@@ -1,6 +1,6 @@
 // FECHA Y HORA OBJETIVO (cambia esto a la que quieras)
 // Formato: 'YYYY-MM-DDTHH:MM:SS'
-const targetDate = new Date('2025-09-22T22:55:00'); 
+const targetDate = new Date('2025-09-22T22:59:00');
 
 const countdownEl = document.getElementById('countdown');
 const randomContainer = document.getElementById('random-images');
@@ -12,14 +12,41 @@ const images = [
   'img/img4.jpg','img/img5.jpg','img/img6.jpg','img/img7.jpg'
 ];
 
+// --- NUEVO: función para obtener siempre la misma semilla a partir de la fecha ---
+function seedFromDate(date){
+  // convierte la fecha en un número estable (milisegundos desde 1970)
+  return date.getTime();
+}
+
+// Pequeño generador pseudoaleatorio a partir de una semilla
+function seededRandom(seed){
+  const x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
+}
+
+function pickImages() {
+  const seed = seedFromDate(targetDate);
+  // primer número
+  const r1 = Math.floor(seededRandom(seed) * images.length);
+  // segundo número, asegurando que no se repita el primero
+  let r2;
+  do {
+    r2 = Math.floor(seededRandom(seed + 1) * images.length);
+  } while (r2 === r1);
+
+  return [images[r1], images[r2]];
+}
+
 function updateCountdown() {
   const now = new Date();
   const diff = targetDate - now;
 
   if (diff <= 0) {
-    // Cuenta atrás terminada
     countdownEl.textContent = "¡Ya es hora!";
-    showRandomImages();
+    const [im1, im2] = pickImages();
+    img1.src = im1;
+    img2.src = im2;
+    randomContainer.classList.remove('hidden');
     clearInterval(timer);
     return;
   }
@@ -29,16 +56,8 @@ function updateCountdown() {
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
   const seconds = Math.floor((diff / 1000) % 60);
 
-  countdownEl.textContent = 
+  countdownEl.textContent =
     `${days}d ${hours}h ${minutes}m ${seconds}s`;
-}
-
-function showRandomImages() {
-  // Escoge 2 imágenes diferentes al azar
-  let shuffled = images.sort(() => 0.5 - Math.random());
-  img1.src = shuffled[0];
-  img2.src = shuffled[1];
-  randomContainer.classList.remove('hidden');
 }
 
 const timer = setInterval(updateCountdown, 1000);
