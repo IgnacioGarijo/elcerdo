@@ -1,6 +1,6 @@
 // FECHA Y HORA OBJETIVO (cambia esto a la que quieras)
 // Formato: 'YYYY-MM-DDTHH:MM:SS'
-const targetDate = new Date('2025-09-22T22:59:00');
+const targetDate = new Date('2025-09-22T23:05:00');
 
 const countdownEl = document.getElementById('countdown');
 const randomContainer = document.getElementById('random-images');
