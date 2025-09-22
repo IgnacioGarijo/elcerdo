@@ -28,13 +28,10 @@ body {
 }
 
 #main-image {
-  position: fixed;        /* se mantiene ocupando la pantalla */
-  top: 0;
-  left: 0;
-  width: 100vw;           /* ancho completo de la ventana */
-  height: 100vh;          /* alto completo de la ventana */
-  object-fit: cover;      /* recorta/proporciona sin deformar */
-  z-index: -1;            /* opcional: para que el contador quede encima */
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100vh;
 }
 
 /* Si quieres que el contador quede centrado sobre la imagen */
