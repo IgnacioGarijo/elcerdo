@@ -1,6 +1,3 @@
-// FECHA Y HORA OBJETIVO (cambia esto a la que quieras)
-// Formato: 'YYYY-MM-DDTHH:MM:SS'
-const targetDate = new Date('2025-09-25T21:00:00');
 
 const countdownEl = document.getElementById('countdown');
 const randomContainer = document.getElementById('random-images');
@@ -12,13 +9,25 @@ const images = [
   'img/img4.jpg','img/img5.jpg','img/img6.jpg','img/img7.jpg'
 ];
 
-// --- NUEVO: función para obtener siempre la misma semilla a partir de la fecha ---
+// 👇 AQUÍ introduces fecha y hora EN HORARIO DE ESPAÑA (península)
+const fechaEspaña = {
+  year: 2025,
+  month: 9,
+  day: 25,
+  hour: 21,
+  minute: 0
+};
+
+// --- NUEVO: convertir automáticamente a UTC ---
+const { DateTime } = luxon;
+const targetDate = DateTime.fromObject(fechaEspaña, { zone: "Europe/Madrid" })
+                            .toUTC()
+                            .toJSDate();   // convierte a objeto Date nativo
+
 function seedFromDate(date){
-  // convierte la fecha en un número estable (milisegundos desde 1970)
   return date.getTime();
 }
 
-// Pequeño generador pseudoaleatorio a partir de una semilla
 function seededRandom(seed){
   const x = Math.sin(seed) * 10000;
   return x - Math.floor(x);
@@ -26,14 +35,10 @@ function seededRandom(seed){
 
 function pickImages() {
   const seed = seedFromDate(targetDate);
-  // primer número
   const r1 = Math.floor(seededRandom(seed) * images.length);
-  // segundo número, asegurando que no se repita el primero
   let r2;
-  do {
-    r2 = Math.floor(seededRandom(seed + 1) * images.length);
-  } while (r2 === r1);
-
+  do { r2 = Math.floor(seededRandom(seed + 1) * images.length); }
+  while (r2 === r1);
   return [images[r1], images[r2]];
 }
 
