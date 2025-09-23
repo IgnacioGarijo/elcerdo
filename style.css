@@ -29,7 +29,7 @@ body {
 
 #main-image {
   width: auto;
-  max-width: 100vw;
+  max-width: 800vw;
   height: auto;
   max-height: 100vh;
 }
