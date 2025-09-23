@@ -9,7 +9,11 @@
 <body>
   <div id="container">
     <!-- Imagen inicial -->
-    <img id="main-image" src="img/imagen_inicial.png" alt="Imagen inicial">
+    <picture>
+  <source srcset="cerdo-vertical.png" media="(max-width: 768px)">
+  <img id="main-image" src="cerdo-horizontal.png" alt="Cerdo">
+</picture>
+
 
     <!-- Cuenta atrás -->
     <div id="countdown"></div>
