@@ -96,9 +96,10 @@ function triggerEasterEgg() {
   evilLaugh.currentTime = 0;
   evilLaugh.play();
 
-  // 3️⃣ Generar monedas
-  for (let i = 0; i < 20; i++) {
-    createCoin();
+  // 3️⃣ Generar monedas en intervalos para simular lluvia
+  for (let i = 0; i < 30; i++) {
+    setTimeout(() => createCoin(), Math.random() * 2000); 
+    // cada moneda aparece en un momento aleatorio dentro de 2s
   }
 }
 
@@ -107,13 +108,17 @@ function createCoin() {
   coin.src = "img/moneda.png";
   coin.className = "coin";
 
-  // Posición aleatoria en el ancho de la pantalla
+  // Posición horizontal aleatoria (0–90% para no salirse)
   coin.style.left = Math.random() * 90 + "%";
 
-  // Tamaño aleatorio (opcional)
+  // Tamaño aleatorio
   const size = 30 + Math.random() * 40;
   coin.style.width = size + "px";
   coin.style.height = size + "px";
+
+  // Duración aleatoria de la caída (2–5 segundos)
+  const duration = 2 + Math.random() * 3;
+  coin.style.animationDuration = duration + "s";
 
   coinContainer.appendChild(coin);
 

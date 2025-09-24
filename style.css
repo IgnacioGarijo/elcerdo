@@ -67,7 +67,9 @@ body {
   position: absolute;
   width: 40px;
   height: 40px;
-  animation: fall 3s linear forwards;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fall {
@@ -80,6 +82,7 @@ body {
     opacity: 0;
   }
 }
+
 
 /* Efecto de sacudida de la imagen */
 @keyframes shake {
