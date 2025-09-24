@@ -67,3 +67,56 @@ function updateCountdown() {
 
 const timer = setInterval(updateCountdown, 1000);
 updateCountdown();
+
+const mainImage = document.getElementById("main-image");
+const evilLaugh = document.getElementById("evil-laugh");
+const coinContainer = document.getElementById("coin-container");
+
+let tapCount = 0;
+let tapTimer = null;
+
+// Detecta taps rápidos (por ejemplo 5 en 2 segundos)
+document.body.addEventListener("touchstart", () => {
+  tapCount++;
+  clearTimeout(tapTimer);
+  tapTimer = setTimeout(() => { tapCount = 0; }, 2000);
+
+  if (tapCount >= 5) {
+    triggerEasterEgg();
+    tapCount = 0;
+  }
+});
+
+function triggerEasterEgg() {
+  // 1️⃣ Agitar imagen
+  mainImage.classList.add("shake");
+  setTimeout(() => mainImage.classList.remove("shake"), 600);
+
+  // 2️⃣ Reproducir sonido
+  evilLaugh.currentTime = 0;
+  evilLaugh.play();
+
+  // 3️⃣ Generar monedas
+  for (let i = 0; i < 20; i++) {
+    createCoin();
+  }
+}
+
+function createCoin() {
+  const coin = document.createElement("img");
+  coin.src = "img/moneda.png";
+  coin.className = "coin";
+
+  // Posición aleatoria en el ancho de la pantalla
+  coin.style.left = Math.random() * 90 + "%";
+
+  // Tamaño aleatorio (opcional)
+  const size = 30 + Math.random() * 40;
+  coin.style.width = size + "px";
+  coin.style.height = size + "px";
+
+  coinContainer.appendChild(coin);
+
+  // Eliminar cuando termine la animación
+  coin.addEventListener("animationend", () => coin.remove());
+}
