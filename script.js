@@ -12,8 +12,8 @@ const images = [
 // 👇 AQUÍ introduces fecha y hora EN HORARIO DE ESPAÑA (península)
 const fechaEspaña = {
   year: 2025,
-  month: 9,
-  day: 25,
+  month: 10,
+  day: 2,
   hour: 21,
   minute: 0
 };
