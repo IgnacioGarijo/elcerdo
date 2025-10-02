@@ -65,8 +65,8 @@ body {
 /* Cada moneda individual */
 .coin {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 41px;
+  height: 41px;
   animation-name: fall;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
