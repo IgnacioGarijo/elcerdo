@@ -14,8 +14,8 @@ const fechaEspaña = {
   year: 2025,
   month: 10,
   day: 2,
-  hour: 21,
-  minute: 35
+  hour: 22,
+  minute: 01
 };
 
 // --- NUEVO: convertir automáticamente a UTC ---
