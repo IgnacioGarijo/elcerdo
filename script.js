@@ -13,9 +13,9 @@ const images = [
 const fechaEspaña = {
   year: 2025,
   month: 10,
-  day: 2,
-  hour: 22,
-  minute: 10
+  day:7,
+  hour: 12,
+  minute: 11
 };
 
 // --- NUEVO: convertir automáticamente a UTC ---
