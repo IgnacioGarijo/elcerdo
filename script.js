@@ -1,4 +1,3 @@
-
 const countdownEl = document.getElementById('countdown');
 const randomContainer = document.getElementById('random-images');
 const img1 = document.getElementById('img1');
@@ -9,39 +8,54 @@ const images = [
   'img/img4.jpg','img/img5.jpg','img/img6.jpg','img/img7.jpg'
 ];
 
-// 👇 AQUÍ introduces fecha y hora EN HORARIO DE ESPAÑA (península)
+// 👇 Ajusta aquí la fecha y hora EN HORARIO DE ESPAÑA (península)
 const fechaEspaña = {
   year: 2025,
   month: 10,
-  day:16,
+  day: 23,   // jueves siguiente
   hour: 21,
-  minute: 11
+  minute: 0
 };
 
-// --- NUEVO: convertir automáticamente a UTC ---
+// --- Conversión automática a UTC ---
 const { DateTime } = luxon;
 const targetDate = DateTime.fromObject(fechaEspaña, { zone: "Europe/Madrid" })
                             .toUTC()
-                            .toJSDate();   // convierte a objeto Date nativo
+                            .toJSDate();
 
-function seedFromDate(date){
-  return date.getTime();
+// ------------------------------
+// 🔢 NUEVO SISTEMA DE SELECCIÓN
+// ------------------------------
+function simpleHash(str) {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = (hash << 5) - hash + str.charCodeAt(i);
+    hash |= 0; // convierte a 32 bits
+  }
+  return Math.abs(hash);
 }
 
-function seededRandom(seed){
-  const x = Math.sin(seed) * 10000;
-  return x - Math.floor(x);
+function seededRandomFromString(str) {
+  const seed = simpleHash(str);
+  return (seed % 10000) / 10000;
 }
 
 function pickImages() {
-  const seed = seedFromDate(targetDate);
-  const r1 = Math.floor(seededRandom(seed) * images.length);
+  // Fecha base como cadena tipo "2025-10-23T21:00"
+  const dateStr = targetDate.toISOString().slice(0, 16);
+
+  const r1 = Math.floor(seededRandomFromString(dateStr) * images.length);
   let r2;
-  do { r2 = Math.floor(seededRandom(seed + 1) * images.length); }
-  while (r2 === r1);
+  do {
+    r2 = Math.floor(seededRandomFromString(dateStr + "_b") * images.length);
+  } while (r2 === r1);
+
   return [images[r1], images[r2]];
 }
 
+// ------------------------------
+// ⏳ LÓGICA DE LA CUENTA ATRÁS
+// ------------------------------
 function updateCountdown() {
   const now = new Date();
   const diff = targetDate - now;
@@ -68,6 +82,9 @@ function updateCountdown() {
 const timer = setInterval(updateCountdown, 1000);
 updateCountdown();
 
+// ------------------------------
+// 🐷 EASTER EGG DE LA RISA + MONEDAS
+// ------------------------------
 const mainImage = document.getElementById("main-image");
 const evilLaugh = document.getElementById("evil-laugh");
 const coinContainer = document.getElementById("coin-container");
@@ -75,7 +92,7 @@ const coinContainer = document.getElementById("coin-container");
 let tapCount = 0;
 let tapTimer = null;
 
-// Detecta taps rápidos (por ejemplo 5 en 2 segundos)
+// Detecta 5 taps rápidos en 2 segundos
 document.body.addEventListener("touchstart", () => {
   tapCount++;
   clearTimeout(tapTimer);
@@ -96,10 +113,9 @@ function triggerEasterEgg() {
   evilLaugh.currentTime = 0;
   evilLaugh.play();
 
-  // 3️⃣ Generar monedas en intervalos para simular lluvia
+  // 3️⃣ Lluvia de monedas
   for (let i = 0; i < 30; i++) {
     setTimeout(() => createCoin(), Math.random() * 2000); 
-    // cada moneda aparece en un momento aleatorio dentro de 2s
   }
 }
 
@@ -108,7 +124,7 @@ function createCoin() {
   coin.src = "img/moneda.png";
   coin.className = "coin";
 
-  // Posición horizontal aleatoria (0–90% para no salirse)
+  // Posición horizontal aleatoria (0–90%)
   coin.style.left = Math.random() * 90 + "%";
 
   // Tamaño aleatorio
@@ -116,12 +132,12 @@ function createCoin() {
   coin.style.width = size + "px";
   coin.style.height = size + "px";
 
-  // Duración aleatoria de la caída (2–5 segundos)
+  // Duración de la caída (2–5s)
   const duration = 2 + Math.random() * 3;
   coin.style.animationDuration = duration + "s";
 
   coinContainer.appendChild(coin);
 
-  // Eliminar cuando termine la animación
+  // Eliminar al acabar animación
   coin.addEventListener("animationend", () => coin.remove());
 }
