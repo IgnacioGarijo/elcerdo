@@ -12,6 +12,54 @@ const images = [
   'img/img4.jpg','img/img5.jpg','img/img6.jpg','img/img7.jpg'
 ];
 
+// 👇 Ajusta aquí la fecha y hora EN HORARIO DE ESPAÑA (península)
+const fechaEspaña = {
+  year: 2025,
+  month: 11,
+  day: 20,   
+  hour: 21,
+  minute: 0
+};
+
+// --- Conversión automática a UTC ---
+const { DateTime } = luxon;
+const targetDate = DateTime.fromObject(fechaEspaña, { zone: "Europe/Madrid" })
+                            .toUTC()
+                            .toJSDate();
+
+// ------------------------------
+// 🔢 NUEVO SISTEMA DE SELECCIÓN
+// ------------------------------
+function simpleHash(str) {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = (hash << 5) - hash + str.charCodeAt(i);
+    hash |= 0; // convierte a 32 bits
+  }
+  return Math.abs(hash);
+}
+
+function seededRandomFromString(str) {
+  const seed = simpleHash(str);
+  return (seed % 10000) / 10000;
+}
+
+function pickImages() {
+  // Fecha base como cadena tipo "2025-10-23T21:00"
+  const dateStr = targetDate.toISOString().slice(0, 16);
+
+  const r1 = Math.floor(seededRandomFromString(dateStr) * images.length);
+  let r2;
+  do {
+    r2 = Math.floor(seededRandomFromString(dateStr + "_b") * images.length);
+  } while (r2 === r1);
+
+  return [images[r1], images[r2]];
+}
+
+// ------------------------------
+// ⏳ LÓGICA DE LA CUENTA ATRÁS
+// ------------------------------
 function updateCountdown() {
   const now = new Date();
   const diff = targetDate - now;
