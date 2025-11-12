@@ -11,11 +11,10 @@ const images = [
 // 👇 Ajusta aquí la fecha y hora EN HORARIO DE ESPAÑA (península)
 const fechaEspaña = {
   year: 2025,
-  month: 10,
-  day: 23,   
-  day: 30,   
-  hour: 21,
-  minute: 0
+  month: 11,
+  day: 12,      
+  hour: 2,
+  minute: 20
 };
 
 // --- Conversión automática a UTC ---
