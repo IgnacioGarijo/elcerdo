@@ -12,9 +12,9 @@ const images = [
 const fechaEspaña = {
   year: 2025,
   month: 11,
-  day: 23,   // jueves siguiente
-  hour: 21,
-  minute: 0
+  day: 12,      
+  hour: 2,
+  minute: 22
 };
 
 // --- Conversión automática a UTC ---
@@ -81,6 +81,66 @@ function updateCountdown() {
 
 const timer = setInterval(updateCountdown, 1000);
 updateCountdown();
+
+// ------------------------------
+// 🐷 EASTER EGG DE LA RISA + MONEDAS
+// ------------------------------
+const mainImage = document.getElementById("main-image");
+const evilLaugh = document.getElementById("evil-laugh");
+const coinContainer = document.getElementById("coin-container");
+
+let tapCount = 0;
+let tapTimer = null;
+
+// Detecta 5 taps rápidos en 2 segundos
+document.body.addEventListener("touchstart", () => {
+  tapCount++;
+  clearTimeout(tapTimer);
+  tapTimer = setTimeout(() => { tapCount = 0; }, 2000);
+
+  if (tapCount >= 5) {
+    triggerEasterEgg();
+    tapCount = 0;
+  }
+});
+
+function triggerEasterEgg() {
+  // 1️⃣ Agitar imagen
+  mainImage.classList.add("shake");
+  setTimeout(() => mainImage.classList.remove("shake"), 600);
+
+  // 2️⃣ Reproducir sonido
+  evilLaugh.currentTime = 0;
+  evilLaugh.play();
+
+  // 3️⃣ Lluvia de monedas
+  for (let i = 0; i < 30; i++) {
+    setTimeout(() => createCoin(), Math.random() * 2000); 
+  }
+}
+
+function createCoin() {
+  const coin = document.createElement("img");
+  coin.src = "img/moneda.png";
+  coin.className = "coin";
+
+  // Posición horizontal aleatoria (0–90%)
+  coin.style.left = Math.random() * 90 + "%";
+
+  // Tamaño aleatorio
+  const size = 30 + Math.random() * 40;
+  coin.style.width = size + "px";
+  coin.style.height = size + "px";
+
+  // Duración de la caída (2–5s)
+  const duration = 2 + Math.random() * 3;
+  coin.style.animationDuration = duration + "s";
+
+  coinContainer.appendChild(coin);
+
+  // Eliminar al acabar animación
+  coin.addEventListener("animationend", () => coin.remove());
+}
 
 // ------------------------------
 // 🐷 EASTER EGG DE LA RISA + MONEDAS
