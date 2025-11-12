@@ -14,7 +14,7 @@ const fechaEspaña = {
   month: 11,
   day: 12,      
   hour: 2,
-  minute: 20
+  minute: 22
 };
 
 // --- Conversión automática a UTC ---
