@@ -12,7 +12,7 @@ const images = [
 const fechaEspaña = {
   year: 2025,
   month: 12,
-  day: 11,      
+  day: 18,      
   hour: 21,
   minute: 0
 };
