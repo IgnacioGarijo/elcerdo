@@ -1,36 +1,96 @@
+// ------------------------------
+// 🔗 REFERENCIAS AL DOM
+// ------------------------------
 const countdownEl = document.getElementById('countdown');
 const randomContainer = document.getElementById('random-images');
 const img1 = document.getElementById('img1');
 const img2 = document.getElementById('img2');
 
+const mainImage = document.getElementById("main-image");
+const evilLaugh = document.getElementById("evil-laugh");
+const coinContainer = document.getElementById("coin-container");
+
+// ------------------------------
+// 🖼️ IMÁGENES DISPONIBLES
+// ------------------------------
 const images = [
-  'img/img1.jpg','img/img2.jpg','img/img3.jpg',
-  'img/img4.jpg','img/img5.jpg','img/img6.jpg','img/img7.jpg'
+  'img/img1.jpg',
+  'img/img2.jpg',
+  'img/img3.jpg',
+  'img/img4.jpg',
+  'img/img5.jpg',
+  'img/img6.jpg',
+  'img/img7.jpg'
 ];
 
-// 👇 Ajusta aquí la fecha y hora EN HORARIO DE ESPAÑA (península)
+// ------------------------------
+// 📅 FECHA OBJETIVO (EDITABLE CADA SEMANA)
+// ⚠️ Hora SIEMPRE en horario peninsular español
+// ------------------------------
 const fechaEspaña = {
   year: 2025,
-  month: 12,
-  day: 18,      
-  hour: 21,
+  month: 12, // 1–12
+  day: 19,
+  hour: 10,
   minute: 0
 };
 
-// --- Conversión automática a UTC ---
-const { DateTime } = luxon;
-const targetDate = DateTime.fromObject(fechaEspaña, { zone: "Europe/Madrid" })
-                            .toUTC()
-                            .toJSDate();
+// ------------------------------
+// 🕰️ CONVERSIÓN ROBUSTA A UTC (NO TOCAR)
+// Convierte "21:00 España" en el instante real global
+// Funciona con horario de verano/invierno
+// ------------------------------
+function dateFromSpainTime({ year, month, day, hour, minute }) {
+  // Suposición inicial en UTC
+  const utcGuess = new Date(Date.UTC(
+    year,
+    month - 1,
+    day,
+    hour,
+    minute,
+    0
+  ));
+
+  // Cómo se vería esa fecha en España
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Europe/Madrid",
+    hour12: false,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+  }).formatToParts(utcGuess);
+
+  const get = type => parts.find(p => p.type === type).value;
+
+  const spainTime = Date.UTC(
+    get("year"),
+    get("month") - 1,
+    get("day"),
+    get("hour"),
+    get("minute"),
+    get("second")
+  );
+
+  // Diferencia real España ↔ UTC (incluye cambio de hora)
+  const offset = spainTime - utcGuess.getTime();
+
+  // Fecha UTC final correcta
+  return new Date(utcGuess.getTime() - offset);
+}
+
+const targetDate = dateFromSpainTime(fechaEspaña);
 
 // ------------------------------
-// 🔢 NUEVO SISTEMA DE SELECCIÓN
+// 🔢 SELECCIÓN DETERMINISTA DE IMÁGENES
 // ------------------------------
 function simpleHash(str) {
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
     hash = (hash << 5) - hash + str.charCodeAt(i);
-    hash |= 0; // convierte a 32 bits
+    hash |= 0;
   }
   return Math.abs(hash);
 }
@@ -41,7 +101,7 @@ function seededRandomFromString(str) {
 }
 
 function pickImages() {
-  // Fecha base como cadena tipo "2025-10-23T21:00"
+  // Clave estable basada en la fecha del evento
   const dateStr = targetDate.toISOString().slice(0, 16);
 
   const r1 = Math.floor(seededRandomFromString(dateStr) * images.length);
@@ -54,7 +114,7 @@ function pickImages() {
 }
 
 // ------------------------------
-// ⏳ LÓGICA DE LA CUENTA ATRÁS
+// ⏳ CUENTA ATRÁS
 // ------------------------------
 function updateCountdown() {
   const now = new Date();
@@ -83,16 +143,11 @@ const timer = setInterval(updateCountdown, 1000);
 updateCountdown();
 
 // ------------------------------
-// 🐷 EASTER EGG DE LA RISA + MONEDAS
+// 🐷 EASTER EGG (5 TAPS)
 // ------------------------------
-const mainImage = document.getElementById("main-image");
-const evilLaugh = document.getElementById("evil-laugh");
-const coinContainer = document.getElementById("coin-container");
-
 let tapCount = 0;
 let tapTimer = null;
 
-// Detecta 5 taps rápidos en 2 segundos
 document.body.addEventListener("touchstart", () => {
   tapCount++;
   clearTimeout(tapTimer);
@@ -105,17 +160,17 @@ document.body.addEventListener("touchstart", () => {
 });
 
 function triggerEasterEgg() {
-  // 1️⃣ Agitar imagen
+  // Agitar imagen
   mainImage.classList.add("shake");
   setTimeout(() => mainImage.classList.remove("shake"), 600);
 
-  // 2️⃣ Reproducir sonido
+  // Sonido
   evilLaugh.currentTime = 0;
   evilLaugh.play();
 
-  // 3️⃣ Lluvia de monedas
+  // Lluvia de monedas
   for (let i = 0; i < 30; i++) {
-    setTimeout(() => createCoin(), Math.random() * 2000); 
+    setTimeout(() => createCoin(), Math.random() * 2000);
   }
 }
 
@@ -124,20 +179,15 @@ function createCoin() {
   coin.src = "img/moneda.png";
   coin.className = "coin";
 
-  // Posición horizontal aleatoria (0–90%)
   coin.style.left = Math.random() * 90 + "%";
 
-  // Tamaño aleatorio
   const size = 30 + Math.random() * 40;
   coin.style.width = size + "px";
   coin.style.height = size + "px";
 
-  // Duración de la caída (2–5s)
   const duration = 2 + Math.random() * 3;
   coin.style.animationDuration = duration + "s";
 
   coinContainer.appendChild(coin);
-
-  // Eliminar al acabar animación
   coin.addEventListener("animationend", () => coin.remove());
 }
