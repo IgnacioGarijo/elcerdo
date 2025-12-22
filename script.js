@@ -178,7 +178,7 @@ function triggerEasterEgg() {
 
 function createCoin() {
   const coin = document.createElement("img");
-  coin.src = "img/moneda.png";
+  coin.src = "img/moneda-christmas.png";
   coin.className = "coin";
 
   coin.style.left = Math.random() * 90 + "%";
