@@ -28,10 +28,10 @@ const images = [
 // ⚠️ Hora SIEMPRE en horario peninsular español
 // ------------------------------
 const fechaEspaña = {
-  year: 2025,
-  month: 12, // 1–12
-  day: 19,
-  hour: 10,
+  year: 2026,
+  month: 1, // 1–12
+  day: 1,
+  hour: 21,
   minute: 0
 };
 
