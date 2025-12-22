@@ -116,7 +116,7 @@ function pickImages() {
 // ------------------------------
 // ⏳ CUENTA ATRÁS
 // ------------------------------
-const countdownPrefix = "El Cerdo os desea Feliz Navidad. Volvemos en: ";
+const countdownPrefix = "Volvemos en: ";
 
 function updateCountdown() {
   const now = new Date();
