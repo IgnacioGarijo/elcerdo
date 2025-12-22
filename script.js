@@ -116,6 +116,8 @@ function pickImages() {
 // ------------------------------
 // ⏳ CUENTA ATRÁS
 // ------------------------------
+const countdownPrefix = "El Cerdo os desea Feliz Navidad. Volvemos en: ";
+
 function updateCountdown() {
   const now = new Date();
   const diff = targetDate - now;
@@ -136,7 +138,7 @@ function updateCountdown() {
   const seconds = Math.floor((diff / 1000) % 60);
 
   countdownEl.textContent =
-    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  `${countdownPrefix}${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 
 const timer = setInterval(updateCountdown, 1000);
