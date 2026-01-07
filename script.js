@@ -30,7 +30,7 @@ const images = [
 const fechaEspaña = {
   year: 2026,
   month: 1, // 1–12
-  day: 1,
+  day: 8,
   hour: 21,
   minute: 0
 };
@@ -178,7 +178,7 @@ function triggerEasterEgg() {
 
 function createCoin() {
   const coin = document.createElement("img");
-  coin.src = "img/moneda-christmas.png";
+  coin.src = "img/moneda.png";
   coin.className = "coin";
 
   coin.style.left = Math.random() * 90 + "%";
