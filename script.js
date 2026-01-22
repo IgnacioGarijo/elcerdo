@@ -30,7 +30,7 @@ const images = [
 const fechaEspaña = {
   year: 2026,
   month: 1, // 1–12
-  day: 15,
+  day: 22,
   hour: 21,
   minute: 0
 };
