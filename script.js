@@ -9,6 +9,7 @@ const img2 = document.getElementById('img2');
 const mainImage = document.getElementById("main-image");
 const evilLaugh = document.getElementById("evil-laugh");
 const coinContainer = document.getElementById("coin-container");
+const videoSection = document.getElementById('video-section');
 
 // ------------------------------
 // 🖼️ IMÁGENES DISPONIBLES
@@ -30,7 +31,7 @@ const images = [
 const fechaEspaña = {
   year: 2026,
   month: 2, // 1–12
-  day: 12,
+  day: 17,
   hour: 21,
   minute: 0
 };
@@ -128,6 +129,7 @@ function updateCountdown() {
     img1.src = im1;
     img2.src = im2;
     randomContainer.classList.remove('hidden');
+    videoSection.classList.remove('hidden'); // ← añadir esto
     clearInterval(timer);
     return;
   }
