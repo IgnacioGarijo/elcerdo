@@ -32,8 +32,8 @@ const fechaEspaña = {
   year: 2026,
   month: 2, // 1–12
   day: 26,
-  hour: 11,
-  minute: 35
+  hour: 19,
+  minute: 0
 };
 
 // ------------------------------
