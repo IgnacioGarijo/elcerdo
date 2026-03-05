@@ -31,7 +31,7 @@ const images = [
 const fechaEspaña = {
   year: 2026,
   month: 3, // 1–12
-  day: 4,
+  day: 5,
   hour: 21,
   minute: 0
 };
@@ -124,7 +124,7 @@ function updateCountdown() {
   const diff = targetDate - now;
 
   if (diff <= 0) {
-    countdownEl.textContent = "¡Ya es hora!";
+    countdownEl.textContent = "Los pagadores de la jornada 27 serán...";
     const [im1, im2] = pickImages();
     img1.src = im1;
     img2.src = im2;
