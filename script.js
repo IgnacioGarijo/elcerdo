@@ -31,9 +31,9 @@ const images = [
 const fechaEspaña = {
   year: 2026,
   month: 3, // 1–12
-  day: 5,
-  hour: 21,
-  minute: 0
+  day: 13,
+  hour: 20,
+  minute: 45
 };
 
 // ------------------------------
