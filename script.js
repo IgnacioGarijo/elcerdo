@@ -9,7 +9,6 @@ const img2 = document.getElementById('img2');
 const mainImage = document.getElementById("main-image");
 const evilLaugh = document.getElementById("evil-laugh");
 const coinContainer = document.getElementById("coin-container");
-const videoSection = document.getElementById('video-section');
 
 // ------------------------------
 // 🖼️ IMÁGENES DISPONIBLES
@@ -124,12 +123,11 @@ function updateCountdown() {
   const diff = targetDate - now;
 
   if (diff <= 0) {
-    countdownEl.textContent = "Los pagadores de la jornada 27 serán...";
+    countdownEl.textContent = "Pagarán...";
     const [im1, im2] = pickImages();
     img1.src = im1;
     img2.src = im2;
     randomContainer.classList.remove('hidden');
-    showPsoedMessage(); // ← añadir esto
     clearInterval(timer);
     return;
   }
@@ -196,35 +194,3 @@ function createCoin() {
   coin.addEventListener("animationend", () => coin.remove());
 }
 
-function showPsoedMessage() {
-  // Vaciar el contenido actual (borra el texto y el iframe)
-  videoSection.innerHTML = '';
-
-  // Crear título
-  const title = document.createElement('h1');
-  title.textContent = 'ENHORABUENA, YOU HAVE BEEN PSOED';
-
-  // Crear imagen
-  const image = document.createElement('img');
-  image.src = 'img/psoed.jpg';
-  image.alt = 'PSOED';
-  image.style.maxWidth = '400px';
-  image.style.margin = '20px 0';
-
-  // Crear texto
-  const description = document.createElement('p');
-  description.textContent =
-    'Para la jornada 27 la cleptocracia se ha adueñado de la liga, y para poder puntuar tendrás que tener al menos dos jugadores que ahora pertenecen a un equipo rival. Además, para evitar cláusulas a jugadores poco relevantes, uno de ellos deberá ser tu capitán';
-
-  description.style.maxWidth = '800px';
-  description.style.margin = '0 auto';
-  description.style.lineHeight = '1.6';
-
-  // Añadir al contenedor
-  videoSection.appendChild(title);
-  videoSection.appendChild(image);
-  videoSection.appendChild(description);
-
-  // Mostrar sección
-  videoSection.classList.remove('hidden');
-}
