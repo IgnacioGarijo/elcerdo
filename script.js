@@ -29,8 +29,8 @@ const images = [
 // ------------------------------
 const fechaEspaña = {
   year: 2026,
-  month: 4, // 1–12
-  day: 2,
+  month: 8, // 1–12
+  day: 15,
   hour: 20,
   minute: 45
 };
@@ -116,7 +116,7 @@ function pickImages() {
 // ------------------------------
 // ⏳ CUENTA ATRÁS
 // ------------------------------
-const countdownPrefix = "Volvemos en: ";
+const countdownPrefix = "Estamos de vacaciones, volveremos en...: ";
 
 function updateCountdown() {
   const now = new Date();
