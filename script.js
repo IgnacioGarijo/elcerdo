@@ -116,7 +116,7 @@ function pickImages() {
 // ------------------------------
 // ⏳ CUENTA ATRÁS
 // ------------------------------
-const countdownPrefix = "Estamos de vacaciones, volveremos en...: ";
+const countdownPrefix = "Volvemos en: ";
 
 function updateCountdown() {
   const now = new Date();
