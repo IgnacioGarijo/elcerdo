@@ -38,8 +38,8 @@ const images = [
 ];
 
 const BUILD_VERSION = {
-  label: "web f54025d+cerdo-sync",
-  updatedAt: "2026-08-29T13:26:15+02:00"
+  label: "web easter-v2",
+  updatedAt: "2026-08-29T13:42:00+02:00"
 };
 
 const cardTeams = new Map([
@@ -195,7 +195,7 @@ async function loadData() {
   state.pigHistory = dashboard?.pig || pigHistory || { rounds: [] };
 
   const scrapedAt = dashboard?.meta?.generatedAt || standings?.scrapedAt || feed?.scrapedAt || state.pigHistory.updatedAt;
-  els.syncStatus.textContent = `Web ${formatShortDate(BUILD_VERSION.updatedAt)} · ${scrapedAt ? `Datos ${formatShortDate(scrapedAt)}` : "Datos iniciales"}`;
+  els.syncStatus.innerHTML = `<span>Web ${formatShortDate(BUILD_VERSION.updatedAt)}</span><span>${scrapedAt ? `Datos ${formatShortDate(scrapedAt)}` : "Datos iniciales"}</span>`;
 }
 
 async function safeJson(url) {
@@ -955,33 +955,20 @@ function normalizeCardPath(card) {
 function setupEasterEgg() {
   let tapCount = 0;
   let tapTimer = null;
-  let lastPoint = null;
   let lastEventAt = 0;
-  const maxDistance = 34;
 
   const register = event => {
     const now = Date.now();
     if (now - lastEventAt < 80) return;
     lastEventAt = now;
 
-    const point = eventPoint(event);
-    if (!point) return;
-    const movedTooFar = lastPoint
-      && Math.hypot(point.x - lastPoint.x, point.y - lastPoint.y) > maxDistance;
-    if (movedTooFar) tapCount = 0;
-
-    lastPoint = point;
     tapCount += 1;
     clearTimeout(tapTimer);
-    tapTimer = setTimeout(() => {
-      tapCount = 0;
-      lastPoint = null;
-    }, 1800);
+    tapTimer = setTimeout(() => { tapCount = 0; }, 2400);
 
     if (tapCount >= 5) {
       triggerEasterEgg();
       tapCount = 0;
-      lastPoint = null;
     }
   };
 
@@ -995,13 +982,6 @@ function setupEasterEgg() {
   els.countdownCard?.addEventListener("click", event => {
     register(event);
   });
-}
-
-function eventPoint(event) {
-  const touch = event.touches?.[0] || event.changedTouches?.[0];
-  const source = touch || event;
-  if (typeof source.clientX !== "number" || typeof source.clientY !== "number") return null;
-  return { x: source.clientX, y: source.clientY };
 }
 
 function triggerEasterEgg() {

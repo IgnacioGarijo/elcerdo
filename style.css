@@ -88,6 +88,10 @@ img, svg { max-width: 100%; }
   box-shadow: var(--shadow-cyan);
 }
 
+.sync-pill span {
+  display: block;
+}
+
 .app-shell {
   position: relative;
   z-index: 1;
