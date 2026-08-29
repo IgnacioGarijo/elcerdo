@@ -1,0 +1,24 @@
+{
+  "updatedAt": "2026-08-29T00:00:00.000Z",
+  "note": "Histórico inicial editable. Las automatizaciones semanales podrán actualizar este archivo con las víctimas reales y las dos tarjetas de cada jornada.",
+  "rounds": [
+    {
+      "round": 1,
+      "status": "closed",
+      "victims": ["Alex Ballena", "Olivito"],
+      "cards": ["img/img2.jpg", "img/img6.jpg"]
+    },
+    {
+      "round": 2,
+      "status": "closed",
+      "victims": ["Alex Ballena", "Peter LIM"],
+      "cards": ["img/img4.jpg", "img/img1.jpg"]
+    },
+    {
+      "round": 3,
+      "status": "in_progress",
+      "victims": [],
+      "cards": ["img/img3.jpg", "img/img7.jpg"]
+    }
+  ]
+}

@@ -1,0 +1,3340 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-29T09:26:14.516Z",
+    "sources": {
+      "standings": "2026-08-28T23:50:40.594Z",
+      "feed": "2026-08-28T23:50:40.594Z",
+      "market": "2026-08-29T00:13:18.312Z",
+      "team": "2026-08-28T23:50:40.594Z",
+      "search": "2026-08-28T23:50:40.594Z",
+      "calendar": "2026-08-29T09:14:39.126Z"
+    },
+    "latestClosedRound": 2,
+    "liveRoundPolicy": "Las jornadas en juego se muestran, pero no suman ni desbloquean galardones hasta aparecer como Fin de la jornada en el feed.",
+    "limitations": [
+      "Mister todavía no guarda alineaciones históricas completas de todos los usuarios.",
+      "Los galardones de eficiencia usan valor actual hasta tener snapshots de valor al cierre de cada jornada.",
+      "Los galardones de goles, asistencias, tarjetas, capitán, banquillo y dependencia se desbloquearán cuando el scraper capture eventos y alineaciones por jornada."
+    ]
+  },
+  "teams": [
+    {
+      "name": "Rodando Nazário",
+      "initials": "RN"
+    },
+    {
+      "name": "Don Manuel Ruíz de Lopera",
+      "initials": "DM"
+    },
+    {
+      "name": "Heung Min Dad",
+      "initials": "HM"
+    },
+    {
+      "name": "Mikel Poyarzabal",
+      "initials": "MP"
+    },
+    {
+      "name": "Peter LIM",
+      "initials": "PL"
+    },
+    {
+      "name": "Olivito",
+      "initials": "O"
+    },
+    {
+      "name": "Alex Ballena",
+      "initials": "AB"
+    }
+  ],
+  "currentStandings": [
+    {
+      "rank": 1,
+      "initials": "RN",
+      "name": "Rodando Nazário",
+      "points": 142,
+      "value": 80094000,
+      "playedText": ""
+    },
+    {
+      "rank": 2,
+      "initials": "DM",
+      "name": "Don Manuel Ruíz de Lopera",
+      "points": 139,
+      "value": 80337000,
+      "playedText": ""
+    },
+    {
+      "rank": 3,
+      "initials": "HM",
+      "name": "Heung Min Dad",
+      "points": 134,
+      "value": 61727000,
+      "playedText": ""
+    },
+    {
+      "rank": 4,
+      "initials": "MP",
+      "name": "Mikel Poyarzabal",
+      "points": 108,
+      "value": 72976000,
+      "playedText": ""
+    },
+    {
+      "rank": 5,
+      "initials": "PL",
+      "name": "Peter LIM",
+      "points": 106,
+      "value": 53566000,
+      "playedText": ""
+    },
+    {
+      "rank": 6,
+      "initials": "O",
+      "name": "Olivito",
+      "points": 49,
+      "value": 62947000,
+      "playedText": ""
+    },
+    {
+      "rank": 7,
+      "initials": "AB",
+      "name": "Alex Ballena",
+      "points": 45,
+      "value": 59124000,
+      "playedText": ""
+    }
+  ],
+  "closedRounds": [
+    {
+      "round": 1,
+      "status": "closed",
+      "rows": [
+        {
+          "rank": 1,
+          "initials": "DM",
+          "name": "Don Manuel Ruíz de Lopera",
+          "bonus": 3200000,
+          "points": 62
+        },
+        {
+          "rank": 2,
+          "initials": "HM",
+          "name": "Heung Min Dad",
+          "bonus": 3050000,
+          "points": 53
+        },
+        {
+          "rank": 3,
+          "initials": "RN",
+          "name": "Rodando Nazário",
+          "bonus": 3300000,
+          "points": 52
+        },
+        {
+          "rank": 4,
+          "initials": "PL",
+          "name": "Peter LIM",
+          "bonus": 3400000,
+          "points": 48
+        },
+        {
+          "rank": 5,
+          "initials": "MP",
+          "name": "Mikel Poyarzabal",
+          "bonus": 3250000,
+          "points": 39
+        },
+        {
+          "rank": 6,
+          "initials": "O",
+          "name": "Olivito",
+          "bonus": 2650000,
+          "points": 21
+        },
+        {
+          "rank": 7,
+          "initials": "AB",
+          "name": "Alex Ballena",
+          "bonus": 2900000,
+          "points": 18
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "status": "closed",
+      "rows": [
+        {
+          "rank": 1,
+          "initials": "RN",
+          "name": "Rodando Nazário",
+          "bonus": 3850000,
+          "points": 75
+        },
+        {
+          "rank": 2,
+          "initials": "HM",
+          "name": "Heung Min Dad",
+          "bonus": 3950000,
+          "points": 71
+        },
+        {
+          "rank": 3,
+          "initials": "DM",
+          "name": "Don Manuel Ruíz de Lopera",
+          "bonus": 3300000,
+          "points": 52
+        },
+        {
+          "rank": 4,
+          "initials": "MP",
+          "name": "Mikel Poyarzabal",
+          "bonus": 3350000,
+          "points": 47
+        },
+        {
+          "rank": 5,
+          "initials": "PL",
+          "name": "Peter LIM",
+          "bonus": 2900000,
+          "points": 32
+        },
+        {
+          "rank": 6,
+          "initials": "O",
+          "name": "Olivito",
+          "bonus": 2650000,
+          "points": 21
+        },
+        {
+          "rank": 7,
+          "initials": "AB",
+          "name": "Alex Ballena",
+          "bonus": 2500000,
+          "points": 10
+        }
+      ]
+    }
+  ],
+  "liveRounds": [
+    {
+      "round": 3,
+      "status": "in_progress",
+      "rows": [
+        {
+          "rank": 1,
+          "initials": "PL",
+          "name": "Peter LIM",
+          "points": 26,
+          "value": 48362000,
+          "playedText": "3 / 11"
+        },
+        {
+          "rank": 2,
+          "initials": "DM",
+          "name": "Don Manuel Ruíz de Lopera",
+          "points": 25,
+          "value": 71372000,
+          "playedText": "3 / 11"
+        },
+        {
+          "rank": 3,
+          "initials": "MP",
+          "name": "Mikel Poyarzabal",
+          "points": 22,
+          "value": 58850000,
+          "playedText": "4 / 11"
+        },
+        {
+          "rank": 4,
+          "initials": "AB",
+          "name": "Alex Ballena",
+          "points": 17,
+          "value": 58478000,
+          "playedText": "4 / 11"
+        },
+        {
+          "rank": 5,
+          "initials": "RN",
+          "name": "Rodando Nazário",
+          "points": 15,
+          "value": 80094000,
+          "playedText": "3 / 11"
+        },
+        {
+          "rank": 6,
+          "initials": "HM",
+          "name": "Heung Min Dad",
+          "points": 10,
+          "value": 58088000,
+          "playedText": "3 / 11"
+        },
+        {
+          "rank": 7,
+          "initials": "O",
+          "name": "Olivito",
+          "points": 7,
+          "value": 62216000,
+          "playedText": "2 / 11"
+        }
+      ]
+    }
+  ],
+  "cumulative": [
+    {
+      "round": 0,
+      "rows": [
+        {
+          "name": "Alex Ballena",
+          "initials": "AB",
+          "points": 0
+        },
+        {
+          "name": "Don Manuel Ruíz de Lopera",
+          "initials": "DM",
+          "points": 0
+        },
+        {
+          "name": "Heung Min Dad",
+          "initials": "HM",
+          "points": 0
+        },
+        {
+          "name": "Mikel Poyarzabal",
+          "initials": "MP",
+          "points": 0
+        },
+        {
+          "name": "Olivito",
+          "initials": "O",
+          "points": 0
+        },
+        {
+          "name": "Peter LIM",
+          "initials": "PL",
+          "points": 0
+        },
+        {
+          "name": "Rodando Nazário",
+          "initials": "RN",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "rows": [
+        {
+          "name": "Don Manuel Ruíz de Lopera",
+          "initials": "DM",
+          "points": 62
+        },
+        {
+          "name": "Heung Min Dad",
+          "initials": "HM",
+          "points": 53
+        },
+        {
+          "name": "Rodando Nazário",
+          "initials": "RN",
+          "points": 52
+        },
+        {
+          "name": "Peter LIM",
+          "initials": "PL",
+          "points": 48
+        },
+        {
+          "name": "Mikel Poyarzabal",
+          "initials": "MP",
+          "points": 39
+        },
+        {
+          "name": "Olivito",
+          "initials": "O",
+          "points": 21
+        },
+        {
+          "name": "Alex Ballena",
+          "initials": "AB",
+          "points": 18
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "rows": [
+        {
+          "name": "Rodando Nazário",
+          "initials": "RN",
+          "points": 127
+        },
+        {
+          "name": "Heung Min Dad",
+          "initials": "HM",
+          "points": 124
+        },
+        {
+          "name": "Don Manuel Ruíz de Lopera",
+          "initials": "DM",
+          "points": 114
+        },
+        {
+          "name": "Mikel Poyarzabal",
+          "initials": "MP",
+          "points": 86
+        },
+        {
+          "name": "Peter LIM",
+          "initials": "PL",
+          "points": 80
+        },
+        {
+          "name": "Olivito",
+          "initials": "O",
+          "points": 42
+        },
+        {
+          "name": "Alex Ballena",
+          "initials": "AB",
+          "points": 28
+        }
+      ]
+    }
+  ],
+  "awards": {
+    "definitions": [
+      {
+        "id": "winner",
+        "icon": "🏆",
+        "kind": "good",
+        "name": "Ganador de la jornada",
+        "requirement": "round_points"
+      },
+      {
+        "id": "loser",
+        "icon": "🕳",
+        "kind": "bad",
+        "name": "Perdedor de la jornada",
+        "requirement": "round_points"
+      },
+      {
+        "id": "efficient",
+        "icon": "💎",
+        "kind": "good",
+        "name": "Mayor eficiencia de plantilla",
+        "requirement": "team_value_snapshot"
+      },
+      {
+        "id": "inefficient",
+        "icon": "🧯",
+        "kind": "bad",
+        "name": "Menor eficiencia de plantilla",
+        "requirement": "team_value_snapshot"
+      },
+      {
+        "id": "goals",
+        "icon": "⚽",
+        "kind": "good",
+        "name": "Más goles",
+        "requirement": "player_round_events"
+      },
+      {
+        "id": "assists",
+        "icon": "🎯",
+        "kind": "good",
+        "name": "Más asistencias",
+        "requirement": "player_round_events"
+      },
+      {
+        "id": "red",
+        "icon": "🟥",
+        "kind": "bad",
+        "name": "Recibió roja",
+        "requirement": "player_round_events"
+      },
+      {
+        "id": "dnp",
+        "icon": "🧊",
+        "kind": "bad",
+        "name": "Más jugadores sin jugar",
+        "requirement": "lineup_slots"
+      },
+      {
+        "id": "dependency",
+        "icon": "🧲",
+        "kind": "bad",
+        "name": "Mayor dependencia",
+        "requirement": "player_round_points"
+      },
+      {
+        "id": "coral",
+        "icon": "🧬",
+        "kind": "good",
+        "name": "Equipo más coral",
+        "requirement": "player_round_points"
+      },
+      {
+        "id": "captain",
+        "icon": "👑",
+        "kind": "good",
+        "name": "Capitán adecuado",
+        "requirement": "captain_selection"
+      },
+      {
+        "id": "bench",
+        "icon": "🪑",
+        "kind": "bad",
+        "name": "Peor alineador",
+        "requirement": "bench_points"
+      },
+      {
+        "id": "directorGood",
+        "icon": "🧠",
+        "kind": "good",
+        "name": "Mejor director deportivo",
+        "requirement": "roster_delta"
+      },
+      {
+        "id": "directorBad",
+        "icon": "📉",
+        "kind": "bad",
+        "name": "Peor director deportivo",
+        "requirement": "roster_delta"
+      },
+      {
+        "id": "trader",
+        "icon": "📈",
+        "kind": "good",
+        "name": "Mejor trader",
+        "requirement": "daily_value_snapshots"
+      },
+      {
+        "id": "negative",
+        "icon": "☠",
+        "kind": "bad",
+        "name": "No puntuó por estar en negativo",
+        "requirement": "negative_balance_status"
+      }
+    ],
+    "counts": {
+      "Rodando Nazário": {
+        "winner": 1
+      },
+      "Don Manuel Ruíz de Lopera": {
+        "winner": 1
+      },
+      "Heung Min Dad": {
+        "efficient": 1
+      },
+      "Mikel Poyarzabal": {},
+      "Peter LIM": {
+        "efficient": 1
+      },
+      "Olivito": {},
+      "Alex Ballena": {
+        "loser": 2,
+        "inefficient": 2
+      }
+    },
+    "byRound": [
+      {
+        "round": 1,
+        "awardId": "winner",
+        "teamName": "Don Manuel Ruíz de Lopera",
+        "value": "62 pts",
+        "provisional": false
+      },
+      {
+        "round": 1,
+        "awardId": "loser",
+        "teamName": "Alex Ballena",
+        "value": "18 pts",
+        "provisional": false
+      },
+      {
+        "round": 1,
+        "awardId": "efficient",
+        "teamName": "Peter LIM",
+        "value": "valor actual",
+        "provisional": true
+      },
+      {
+        "round": 1,
+        "awardId": "inefficient",
+        "teamName": "Alex Ballena",
+        "value": "valor actual",
+        "provisional": true
+      },
+      {
+        "round": 2,
+        "awardId": "winner",
+        "teamName": "Rodando Nazário",
+        "value": "75 pts",
+        "provisional": false
+      },
+      {
+        "round": 2,
+        "awardId": "loser",
+        "teamName": "Alex Ballena",
+        "value": "10 pts",
+        "provisional": false
+      },
+      {
+        "round": 2,
+        "awardId": "efficient",
+        "teamName": "Heung Min Dad",
+        "value": "valor actual",
+        "provisional": true
+      },
+      {
+        "round": 2,
+        "awardId": "inefficient",
+        "teamName": "Alex Ballena",
+        "value": "valor actual",
+        "provisional": true
+      }
+    ]
+  },
+  "charts": {
+    "availableViews": [
+      {
+        "id": "positions_race",
+        "name": "Carrera de clasificación",
+        "status": "available",
+        "needs": [
+          "round_points"
+        ]
+      },
+      {
+        "id": "wins_losses",
+        "name": "Ganadores y farolillos",
+        "status": "replaced",
+        "needs": [
+          "awards"
+        ],
+        "replacement": "Galardones ganador/perdedor"
+      },
+      {
+        "id": "volatility",
+        "name": "Regularidad / volatilidad",
+        "status": "available",
+        "needs": [
+          "round_points"
+        ]
+      },
+      {
+        "id": "goals",
+        "name": "Goles por equipo",
+        "status": "blocked",
+        "needs": [
+          "player_round_events"
+        ]
+      },
+      {
+        "id": "goal_dependence",
+        "name": "Dependencia de goles",
+        "status": "blocked",
+        "needs": [
+          "player_round_events"
+        ]
+      },
+      {
+        "id": "point_dependence",
+        "name": "Dependencia de puntos",
+        "status": "blocked",
+        "needs": [
+          "player_round_points"
+        ]
+      },
+      {
+        "id": "discipline",
+        "name": "Disciplina",
+        "status": "blocked",
+        "needs": [
+          "player_round_events"
+        ]
+      },
+      {
+        "id": "position_points",
+        "name": "Puntos por posición",
+        "status": "blocked",
+        "needs": [
+          "lineup_positions"
+        ]
+      },
+      {
+        "id": "position_dependence",
+        "name": "Dependencia por posición",
+        "status": "blocked",
+        "needs": [
+          "lineup_positions"
+        ]
+      },
+      {
+        "id": "profit",
+        "name": "Beneficio trading",
+        "status": "partial",
+        "needs": [
+          "market_history"
+        ]
+      },
+      {
+        "id": "roi",
+        "name": "Rentabilidad trading",
+        "status": "partial",
+        "needs": [
+          "market_history"
+        ]
+      },
+      {
+        "id": "signing_points",
+        "name": "Puntos por fichajes",
+        "status": "blocked",
+        "needs": [
+          "ownership_periods",
+          "player_round_points"
+        ]
+      },
+      {
+        "id": "first_round_signing",
+        "name": "Primera jornada tras fichar",
+        "status": "blocked",
+        "needs": [
+          "ownership_periods",
+          "player_round_points"
+        ]
+      },
+      {
+        "id": "trading_activity",
+        "name": "Actividad de mercado",
+        "status": "partial",
+        "needs": [
+          "market_history"
+        ]
+      },
+      {
+        "id": "market_volume",
+        "name": "Volumen de mercado",
+        "status": "partial",
+        "needs": [
+          "market_history"
+        ]
+      },
+      {
+        "id": "loyalty",
+        "name": "Fidelidad de plantilla",
+        "status": "blocked",
+        "needs": [
+          "roster_snapshots"
+        ]
+      },
+      {
+        "id": "concentration",
+        "name": "Concentración de plantilla",
+        "status": "partial",
+        "needs": [
+          "current_roster"
+        ]
+      },
+      {
+        "id": "value_efficiency",
+        "name": "Valor por millón",
+        "status": "partial",
+        "needs": [
+          "team_value_snapshot"
+        ]
+      },
+      {
+        "id": "tables",
+        "name": "Tablas de operaciones y fichajes",
+        "status": "partial",
+        "needs": [
+          "market_history"
+        ]
+      },
+      {
+        "id": "team_profile",
+        "name": "Perfil individual de equipo",
+        "status": "partial",
+        "needs": [
+          "round_points",
+          "market_history",
+          "current_roster"
+        ]
+      }
+    ],
+    "volatility": [
+      {
+        "name": "Olivito",
+        "initials": "O",
+        "average": 21,
+        "volatility": 0,
+        "points": [
+          21,
+          21
+        ]
+      },
+      {
+        "name": "Mikel Poyarzabal",
+        "initials": "MP",
+        "average": 43,
+        "volatility": 4,
+        "points": [
+          39,
+          47
+        ]
+      },
+      {
+        "name": "Alex Ballena",
+        "initials": "AB",
+        "average": 14,
+        "volatility": 4,
+        "points": [
+          18,
+          10
+        ]
+      },
+      {
+        "name": "Don Manuel Ruíz de Lopera",
+        "initials": "DM",
+        "average": 57,
+        "volatility": 5,
+        "points": [
+          62,
+          52
+        ]
+      },
+      {
+        "name": "Peter LIM",
+        "initials": "PL",
+        "average": 40,
+        "volatility": 8,
+        "points": [
+          48,
+          32
+        ]
+      },
+      {
+        "name": "Heung Min Dad",
+        "initials": "HM",
+        "average": 62,
+        "volatility": 9,
+        "points": [
+          53,
+          71
+        ]
+      },
+      {
+        "name": "Rodando Nazário",
+        "initials": "RN",
+        "average": 63.5,
+        "volatility": 11.5,
+        "points": [
+          52,
+          75
+        ]
+      }
+    ],
+    "valueEfficiency": [
+      {
+        "round": 1,
+        "name": "Don Manuel Ruíz de Lopera",
+        "initials": "DM",
+        "points": 62,
+        "teamValue": 80337000,
+        "pointsPerMillion": 0.7717490073067204,
+        "provisional": true
+      },
+      {
+        "round": 1,
+        "name": "Heung Min Dad",
+        "initials": "HM",
+        "points": 53,
+        "teamValue": 61727000,
+        "pointsPerMillion": 0.8586194047985485,
+        "provisional": true
+      },
+      {
+        "round": 1,
+        "name": "Rodando Nazário",
+        "initials": "RN",
+        "points": 52,
+        "teamValue": 80094000,
+        "pointsPerMillion": 0.6492371463530352,
+        "provisional": true
+      },
+      {
+        "round": 1,
+        "name": "Peter LIM",
+        "initials": "PL",
+        "points": 48,
+        "teamValue": 53566000,
+        "pointsPerMillion": 0.8960908038681252,
+        "provisional": true
+      },
+      {
+        "round": 1,
+        "name": "Mikel Poyarzabal",
+        "initials": "MP",
+        "points": 39,
+        "teamValue": 72976000,
+        "pointsPerMillion": 0.5344222758167069,
+        "provisional": true
+      },
+      {
+        "round": 1,
+        "name": "Olivito",
+        "initials": "O",
+        "points": 21,
+        "teamValue": 62947000,
+        "pointsPerMillion": 0.3336139927240377,
+        "provisional": true
+      },
+      {
+        "round": 1,
+        "name": "Alex Ballena",
+        "initials": "AB",
+        "points": 18,
+        "teamValue": 59124000,
+        "pointsPerMillion": 0.30444489547391923,
+        "provisional": true
+      },
+      {
+        "round": 2,
+        "name": "Rodando Nazário",
+        "initials": "RN",
+        "points": 75,
+        "teamValue": 80094000,
+        "pointsPerMillion": 0.9363997303168777,
+        "provisional": true
+      },
+      {
+        "round": 2,
+        "name": "Heung Min Dad",
+        "initials": "HM",
+        "points": 71,
+        "teamValue": 61727000,
+        "pointsPerMillion": 1.1502259951074896,
+        "provisional": true
+      },
+      {
+        "round": 2,
+        "name": "Don Manuel Ruíz de Lopera",
+        "initials": "DM",
+        "points": 52,
+        "teamValue": 80337000,
+        "pointsPerMillion": 0.6472733609669268,
+        "provisional": true
+      },
+      {
+        "round": 2,
+        "name": "Mikel Poyarzabal",
+        "initials": "MP",
+        "points": 47,
+        "teamValue": 72976000,
+        "pointsPerMillion": 0.6440473580355185,
+        "provisional": true
+      },
+      {
+        "round": 2,
+        "name": "Peter LIM",
+        "initials": "PL",
+        "points": 32,
+        "teamValue": 53566000,
+        "pointsPerMillion": 0.5973938692454168,
+        "provisional": true
+      },
+      {
+        "round": 2,
+        "name": "Olivito",
+        "initials": "O",
+        "points": 21,
+        "teamValue": 62947000,
+        "pointsPerMillion": 0.3336139927240377,
+        "provisional": true
+      },
+      {
+        "round": 2,
+        "name": "Alex Ballena",
+        "initials": "AB",
+        "points": 10,
+        "teamValue": 59124000,
+        "pointsPerMillion": 0.16913605304106621,
+        "provisional": true
+      }
+    ]
+  },
+  "market": {
+    "playerCount": 44,
+    "averageValue": 3562295,
+    "trendCounts": {
+      "up": 23,
+      "down": 19,
+      "flat": 2
+    },
+    "topSellers": [
+      {
+        "seller": "Libre",
+        "count": 20
+      },
+      {
+        "seller": "Rodando Nazário",
+        "count": 5
+      },
+      {
+        "seller": "Olivito",
+        "count": 5
+      },
+      {
+        "seller": "Mikel Poyarzabal",
+        "count": 4
+      },
+      {
+        "seller": "Heung Min Dad",
+        "count": 4
+      },
+      {
+        "seller": "Don Manuel Ruíz de Lopera",
+        "count": 4
+      },
+      {
+        "seller": "Peter LIM",
+        "count": 1
+      },
+      {
+        "seller": "Alex Ballena",
+        "count": 1
+      }
+    ],
+    "historySnapshots": 2,
+    "latestPlayers": [
+      {
+        "playerId": "65704",
+        "name": "G. Mikautadze",
+        "href": "players/65704/georges-mikautadze",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/65704/georges-mikautadze",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/20.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/65704.png?version=20250901204540",
+        "positionId": 4,
+        "position": "forward",
+        "points": 17,
+        "marketValue": 14194000,
+        "valueTrend": "up",
+        "average": 5.7,
+        "streak": [
+          4,
+          10,
+          3
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/6.png?version=20260626093814",
+        "seller": "Rodando Nazário",
+        "expiresInText": "1d 2h",
+        "ownerId": "8769466",
+        "askingPrice": 14000000,
+        "bidLabel": "14.000.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "59789",
+        "name": "O. Óskarsson",
+        "href": "players/59789/orri-oskarsson",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/59789/orri-oskarsson",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/16.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/59789.png?version=20251004234219",
+        "positionId": 4,
+        "position": "forward",
+        "points": 2,
+        "marketValue": 5032000,
+        "valueTrend": "down",
+        "average": 1,
+        "streak": [
+          1,
+          1
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/8.png?version=20221205131749",
+        "seller": "Olivito",
+        "expiresInText": "1d 2h",
+        "ownerId": "10359824",
+        "askingPrice": 0,
+        "bidLabel": "En venta",
+        "isAlreadyForSaleByUser": true
+      },
+      {
+        "playerId": "4886",
+        "name": "A. Villalibre",
+        "href": "players/4886/asier-villalibre",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/4886/asier-villalibre",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/1490.png?version=20260619162046",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/4886.png?version=20260619115232",
+        "positionId": 4,
+        "position": "forward",
+        "points": 7,
+        "marketValue": 3618000,
+        "valueTrend": "up",
+        "average": 2.3,
+        "streak": [
+          2,
+          2,
+          3
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/14.png?version=20221205131749",
+        "seller": "Mikel Poyarzabal",
+        "expiresInText": "1d 2h",
+        "ownerId": "13365280",
+        "askingPrice": 3618000,
+        "bidLabel": "3.618.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "3060",
+        "name": "M. Díaz",
+        "href": "players/3060/mariano-diaz",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/3060/mariano-diaz",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/48.png?version=20221205134308",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/3060.png?version=20231221112719",
+        "positionId": 4,
+        "position": "forward",
+        "points": 25,
+        "marketValue": 1403000,
+        "valueTrend": "up",
+        "average": 8.3,
+        "streak": [
+          13,
+          10,
+          2
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/50.png?version=20221205131749",
+        "seller": "Heung Min Dad",
+        "expiresInText": "1d 2h",
+        "ownerId": "8771310",
+        "askingPrice": 1162000,
+        "bidLabel": "1.162.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "71794",
+        "name": "U. Konare",
+        "href": "players/71794/umaru-konare",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/71794/umaru-konare",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/23.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/71794.png?version=20260805112002",
+        "positionId": 4,
+        "position": "forward",
+        "points": 2,
+        "marketValue": 380000,
+        "valueTrend": "down",
+        "average": 2,
+        "streak": [
+          2,
+          null,
+          null
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/16.png?version=20221205131749",
+        "seller": "Olivito",
+        "expiresInText": "1d 2h",
+        "ownerId": "10359824",
+        "askingPrice": 0,
+        "bidLabel": "En venta",
+        "isAlreadyForSaleByUser": true
+      },
+      {
+        "playerId": "71154",
+        "name": "L. Amatucci",
+        "href": "players/71154/lorenzo-amatucci",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/71154/lorenzo-amatucci",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/6.png?version=20260626093814",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/71154.png?version=20260709090853",
+        "positionId": 3,
+        "position": "midfielder",
+        "points": 10,
+        "marketValue": 5773000,
+        "valueTrend": "up",
+        "average": 5,
+        "streak": [
+          6,
+          4
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/19.png?version=20221205131749",
+        "seller": "Rodando Nazário",
+        "expiresInText": "1d 2h",
+        "ownerId": "8769466",
+        "askingPrice": 5469000,
+        "bidLabel": "5.469.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "3728",
+        "name": "M. Roca",
+        "href": "players/3728/marc-roca",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/3728/marc-roca",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/4.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/3728.png?version=20260809062618",
+        "positionId": 3,
+        "position": "midfielder",
+        "points": 4,
+        "marketValue": 5148000,
+        "valueTrend": "up",
+        "average": 4,
+        "streak": [
+          null,
+          4
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/12.png?version=20221205131749",
+        "seller": "Don Manuel Ruíz de Lopera",
+        "expiresInText": "1d 2h",
+        "ownerId": "8785696",
+        "askingPrice": 5148000,
+        "bidLabel": "5.148.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "68606",
+        "name": "Á. Pérez",
+        "href": "players/68606/angel-perez",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/68606/angel-perez",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/48.png?version=20221205134308",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/68606.png?version=20260323141026",
+        "positionId": 3,
+        "position": "midfielder",
+        "points": 17,
+        "marketValue": 4253000,
+        "valueTrend": "up",
+        "average": 5.7,
+        "streak": [
+          4,
+          5,
+          8
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/50.png?version=20221205131749",
+        "seller": "Rodando Nazário",
+        "expiresInText": "1d 2h",
+        "ownerId": "8769466",
+        "askingPrice": 3410000,
+        "bidLabel": "3.410.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "64468",
+        "name": "T. Dolan",
+        "href": "players/64468/tyrhys-dolan",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/64468/tyrhys-dolan",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/8.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/64468.png?version=20250725131445",
+        "positionId": 3,
+        "position": "midfielder",
+        "points": 12,
+        "marketValue": 3057000,
+        "valueTrend": "up",
+        "average": 6,
+        "streak": [
+          10,
+          2
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/16.png?version=20221205131749",
+        "seller": "Rodando Nazário",
+        "expiresInText": "1d 2h",
+        "ownerId": "8769466",
+        "askingPrice": 2827000,
+        "bidLabel": "2.827.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "71343",
+        "name": "J. Asp Jensen",
+        "href": "players/71343/jonathan-asp-jensen",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/71343/jonathan-asp-jensen",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/6.png?version=20260626093814",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/71343.png?version=20260714104654",
+        "positionId": 3,
+        "position": "midfielder",
+        "points": 4,
+        "marketValue": 1429000,
+        "valueTrend": "down",
+        "average": 2,
+        "streak": [
+          2,
+          2
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/19.png?version=20221205131749",
+        "seller": "Olivito",
+        "expiresInText": "1d 2h",
+        "ownerId": "10359824",
+        "askingPrice": 0,
+        "bidLabel": "En venta",
+        "isAlreadyForSaleByUser": true
+      },
+      {
+        "playerId": "68383",
+        "name": "T. Fernández",
+        "href": "players/68383/thiago-fernandez",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/68383/thiago-fernandez",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/12.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/68383.png?version=20260102114636",
+        "positionId": 3,
+        "position": "midfielder",
+        "points": 2,
+        "marketValue": 537000,
+        "valueTrend": "up",
+        "average": 2,
+        "streak": [
+          null,
+          2
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/4.png?version=20221205131749",
+        "seller": "Heung Min Dad",
+        "expiresInText": "1d 2h",
+        "ownerId": "8771310",
+        "askingPrice": 639000,
+        "bidLabel": "639.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "70922",
+        "name": "I. Konaté",
+        "href": "players/70922/ibrahima-konate",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/70922/ibrahima-konate",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/15.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/70922.png?version=20260618121720",
+        "positionId": 2,
+        "position": "defender",
+        "points": 9,
+        "marketValue": 10135000,
+        "valueTrend": "up",
+        "average": 4.5,
+        "streak": [
+          4,
+          5
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/13.png?version=20260621192402",
+        "seller": "Don Manuel Ruíz de Lopera",
+        "expiresInText": "1d 2h",
+        "ownerId": "8785696",
+        "askingPrice": 10065000,
+        "bidLabel": "10.065.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "68498",
+        "name": "Z. Romero",
+        "href": "players/68498/zaid-romero",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/68498/zaid-romero",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/9.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/68498.png?version=20260117124556",
+        "positionId": 2,
+        "position": "defender",
+        "points": 6,
+        "marketValue": 4912000,
+        "valueTrend": "down",
+        "average": 3,
+        "streak": [
+          2,
+          4
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/50.png?version=20221205131749",
+        "seller": "Mikel Poyarzabal",
+        "expiresInText": "1d 2h",
+        "ownerId": "13365280",
+        "askingPrice": 4930000,
+        "bidLabel": "4.930.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "56925",
+        "name": "J. Aramburu",
+        "href": "players/56925/jon-aramburu",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/56925/jon-aramburu",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/16.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/56925.png?version=20251004233907",
+        "positionId": 2,
+        "position": "defender",
+        "points": 5,
+        "marketValue": 4843000,
+        "valueTrend": "down",
+        "average": 2.5,
+        "streak": [
+          3,
+          2
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/8.png?version=20221205131749",
+        "seller": "Mikel Poyarzabal",
+        "expiresInText": "1d 2h",
+        "ownerId": "13365280",
+        "askingPrice": 4629000,
+        "bidLabel": "4.629.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "8953",
+        "name": "P. Maffeo",
+        "href": "players/8953/pablo-maffeo",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/8953/pablo-maffeo",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/19.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/8953.png?version=20251006031549",
+        "positionId": 2,
+        "position": "defender",
+        "points": 6,
+        "marketValue": 4196000,
+        "valueTrend": "up",
+        "average": 3,
+        "streak": [
+          4,
+          2
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/6.png?version=20260626093814",
+        "seller": "Mikel Poyarzabal",
+        "expiresInText": "1d 2h",
+        "ownerId": "13365280",
+        "askingPrice": 3964000,
+        "bidLabel": "3.964.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "71502",
+        "name": "A. García",
+        "href": "players/71502/andres-garcia",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/71502/andres-garcia",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/9.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/71502.png?version=20260716123021",
+        "positionId": 2,
+        "position": "defender",
+        "points": 10,
+        "marketValue": 3141000,
+        "valueTrend": "up",
+        "average": 5,
+        "streak": [
+          2,
+          8
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/50.png?version=20221205131749",
+        "seller": "Don Manuel Ruíz de Lopera",
+        "expiresInText": "1d 2h",
+        "ownerId": "8785696",
+        "askingPrice": 3031000,
+        "bidLabel": "3.031.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "5917",
+        "name": "I. Zubeldia",
+        "href": "players/5917/igor-zubeldia",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/5917/igor-zubeldia",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/16.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/5917.png?version=20251004233803",
+        "positionId": 2,
+        "position": "defender",
+        "points": 3,
+        "marketValue": 2103000,
+        "valueTrend": "up",
+        "average": 1.5,
+        "streak": [
+          1,
+          2
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/8.png?version=20221205131749",
+        "seller": "Heung Min Dad",
+        "expiresInText": "1d 2h",
+        "ownerId": "8771310",
+        "askingPrice": 1944000,
+        "bidLabel": "1.944.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "71037",
+        "name": "F. González",
+        "href": "players/71037/facundo-gonzalez",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/71037/facundo-gonzalez",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/1490.png?version=20260619162046",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/71037.png?version=20260701170617",
+        "positionId": 2,
+        "position": "defender",
+        "points": 7,
+        "marketValue": 1877000,
+        "valueTrend": "down",
+        "average": 2.3,
+        "streak": [
+          2,
+          1,
+          4
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/14.png?version=20221205131749",
+        "seller": "Olivito",
+        "expiresInText": "1d 2h",
+        "ownerId": "10359824",
+        "askingPrice": 0,
+        "bidLabel": "En venta",
+        "isAlreadyForSaleByUser": true
+      },
+      {
+        "playerId": "70938",
+        "name": "Á. Mantilla",
+        "href": "players/70938/alvaro-mantilla",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/70938/alvaro-mantilla",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/1490.png?version=20260619162046",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/70938.png?version=20260619115216",
+        "positionId": 2,
+        "position": "defender",
+        "points": 8,
+        "marketValue": 1796000,
+        "valueTrend": "up",
+        "average": 2.7,
+        "streak": [
+          2,
+          2,
+          4
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/14.png?version=20221205131749",
+        "seller": "Heung Min Dad",
+        "expiresInText": "1d 2h",
+        "ownerId": "8771310",
+        "askingPrice": 1720000,
+        "bidLabel": "1.720.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "53111",
+        "name": "Á. Valles",
+        "href": "players/53111/alvaro-valles",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/53111/alvaro-valles",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/4.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/53111.png?version=20251003194305",
+        "positionId": 1,
+        "position": "goalkeeper",
+        "points": 14,
+        "marketValue": 7464000,
+        "valueTrend": "up",
+        "average": 7,
+        "streak": [
+          8,
+          6
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/12.png?version=20221205131749",
+        "seller": "Don Manuel Ruíz de Lopera",
+        "expiresInText": "1d 2h",
+        "ownerId": "8785696",
+        "askingPrice": 6106000,
+        "bidLabel": "6.106.000",
+        "isAlreadyForSaleByUser": false
+      }
+    ]
+  },
+  "players": {
+    "searchTop": [
+      {
+        "playerId": "55009",
+        "name": "F. López",
+        "href": "https://mister.mundodeportivo.com/players/55009/fermin-lopez",
+        "points": 31,
+        "marketValue": 16555000,
+        "valueTrend": "up",
+        "average": 15.5,
+        "streak": [
+          13,
+          18
+        ]
+      },
+      {
+        "playerId": "48657",
+        "name": "Raphinha",
+        "href": "https://mister.mundodeportivo.com/players/48657/raphinha",
+        "points": 29,
+        "marketValue": 20038000,
+        "valueTrend": "down",
+        "average": 14.5,
+        "streak": [
+          12,
+          17
+        ]
+      },
+      {
+        "playerId": "3060",
+        "name": "M. Díaz",
+        "href": "https://mister.mundodeportivo.com/players/3060/mariano-diaz",
+        "points": 25,
+        "marketValue": 1403000,
+        "valueTrend": "up",
+        "average": 8.3,
+        "streak": [
+          13,
+          10,
+          2
+        ]
+      },
+      {
+        "playerId": "58954",
+        "name": "K. Mbappé",
+        "href": "https://mister.mundodeportivo.com/players/58954/kylian-mbappe",
+        "points": 24,
+        "marketValue": 24335000,
+        "valueTrend": "up",
+        "average": 12,
+        "streak": [
+          21,
+          3
+        ]
+      },
+      {
+        "playerId": "36048",
+        "name": "N. Tenaglia",
+        "href": "https://mister.mundodeportivo.com/players/36048/nahuel-tenaglia",
+        "points": 24,
+        "marketValue": 8505000,
+        "valueTrend": "up",
+        "average": 8,
+        "streak": [
+          13,
+          5,
+          6
+        ]
+      },
+      {
+        "playerId": "71616",
+        "name": "Y. Zabiri",
+        "href": "https://mister.mundodeportivo.com/players/71616/yassir-zabiri",
+        "points": 24,
+        "marketValue": 2410000,
+        "valueTrend": "down",
+        "average": 8,
+        "streak": [
+          2,
+          2,
+          20
+        ]
+      },
+      {
+        "playerId": "59382",
+        "name": "N. Pépé",
+        "href": "https://mister.mundodeportivo.com/players/59382/nicolas-pepe",
+        "points": 22,
+        "marketValue": 14512000,
+        "valueTrend": "up",
+        "average": 7.3,
+        "streak": [
+          10,
+          6,
+          6
+        ]
+      },
+      {
+        "playerId": "36410",
+        "name": "P. Aubameyang",
+        "href": "https://mister.mundodeportivo.com/players/36410/pierre-emerick-aubameyang",
+        "points": 21,
+        "marketValue": 4525000,
+        "valueTrend": "up",
+        "average": 10.5,
+        "streak": [
+          11,
+          10
+        ]
+      },
+      {
+        "playerId": "53114",
+        "name": "J. Bellingham",
+        "href": "https://mister.mundodeportivo.com/players/53114/jude-bellingham",
+        "points": 20,
+        "marketValue": 19074000,
+        "valueTrend": "up",
+        "average": 10,
+        "streak": [
+          9,
+          11
+        ]
+      },
+      {
+        "playerId": "60888",
+        "name": "R. Fernández",
+        "href": "https://mister.mundodeportivo.com/players/60888/roberto-fernandez",
+        "points": 20,
+        "marketValue": 6656000,
+        "valueTrend": "up",
+        "average": 10,
+        "streak": [
+          16,
+          4
+        ]
+      },
+      {
+        "playerId": "52162",
+        "name": "P. Gueye",
+        "href": "https://mister.mundodeportivo.com/players/52162/pape-gueye",
+        "points": 20,
+        "marketValue": 11365000,
+        "valueTrend": "up",
+        "average": 6.7,
+        "streak": [
+          11,
+          6,
+          3
+        ]
+      },
+      {
+        "playerId": "15653",
+        "name": "K. Lee",
+        "href": "https://mister.mundodeportivo.com/players/15653/kang-in-lee",
+        "points": 18,
+        "marketValue": 9830000,
+        "valueTrend": "up",
+        "average": 9,
+        "streak": [
+          14,
+          4
+        ]
+      },
+      {
+        "playerId": "22604",
+        "name": "I. Vicente",
+        "href": "https://mister.mundodeportivo.com/players/22604/inigo-vicente",
+        "points": 18,
+        "marketValue": 6086000,
+        "valueTrend": "up",
+        "average": 6,
+        "streak": [
+          4,
+          5,
+          9
+        ]
+      },
+      {
+        "playerId": "65704",
+        "name": "G. Mikautadze",
+        "href": "https://mister.mundodeportivo.com/players/65704/georges-mikautadze",
+        "points": 17,
+        "marketValue": 14194000,
+        "valueTrend": "up",
+        "average": 5.7,
+        "streak": [
+          4,
+          10,
+          3
+        ]
+      },
+      {
+        "playerId": "7893",
+        "name": "A. Sivera",
+        "href": "https://mister.mundodeportivo.com/players/7893/antonio-sivera",
+        "points": 17,
+        "marketValue": 8606000,
+        "valueTrend": "up",
+        "average": 5.7,
+        "streak": [
+          5,
+          4,
+          8
+        ]
+      },
+      {
+        "playerId": "68606",
+        "name": "Á. Pérez",
+        "href": "https://mister.mundodeportivo.com/players/68606/angel-perez",
+        "points": 17,
+        "marketValue": 4253000,
+        "valueTrend": "up",
+        "average": 5.7,
+        "streak": [
+          4,
+          5,
+          8
+        ]
+      },
+      {
+        "playerId": "71503",
+        "name": "M. Rodriguez",
+        "href": "https://mister.mundodeportivo.com/players/71503/mikel-rodriguez",
+        "points": 17,
+        "marketValue": 966000,
+        "valueTrend": "up",
+        "average": 5.7,
+        "streak": [
+          10,
+          3,
+          4
+        ]
+      },
+      {
+        "playerId": "476",
+        "name": "G. Moreno",
+        "href": "https://mister.mundodeportivo.com/players/476/gerard-moreno",
+        "points": 16,
+        "marketValue": 13179000,
+        "valueTrend": "flat",
+        "average": 5.3,
+        "streak": [
+          4,
+          9,
+          3
+        ]
+      },
+      {
+        "playerId": "63871",
+        "name": "M. Aguado",
+        "href": "https://mister.mundodeportivo.com/players/63871/marc-aguado",
+        "points": 16,
+        "marketValue": 3002000,
+        "valueTrend": "up",
+        "average": 5.3,
+        "streak": [
+          13,
+          2,
+          1
+        ]
+      },
+      {
+        "playerId": "22547",
+        "name": "Pedri",
+        "href": "https://mister.mundodeportivo.com/players/22547/pedri",
+        "points": 15,
+        "marketValue": 22218000,
+        "valueTrend": "down",
+        "average": 7.5,
+        "streak": [
+          10,
+          5
+        ]
+      },
+      {
+        "playerId": "70638",
+        "name": "A. Gordon",
+        "href": "https://mister.mundodeportivo.com/players/70638/anthony-gordon",
+        "points": 15,
+        "marketValue": 13876000,
+        "valueTrend": "up",
+        "average": 7.5,
+        "streak": [
+          6,
+          9
+        ]
+      },
+      {
+        "playerId": "54817",
+        "name": "A. Güler",
+        "href": "https://mister.mundodeportivo.com/players/54817/arda-guler",
+        "points": 15,
+        "marketValue": 12765000,
+        "valueTrend": "up",
+        "average": 7.5,
+        "streak": [
+          8,
+          7
+        ]
+      },
+      {
+        "playerId": "22502",
+        "name": "A. Baena",
+        "href": "https://mister.mundodeportivo.com/players/22502/alex-baena",
+        "points": 15,
+        "marketValue": 10910000,
+        "valueTrend": "up",
+        "average": 7.5,
+        "streak": [
+          12,
+          3
+        ]
+      },
+      {
+        "playerId": "63780",
+        "name": "C. Espí",
+        "href": "https://mister.mundodeportivo.com/players/63780/carlos-espi",
+        "points": 15,
+        "marketValue": 8960000,
+        "valueTrend": "up",
+        "average": 7.5,
+        "streak": [
+          2,
+          13
+        ]
+      },
+      {
+        "playerId": "71061",
+        "name": "Á. Calatrava",
+        "href": "https://mister.mundodeportivo.com/players/71061/alex-calatrava",
+        "points": 15,
+        "marketValue": 5074000,
+        "valueTrend": "up",
+        "average": 7.5,
+        "streak": [
+          5,
+          10
+        ]
+      },
+      {
+        "playerId": "70932",
+        "name": "S. Martinez",
+        "href": "https://mister.mundodeportivo.com/players/70932/sergio-martinez",
+        "points": 15,
+        "marketValue": 926000,
+        "valueTrend": "up",
+        "average": 7.5,
+        "streak": [
+          11,
+          4
+        ]
+      },
+      {
+        "playerId": "71574",
+        "name": "K. Adeyemi",
+        "href": "https://mister.mundodeportivo.com/players/71574/karim-adeyemi",
+        "points": 14,
+        "marketValue": 10672000,
+        "valueTrend": "up",
+        "average": 7,
+        "streak": [
+          3,
+          11
+        ]
+      },
+      {
+        "playerId": "609",
+        "name": "D. Soria",
+        "href": "https://mister.mundodeportivo.com/players/609/david-soria",
+        "points": 14,
+        "marketValue": 10102000,
+        "valueTrend": "down",
+        "average": 7,
+        "streak": [
+          4,
+          10
+        ]
+      },
+      {
+        "playerId": "53111",
+        "name": "Á. Valles",
+        "href": "https://mister.mundodeportivo.com/players/53111/alvaro-valles",
+        "points": 14,
+        "marketValue": 7464000,
+        "valueTrend": "up",
+        "average": 7,
+        "streak": [
+          8,
+          6
+        ]
+      },
+      {
+        "playerId": "68248",
+        "name": "Oso",
+        "href": "https://mister.mundodeportivo.com/players/68248/oso",
+        "points": 14,
+        "marketValue": 5548000,
+        "valueTrend": "up",
+        "average": 7,
+        "streak": [
+          3,
+          11
+        ]
+      },
+      {
+        "playerId": "19727",
+        "name": "R. Riquelme",
+        "href": "https://mister.mundodeportivo.com/players/19727/rodrigo-riquelme",
+        "points": 14,
+        "marketValue": 2535000,
+        "valueTrend": "up",
+        "average": 7,
+        "streak": [
+          2,
+          12
+        ]
+      },
+      {
+        "playerId": "58467",
+        "name": "C. Ejuke",
+        "href": "https://mister.mundodeportivo.com/players/58467/chidera-ejuke",
+        "points": 14,
+        "marketValue": 1632000,
+        "valueTrend": "up",
+        "average": 7,
+        "streak": [
+          2,
+          12
+        ]
+      },
+      {
+        "playerId": "59042",
+        "name": "P. Fernández",
+        "href": "https://mister.mundodeportivo.com/players/59042/peque-fernandez",
+        "points": 14,
+        "marketValue": 1507000,
+        "valueTrend": "up",
+        "average": 7,
+        "streak": [
+          10,
+          4
+        ]
+      },
+      {
+        "playerId": "69889",
+        "name": "X. Espart",
+        "href": "https://mister.mundodeportivo.com/players/69889/xavi-espart",
+        "points": 14,
+        "marketValue": 1347000,
+        "valueTrend": "up",
+        "average": 7,
+        "streak": [
+          6,
+          8
+        ]
+      },
+      {
+        "playerId": "66706",
+        "name": "J. Hernandez",
+        "href": "https://mister.mundodeportivo.com/players/66706/javi-hernandez",
+        "points": 14,
+        "marketValue": 1007000,
+        "valueTrend": "up",
+        "average": 7,
+        "streak": [
+          8,
+          6
+        ]
+      },
+      {
+        "playerId": "27516",
+        "name": "A. Martín",
+        "href": "https://mister.mundodeportivo.com/players/27516/andres-martin",
+        "points": 14,
+        "marketValue": 6923000,
+        "valueTrend": "up",
+        "average": 4.7,
+        "streak": [
+          9,
+          1,
+          4
+        ]
+      },
+      {
+        "playerId": "12900",
+        "name": "V. Júnior",
+        "href": "https://mister.mundodeportivo.com/players/12900/vinicius-junior",
+        "points": 13,
+        "marketValue": 20447000,
+        "valueTrend": "down",
+        "average": 6.5,
+        "streak": [
+          10,
+          3
+        ]
+      },
+      {
+        "playerId": "18004",
+        "name": "A. Budimir",
+        "href": "https://mister.mundodeportivo.com/players/18004/ante-budimir",
+        "points": 13,
+        "marketValue": 16112000,
+        "valueTrend": "down",
+        "average": 6.5,
+        "streak": [
+          7,
+          6
+        ]
+      },
+      {
+        "playerId": "27333",
+        "name": "E. García",
+        "href": "https://mister.mundodeportivo.com/players/27333/eric-garcia",
+        "points": 13,
+        "marketValue": 15455000,
+        "valueTrend": "down",
+        "average": 6.5,
+        "streak": [
+          5,
+          8
+        ]
+      },
+      {
+        "playerId": "30444",
+        "name": "L. Román",
+        "href": "https://mister.mundodeportivo.com/players/30444/leo-roman",
+        "points": 13,
+        "marketValue": 10090000,
+        "valueTrend": "up",
+        "average": 6.5,
+        "streak": [
+          8,
+          5
+        ]
+      },
+      {
+        "playerId": "29222",
+        "name": "G. Simeone",
+        "href": "https://mister.mundodeportivo.com/players/29222/giuliano-simeone",
+        "points": 13,
+        "marketValue": 10066000,
+        "valueTrend": "up",
+        "average": 6.5,
+        "streak": [
+          3,
+          10
+        ]
+      },
+      {
+        "playerId": "20346",
+        "name": "G. Rodríguez",
+        "href": "https://mister.mundodeportivo.com/players/20346/guido-rodriguez",
+        "points": 13,
+        "marketValue": 9333000,
+        "valueTrend": "up",
+        "average": 6.5,
+        "streak": [
+          6,
+          7
+        ]
+      },
+      {
+        "playerId": "28612",
+        "name": "M. Ryan",
+        "href": "https://mister.mundodeportivo.com/players/28612/mathew-ryan",
+        "points": 13,
+        "marketValue": 8987000,
+        "valueTrend": "up",
+        "average": 6.5,
+        "streak": [
+          4,
+          9
+        ]
+      },
+      {
+        "playerId": "59484",
+        "name": "M. Bernal",
+        "href": "https://mister.mundodeportivo.com/players/59484/marc-bernal",
+        "points": 13,
+        "marketValue": 8675000,
+        "valueTrend": "up",
+        "average": 6.5,
+        "streak": [
+          7,
+          6
+        ]
+      },
+      {
+        "playerId": "17290",
+        "name": "S. Camello",
+        "href": "https://mister.mundodeportivo.com/players/17290/sergio-camello",
+        "points": 13,
+        "marketValue": 5268000,
+        "valueTrend": "up",
+        "average": 6.5,
+        "streak": [
+          2,
+          11
+        ]
+      },
+      {
+        "playerId": "25867",
+        "name": "A. Blanco",
+        "href": "https://mister.mundodeportivo.com/players/25867/antonio-blanco",
+        "points": 13,
+        "marketValue": 7144000,
+        "valueTrend": "down",
+        "average": 4.3,
+        "streak": [
+          3,
+          3,
+          7
+        ]
+      },
+      {
+        "playerId": "35434",
+        "name": "M. Pubill",
+        "href": "https://mister.mundodeportivo.com/players/35434/marc-pubill",
+        "points": 12,
+        "marketValue": 10200000,
+        "valueTrend": "up",
+        "average": 12,
+        "streak": [
+          12
+        ]
+      },
+      {
+        "playerId": "61013",
+        "name": "A. Santos",
+        "href": "https://mister.mundodeportivo.com/players/61013/antony-santos",
+        "points": 12,
+        "marketValue": 14740000,
+        "valueTrend": "up",
+        "average": 6,
+        "streak": [
+          6,
+          6
+        ]
+      },
+      {
+        "playerId": "51135",
+        "name": "P. Barrios",
+        "href": "https://mister.mundodeportivo.com/players/51135/pablo-barrios",
+        "points": 12,
+        "marketValue": 9891000,
+        "valueTrend": "up",
+        "average": 6,
+        "streak": [
+          7,
+          5
+        ]
+      },
+      {
+        "playerId": "31",
+        "name": "J. Oblak",
+        "href": "https://mister.mundodeportivo.com/players/31/jan-oblak",
+        "points": 12,
+        "marketValue": 8989000,
+        "valueTrend": "up",
+        "average": 6,
+        "streak": [
+          5,
+          7
+        ]
+      }
+    ],
+    "mySquad": [
+      {
+        "playerId": "71794",
+        "name": "U. Konare",
+        "href": "https://mister.mundodeportivo.com/players/71794/umaru-konare",
+        "points": null,
+        "marketValue": null,
+        "valueTrend": "flat",
+        "average": null,
+        "streak": []
+      },
+      {
+        "playerId": "62910",
+        "name": "F. González",
+        "href": "https://mister.mundodeportivo.com/players/62910/fran-gonzalez",
+        "points": null,
+        "marketValue": null,
+        "valueTrend": "flat",
+        "average": null,
+        "streak": []
+      },
+      {
+        "playerId": "62910",
+        "name": "F. González",
+        "href": "https://mister.mundodeportivo.com/players/62910/fran-gonzalez",
+        "points": 0,
+        "marketValue": 351000,
+        "valueTrend": "down",
+        "average": 0,
+        "streak": []
+      },
+      {
+        "playerId": "28612",
+        "name": "M. Ryan",
+        "href": "https://mister.mundodeportivo.com/players/28612/mathew-ryan",
+        "points": 13,
+        "marketValue": 8987000,
+        "valueTrend": "up",
+        "average": 6.5,
+        "streak": [
+          4,
+          9
+        ]
+      },
+      {
+        "playerId": "71037",
+        "name": "F. González",
+        "href": "https://mister.mundodeportivo.com/players/71037/facundo-gonzalez",
+        "points": 7,
+        "marketValue": 1877000,
+        "valueTrend": "down",
+        "average": 2.3,
+        "streak": [
+          2,
+          1,
+          4
+        ]
+      },
+      {
+        "playerId": "31496",
+        "name": "H. Bellerín",
+        "href": "https://mister.mundodeportivo.com/players/31496/hector-bellerin",
+        "points": 7,
+        "marketValue": 4885000,
+        "valueTrend": "up",
+        "average": 3.5,
+        "streak": [
+          4,
+          3
+        ]
+      },
+      {
+        "playerId": "15693",
+        "name": "J. Galán",
+        "href": "https://mister.mundodeportivo.com/players/15693/javi-galan",
+        "points": 5,
+        "marketValue": 3656000,
+        "valueTrend": "up",
+        "average": 2.5,
+        "streak": [
+          1,
+          4
+        ]
+      },
+      {
+        "playerId": "58467",
+        "name": "C. Ejuke",
+        "href": "https://mister.mundodeportivo.com/players/58467/chidera-ejuke",
+        "points": 14,
+        "marketValue": 1632000,
+        "valueTrend": "up",
+        "average": 7,
+        "streak": [
+          2,
+          12
+        ]
+      },
+      {
+        "playerId": "340",
+        "name": "Isco",
+        "href": "https://mister.mundodeportivo.com/players/340/isco",
+        "points": 4,
+        "marketValue": 11496000,
+        "valueTrend": "down",
+        "average": 2,
+        "streak": [
+          2,
+          2
+        ]
+      },
+      {
+        "playerId": "71343",
+        "name": "J. Asp Jensen",
+        "href": "https://mister.mundodeportivo.com/players/71343/jonathan-asp-jensen",
+        "points": 4,
+        "marketValue": 1429000,
+        "valueTrend": "down",
+        "average": 2,
+        "streak": [
+          2,
+          2
+        ]
+      },
+      {
+        "playerId": "51135",
+        "name": "P. Barrios",
+        "href": "https://mister.mundodeportivo.com/players/51135/pablo-barrios",
+        "points": 12,
+        "marketValue": 9891000,
+        "valueTrend": "up",
+        "average": 6,
+        "streak": [
+          7,
+          5
+        ]
+      },
+      {
+        "playerId": "29169",
+        "name": "P. Ibáñez",
+        "href": "https://mister.mundodeportivo.com/players/29169/pablo-ibanez",
+        "points": 10,
+        "marketValue": 2597000,
+        "valueTrend": "up",
+        "average": 3.3,
+        "streak": [
+          2,
+          5,
+          3
+        ]
+      },
+      {
+        "playerId": "24789",
+        "name": "N. Williams",
+        "href": "https://mister.mundodeportivo.com/players/24789/nico-williams",
+        "points": 6,
+        "marketValue": 10734000,
+        "valueTrend": "down",
+        "average": 3,
+        "streak": [
+          2,
+          4
+        ]
+      },
+      {
+        "playerId": "59789",
+        "name": "O. Óskarsson",
+        "href": "https://mister.mundodeportivo.com/players/59789/orri-oskarsson",
+        "points": 2,
+        "marketValue": 5032000,
+        "valueTrend": "down",
+        "average": 1,
+        "streak": [
+          1,
+          1
+        ]
+      },
+      {
+        "playerId": "71794",
+        "name": "U. Konare",
+        "href": "https://mister.mundodeportivo.com/players/71794/umaru-konare",
+        "points": 2,
+        "marketValue": 380000,
+        "valueTrend": "down",
+        "average": 2,
+        "streak": [
+          2
+        ]
+      }
+    ]
+  },
+  "calendar": {
+    "updatedAt": "2026-08-29T09:14:39.125Z",
+    "scrapedAt": "2026-08-29T09:14:39.126Z",
+    "source": "https://www.laliga.com/laliga-easports/calendario",
+    "fallbackSource": "https://as.com/resultados/futbol/primera/calendario/",
+    "status": "as-calendar-dates",
+    "timezone": "Europe/Madrid",
+    "policy": "La cuenta atrás acaba 24h antes del primer partido de cada jornada. Si no hay hora oficial, se usa 19:00.",
+    "rounds": [
+      {
+        "round": 1,
+        "firstKickoffLocal": "2026-08-15T19:30:00",
+        "start": {
+          "year": 2026,
+          "month": 8,
+          "day": 15,
+          "hour": 19,
+          "minute": 30
+        },
+        "date": "2026-08-15",
+        "kickoffTime": "19:30",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 1,
+            "date": "2026-08-15",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "firstKickoffLocal": "2026-08-20T21:00:00",
+        "start": {
+          "year": 2026,
+          "month": 8,
+          "day": 20,
+          "hour": 21,
+          "minute": 0
+        },
+        "date": "2026-08-20",
+        "kickoffTime": "21:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 2,
+            "date": "2026-08-20",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "firstKickoffLocal": "2026-08-28T19:00:00",
+        "start": {
+          "year": 2026,
+          "month": 8,
+          "day": 28,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2026-08-28",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 3,
+            "date": "2026-08-28",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "firstKickoffLocal": "2026-09-04T21:00:00",
+        "start": {
+          "year": 2026,
+          "month": 9,
+          "day": 4,
+          "hour": 21,
+          "minute": 0
+        },
+        "date": "2026-09-04",
+        "kickoffTime": "21:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 4,
+            "date": "2026-09-04",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 5,
+        "firstKickoffLocal": "2026-09-13T19:00:00",
+        "start": {
+          "year": 2026,
+          "month": 9,
+          "day": 13,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2026-09-13",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 5,
+            "date": "2026-09-13",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 6,
+        "firstKickoffLocal": "2026-09-03T19:00:00",
+        "start": {
+          "year": 2026,
+          "month": 9,
+          "day": 3,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2026-09-03",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 6,
+            "date": "2026-09-03",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 7,
+        "firstKickoffLocal": "2026-09-20T19:00:00",
+        "start": {
+          "year": 2026,
+          "month": 9,
+          "day": 20,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2026-09-20",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 7,
+            "date": "2026-09-20",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 8,
+        "firstKickoffLocal": "2026-10-11T19:00:00",
+        "start": {
+          "year": 2026,
+          "month": 10,
+          "day": 11,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2026-10-11",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 8,
+            "date": "2026-10-11",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 9,
+        "firstKickoffLocal": "2026-10-18T19:00:00",
+        "start": {
+          "year": 2026,
+          "month": 10,
+          "day": 18,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2026-10-18",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 9,
+            "date": "2026-10-18",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 10,
+        "firstKickoffLocal": "2026-10-25T19:00:00",
+        "start": {
+          "year": 2026,
+          "month": 10,
+          "day": 25,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2026-10-25",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 10,
+            "date": "2026-10-25",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 11,
+        "firstKickoffLocal": "2026-11-01T19:00:00",
+        "start": {
+          "year": 2026,
+          "month": 11,
+          "day": 1,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2026-11-01",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 11,
+            "date": "2026-11-01",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 12,
+        "firstKickoffLocal": "2026-11-08T19:00:00",
+        "start": {
+          "year": 2026,
+          "month": 11,
+          "day": 8,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2026-11-08",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 12,
+            "date": "2026-11-08",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 13,
+        "firstKickoffLocal": "2026-11-22T19:00:00",
+        "start": {
+          "year": 2026,
+          "month": 11,
+          "day": 22,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2026-11-22",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 13,
+            "date": "2026-11-22",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 14,
+        "firstKickoffLocal": "2026-11-29T19:00:00",
+        "start": {
+          "year": 2026,
+          "month": 11,
+          "day": 29,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2026-11-29",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 14,
+            "date": "2026-11-29",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 15,
+        "firstKickoffLocal": "2026-12-06T19:00:00",
+        "start": {
+          "year": 2026,
+          "month": 12,
+          "day": 6,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2026-12-06",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 15,
+            "date": "2026-12-06",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 16,
+        "firstKickoffLocal": "2026-12-13T19:00:00",
+        "start": {
+          "year": 2026,
+          "month": 12,
+          "day": 13,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2026-12-13",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 16,
+            "date": "2026-12-13",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 17,
+        "firstKickoffLocal": "2026-12-20T19:00:00",
+        "start": {
+          "year": 2026,
+          "month": 12,
+          "day": 20,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2026-12-20",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 17,
+            "date": "2026-12-20",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 18,
+        "firstKickoffLocal": "2027-01-03T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 1,
+          "day": 3,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-01-03",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 18,
+            "date": "2027-01-03",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 19,
+        "firstKickoffLocal": "2027-01-10T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 1,
+          "day": 10,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-01-10",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 19,
+            "date": "2027-01-10",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 20,
+        "firstKickoffLocal": "2027-01-17T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 1,
+          "day": 17,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-01-17",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 20,
+            "date": "2027-01-17",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 21,
+        "firstKickoffLocal": "2027-01-24T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 1,
+          "day": 24,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-01-24",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 21,
+            "date": "2027-01-24",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 22,
+        "firstKickoffLocal": "2027-01-31T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 1,
+          "day": 31,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-01-31",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 22,
+            "date": "2027-01-31",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 23,
+        "firstKickoffLocal": "2027-02-07T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 2,
+          "day": 7,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-02-07",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 23,
+            "date": "2027-02-07",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 24,
+        "firstKickoffLocal": "2027-02-14T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 2,
+          "day": 14,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-02-14",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 24,
+            "date": "2027-02-14",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 25,
+        "firstKickoffLocal": "2027-02-21T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 2,
+          "day": 21,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-02-21",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 25,
+            "date": "2027-02-21",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 26,
+        "firstKickoffLocal": "2027-02-28T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 2,
+          "day": 28,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-02-28",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 26,
+            "date": "2027-02-28",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 27,
+        "firstKickoffLocal": "2027-03-07T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 3,
+          "day": 7,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-03-07",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 27,
+            "date": "2027-03-07",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 28,
+        "firstKickoffLocal": "2027-03-14T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 3,
+          "day": 14,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-03-14",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 28,
+            "date": "2027-03-14",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 29,
+        "firstKickoffLocal": "2027-03-21T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 3,
+          "day": 21,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-03-21",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 29,
+            "date": "2027-03-21",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 30,
+        "firstKickoffLocal": "2027-04-04T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 4,
+          "day": 4,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-04-04",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 30,
+            "date": "2027-04-04",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 31,
+        "firstKickoffLocal": "2027-04-11T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 4,
+          "day": 11,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-04-11",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 31,
+            "date": "2027-04-11",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 32,
+        "firstKickoffLocal": "2027-04-18T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 4,
+          "day": 18,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-04-18",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 32,
+            "date": "2027-04-18",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 33,
+        "firstKickoffLocal": "2027-04-21T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 4,
+          "day": 21,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-04-21",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 33,
+            "date": "2027-04-21",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 34,
+        "firstKickoffLocal": "2027-05-02T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 5,
+          "day": 2,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-05-02",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 34,
+            "date": "2027-05-02",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 35,
+        "firstKickoffLocal": "2027-05-09T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 5,
+          "day": 9,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-05-09",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 35,
+            "date": "2027-05-09",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 36,
+        "firstKickoffLocal": "2027-05-16T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 5,
+          "day": 16,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-05-16",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 36,
+            "date": "2027-05-16",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 37,
+        "firstKickoffLocal": "2027-05-23T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 5,
+          "day": 23,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-05-23",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 37,
+            "date": "2027-05-23",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      },
+      {
+        "round": 38,
+        "firstKickoffLocal": "2027-05-30T19:00:00",
+        "start": {
+          "year": 2027,
+          "month": 5,
+          "day": 30,
+          "hour": 19,
+          "minute": 0
+        },
+        "date": "2027-05-30",
+        "kickoffTime": "19:00",
+        "confidence": "as-calendar-date",
+        "matches": [
+          {
+            "round": 38,
+            "date": "2027-05-30",
+            "kickoffTime": null,
+            "home": null,
+            "away": null,
+            "source": "as-calendar"
+          }
+        ]
+      }
+    ]
+  },
+  "pig": {
+    "updatedAt": "2026-08-29T00:00:00.000Z",
+    "note": "Histórico inicial editable. Las automatizaciones semanales podrán actualizar este archivo con las víctimas reales y las dos tarjetas de cada jornada.",
+    "rounds": [
+      {
+        "round": 1,
+        "status": "closed",
+        "victims": [
+          "Alex Ballena",
+          "Olivito"
+        ],
+        "cards": [
+          "img/img2.jpg",
+          "img/img6.jpg"
+        ]
+      },
+      {
+        "round": 2,
+        "status": "closed",
+        "victims": [
+          "Alex Ballena",
+          "Peter LIM"
+        ],
+        "cards": [
+          "img/img4.jpg",
+          "img/img1.jpg"
+        ]
+      },
+      {
+        "round": 3,
+        "status": "in_progress",
+        "victims": [],
+        "cards": [
+          "img/img3.jpg",
+          "img/img7.jpg"
+        ]
+      }
+    ]
+  }
+}

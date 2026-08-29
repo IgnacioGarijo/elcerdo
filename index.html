@@ -2,37 +2,154 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>Página con cuenta atrás</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#03040a">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="El Cerdo">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>El Cerdo Cyborg</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/icons/moneda-192.png">
+  <link rel="apple-touch-icon" href="img/icons/moneda-192.png">
+  <link rel="stylesheet" href="style.css?v=cyber-app-1">
 </head>
 <body>
-  <div id="container">
-    <!-- Imagen inicial -->
-    <picture>
-      <source srcset="img/cerdo-vertical.png" media="(max-width: 768px)">
-      <img id="main-image" src="img/cerdo-horizontal.png" alt="Cerdo">
-    </picture>
+  <div class="app-bg" aria-hidden="true"></div>
 
-    <!-- Cuenta atrás -->
-    <div id="countdown"></div>
-
-    <!-- Contenedor para las imágenes aleatorias -->
-    <div id="random-images" class="hidden">
-      <img id="img1" alt="Imagen aleatoria 1">
-      <img id="img2" alt="Imagen aleatoria 2">
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Manicomio 26/27</p>
+      <h1>El Cerdo Cyborg</h1>
     </div>
-  </div>
+    <div class="sync-pill" id="sync-status">Leyendo datos</div>
+  </header>
+
+  <main class="app-shell">
+    <section class="main-tab active" id="tab-cerdo" data-tab-panel="cerdo">
+      <article class="pig-stage">
+        <picture>
+          <source srcset="img/cerdo-cyborg-vertical.png" media="(max-width: 760px)">
+          <img id="main-image" src="img/cerdo-cyborg.png" alt="Cerdo cyborg">
+        </picture>
+        <div class="countdown-card">
+          <span id="round-label">Próxima sentencia</span>
+          <strong id="countdown">Calculando...</strong>
+        </div>
+        <div id="random-images" class="card-reveal hidden" aria-live="polite">
+          <img id="img1" alt="Primera tarjeta del cerdo">
+          <img id="img2" alt="Segunda tarjeta del cerdo">
+        </div>
+      </article>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Víctimas favoritas</p>
+            <h2>Veces que ha tocado el cerdo</h2>
+          </div>
+        </div>
+        <div id="victim-chart" class="victim-chart"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head compact-head">
+          <div>
+            <p class="eyebrow">Histórico</p>
+            <h2>Tarjetas por jornada</h2>
+          </div>
+          <select id="pig-round-select" class="neon-select" aria-label="Elegir jornada del cerdo"></select>
+        </div>
+        <div id="pig-round-detail" class="round-card-detail"></div>
+      </section>
+    </section>
+
+    <section class="main-tab" id="tab-general" data-tab-panel="general">
+      <section class="panel">
+        <div class="section-head compact-head">
+          <div>
+            <p class="eyebrow">General cerrada</p>
+            <h2>Clasificación animada</h2>
+          </div>
+          <button id="race-play" class="icon-button" type="button" aria-label="Reproducir evolución" title="Reproducir evolución">▶</button>
+        </div>
+        <div id="race-chart" class="race-chart"></div>
+        <div class="race-controls">
+          <span>J0</span>
+          <input id="race-range" type="range" min="0" max="0" value="0" aria-label="Jornada de clasificación general">
+          <span id="race-round-label">J0</span>
+        </div>
+        <p id="closed-round-note" class="data-note"></p>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Galardones</p>
+            <h2>Vitrina de la temporada</h2>
+          </div>
+        </div>
+        <div id="award-grid" class="award-grid"></div>
+        <div id="award-detail" class="award-detail">Toca un icono para ver qué desbloquea.</div>
+      </section>
+
+      <section class="panel">
+        <div class="subtabs" role="tablist" aria-label="Vistas de análisis general">
+          <button class="subtab active" type="button" data-subtab="summary">Resumen</button>
+          <button class="subtab" type="button" data-subtab="players">Jugadores</button>
+          <button class="subtab" type="button" data-subtab="market">Mercado</button>
+          <button class="subtab" type="button" data-subtab="management">Plantilla</button>
+          <button class="subtab" type="button" data-subtab="pending">Pendiente</button>
+        </div>
+        <div id="general-subtab" class="subtab-content"></div>
+      </section>
+    </section>
+
+    <section class="main-tab" id="tab-jornada" data-tab-panel="jornada">
+      <section class="panel">
+        <div class="section-head compact-head">
+          <div>
+            <p class="eyebrow">Jornada</p>
+            <h2>Clasificación y botín</h2>
+          </div>
+          <select id="round-select" class="neon-select" aria-label="Elegir jornada"></select>
+        </div>
+        <div id="round-status" class="round-status"></div>
+        <div id="round-standings" class="standing-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Galardones jornada</p>
+            <h2>Quién se llevó cada cosa</h2>
+          </div>
+        </div>
+        <div id="round-awards" class="round-awards"></div>
+      </section>
+    </section>
+  </main>
+
+  <nav class="app-tabs" aria-label="Pestañas principales">
+    <button class="tab-button active" type="button" data-tab="cerdo">
+      <span>◉</span>
+      <strong>Cerdo</strong>
+    </button>
+    <button class="tab-button" type="button" data-tab="general">
+      <span>▰</span>
+      <strong>General</strong>
+    </button>
+    <button class="tab-button" type="button" data-tab="jornada">
+      <span>◇</span>
+      <strong>Jornada</strong>
+    </button>
+  </nav>
 
   <audio id="evil-laugh" src="risa.mp3" preload="auto"></audio>
-
-  <!-- Contenedor donde nacerán las monedas -->
   <div id="coin-container"></div>
-
-  <script src="script.js"></script>
+  <script src="script.js?v=cyber-app-1"></script>
 </body>
 </html>
-

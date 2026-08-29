@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
+import { spawn } from "node:child_process";
 import { chromium } from "playwright";
 
 const ROOT = process.cwd();
@@ -59,6 +60,21 @@ async function writeJson(filePath, data) {
 async function appendJsonl(filePath, data) {
   await fs.mkdir(path.dirname(filePath), { recursive: true });
   await fs.appendFile(filePath, `${JSON.stringify(data)}\n`, "utf8");
+}
+
+async function runNodeScript(scriptPath) {
+  await new Promise((resolve, reject) => {
+    const child = spawn(process.execPath, [scriptPath], {
+      cwd: ROOT,
+      stdio: "inherit",
+      env: process.env
+    });
+    child.on("exit", (code) => {
+      if (code === 0) resolve();
+      else reject(new Error(`${path.basename(scriptPath)} termino con codigo ${code}`));
+    });
+    child.on("error", reject);
+  });
 }
 
 async function storageStateFromEnv() {
@@ -326,6 +342,7 @@ async function main() {
       ]))
     });
 
+    await runNodeScript(path.join(ROOT, "scripts", "build-mister-dashboard-data.mjs"));
     console.log(`Scraping Mister completado: ${Object.keys(results).join(", ")}`);
   } finally {
     await browser.close();

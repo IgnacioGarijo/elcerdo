@@ -40,8 +40,14 @@ jobs:
           MISTER_EMAIL: ${{ secrets.MISTER_EMAIL }}
           MISTER_PASSWORD: ${{ secrets.MISTER_PASSWORD }}
 
+      - name: Update LaLiga calendar
+        run: pnpm run calendar:laliga
+
+      - name: Build dashboard data
+        run: pnpm run build:data
+
       - name: Commit data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Actualizar mercado Mister"
-          file_pattern: data/mister/**
+          commit_message: "Actualizar mercado y calendario Mister"
+          file_pattern: data/mister/** data/laliga/**
