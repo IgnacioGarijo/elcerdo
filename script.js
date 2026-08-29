@@ -1,5 +1,6 @@
 const els = {
   countdown: document.getElementById("countdown"),
+  countdownCard: document.querySelector(".countdown-card"),
   roundLabel: document.getElementById("round-label"),
   randomContainer: document.getElementById("random-images"),
   img1: document.getElementById("img1"),
@@ -9,6 +10,7 @@ const els = {
   coinContainer: document.getElementById("coin-container"),
   syncStatus: document.getElementById("sync-status"),
   victimChart: document.getElementById("victim-chart"),
+  pigAccuracy: document.getElementById("pig-accuracy"),
   pigRoundSelect: document.getElementById("pig-round-select"),
   pigRoundDetail: document.getElementById("pig-round-detail"),
   raceChart: document.getElementById("race-chart"),
@@ -32,8 +34,19 @@ const images = [
   "img/img4.jpg",
   "img/img5.jpg",
   "img/img6.jpg",
-  "img/img7.jpg"
+  "img/img7.jpeg"
 ];
+
+const cardTeams = new Map([
+  ["img/img1.jpg", "Peter LIM"],
+  ["img/img2.jpg", "Rodando Nazário"],
+  ["img/img3.jpg", "Alex Ballena"],
+  ["img/img4.jpg", "Mikel Poyarzabal"],
+  ["img/img5.jpg", "Heung Min Dad"],
+  ["img/img6.jpg", "Don Manuel Ruíz de Lopera"],
+  ["img/img7.jpg", "Olivito"],
+  ["img/img7.jpeg", "Olivito"]
+]);
 
 const jornadaSchedule = [
   { round: 1, start: { year: 2026, month: 8, day: 15, hour: 19, minute: 30 }, status: "confirmed" },
@@ -338,6 +351,8 @@ function renderPigHistory() {
     </div>
   `).join("");
 
+  renderPigAccuracy();
+
   els.pigRoundSelect.innerHTML = (state.pigHistory.rounds || [])
     .map(round => `<option value="${round.round}">J${round.round}</option>`)
     .join("");
@@ -346,16 +361,87 @@ function renderPigHistory() {
   renderPigRoundDetail();
 }
 
+function renderPigAccuracy() {
+  const results = buildPigAccuracy();
+  if (!results.rounds.length) {
+    els.pigAccuracy.innerHTML = `<p class="mini-copy">Todavía no hay jornadas cerradas con tarjetas suficientes para medir al cerdo.</p>`;
+    return;
+  }
+
+  const pct = Math.round((results.correct / Math.max(1, results.total)) * 100);
+  els.pigAccuracy.innerHTML = `
+    <div class="metric-grid">
+      <div class="metric"><strong>${pct}%</strong><span>puntería total</span></div>
+      <div class="metric"><strong>${results.correct}/${results.total}</strong><span>tarjetas acertadas</span></div>
+    </div>
+    <div class="pig-accuracy-list">
+      ${results.rounds.map(round => `
+        <div class="pig-accuracy-round">
+          <div>
+            <strong>J${round.round}</strong>
+            <span>Diana: ${round.targets.map(escapeHtml).join(" / ")}</span>
+          </div>
+          <div class="pig-predictions">
+            ${round.predictions.map(prediction => `
+              <span class="prediction-chip ${prediction.hit ? "hit" : "miss"}" title="${escapeAttr(prediction.team)}">
+                ${prediction.hit ? "✓" : "×"} ${escapeHtml(teamInitials(prediction.team))}
+              </span>
+            `).join("")}
+          </div>
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
+function buildPigAccuracy() {
+  const closedByRound = new Map(state.closedRounds.map(round => [round.round, round]));
+  const rounds = [];
+  let total = 0;
+  let correct = 0;
+
+  for (const pigRound of state.pigHistory.rounds || []) {
+    const closed = closedByRound.get(pigRound.round);
+    if (!closed?.rows?.length || pigRound.status !== "closed") continue;
+
+    const ordered = closed.rows.slice().sort((a, b) => a.rank - b.rank);
+    const targets = ordered.slice(-2).map(row => row.name);
+    const predictions = (pigRound.cards || []).slice(0, 2)
+      .map(card => {
+        const team = cardTeams.get(card) || "Sin asignar";
+        const hit = targets.some(target => sameTeam(target, team));
+        total += 1;
+        if (hit) correct += 1;
+        return { card, team, hit };
+      });
+
+    if (predictions.length) rounds.push({ round: pigRound.round, targets, predictions });
+  }
+
+  return { rounds, total, correct };
+}
+
 function renderPigRoundDetail() {
   const round = (state.pigHistory.rounds || []).find(item => String(item.round) === els.pigRoundSelect.value);
   if (!round) {
     els.pigRoundDetail.innerHTML = `<p class="mini-copy">Todavía no hay histórico del cerdo.</p>`;
     return;
   }
+  const accuracy = buildPigAccuracy().rounds.find(item => item.round === round.round);
   els.pigRoundDetail.innerHTML = `
     <p class="mini-copy">J${round.round} · ${round.status === "closed" ? "cerrada" : "en curso"} · Víctimas: ${(round.victims || []).join(", ") || "pendiente"}</p>
     <div class="round-card-images">
-      ${(round.cards || []).slice(0, 2).map(card => `<img src="${card}" alt="Tarjeta de la jornada ${round.round}">`).join("")}
+      ${(round.cards || []).slice(0, 2).map((card, index) => {
+        const prediction = accuracy?.predictions?.[index];
+        const team = prediction?.team || cardTeams.get(card) || "Sin asignar";
+        const verdict = prediction ? (prediction.hit ? "Diana" : "Falló") : "Pendiente";
+        return `
+          <figure class="pig-card-result ${prediction?.hit ? "hit" : prediction ? "miss" : ""}">
+            <img src="${card}" alt="Tarjeta de ${escapeAttr(team)} en la jornada ${round.round}">
+            <figcaption>${escapeHtml(team)} · ${verdict}</figcaption>
+          </figure>
+        `;
+      }).join("")}
     </div>
   `;
 }
@@ -852,27 +938,33 @@ function pickImages(roundEvent) {
 function setupEasterEgg() {
   let tapCount = 0;
   let tapTimer = null;
-  let lastTouchTime = 0;
+  let lastPoint = null;
+  const maxDistance = 34;
 
-  const register = () => {
+  const register = event => {
+    const point = { x: event.clientX, y: event.clientY };
+    const movedTooFar = lastPoint
+      && Math.hypot(point.x - lastPoint.x, point.y - lastPoint.y) > maxDistance;
+    if (movedTooFar) tapCount = 0;
+
+    lastPoint = point;
     tapCount += 1;
     clearTimeout(tapTimer);
-    tapTimer = setTimeout(() => { tapCount = 0; }, 2000);
+    tapTimer = setTimeout(() => {
+      tapCount = 0;
+      lastPoint = null;
+    }, 1800);
+
     if (tapCount >= 5) {
       triggerEasterEgg();
       tapCount = 0;
+      lastPoint = null;
     }
   };
 
-  document.body.addEventListener("touchstart", () => {
-    lastTouchTime = Date.now();
-    register();
-  });
-
-  document.body.addEventListener("click", event => {
-    if (event.target.closest("button, select, input")) return;
-    if (Date.now() - lastTouchTime < 700) return;
-    register();
+  els.countdownCard?.addEventListener("pointerdown", event => {
+    if (!event.isPrimary) return;
+    register(event);
   });
 }
 
@@ -937,6 +1029,23 @@ function formatMoney(value) {
 
 function initialsFor(name) {
   return name.split(/\s+/).map(part => part[0]).join("").slice(0, 2).toUpperCase();
+}
+
+function teamInitials(name) {
+  return state.teams.find(team => sameTeam(team.name, name))?.initials || initialsFor(name);
+}
+
+function sameTeam(a, b) {
+  return normalizeTeamName(a) === normalizeTeamName(b);
+}
+
+function normalizeTeamName(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
 }
 
 function escapeHtml(value) {

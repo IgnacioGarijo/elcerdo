@@ -1,4 +1,4 @@
-const CACHE_NAME = "el-cerdo-cyborg-v1";
+const CACHE_NAME = "el-cerdo-cyborg-v2";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
@@ -12,6 +12,15 @@ const STATIC_ASSETS = [
   "./img/moneda.png",
   "./img/cerdo-cyborg.png",
   "./img/cerdo-cyborg-vertical.png",
+  "./img/img1.jpg",
+  "./img/img2.jpg",
+  "./img/img3.jpg",
+  "./img/img4.jpg",
+  "./img/img5.jpg",
+  "./img/img6.jpg",
+  "./img/img7.jpeg",
+  "./data/cerdo/history.json",
+  "./data/mister/latest/dashboard.json",
   "./risa.mp3"
 ];
 
