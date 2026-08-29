@@ -1,67 +1,86 @@
 {
-  "communityId": "1263883",
-  "mode": "codex-browser-session",
-  "page": "standings",
-  "scrapedAt": "2026-08-28T23:50:40.594Z",
+  "scrapedAt": "2026-08-29T19:58:05.639Z",
   "source": "https://mister.mundodeportivo.com",
-  "text": "O\nOlivito\nignaciogarijo1@hotmail.com\nLigas oficiales\n🎲\nQuiniela\nTus ligas\nManicomio 26/27\nOtros\nAyuda\nX (Twitter)\nInstagram\nTikTok\nAñadir liga\n1,7M\n64\nInicio\nMercado\n1\nEquipo\nTabla\nBuscar\nGeneral\nJornada\nJ1\nJ2\nJ3\n1\nPL\nPeter LIM\n3 / 11 Jugadores · € 48.362.000\n26 PTS\n2\nDM\nDon Manuel Ruíz de Lopera\n3 / 11 Jugadores · € 71.372.000\n25 PTS\n3\nMP\nMikel Poyarzabal\n4 / 11 Jugadores · € 58.850.000\n22 PTS\n4\nAB\nAlex Ballena\n4 / 11 Jugadores · € 58.478.000\n17 PTS\n5\nRN\nRodando Nazário\n3 / 11 Jugadores · € 80.094.000\n15 PTS\n6\nHM\nHeung Min Dad\n3 / 11 Jugadores · € 58.088.000\n10 PTS\n7\nO\nOlivito\n2 / 11 Jugadores · € 62.216.000\n7 PTS\nEvolución de la clasificación\nInvitar amigos",
+  "communityId": "1263883",
+  "page": "standings",
   "url": "https://mister.mundodeportivo.com/standings",
+  "text": "O\nOlivito\n[email-redacted]\nLigas oficiales\n🎲\nQuiniela\nTus ligas\nManicomio 26/27\nOtros\nAyuda\nX (Twitter)\nInstagram\nTikTok\nAñadir liga\n1,7M\n64\nInicio\nMercado\n5\nEquipo\nTabla\nBuscar\nGeneral\nJornada\nJ1\nJ2\nJ3\n1\nDM\nDon Manuel Ruíz de Lopera\n9 / 11 Jugadores · € 71.372.000\n42 PTS\n2\nMP\nMikel Poyarzabal\n7 / 11 Jugadores · € 58.850.000\n34 PTS\n3\nO\nOlivito\n7 / 11 Jugadores · € 62.216.000\n28 PTS\n4\nRN\nRodando Nazário\n6 / 11 Jugadores · € 80.094.000\n26 PTS\n5\nPL\nPeter LIM\n4 / 11 Jugadores · € 48.362.000\n24 PTS\n6\nHM\nHeung Min Dad\n8 / 11 Jugadores · € 58.088.000\n22 PTS\n7\nAB\nAlex Ballena\n5 / 11 Jugadores · € 58.478.000\n19 PTS\nEvolución de la clasificación\nInvitar amigos",
+  "gameweekLinks": [
+    {
+      "text": "J1",
+      "href": "https://mister.mundodeportivo.com/standings?gw=3968",
+      "gameweekId": "3968",
+      "round": 1
+    },
+    {
+      "text": "J2",
+      "href": "https://mister.mundodeportivo.com/standings?gw=4043",
+      "gameweekId": "4043",
+      "round": 2
+    },
+    {
+      "text": "J3",
+      "href": "https://mister.mundodeportivo.com/standings?gw=4044",
+      "gameweekId": "4044",
+      "round": 3
+    }
+  ],
   "users": [
     {
-      "href": "https://mister.mundodeportivo.com/users/8769466/rodando-nazario",
-      "text": "1 RN Rodando Nazário 11 jugadores · € 80.094.000 142 Pts +93"
+      "text": "1 DM Don Manuel Ruíz de Lopera 14 jugadores · € 81.870.000 156 Pts +86",
+      "href": "https://mister.mundodeportivo.com/users/8785696/don-manuel-ruiz-de-lopera"
     },
     {
-      "href": "https://mister.mundodeportivo.com/users/8785696/don-manuel-ruiz-de-lopera",
-      "text": "2 DM Don Manuel Ruíz de Lopera 14 jugadores · € 80.337.000 139 Pts +90"
+      "text": "2 RN Rodando Nazário 13 jugadores · € 85.319.000 153 Pts +83",
+      "href": "https://mister.mundodeportivo.com/users/8769466/rodando-nazario"
     },
     {
-      "href": "https://mister.mundodeportivo.com/users/8771310/heung-min-dad",
-      "text": "3 HM Heung Min Dad 13 jugadores · € 61.727.000 134 Pts +85"
+      "text": "3 HM Heung Min Dad 13 jugadores · € 62.654.000 146 Pts +76",
+      "href": "https://mister.mundodeportivo.com/users/8771310/heung-min-dad"
     },
     {
-      "href": "https://mister.mundodeportivo.com/users/13365280/mikel-poyarzabal",
-      "text": "4 MP Mikel Poyarzabal 16 jugadores · € 72.976.000 108 Pts +59"
+      "text": "4 MP Mikel Poyarzabal 17 jugadores · € 76.629.000 120 Pts +50",
+      "href": "https://mister.mundodeportivo.com/users/13365280/mikel-poyarzabal"
     },
     {
-      "href": "https://mister.mundodeportivo.com/users/12113243/peter-lim",
-      "text": "5 PL Peter LIM 14 jugadores · € 53.566.000 106 Pts +57"
+      "text": "5 PL Peter LIM 14 jugadores · € 53.857.000 104 Pts +34",
+      "href": "https://mister.mundodeportivo.com/users/12113243/peter-lim"
     },
     {
-      "href": "https://mister.mundodeportivo.com/users/10359824/olivito",
-      "text": "6 O Olivito 13 jugadores · € 62.947.000 49 Pts"
+      "text": "6 O Olivito 13 jugadores · € 63.239.000 70 Pts",
+      "href": "https://mister.mundodeportivo.com/users/10359824/olivito"
     },
     {
-      "href": "https://mister.mundodeportivo.com/users/15420188/alex-ballena",
-      "text": "7 AB Alex Ballena 14 jugadores · € 59.124.000 45 Pts -4"
+      "text": "7 AB Alex Ballena 14 jugadores · € 59.521.000 47 Pts -23",
+      "href": "https://mister.mundodeportivo.com/users/15420188/alex-ballena"
     },
     {
-      "href": "https://mister.mundodeportivo.com/users/12113243/peter-lim",
-      "text": "1 PL Peter LIM 3 / 11 Jugadores · € 48.362.000 26 PTS"
+      "text": "1 DM Don Manuel Ruíz de Lopera 9 / 11 Jugadores · € 71.372.000 42 PTS",
+      "href": "https://mister.mundodeportivo.com/users/8785696/don-manuel-ruiz-de-lopera"
     },
     {
-      "href": "https://mister.mundodeportivo.com/users/8785696/don-manuel-ruiz-de-lopera",
-      "text": "2 DM Don Manuel Ruíz de Lopera 3 / 11 Jugadores · € 71.372.000 25 PTS"
+      "text": "2 MP Mikel Poyarzabal 7 / 11 Jugadores · € 58.850.000 34 PTS",
+      "href": "https://mister.mundodeportivo.com/users/13365280/mikel-poyarzabal"
     },
     {
-      "href": "https://mister.mundodeportivo.com/users/13365280/mikel-poyarzabal",
-      "text": "3 MP Mikel Poyarzabal 4 / 11 Jugadores · € 58.850.000 22 PTS"
+      "text": "3 O Olivito 7 / 11 Jugadores · € 62.216.000 28 PTS",
+      "href": "https://mister.mundodeportivo.com/users/10359824/olivito"
     },
     {
-      "href": "https://mister.mundodeportivo.com/users/15420188/alex-ballena",
-      "text": "4 AB Alex Ballena 4 / 11 Jugadores · € 58.478.000 17 PTS"
+      "text": "4 RN Rodando Nazário 6 / 11 Jugadores · € 80.094.000 26 PTS",
+      "href": "https://mister.mundodeportivo.com/users/8769466/rodando-nazario"
     },
     {
-      "href": "https://mister.mundodeportivo.com/users/8769466/rodando-nazario",
-      "text": "5 RN Rodando Nazário 3 / 11 Jugadores · € 80.094.000 15 PTS"
+      "text": "5 PL Peter LIM 4 / 11 Jugadores · € 48.362.000 24 PTS",
+      "href": "https://mister.mundodeportivo.com/users/12113243/peter-lim"
     },
     {
-      "href": "https://mister.mundodeportivo.com/users/8771310/heung-min-dad",
-      "text": "6 HM Heung Min Dad 3 / 11 Jugadores · € 58.088.000 10 PTS"
+      "text": "6 HM Heung Min Dad 8 / 11 Jugadores · € 58.088.000 22 PTS",
+      "href": "https://mister.mundodeportivo.com/users/8771310/heung-min-dad"
     },
     {
-      "href": "https://mister.mundodeportivo.com/users/10359824/olivito",
-      "text": "7 O Olivito 2 / 11 Jugadores · € 62.216.000 7 PTS"
+      "text": "7 AB Alex Ballena 5 / 11 Jugadores · € 58.478.000 19 PTS",
+      "href": "https://mister.mundodeportivo.com/users/15420188/alex-ballena"
     }
   ]
 }

@@ -17,11 +17,13 @@ const els = {
   raceRange: document.getElementById("race-range"),
   raceRoundLabel: document.getElementById("race-round-label"),
   racePlay: document.getElementById("race-play"),
+  generalScoringSelect: document.getElementById("general-scoring-select"),
   closedRoundNote: document.getElementById("closed-round-note"),
   awardGrid: document.getElementById("award-grid"),
   awardDetail: document.getElementById("award-detail"),
   generalSubtab: document.getElementById("general-subtab"),
   roundSelect: document.getElementById("round-select"),
+  roundScoringSelect: document.getElementById("round-scoring-select"),
   roundStatus: document.getElementById("round-status"),
   roundStandings: document.getElementById("round-standings"),
   roundAwards: document.getElementById("round-awards")
@@ -38,8 +40,8 @@ const images = [
 ];
 
 const BUILD_VERSION = {
-  label: "web easter-v3",
-  updatedAt: "2026-08-29T14:18:00+02:00"
+  label: "web deep-v2",
+  updatedAt: "2026-08-30T00:42:00+02:00"
 };
 
 const cardTeams = new Map([
@@ -100,7 +102,6 @@ const awardDefs = [
   { id: "efficient", icon: "💎", kind: "good", name: "Mayor eficiencia de plantilla", desc: "Más puntos por millón de valor de equipo. En esta primera versión usa el valor actual hasta tener snapshot semanal." },
   { id: "inefficient", icon: "🧯", kind: "bad", name: "Menor eficiencia de plantilla", desc: "Menos puntos por millón de valor de equipo. En esta primera versión usa el valor actual hasta tener snapshot semanal." },
   { id: "goals", icon: "⚽", kind: "good", name: "Más goles", desc: "Se desbloqueará cuando el scraper guarde eventos de jugadores por jornada." },
-  { id: "assists", icon: "🎯", kind: "good", name: "Más asistencias", desc: "Se desbloqueará cuando el scraper guarde eventos de jugadores por jornada." },
   { id: "red", icon: "🟥", kind: "bad", name: "Recibió roja", desc: "Puede ganarlo más de un equipo en la misma jornada." },
   { id: "dnp", icon: "🧊", kind: "bad", name: "Más jugadores sin jugar", desc: "Necesita detalle de alineación y jugadores no utilizados." },
   { id: "dependency", icon: "🧲", kind: "bad", name: "Mayor dependencia", desc: "Mayor porcentaje de puntos concentrado en un solo jugador." },
@@ -110,6 +111,7 @@ const awardDefs = [
   { id: "directorGood", icon: "🧠", kind: "good", name: "Mejor director deportivo", desc: "Más puntos ganados por cambios de plantilla respecto a la jornada anterior." },
   { id: "directorBad", icon: "📉", kind: "bad", name: "Peor director deportivo", desc: "Más puntos perdidos por cambios de plantilla respecto a la jornada anterior." },
   { id: "trader", icon: "📈", kind: "good", name: "Mejor trader", desc: "Mayor aumento de valor de equipo entre jornadas." },
+  { id: "traderBad", icon: "💸", kind: "bad", name: "Peor trader", desc: "Mayor bajada de valor de equipo entre jornadas." },
   { id: "negative", icon: "☠", kind: "bad", name: "No puntuó por estar en negativo", desc: "Calavera para el equipo que no puntúe una jornada por saldo negativo." }
 ];
 
@@ -153,6 +155,8 @@ const state = {
   closedRounds: fallbackClosedRounds,
   liveRounds: [],
   selectedSubtab: "summary",
+  selectedScoringSystem: "final",
+  selectedRoundScoringSystem: "final",
   raceTimer: null,
   raceAnimationFrame: null,
   raceRowsReady: false
@@ -452,6 +456,7 @@ function renderPigRoundDetail() {
 
 function setupRace() {
   const latestClosed = latestClosedRound();
+  setupScoringSelects();
   els.raceRange.max = String(latestClosed);
   els.raceRange.value = String(latestClosed);
   els.raceRange.addEventListener("input", () => {
@@ -462,8 +467,42 @@ function setupRace() {
   els.closedRoundNote.textContent = `La general solo suma jornadas cerradas. Última computada: J${latestClosed}.`;
 }
 
+function setupScoringSelects() {
+  const systems = scoringSystems();
+  const options = systems.map(system => `<option value="${escapeAttr(system.id)}">${escapeHtml(system.name)}</option>`).join("");
+  if (els.generalScoringSelect) {
+    els.generalScoringSelect.innerHTML = options;
+    els.generalScoringSelect.value = state.selectedScoringSystem;
+    els.generalScoringSelect.addEventListener("change", () => {
+      state.selectedScoringSystem = els.generalScoringSelect.value;
+      state.raceRowsReady = false;
+      stopRaceAnimation();
+      renderRace(Number(els.raceRange.value));
+      renderGeneralSubtab();
+    });
+  }
+  if (els.roundScoringSelect) {
+    els.roundScoringSelect.innerHTML = options;
+    els.roundScoringSelect.value = state.selectedRoundScoringSystem;
+    els.roundScoringSelect.addEventListener("change", () => {
+      state.selectedRoundScoringSystem = els.roundScoringSelect.value;
+      renderRound();
+    });
+  }
+}
+
+function scoringSystems() {
+  return state.dashboard?.scoringSystems || [
+    { id: "final", name: "Mixto" },
+    { id: "as", name: "AS" },
+    { id: "marca", name: "Marca" },
+    { id: "mundoDeportivo", name: "Mundo Deportivo" },
+    { id: "sofascore", name: "Sofascore" }
+  ];
+}
+
 function renderRace(roundNumber) {
-  const standings = cumulativeStandings(roundNumber);
+  const standings = cumulativeStandings(roundNumber, state.selectedScoringSystem);
   renderRaceRows(standings, roundNumber);
 }
 
@@ -520,12 +559,18 @@ function playRace() {
   state.raceAnimationFrame = requestAnimationFrame(tick);
 }
 
-function cumulativeStandings(roundNumber) {
+function cumulativeStandings(roundNumber, system = state.selectedScoringSystem) {
+  const prebuilt = state.dashboard?.cumulativeBySystem?.[system]?.find(item => item.round === roundNumber)?.rows;
+  if (prebuilt?.length) return prebuilt;
+  const prebuiltFinal = system === "final" ? state.dashboard?.cumulative?.find(item => item.round === roundNumber)?.rows : null;
+  if (prebuiltFinal?.length) return prebuiltFinal;
+
   const totals = new Map(state.teams.map(team => [team.name, { ...team, points: 0 }]));
   state.closedRounds
     .filter(round => round.round <= roundNumber)
     .forEach(round => {
-      round.rows.forEach(row => {
+      const rows = round.rowsBySystem?.[system] || (system === "final" ? round.rows : []);
+      rows.forEach(row => {
         if (!totals.has(row.name)) totals.set(row.name, { name: row.name, initials: row.initials, points: 0 });
         totals.get(row.name).points += row.points;
       });
@@ -535,8 +580,8 @@ function cumulativeStandings(roundNumber) {
 }
 
 function interpolatedStandings(fromRound, toRound, t) {
-  const from = new Map(cumulativeStandings(fromRound).map(row => [row.name, row.points]));
-  const to = new Map(cumulativeStandings(toRound).map(row => [row.name, row.points]));
+  const from = new Map(cumulativeStandings(fromRound, state.selectedScoringSystem).map(row => [row.name, row.points]));
+  const to = new Map(cumulativeStandings(toRound, state.selectedScoringSystem).map(row => [row.name, row.points]));
   return state.teams.map(team => {
     const start = from.get(team.name) || 0;
     const end = to.get(team.name) || start;
@@ -630,17 +675,20 @@ function renderRound() {
   if (!round) return;
 
   const isClosed = round.status === "closed";
+  const system = state.selectedRoundScoringSystem;
+  const systemName = scoringSystems().find(item => item.id === system)?.name || system;
+  const rows = round.rowsBySystem?.[system]?.length ? round.rowsBySystem[system] : round.rows;
   els.roundStatus.textContent = isClosed
-    ? `J${round.round} cerrada y computada en la general.`
-    : `J${round.round} en juego: se muestra, pero no suma en la general ni desbloquea galardones hasta cerrar.`;
+    ? `J${round.round} cerrada · sistema ${systemName}.`
+    : `J${round.round} en juego · sistema ${systemName}. Se muestra, pero no suma en la general ni desbloquea galardones hasta cerrar.`;
 
-  els.roundStandings.innerHTML = [...round.rows]
+  els.roundStandings.innerHTML = [...rows]
     .sort((a, b) => b.points - a.points)
     .map((row, index) => `
       <div class="standing-row">
         <span class="standing-rank">${index + 1}</span>
-        <span class="standing-name">${escapeHtml(row.name)}${row.playedText ? `<br><span class="mini-copy">${row.playedText} jugadores</span>` : ""}</span>
-        <span class="standing-points">${row.points} pts</span>
+        <span class="standing-name">${escapeHtml(row.name)}${row.playedText ? `<br><span class="mini-copy">${row.playedText} jugadores</span>` : row.availablePlayers ? `<br><span class="mini-copy">${row.availablePlayers}/${row.totalLineupPlayers || 11} jugadores con dato</span>` : ""}</span>
+        <span class="standing-points">${Math.round(row.points)} pts</span>
       </div>
     `).join("");
 
@@ -704,12 +752,13 @@ function renderRoundAwards(round) {
 
 function renderGeneralSubtab() {
   const latest = latestClosedRound();
-  const standings = cumulativeStandings(latest);
+  const standings = cumulativeStandings(latest, state.selectedScoringSystem);
   const leader = standings[0];
   const last = standings.at(-1);
   const totalPoints = standings.reduce((sum, row) => sum + row.points, 0);
   const awards = buildAwardCounts();
   const unlocked = Array.from(awards.values()).reduce((sum, item) => sum + Object.values(item).reduce((a, b) => a + b, 0), 0);
+  const systemName = scoringSystems().find(item => item.id === state.selectedScoringSystem)?.name || state.selectedScoringSystem;
 
   if (state.selectedSubtab === "summary") {
     const volatility = state.dashboard?.charts?.volatility || [];
@@ -718,7 +767,7 @@ function renderGeneralSubtab() {
     els.generalSubtab.innerHTML = `
       <div class="metric-grid">
         <div class="metric"><strong>${latest}</strong><span>jornadas cerradas</span></div>
-        <div class="metric"><strong>${totalPoints}</strong><span>puntos computados</span></div>
+        <div class="metric"><strong>${Math.round(totalPoints)}</strong><span>puntos ${escapeHtml(systemName)}</span></div>
         <div class="metric"><strong>${escapeHtml(leader?.initials || "-")}</strong><span>líder provisional</span></div>
         <div class="metric"><strong>${unlocked}</strong><span>galardones activos</span></div>
       </div>
@@ -727,12 +776,17 @@ function renderGeneralSubtab() {
       </div>
       ${renderMiniBars(volatility.slice().reverse(), "volatility", "Volatilidad")}
       <p class="info-tile">La J3 aparece viva en la pestaña Jornada, pero no altera esta general hasta que Mister publique el cierre.</p>
+      <p class="info-tile">Selector activo: ${escapeHtml(systemName)}. AS, Marca, Mundo Deportivo y Sofascore dependen de los popups de puntuación por jugador.</p>
     `;
     return;
   }
 
   if (state.selectedSubtab === "players") {
     const topPlayers = state.dashboard?.players?.searchTop || [];
+    const profiles = state.dashboard?.players?.profiles || [];
+    const ownedProfiles = profiles.filter(player => player.owner?.managerName);
+    const topGoals = profiles.filter(player => Number.isFinite(player.goals)).sort((a, b) => (b.goals || 0) - (a.goals || 0)).slice(0, 8);
+    const topCards = profiles.filter(player => Number.isFinite(player.cards) && player.cards > 0).sort((a, b) => (b.cards || 0) - (a.cards || 0)).slice(0, 8);
     els.generalSubtab.innerHTML = `
       <div class="metric-grid">
         ${topPlayers.slice(0, 4).map(player => `
@@ -743,7 +797,9 @@ function renderGeneralSubtab() {
         `).join("")}
       </div>
       ${renderMiniBars(topPlayers.slice(0, 8), "points", "Top puntos")}
-      <p class="info-tile">Esta vista ya usa el buscador de Mister. Falta enlazar cada jugador con propietario histórico y jornada cerrada para convertirlo en gráficos de goles, asistencias y dependencia.</p>
+      ${renderMiniBars(topGoals, "goals", "Goles detectados", value => `${value} goles`)}
+      ${topCards.length ? renderMiniBars(topCards, "cards", "Tarjetas detectadas", value => `${value} tarjetas`) : ""}
+      <p class="info-tile">Perfiles profundos: ${profiles.length}. Con propietario o precio de fichaje visible: ${ownedProfiles.length}. Las asistencias se omiten porque Mister no las da en estas fichas.</p>
     `;
     return;
   }
@@ -776,16 +832,19 @@ function renderGeneralSubtab() {
 
   if (state.selectedSubtab === "management") {
     const squad = state.dashboard?.players?.mySquad || [];
+    const profiles = state.dashboard?.players?.profiles || [];
+    const signed = profiles.filter(player => player.owner?.signedPrice);
     const value = squad.reduce((sum, player) => sum + (player.marketValue || 0), 0);
     els.generalSubtab.innerHTML = `
       <div class="metric-grid">
         <div class="metric"><strong>${squad.length}</strong><span>jugadores leídos de tu plantilla</span></div>
         <div class="metric"><strong>${formatMoney(value)}</strong><span>valor identificado</span></div>
         <div class="metric"><strong>${squad.filter(player => player.valueTrend === "up").length}</strong><span>subiendo</span></div>
-        <div class="metric"><strong>${squad.filter(player => player.valueTrend === "down").length}</strong><span>bajando</span></div>
+        <div class="metric"><strong>${signed.length}</strong><span>fichajes con precio</span></div>
       </div>
       ${renderMiniBars(squad.filter(player => player.marketValue).slice(0, 8), "marketValue", "Valor plantilla visible", formatMoney)}
-      <p class="info-tile">Para fidelidad, concentración real por equipo y director deportivo hay que capturar plantilla de todos los usuarios cada semana, no solo tu equipo visible.</p>
+      ${renderMiniBars(signed.slice(0, 8).map(player => ({ name: `${player.name} · ${player.owner.managerName}`, signedPrice: player.owner.signedPrice })), "signedPrice", "Fichajes detectados", formatMoney)}
+      <p class="info-tile">El scraping profundo ya captura once, banquillo, propietario actual, cláusula, último movimiento e historial de valor de los jugadores abiertos. Director deportivo y banquillo serán cada vez más fiables según se acumulen semanas.</p>
     `;
     return;
   }

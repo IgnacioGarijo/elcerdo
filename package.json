@@ -10,7 +10,7 @@
     "calendar:laliga": "node scripts/update-laliga-calendar.mjs",
     "scrape:mister": "node scripts/scrape-mister.mjs --all",
     "scrape:mister:market": "node scripts/scrape-mister.mjs --market",
-    "scrape:mister:weekly": "node scripts/scrape-mister.mjs --feed --standings --team --search"
+    "scrape:mister:weekly": "node scripts/scrape-mister.mjs --feed --standings --team --search --deep"
   },
   "devDependencies": {
     "playwright": "1.62.1"

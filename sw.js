@@ -1,4 +1,4 @@
-const CACHE_NAME = "el-cerdo-cyborg-v6";
+const CACHE_NAME = "el-cerdo-cyborg-v7";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
@@ -21,6 +21,7 @@ const STATIC_ASSETS = [
   "./img/img7.jpeg",
   "./data/cerdo/history.json",
   "./data/mister/latest/dashboard.json",
+  "./data/mister/latest/deep.json",
   "./risa.mp3"
 ];
 
