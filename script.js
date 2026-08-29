@@ -37,6 +37,11 @@ const images = [
   "img/img7.jpeg"
 ];
 
+const BUILD_VERSION = {
+  label: "web f54025d+cerdo-sync",
+  updatedAt: "2026-08-29T13:26:15+02:00"
+};
+
 const cardTeams = new Map([
   ["img/img1.jpg", "Peter LIM"],
   ["img/img2.jpg", "Rodando Nazário"],
@@ -190,9 +195,7 @@ async function loadData() {
   state.pigHistory = dashboard?.pig || pigHistory || { rounds: [] };
 
   const scrapedAt = dashboard?.meta?.generatedAt || standings?.scrapedAt || feed?.scrapedAt || state.pigHistory.updatedAt;
-  els.syncStatus.textContent = scrapedAt
-    ? `Actualizado ${formatShortDate(scrapedAt)}`
-    : "Datos iniciales";
+  els.syncStatus.textContent = `Web ${formatShortDate(BUILD_VERSION.updatedAt)} · ${scrapedAt ? `Datos ${formatShortDate(scrapedAt)}` : "Datos iniciales"}`;
 }
 
 async function safeJson(url) {
@@ -427,11 +430,12 @@ function renderPigRoundDetail() {
     els.pigRoundDetail.innerHTML = `<p class="mini-copy">Todavía no hay histórico del cerdo.</p>`;
     return;
   }
+  const cards = cardsForRound(round.round);
   const accuracy = buildPigAccuracy().rounds.find(item => item.round === round.round);
   els.pigRoundDetail.innerHTML = `
     <p class="mini-copy">J${round.round} · ${round.status === "closed" ? "cerrada" : "en curso"} · Víctimas: ${(round.victims || []).join(", ") || "pendiente"}</p>
     <div class="round-card-images">
-      ${(round.cards || []).slice(0, 2).map((card, index) => {
+      ${cards.map((card, index) => {
         const prediction = accuracy?.predictions?.[index];
         const team = prediction?.team || cardTeams.get(card) || "Sin asignar";
         const verdict = prediction ? (prediction.hit ? "Diana" : "Falló") : "Pendiente";
@@ -891,7 +895,7 @@ function updateCountdown() {
     els.roundLabel.textContent = `J${currentState.event.round} · sentencia activa`;
     els.countdown.textContent = "Pagarán...";
     if (activeCardRound !== currentState.event.round) {
-      const [first, second] = pickImages(currentState.event);
+      const [first, second] = cardsForRound(currentState.event.round, currentState.event);
       els.img1.src = first;
       els.img2.src = second;
       activeCardRound = currentState.event.round;
@@ -933,6 +937,19 @@ function pickImages(roundEvent) {
   let r2 = Math.floor((simpleHash(`${dateStr}_b`) % 10000) / 10000 * images.length);
   if (r2 === r1) r2 = (r2 + 1) % images.length;
   return [images[r1], images[r2]];
+}
+
+function cardsForRound(roundNumber, roundEvent = null) {
+  const savedRound = (state.pigHistory.rounds || [])
+    .find(round => Number(round.round) === Number(roundNumber));
+  const savedCards = (savedRound?.cards || []).filter(Boolean).slice(0, 2);
+  if (savedCards.length === 2) return savedCards.map(normalizeCardPath);
+  if (!roundEvent) return savedCards.map(normalizeCardPath);
+  return pickImages(roundEvent);
+}
+
+function normalizeCardPath(card) {
+  return card === "img/img7.jpg" ? "img/img7.jpeg" : card;
 }
 
 function setupEasterEgg() {
