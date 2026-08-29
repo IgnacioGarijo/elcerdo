@@ -939,10 +939,16 @@ function setupEasterEgg() {
   let tapCount = 0;
   let tapTimer = null;
   let lastPoint = null;
+  let lastEventAt = 0;
   const maxDistance = 34;
 
   const register = event => {
-    const point = { x: event.clientX, y: event.clientY };
+    const now = Date.now();
+    if (now - lastEventAt < 80) return;
+    lastEventAt = now;
+
+    const point = eventPoint(event);
+    if (!point) return;
     const movedTooFar = lastPoint
       && Math.hypot(point.x - lastPoint.x, point.y - lastPoint.y) > maxDistance;
     if (movedTooFar) tapCount = 0;
@@ -966,6 +972,19 @@ function setupEasterEgg() {
     if (!event.isPrimary) return;
     register(event);
   });
+  els.countdownCard?.addEventListener("touchstart", event => {
+    register(event);
+  }, { passive: true });
+  els.countdownCard?.addEventListener("click", event => {
+    register(event);
+  });
+}
+
+function eventPoint(event) {
+  const touch = event.touches?.[0] || event.changedTouches?.[0];
+  const source = touch || event;
+  if (typeof source.clientX !== "number" || typeof source.clientY !== "number") return null;
+  return { x: source.clientX, y: source.clientY };
 }
 
 function triggerEasterEgg() {
