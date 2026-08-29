@@ -858,6 +858,31 @@ input[type="range"] { accent-color: var(--cyan); }
 
   .card-reveal { bottom: 170px; }
 
+  .award-team {
+    grid-template-columns: minmax(126px, 0.5fr) minmax(0, 2.5fr);
+    gap: 12px;
+  }
+
+  .award-icons {
+    flex-wrap: nowrap;
+    gap: 5px;
+  }
+
+  .award-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    font-size: 0.94rem;
+  }
+
+  .award-count {
+    right: -5px;
+    bottom: -6px;
+    min-width: 17px;
+    padding: 1px 3px;
+    font-size: 0.56rem;
+  }
+
   .app-tabs {
     width: min(520px, calc(100% - 20px));
     margin: 0 auto;

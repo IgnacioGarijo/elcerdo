@@ -38,8 +38,8 @@ const images = [
 ];
 
 const BUILD_VERSION = {
-  label: "web easter-v2",
-  updatedAt: "2026-08-29T13:42:00+02:00"
+  label: "web easter-v3",
+  updatedAt: "2026-08-29T14:18:00+02:00"
 };
 
 const cardTeams = new Map([
@@ -956,32 +956,61 @@ function setupEasterEgg() {
   let tapCount = 0;
   let tapTimer = null;
   let lastEventAt = 0;
+  let originPoint = null;
 
-  const register = event => {
+  const register = (event, dedupeMs = 0) => {
     const now = Date.now();
-    if (now - lastEventAt < 80) return;
+    const point = eventPoint(event);
+    if (!point) return;
+    if (dedupeMs && now - lastEventAt < dedupeMs) return;
     lastEventAt = now;
+
+    if (!originPoint || now - originPoint.at > 2400 || distanceBetween(point, originPoint) > 38) {
+      originPoint = { ...point, at: now };
+      tapCount = 0;
+    } else {
+      originPoint.at = now;
+    }
 
     tapCount += 1;
     clearTimeout(tapTimer);
-    tapTimer = setTimeout(() => { tapCount = 0; }, 2400);
+    tapTimer = setTimeout(() => {
+      tapCount = 0;
+      originPoint = null;
+    }, 2400);
 
     if (tapCount >= 5) {
       triggerEasterEgg();
       tapCount = 0;
+      originPoint = null;
     }
   };
 
-  els.countdownCard?.addEventListener("pointerdown", event => {
-    if (!event.isPrimary) return;
-    register(event);
-  });
-  els.countdownCard?.addEventListener("touchstart", event => {
-    register(event);
-  }, { passive: true });
-  els.countdownCard?.addEventListener("click", event => {
-    register(event);
-  });
+  if ("PointerEvent" in window) {
+    document.addEventListener("pointerdown", event => {
+      if (!event.isPrimary) return;
+      register(event);
+    });
+  } else {
+    document.addEventListener("touchstart", event => {
+      register(event, 120);
+    }, { passive: true });
+    document.addEventListener("click", event => {
+      register(event, 120);
+    });
+  }
+}
+
+function eventPoint(event) {
+  const touch = event.touches?.[0] || event.changedTouches?.[0];
+  const x = touch?.clientX ?? event.clientX;
+  const y = touch?.clientY ?? event.clientY;
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+  return { x, y };
+}
+
+function distanceBetween(point, origin) {
+  return Math.hypot(point.x - origin.x, point.y - origin.y);
 }
 
 function triggerEasterEgg() {
