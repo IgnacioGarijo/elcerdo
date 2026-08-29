@@ -1,0 +1,16 @@
+{
+  "name": "elcerdo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "auth:mister": "node scripts/export-mister-storage-state.mjs",
+    "scrape:mister": "node scripts/scrape-mister.mjs --all",
+    "scrape:mister:market": "node scripts/scrape-mister.mjs --market",
+    "scrape:mister:weekly": "node scripts/scrape-mister.mjs --feed --standings --team --search"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

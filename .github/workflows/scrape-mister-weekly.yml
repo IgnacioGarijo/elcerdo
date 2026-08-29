@@ -1,0 +1,47 @@
+name: Scrape Mister weekly data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 8 * * 2"
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-weekly:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.19.0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright browser
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Scrape weekly pages
+        run: pnpm run scrape:mister:weekly
+        env:
+          MISTER_COMMUNITY_ID: ${{ secrets.MISTER_COMMUNITY_ID }}
+          MISTER_STORAGE_STATE_BASE64: ${{ secrets.MISTER_STORAGE_STATE_BASE64 }}
+          MISTER_EMAIL: ${{ secrets.MISTER_EMAIL }}
+          MISTER_PASSWORD: ${{ secrets.MISTER_PASSWORD }}
+
+      - name: Commit data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Actualizar datos semanales Mister"
+          file_pattern: data/mister/**

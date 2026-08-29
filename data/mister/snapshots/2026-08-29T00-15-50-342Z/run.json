@@ -1,0 +1,10 @@
+{
+  "note": "Snapshot completo creado desde data/mister/latest antes del primer commit de scraping.",
+  "pages": [
+    "market",
+    "feed",
+    "standings",
+    "team",
+    "search"
+  ]
+}
