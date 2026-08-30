@@ -454,6 +454,37 @@ input[type="range"] { accent-color: var(--cyan); }
   filter: grayscale(0.8);
 }
 
+.award-tooltip {
+  position: fixed;
+  z-index: 12000;
+  display: grid;
+  gap: 5px;
+  padding: 10px 12px;
+  border: 1px solid rgba(102, 255, 241, 0.38);
+  border-radius: 8px;
+  background: rgba(4, 7, 16, 0.96);
+  color: var(--ink);
+  box-shadow: 0 0 26px rgba(102, 255, 241, 0.28), 0 0 20px rgba(255, 85, 223, 0.16);
+  backdrop-filter: blur(14px);
+  pointer-events: none;
+}
+
+.award-tooltip[hidden] {
+  display: none;
+}
+
+.award-tooltip strong {
+  color: var(--cyan);
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+.award-tooltip span {
+  color: #dce8f5;
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+
 .award-count {
   position: absolute;
   right: -4px;
@@ -763,8 +794,6 @@ th {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.04);
 }
-
-.round-award-card .award-icon { pointer-events: none; }
 
 .app-tabs {
   position: fixed;

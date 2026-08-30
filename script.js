@@ -40,8 +40,8 @@ const images = [
 ];
 
 const BUILD_VERSION = {
-  label: "web stats-v3",
-  updatedAt: "2026-08-30T10:07:52+02:00"
+  label: "web awards-tooltip-v1",
+  updatedAt: "2026-08-30T10:29:58+02:00"
 };
 
 const cardTeams = new Map([
@@ -170,6 +170,7 @@ async function init() {
   registerServiceWorker();
   setupTabs();
   setupStatsTabs();
+  setupAwardTooltips();
   setupEasterEgg();
   await loadData();
   normalizeData();
@@ -344,6 +345,49 @@ function setupStatsTabs() {
     });
   });
 }
+
+function setupAwardTooltips() {
+  const tooltip = document.createElement("div");
+  tooltip.className = "award-tooltip";
+  tooltip.setAttribute("role", "tooltip");
+  tooltip.hidden = true;
+  document.body.appendChild(tooltip);
+
+  const hide = () => {
+    tooltip.hidden = true;
+  };
+
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest(".award-icon[data-award]");
+    if (!button) {
+      hide();
+      return;
+    }
+
+    const def = awardDefs.find(item => item.id === button.dataset.award);
+    if (!def) return;
+    event.preventDefault();
+    event.stopPropagation();
+    tooltip.innerHTML = `<strong>${escapeHtml(def.name)}</strong><span>${escapeHtml(def.desc)}</span>`;
+
+    const rect = button.getBoundingClientRect();
+    tooltip.hidden = false;
+    const width = Math.min(300, window.innerWidth - 24);
+    tooltip.style.width = `${width}px`;
+    const left = Math.min(Math.max(12, rect.left + rect.width / 2 - width / 2), window.innerWidth - width - 12);
+    const topCandidate = rect.top - tooltip.offsetHeight - 10;
+    const top = topCandidate > 12 ? topCandidate : rect.bottom + 10;
+    tooltip.style.left = `${left}px`;
+    tooltip.style.top = `${top}px`;
+  });
+
+  window.addEventListener("scroll", hide, { passive: true });
+  window.addEventListener("resize", hide);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") hide();
+  });
+}
+
 
 function renderPigHistory() {
   const counts = new Map(state.teams.map(team => [team.name, 0]));
@@ -615,13 +659,6 @@ function renderAwards() {
     `;
   }).join("");
 
-  document.querySelectorAll(".award-icon").forEach(button => {
-    button.addEventListener("click", () => {
-      const def = awardDefs.find(item => item.id === button.dataset.award);
-      const count = Number(button.dataset.count);
-      els.awardDetail.textContent = `${button.dataset.team}: ${def.name}. ${def.desc} ${count ? `Desbloqueado ${count} vez/veces.` : "Bloqueado por ahora."}`;
-    });
-  });
 }
 
 function awardButton(def, team, count) {
@@ -714,7 +751,7 @@ function renderRoundAwards(round) {
   if (dashboardAwards.length) {
     els.roundAwards.innerHTML = dashboardAwards.map(item => `
       <div class="round-award-card">
-        <button class="award-icon ${item.def.kind === "bad" ? "bad" : ""}" type="button">${item.def.icon}</button>
+        <button class="award-icon ${item.def.kind === "bad" ? "bad" : ""}" type="button" data-award="${escapeAttr(item.def.id)}" title="${escapeAttr(item.def.name)}">${item.def.icon}</button>
         <div>
           <strong>${escapeHtml(item.def.name)}</strong>
           <p class="mini-copy">${escapeHtml(item.team)} · ${escapeHtml(item.value || "")}</p>
@@ -743,7 +780,7 @@ function renderRoundAwards(round) {
 
   els.roundAwards.innerHTML = details.map(item => `
     <div class="round-award-card">
-      <button class="award-icon ${item.def.kind === "bad" ? "bad" : ""}" type="button">${item.def.icon}</button>
+      <button class="award-icon ${item.def.kind === "bad" ? "bad" : ""}" type="button" data-award="${escapeAttr(item.def.id)}" title="${escapeAttr(item.def.name)}">${item.def.icon}</button>
       <div>
         <strong>${escapeHtml(item.def.name)}</strong>
         <p class="mini-copy">${escapeHtml(item.team)} · ${escapeHtml(item.value)}</p>
@@ -1039,7 +1076,7 @@ function setupStatsTeamSelector(stats) {
       <div class="award-icons profile-awards">
         ${awardDefs.map(def => {
           const count = awards[def.id] || 0;
-          return `<button class="award-icon ${def.kind === "bad" ? "bad" : ""} ${count ? "" : "locked"}" type="button" title="${escapeAttr(def.name)}">${def.icon}${count ? `<span class="award-count">x${count}</span>` : ""}</button>`;
+          return `<button class="award-icon ${def.kind === "bad" ? "bad" : ""} ${count ? "" : "locked"}" type="button" data-award="${escapeAttr(def.id)}" title="${escapeAttr(def.name)}">${def.icon}${count ? `<span class="award-count">x${count}</span>` : ""}</button>`;
         }).join("")}
       </div>
       ${statsTable("Jugadores destacados", bestPlayers, ["player_name", "position_name", "points", "goals", "assists"])}
