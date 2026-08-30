@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generatedAt": "2026-08-30T12:44:05.387Z",
+    "generatedAt": "2026-08-30T12:49:36.676Z",
     "sources": {
       "standings": "2026-08-30T07:57:30.287Z",
-      "feed": "2026-08-30T07:57:30.287Z",
-      "market": "2026-08-30T07:40:08.335Z",
+      "feed": "2026-08-30T12:49:02.962Z",
+      "market": "2026-08-30T12:49:02.962Z",
       "team": "2026-08-30T07:57:30.287Z",
       "search": "2026-08-30T07:57:30.287Z",
-      "calendar": "2026-08-29T13:09:00.697Z"
+      "calendar": "2026-08-30T12:49:36.059Z"
     },
     "latestClosedRound": 2,
     "liveRoundPolicy": "Las jornadas en juego se muestran, pero no suman ni desbloquean galardones hasta aparecer como Fin de la jornada en el feed.",
@@ -12969,9 +12969,16 @@
       {
         "user_name": "Don Manuel Ruíz de Lopera",
         "purchases": 33,
-        "sales": 37,
-        "market_volume": 361115757,
-        "visible_movements": 70
+        "sales": 41,
+        "market_volume": 399796537,
+        "visible_movements": 74
+      },
+      {
+        "user_name": "Mikel Poyarzabal",
+        "purchases": 30,
+        "sales": 28,
+        "market_volume": 296640239,
+        "visible_movements": 58
       },
       {
         "user_name": "Rodando Nazário",
@@ -12981,48 +12988,52 @@
         "visible_movements": 57
       },
       {
-        "user_name": "Mikel Poyarzabal",
-        "purchases": 30,
-        "sales": 23,
-        "market_volume": 265150889,
-        "visible_movements": 53
-      },
-      {
         "user_name": "Alex Ballena",
-        "purchases": 25,
-        "sales": 21,
-        "market_volume": 151279770,
-        "visible_movements": 46
+        "purchases": 26,
+        "sales": 23,
+        "market_volume": 160406570,
+        "visible_movements": 49
       },
       {
         "user_name": "Olivito",
         "purchases": 19,
-        "sales": 20,
-        "market_volume": 227233180,
-        "visible_movements": 39
+        "sales": 28,
+        "market_volume": 253690830,
+        "visible_movements": 47
       },
       {
         "user_name": "Peter LIM",
         "purchases": 16,
-        "sales": 15,
-        "market_volume": 170098280,
-        "visible_movements": 31
+        "sales": 17,
+        "market_volume": 178989315,
+        "visible_movements": 33
       }
     ],
     "transfers": [
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "5h",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "2h",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Nico Williams",
+        "from": "Olivito",
+        "to": "Mister",
+        "price": 11110320,
+        "raw": "2h | Nico Williams cambia de Olivito a Mister | 6 | O | M | 11.110.320 | Comentar | Nuevas transacciones en el mercado"
+      },
+      {
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "10h",
         "source": "feed",
         "playerId": null,
         "playerName": "Isi Palazón",
         "from": "Mister",
         "to": "Alex Ballena",
         "price": 5740000,
-        "raw": "5h | Isi Palazón cambia de Mister a Alex Ballena | 7 | M | AB | 5.740.000 | Saba Sazonov cambia de Mister a Mikel Poyarzabal | 3"
+        "raw": "10h | Isi Palazón cambia de Mister a Alex Ballena | 7 | M | AB | 5.740.000 | Saba Sazonov cambia de Mister a Mikel Poyarzabal | 3"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13033,7 +13044,7 @@
         "raw": "5.740.000 | Saba Sazonov cambia de Mister a Mikel Poyarzabal | 3 | M | MP | 580.670 | Vinícius Júnior cambia de Mister a Olivito | 13"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13044,7 +13055,7 @@
         "raw": "580.670 | Vinícius Júnior cambia de Mister a Olivito | 13 | M | O | 25.633.000 | Iago Aspas cambia de Mister a Olivito | 11"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13055,62 +13066,62 @@
         "raw": "25.633.000 | Iago Aspas cambia de Mister a Olivito | 11 | M | O | 4.886.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "9h",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "14h",
         "source": "feed",
         "playerId": null,
         "playerName": "Jon Aramburu",
         "from": "Mikel Poyarzabal",
         "to": "Mister",
         "price": 5085150,
-        "raw": "9h | Jon Aramburu cambia de Mikel Poyarzabal a Mister | 10 | MP | M | 5.085.150 | Comentar | Nuevas transacciones en el mercado"
+        "raw": "14h | Jon Aramburu cambia de Mikel Poyarzabal a Mister | 10 | MP | M | 5.085.150 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "9h",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "14h",
         "source": "feed",
         "playerId": null,
         "playerName": "Asier Villalibre",
         "from": "Mikel Poyarzabal",
         "to": "Mister",
         "price": 3762720,
-        "raw": "9h | Asier Villalibre cambia de Mikel Poyarzabal a Mister | 7 | MP | M | 3.762.720 | Comentar | Nuevas transacciones en el mercado"
+        "raw": "14h | Asier Villalibre cambia de Mikel Poyarzabal a Mister | 7 | MP | M | 3.762.720 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "12h",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "16h",
         "source": "feed",
         "playerId": null,
         "playerName": "Umaru Konare",
         "from": "Olivito",
         "to": "Mister",
         "price": 368600,
-        "raw": "12h | Umaru Konare cambia de Olivito a Mister | 2 | O | M | 368.600 | Comentar | Nuevas transacciones en el mercado"
+        "raw": "16h | Umaru Konare cambia de Olivito a Mister | 2 | O | M | 368.600 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "12h",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "16h",
         "source": "feed",
         "playerId": null,
         "playerName": "Facundo González",
         "from": "Olivito",
         "to": "Mister",
         "price": 1933310,
-        "raw": "12h | Facundo González cambia de Olivito a Mister | 7 | O | M | 1.933.310 | Comentar | Nuevas transacciones en el mercado"
+        "raw": "16h | Facundo González cambia de Olivito a Mister | 7 | O | M | 1.933.310 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "12h",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "16h",
         "source": "feed",
         "playerId": null,
         "playerName": "Fran González",
         "from": "Olivito",
         "to": "Mister",
         "price": 340470,
-        "raw": "12h | Fran González cambia de Olivito a Mister | 0 | O | M | 340.470 | Comentar | Nuevos movimientos de jugadores"
+        "raw": "16h | Fran González cambia de Olivito a Mister | 0 | O | M | 340.470 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "1d",
         "source": "feed",
         "playerId": null,
@@ -13121,7 +13132,7 @@
         "raw": "1d | Enes Ünal cambia de Mister a Mikel Poyarzabal | 12 | M | MP | 4.250.840 | Abel Bretones cambia de Mister a Rodando Nazário | 5"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13132,7 +13143,7 @@
         "raw": "4.250.840 | Abel Bretones cambia de Mister a Rodando Nazário | 5 | M | RN | 2.831.010 | Arouna Sangante cambia de Mister a Rodando Nazário | 3"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13143,7 +13154,7 @@
         "raw": "2.831.010 | Arouna Sangante cambia de Mister a Rodando Nazário | 3 | M | RN | 2.560.780 | Comentar | Jornada 3"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "2d",
         "source": "feed",
         "playerId": null,
@@ -13154,7 +13165,7 @@
         "raw": "2d | José Salinas cambia de Alex Ballena a Mister | 3 | AB | M | 1.187.280 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "2d",
         "source": "feed",
         "playerId": null,
@@ -13165,7 +13176,7 @@
         "raw": "2d | Luismi Cruz cambia de Don Manuel Ruíz de Lopera a Mister | 8 | DM | M | 1.973.760 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "2d",
         "source": "feed",
         "playerId": null,
@@ -13176,7 +13187,7 @@
         "raw": "2d | José Luis Gayà cambia de Rodando Nazário a Mister | 4 | RN | M | 2.806.080 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "2d",
         "source": "feed",
         "playerId": null,
@@ -13187,7 +13198,7 @@
         "raw": "2d | David Soria cambia de Mikel Poyarzabal a Mister | 14 | MP | M | 10.309.140 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "2d",
         "source": "feed",
         "playerId": null,
@@ -13198,7 +13209,7 @@
         "raw": "2d | Williot Swedberg cambia de Don Manuel Ruíz de Lopera a Mister | 4 | DM | M | 2.891.700 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "2d",
         "source": "feed",
         "playerId": null,
@@ -13209,7 +13220,7 @@
         "raw": "2d | Mikel Rodriguez cambia de Mister a Alex Ballena | 17 | M | AB | 889.000 | Einar Galilea cambia de Mister a Rodando Nazário | 8"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13220,18 +13231,18 @@
         "raw": "889.000 | Einar Galilea cambia de Mister a Rodando Nazário | 8 | M | RN | 2.110.660 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "2d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "3d",
         "source": "feed",
         "playerId": null,
         "playerName": "Carlos Espí",
         "from": "Mikel Poyarzabal",
         "to": "Mister",
         "price": 9018680,
-        "raw": "2d | Carlos Espí cambia de Mikel Poyarzabal a Mister | 15 | MP | M | 9.018.680 | Comentar | Nuevas transacciones en el mercado"
+        "raw": "3d | Carlos Espí cambia de Mikel Poyarzabal a Mister | 15 | MP | M | 9.018.680 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "3d",
         "source": "feed",
         "playerId": null,
@@ -13242,7 +13253,7 @@
         "raw": "3d | Sergio Carreira cambia de Don Manuel Ruíz de Lopera a Mister | 9 | DM | M | 5.093.000 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "3d",
         "source": "feed",
         "playerId": null,
@@ -13253,7 +13264,7 @@
         "raw": "3d | David Soria cambia de Mister a Mikel Poyarzabal | 14 | M | MP | 9.990.010 | Rodrigo Riquelme cambia de Mister a Mikel Poyarzabal | 21"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13264,7 +13275,7 @@
         "raw": "9.990.010 | Rodrigo Riquelme cambia de Mister a Mikel Poyarzabal | 21 | M | MP | 2.681.460 | Sergio Canales cambia de Mister a Peter LIM | 11"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13275,7 +13286,7 @@
         "raw": "2.681.460 | Sergio Canales cambia de Mister a Peter LIM | 11 | M | PL | 7.695.000 | Luismi Cruz cambia de Mister a Don Manuel Ruíz de Lopera | 8"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13286,40 +13297,40 @@
         "raw": "7.695.000 | Luismi Cruz cambia de Mister a Don Manuel Ruíz de Lopera | 8 | M | DM | 1.969.360 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "3d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "4d",
         "source": "feed",
         "playerId": null,
         "playerName": "Aimar Oroz",
         "from": "Mikel Poyarzabal",
         "to": "Mister",
         "price": 5841150,
-        "raw": "3d | Aimar Oroz cambia de Mikel Poyarzabal a Mister | 4 | MP | M | 5.841.150 | Comentar | Nuevas transacciones en el mercado"
+        "raw": "4d | Aimar Oroz cambia de Mikel Poyarzabal a Mister | 4 | MP | M | 5.841.150 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "3d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "4d",
         "source": "feed",
         "playerId": null,
         "playerName": "Álvaro García",
         "from": "Mikel Poyarzabal",
         "to": "Mister",
         "price": 7781650,
-        "raw": "3d | Álvaro García cambia de Mikel Poyarzabal a Mister | 12 | MP | M | 7.781.650 | Comentar | Nuevas transacciones en el mercado"
+        "raw": "4d | Álvaro García cambia de Mikel Poyarzabal a Mister | 12 | MP | M | 7.781.650 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "3d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "4d",
         "source": "feed",
         "playerId": null,
         "playerName": "Rubén García",
         "from": "Don Manuel Ruíz de Lopera",
         "to": "Mister",
         "price": 5462100,
-        "raw": "3d | Rubén García cambia de Don Manuel Ruíz de Lopera a Mister | 8 | DM | M | 5.462.100 | Comentar | Nuevos movimientos de jugadores"
+        "raw": "4d | Rubén García cambia de Don Manuel Ruíz de Lopera a Mister | 8 | DM | M | 5.462.100 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "4d",
         "source": "feed",
         "playerId": null,
@@ -13330,7 +13341,7 @@
         "raw": "4d | Pau Navarro cambia de Olivito a Mister | 0 | O | M | 1.719.120 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "4d",
         "source": "feed",
         "playerId": null,
@@ -13341,7 +13352,7 @@
         "raw": "4d | Carlos Álvarez cambia de Olivito a Mister | 1 | O | M | 4.090.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "4d",
         "source": "feed",
         "playerId": null,
@@ -13352,7 +13363,7 @@
         "raw": "4d | Jon Martin cambia de Olivito a Mister | 10 | O | M | 7.173.920 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "4d",
         "source": "feed",
         "playerId": null,
@@ -13363,7 +13374,7 @@
         "raw": "4d | Sergio Martinez cambia de Mister a Alex Ballena | 15 | M | AB | 1.143.000 | Ángel Ortiz cambia de Mister a Alex Ballena | 4"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13374,7 +13385,7 @@
         "raw": "1.143.000 | Ángel Ortiz cambia de Mister a Alex Ballena | 4 | M | AB | 263.000 | Mathew Ryan cambia de Mister a Olivito | 17"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13385,7 +13396,7 @@
         "raw": "263.000 | Mathew Ryan cambia de Mister a Olivito | 17 | M | O | 9.096.000 | Javi Galán cambia de Mister a Olivito | 5"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13396,7 +13407,7 @@
         "raw": "9.096.000 | Javi Galán cambia de Mister a Olivito | 5 | M | O | 3.649.000 | Ibrahima Konaté cambia de Mister a Don Manuel Ruíz de Lopera | 9"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13407,7 +13418,7 @@
         "raw": "3.649.000 | Ibrahima Konaté cambia de Mister a Don Manuel Ruíz de Lopera | 9 | M | DM | 10.629.899 | Sergio Carreira cambia de Mister a Don Manuel Ruíz de Lopera | 9"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13418,7 +13429,7 @@
         "raw": "10.629.899 | Sergio Carreira cambia de Mister a Don Manuel Ruíz de Lopera | 9 | M | DM | 5.028.540 | Dani Cárdenas cambia de Mister a Don Manuel Ruíz de Lopera | 3"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13429,18 +13440,18 @@
         "raw": "5.028.540 | Dani Cárdenas cambia de Mister a Don Manuel Ruíz de Lopera | 3 | M | DM | 637.260 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "4d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "5d",
         "source": "feed",
         "playerId": null,
         "playerName": "Mario Martín",
         "from": "Alex Ballena",
         "to": "Mister",
         "price": 2142400,
-        "raw": "4d | Mario Martín cambia de Alex Ballena a Mister | 3 | AB | M | 2.142.400 | Comentar | Nuevos movimientos de jugadores"
+        "raw": "5d | Mario Martín cambia de Alex Ballena a Mister | 3 | AB | M | 2.142.400 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "5d",
         "source": "feed",
         "playerId": null,
@@ -13451,7 +13462,7 @@
         "raw": "5d | Etta Eyong cambia de Don Manuel Ruíz de Lopera a Mister | 4 | DM | M | 4.297.650 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "5d",
         "source": "feed",
         "playerId": null,
@@ -13462,7 +13473,7 @@
         "raw": "5d | Urko González cambia de Rodando Nazário a Mister | 10 | RN | M | 2.491.570 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "5d",
         "source": "feed",
         "playerId": null,
@@ -13473,7 +13484,7 @@
         "raw": "5d | Gorka Guruzeta cambia de Olivito a Mister | 0 | O | M | 7.250.170 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "5d",
         "source": "feed",
         "playerId": null,
@@ -13484,7 +13495,7 @@
         "raw": "5d | Pablo Barrios cambia de Rodando Nazário a Olivito | 21 | RN | O | 10.800.000 | Comentar | Fin de la jornada 2"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "5d",
         "source": "feed",
         "playerId": null,
@@ -13495,7 +13506,7 @@
         "raw": "5d | Javi Rueda cambia de Mikel Poyarzabal a Mister | 4 | MP | M | 1.986.400 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "5d",
         "source": "feed",
         "playerId": null,
@@ -13506,7 +13517,7 @@
         "raw": "5d | Jonathan Dubasin cambia de Heung Min Dad a Mister | 4 | HM | M | 1.860.560 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "5d",
         "source": "feed",
         "playerId": null,
@@ -13517,7 +13528,7 @@
         "raw": "5d | Isaac Romero cambia de Mister a Alex Ballena | 14 | M | AB | 3.278.000 | Fermín López cambia de Mister a Mikel Poyarzabal | 31"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13528,7 +13539,7 @@
         "raw": "3.278.000 | Fermín López cambia de Mister a Mikel Poyarzabal | 31 | M | MP | 16.488.620 | Carlos Espí cambia de Mister a Mikel Poyarzabal | 15"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13539,7 +13550,7 @@
         "raw": "16.488.620 | Carlos Espí cambia de Mister a Mikel Poyarzabal | 15 | M | MP | 8.555.490 | Pablo Maffeo cambia de Mister a Mikel Poyarzabal | 6"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13550,7 +13561,7 @@
         "raw": "8.555.490 | Pablo Maffeo cambia de Mister a Mikel Poyarzabal | 6 | M | MP | 3.958.360 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "6d",
         "source": "feed",
         "playerId": null,
@@ -13561,7 +13572,7 @@
         "raw": "6d | Lucas Cepeda cambia de Heung Min Dad a Mister | 9 | HM | M | 1.764.880 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "6d",
         "source": "feed",
         "playerId": null,
@@ -13572,7 +13583,7 @@
         "raw": "6d | Mikel Jauregizar cambia de Rodando Nazário a Mister | 3 | RN | M | 2.820.930 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "6d",
         "source": "feed",
         "playerId": null,
@@ -13583,7 +13594,7 @@
         "raw": "6d | Alejandro Balde cambia de Don Manuel Ruíz de Lopera a Mister | 0 | DM | M | 6.446.960 | Comentar | Nuevas bajadas de cláusulas"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "6d",
         "source": "feed",
         "playerId": null,
@@ -13594,7 +13605,7 @@
         "raw": "6d | Fran Pérez cambia de Mister a Alex Ballena | 4 | M | AB | 358.000 | Rodri Hernández cambia de Mister a Don Manuel Ruíz de Lopera | 5"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13605,7 +13616,7 @@
         "raw": "358.000 | Rodri Hernández cambia de Mister a Don Manuel Ruíz de Lopera | 5 | M | DM | 13.777.000 | Williot Swedberg cambia de Mister a Don Manuel Ruíz de Lopera | 4"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13616,7 +13627,7 @@
         "raw": "13.777.000 | Williot Swedberg cambia de Mister a Don Manuel Ruíz de Lopera | 4 | M | DM | 2.631.660 | Mariano Díaz cambia de Mister a Heung Min Dad | 25"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13627,7 +13638,7 @@
         "raw": "2.631.660 | Mariano Díaz cambia de Mister a Heung Min Dad | 25 | M | HM | 3.274.659 | Tyrhys Dolan cambia de Mister a Rodando Nazário | 14"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13638,7 +13649,7 @@
         "raw": "3.274.659 | Tyrhys Dolan cambia de Mister a Rodando Nazário | 14 | M | RN | 2.755.510 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "7d",
         "source": "feed",
         "playerId": null,
@@ -13649,7 +13660,7 @@
         "raw": "7d | Martín Satriano cambia de Mikel Poyarzabal a Mister | 6 | MP | M | 7.177.040 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "7d",
         "source": "feed",
         "playerId": null,
@@ -13660,7 +13671,7 @@
         "raw": "7d | Angeliño cambia de Mikel Poyarzabal a Mister | 0 | MP | M | 1.808.560 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "7d",
         "source": "feed",
         "playerId": null,
@@ -13671,7 +13682,7 @@
         "raw": "7d | Luismi Cruz cambia de Rodando Nazário a Mister | 8 | RN | M | 1.956.150 | Comentar | ⚽ PORRA Atlético - Villarreal / LaLiga"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "7d",
         "source": "feed",
         "playerId": null,
@@ -13682,7 +13693,7 @@
         "raw": "7d | Dean Huijsen cambia de Heung Min Dad a Mister | 6 | HM | M | 9.737.700 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "7d",
         "source": "feed",
         "playerId": null,
@@ -13693,7 +13704,7 @@
         "raw": "7d | Kang-In Lee cambia de Mister a Don Manuel Ruíz de Lopera | 24 | M | DM | 12.270.000 | Pedri cambia de Mister a Rodando Nazário | 15"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13704,7 +13715,7 @@
         "raw": "12.270.000 | Pedri cambia de Mister a Rodando Nazário | 15 | M | RN | 22.925.020 | Joaquín Muñoz cambia de Mister a Rodando Nazário | 8"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13715,7 +13726,7 @@
         "raw": "22.925.020 | Joaquín Muñoz cambia de Mister a Rodando Nazário | 8 | M | RN | 2.129.450 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "8d",
         "source": "feed",
         "playerId": null,
@@ -13726,7 +13737,7 @@
         "raw": "8d | João Cancelo cambia de Don Manuel Ruíz de Lopera a Mister | 3 | DM | M | 15.017.100 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "8d",
         "source": "feed",
         "playerId": null,
@@ -13737,7 +13748,7 @@
         "raw": "8d | Ferran Jutglà cambia de Rodando Nazário a Mister | 4 | RN | M | 8.818.160 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "8d",
         "source": "feed",
         "playerId": null,
@@ -13748,7 +13759,7 @@
         "raw": "8d | Kazunari Kita cambia de Peter LIM a Mister | 0 | PL | M | 168.960 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "8d",
         "source": "feed",
         "playerId": null,
@@ -13759,7 +13770,7 @@
         "raw": "8d | Maroan Sannadi cambia de Peter LIM a Mister | 0 | PL | M | 351.230 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "8d",
         "source": "feed",
         "playerId": null,
@@ -13770,7 +13781,7 @@
         "raw": "8d | Pablo García cambia de Alex Ballena a Mister | 14 | AB | M | 791.040 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "8d",
         "source": "feed",
         "playerId": null,
@@ -13781,7 +13792,7 @@
         "raw": "8d | Sergio Carreira cambia de Heung Min Dad a Mister | 9 | HM | M | 5.118.680 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "8d",
         "source": "feed",
         "playerId": null,
@@ -13792,7 +13803,7 @@
         "raw": "8d | José Salinas cambia de Mister a Alex Ballena | 3 | M | AB | 1.216.000 | Ali Houary cambia de Mister a Alex Ballena | 6"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13803,7 +13814,7 @@
         "raw": "1.216.000 | Ali Houary cambia de Mister a Alex Ballena | 6 | M | AB | 353.000 | Laro Gómez cambia de Mister a Alex Ballena | 0"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13814,7 +13825,7 @@
         "raw": "353.000 | Laro Gómez cambia de Mister a Alex Ballena | 0 | M | AB | 206.000 | Orel Mangala cambia de Mister a Peter LIM | 5"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13825,7 +13836,7 @@
         "raw": "206.000 | Orel Mangala cambia de Mister a Peter LIM | 5 | M | PL | 2.668.960 | Iván Martín cambia de Mister a Peter LIM | 9"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13836,7 +13847,7 @@
         "raw": "2.668.960 | Iván Martín cambia de Mister a Peter LIM | 9 | M | PL | 187.000 | João Cancelo cambia de Mister a Don Manuel Ruíz de Lopera | 3"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13847,7 +13858,7 @@
         "raw": "187.000 | João Cancelo cambia de Mister a Don Manuel Ruíz de Lopera | 3 | M | DM | 14.326.030 | Alejandro Balde cambia de Mister a Don Manuel Ruíz de Lopera | 0"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13858,7 +13869,7 @@
         "raw": "14.326.030 | Alejandro Balde cambia de Mister a Don Manuel Ruíz de Lopera | 0 | M | DM | 6.536.760 | Pablo Fornals cambia de Mister a Rodando Nazário | 8"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13869,62 +13880,62 @@
         "raw": "6.536.760 | Pablo Fornals cambia de Mister a Rodando Nazário | 8 | M | RN | 17.676.700 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "8d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "9d",
         "source": "feed",
         "playerId": null,
         "playerName": "Kiko Femenía",
         "from": "Alex Ballena",
         "to": "Mister",
         "price": 1244400,
-        "raw": "8d | Kiko Femenía cambia de Alex Ballena a Mister | -8 | AB | M | 1.244.400 | Comentar | Nuevas transacciones en el mercado"
+        "raw": "9d | Kiko Femenía cambia de Alex Ballena a Mister | -8 | AB | M | 1.244.400 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "8d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "9d",
         "source": "feed",
         "playerId": null,
         "playerName": "Sergio Gómez",
         "from": "Don Manuel Ruíz de Lopera",
         "to": "Mister",
         "price": 5403840,
-        "raw": "8d | Sergio Gómez cambia de Don Manuel Ruíz de Lopera a Mister | 12 | DM | M | 5.403.840 | Comentar | Nuevas transacciones en el mercado"
+        "raw": "9d | Sergio Gómez cambia de Don Manuel Ruíz de Lopera a Mister | 12 | DM | M | 5.403.840 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "8d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "9d",
         "source": "feed",
         "playerId": null,
         "playerName": "Luis Rioja",
         "from": "Peter LIM",
         "to": "Mister",
         "price": 4314670,
-        "raw": "8d | Luis Rioja cambia de Peter LIM a Mister | 5 | PL | M | 4.314.670 | Comentar | Nuevas transacciones en el mercado"
+        "raw": "9d | Luis Rioja cambia de Peter LIM a Mister | 5 | PL | M | 4.314.670 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "8d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "9d",
         "source": "feed",
         "playerId": null,
         "playerName": "Fran García",
         "from": "Peter LIM",
         "to": "Don Manuel Ruíz de Lopera por pago de cláusula",
         "price": 4576365,
-        "raw": "8d | Fran García cambia de Peter LIM a Don Manuel Ruíz de Lopera por pago de cláusula | 10 | PL | DM | 4.576.365 | Comentar | Nuevas transacciones en el mercado"
+        "raw": "9d | Fran García cambia de Peter LIM a Don Manuel Ruíz de Lopera por pago de cláusula | 10 | PL | DM | 4.576.365 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "8d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "9d",
         "source": "feed",
         "playerId": null,
         "playerName": "Julián Álvarez",
         "from": "Don Manuel Ruíz de Lopera",
         "to": "Mister",
         "price": 14056620,
-        "raw": "8d | Julián Álvarez cambia de Don Manuel Ruíz de Lopera a Mister | 1 | DM | M | 14.056.620 | Comentar | Nuevas transacciones en el mercado"
+        "raw": "9d | Julián Álvarez cambia de Don Manuel Ruíz de Lopera a Mister | 1 | DM | M | 14.056.620 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "9d",
         "source": "feed",
         "playerId": null,
@@ -13935,7 +13946,7 @@
         "raw": "9d | Oso cambia de Rodando Nazário a Mister | 14 | RN | M | 4.935.150 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "9d",
         "source": "feed",
         "playerId": null,
@@ -13946,7 +13957,7 @@
         "raw": "9d | Yeremay Hernández cambia de Don Manuel Ruíz de Lopera a Mister | 2 | DM | M | 8.713.120 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "9d",
         "source": "feed",
         "playerId": null,
@@ -13957,7 +13968,7 @@
         "raw": "9d | Asier Villalibre cambia de Mister a Mikel Poyarzabal | 7 | M | MP | 3.577.810 | Juan Cruz cambia de Mister a Peter LIM | 6"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13968,7 +13979,7 @@
         "raw": "3.577.810 | Juan Cruz cambia de Mister a Peter LIM | 6 | M | PL | 2.788.050 | Pierre-Emerick Aubameyang cambia de Mister a Heung Min Dad | 21"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13979,7 +13990,7 @@
         "raw": "2.788.050 | Pierre-Emerick Aubameyang cambia de Mister a Heung Min Dad | 21 | M | HM | 6.616.460 | Javi Hernandez cambia de Mister a Heung Min Dad | 19"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -13990,7 +14001,7 @@
         "raw": "6.616.460 | Javi Hernandez cambia de Mister a Heung Min Dad | 19 | M | HM | 2.138.850 | Álvaro Mantilla cambia de Mister a Heung Min Dad | 8"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14001,7 +14012,7 @@
         "raw": "2.138.850 | Álvaro Mantilla cambia de Mister a Heung Min Dad | 8 | M | HM | 2.025.560 | Igor Zubeldia cambia de Mister a Heung Min Dad | 9"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14012,7 +14023,7 @@
         "raw": "2.025.560 | Igor Zubeldia cambia de Mister a Heung Min Dad | 9 | M | HM | 1.830.340 | Ángel Pérez cambia de Mister a Rodando Nazário | 17"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14023,7 +14034,7 @@
         "raw": "1.830.340 | Ángel Pérez cambia de Mister a Rodando Nazário | 17 | M | RN | 3.755.780 | José Luis Gayà cambia de Mister a Rodando Nazário | 4"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14034,7 +14045,7 @@
         "raw": "3.755.780 | José Luis Gayà cambia de Mister a Rodando Nazário | 4 | M | RN | 2.922.640 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "9d",
         "source": "feed",
         "playerId": null,
@@ -14045,7 +14056,7 @@
         "raw": "9d | Marc Bernal cambia de Rodando Nazário a Mister | 13 | RN | M | 8.829.160 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -14056,7 +14067,7 @@
         "raw": "10d | Bernardo Silva cambia de Heung Min Dad a Mister | 6 | HM | M | 10.578.880 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -14067,7 +14078,7 @@
         "raw": "10d | Carl Starfelt cambia de Don Manuel Ruíz de Lopera a Mister | 2 | DM | M | 2.223.000 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -14078,7 +14089,7 @@
         "raw": "10d | Mario Soriano cambia de Alex Ballena a Mister | 6 | AB | M | 3.543.200 | Comentar | Bonificaciones realizadas por el administrador"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -14089,7 +14100,7 @@
         "raw": "10d | Gonzalo Petit cambia de Peter LIM a Mister | 0 | PL | M | 185.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -14100,7 +14111,7 @@
         "raw": "10d | Alex Baena cambia de Peter LIM a Mister | 33 | PL | M | 10.799.760 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -14111,7 +14122,7 @@
         "raw": "10d | Arda Güler cambia de Peter LIM a Mister | 15 | PL | M | 11.945.280 | Comentar | Fin de la jornada 1"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -14122,7 +14133,7 @@
         "raw": "10d | Yuri Berchiche cambia de Rodando Nazário a Mister | -9 | RN | M | 5.372.850 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -14133,7 +14144,7 @@
         "raw": "10d | Isaac Romero cambia de Don Manuel Ruíz de Lopera a Mister | 14 | DM | M | 2.258.880 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -14144,7 +14155,7 @@
         "raw": "10d | Denzel Dumfries cambia de Heung Min Dad a Mister | 7 | HM | M | 9.009.660 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -14155,7 +14166,7 @@
         "raw": "10d | Javi Rueda cambia de Mister a Mikel Poyarzabal | 4 | M | MP | 1.966.780 | Jude Bellingham cambia de Mister a Peter LIM | 20"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14166,7 +14177,7 @@
         "raw": "1.966.780 | Jude Bellingham cambia de Mister a Peter LIM | 20 | M | PL | 19.969.000 | Facundo González cambia de Mister a Olivito | 7"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14177,7 +14188,7 @@
         "raw": "19.969.000 | Facundo González cambia de Mister a Olivito | 7 | M | O | 2.265.000 | Rubén García cambia de Mister a Don Manuel Ruíz de Lopera | 8"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14188,7 +14199,7 @@
         "raw": "2.265.000 | Rubén García cambia de Mister a Don Manuel Ruíz de Lopera | 8 | M | DM | 4.765.620 | Etta Eyong cambia de Mister a Don Manuel Ruíz de Lopera | 4"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14199,7 +14210,7 @@
         "raw": "4.765.620 | Etta Eyong cambia de Mister a Don Manuel Ruíz de Lopera | 4 | M | DM | 3.483.260 | Antony Santos cambia de Mister a Heung Min Dad | 15"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14210,7 +14221,7 @@
         "raw": "3.483.260 | Antony Santos cambia de Mister a Heung Min Dad | 15 | M | HM | 15.511.930 | Aitor Paredes cambia de Mister a Rodando Nazário | 9"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14221,7 +14232,7 @@
         "raw": "15.511.930 | Aitor Paredes cambia de Mister a Rodando Nazário | 9 | M | RN | 1.581.760 | Comentar | Concurso de la Quiniela de la jornada 2"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "11d",
         "source": "feed",
         "playerId": null,
@@ -14232,7 +14243,7 @@
         "raw": "11d | Robert Navarro cambia de Alex Ballena a Mister | 2 | AB | M | 1.564.490 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "11d",
         "source": "feed",
         "playerId": null,
@@ -14243,18 +14254,18 @@
         "raw": "11d | Mikel Jauregizar cambia de Mister a Rodando Nazário | 3 | M | RN | 3.389.610 | Comentar | Don Manuel Ruíz de Lopera ha comentado esta publicación"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "11d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "12d",
         "source": "feed",
         "playerId": null,
         "playerName": "Alberto Moleiro",
         "from": "Don Manuel Ruíz de Lopera",
         "to": "Mister",
         "price": 13758220,
-        "raw": "11d | Alberto Moleiro cambia de Don Manuel Ruíz de Lopera a Mister | 8 | DM | M | 13.758.220 | Comentar · 2 | DM"
+        "raw": "12d | Alberto Moleiro cambia de Don Manuel Ruíz de Lopera a Mister | 8 | DM | M | 13.758.220 | Comentar · 2 | DM"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "12d",
         "source": "feed",
         "playerId": null,
@@ -14265,7 +14276,7 @@
         "raw": "12d | Julen Agirrezabala cambia de Rodando Nazário a Heung Min Dad por pago de cláusula | 11 | RN | HM | 5.668.514 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "12d",
         "source": "feed",
         "playerId": null,
@@ -14276,7 +14287,7 @@
         "raw": "12d | Miguel Loureiro cambia de Heung Min Dad a Mister | 2 | HM | M | 1.789.920 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "12d",
         "source": "feed",
         "playerId": null,
@@ -14287,7 +14298,7 @@
         "raw": "12d | Pablo Ramón cambia de Mister a Heung Min Dad | 9 | M | HM | 700.000 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "13d",
         "source": "feed",
         "playerId": null,
@@ -14298,7 +14309,7 @@
         "raw": "13d | Matteo Ruggeri cambia de Alex Ballena a Mister | 0 | AB | M | 1.457.040 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "13d",
         "source": "feed",
         "playerId": null,
@@ -14309,7 +14320,7 @@
         "raw": "13d | Juan Cruz cambia de Alex Ballena a Mister | 6 | AB | M | 2.307.900 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "13d",
         "source": "feed",
         "playerId": null,
@@ -14320,7 +14331,7 @@
         "raw": "13d | Pere Milla cambia de Alex Ballena a Mister | 5 | AB | M | 2.384.500 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "13d",
         "source": "feed",
         "playerId": null,
@@ -14331,7 +14342,7 @@
         "raw": "13d | Julen Agirrezabala cambia de Heung Min Dad a Rodando Nazário por pago de cláusula | 11 | HM | RN | 2.834.257 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "13d",
         "source": "feed",
         "playerId": null,
@@ -14342,7 +14353,7 @@
         "raw": "13d | Davinchi cambia de Don Manuel Ruíz de Lopera a Mister | 0 | DM | M | 1.540.880 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "13d",
         "source": "feed",
         "playerId": null,
@@ -14353,7 +14364,7 @@
         "raw": "13d | Iván Romero cambia de Don Manuel Ruíz de Lopera a Mister | 9 | DM | M | 7.808.320 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "13d",
         "source": "feed",
         "playerId": null,
@@ -14364,7 +14375,7 @@
         "raw": "13d | Alberto Moleiro cambia de Mister a Don Manuel Ruíz de Lopera | 8 | M | DM | 14.571.320 | Dean Huijsen cambia de Mister a Heung Min Dad | 6"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14375,7 +14386,7 @@
         "raw": "14.571.320 | Dean Huijsen cambia de Mister a Heung Min Dad | 6 | M | HM | 8.925.250 | Facundo Bernal cambia de Mister a Heung Min Dad | 10"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14386,7 +14397,7 @@
         "raw": "8.925.250 | Facundo Bernal cambia de Mister a Heung Min Dad | 10 | M | HM | 3.013.540 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "14d",
         "source": "feed",
         "playerId": null,
@@ -14397,7 +14408,7 @@
         "raw": "14d | Carles Aleñá cambia de Don Manuel Ruíz de Lopera a Mister | 2 | DM | M | 1.574.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "14d",
         "source": "feed",
         "playerId": null,
@@ -14408,7 +14419,7 @@
         "raw": "14d | Antonio Blanco cambia de Heung Min Dad a Mister | 13 | HM | M | 9.086.970 | Comentar | Nuevas bajadas de cláusulas"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "14d",
         "source": "feed",
         "playerId": null,
@@ -14419,7 +14430,7 @@
         "raw": "14d | Nicolas Pépé cambia de Mister a Alex Ballena | 22 | M | AB | 14.260.000 | Mario Martín cambia de Mister a Alex Ballena | 3"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14430,7 +14441,7 @@
         "raw": "14.260.000 | Mario Martín cambia de Mister a Alex Ballena | 3 | M | AB | 1.850.000 | Iván Romero cambia de Mister a Don Manuel Ruíz de Lopera | 9"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14441,7 +14452,7 @@
         "raw": "1.850.000 | Iván Romero cambia de Mister a Don Manuel Ruíz de Lopera | 9 | M | DM | 7.457.300 | Thiago Fernández cambia de Mister a Heung Min Dad | 8"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14452,7 +14463,7 @@
         "raw": "7.457.300 | Thiago Fernández cambia de Mister a Heung Min Dad | 8 | M | HM | 631.040 | Comentar | Jornada 1"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14463,7 +14474,7 @@
         "raw": "15d | Álvaro Mantilla cambia de Heung Min Dad a Mister | 8 | HM | M | 1.507.800 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14474,7 +14485,7 @@
         "raw": "15d | Renato Veiga cambia de Heung Min Dad a Mister | 11 | HM | M | 6.431.680 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14485,7 +14496,7 @@
         "raw": "15d | Nelson Deossa cambia de Heung Min Dad a Mister | 6 | HM | M | 979.680 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14496,7 +14507,7 @@
         "raw": "15d | Nahuel Tenaglia cambia de Heung Min Dad a Mister | 24 | HM | M | 6.667.100 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14507,7 +14518,7 @@
         "raw": "15d | Marc Bartra cambia de Heung Min Dad a Mister | 11 | HM | M | 1.581.120 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14518,7 +14529,7 @@
         "raw": "15d | Ángel Pérez cambia de Rodando Nazário a Mister | 17 | RN | M | 2.638.150 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14529,7 +14540,7 @@
         "raw": "15d | Jon Moncayola cambia de Rodando Nazário a Mister | 5 | RN | M | 3.633.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14540,7 +14551,7 @@
         "raw": "15d | Jiri Letacek cambia de Alex Ballena a Mister | 0 | AB | M | 194.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14551,7 +14562,7 @@
         "raw": "15d | Carlos Dominguez cambia de Peter LIM a Mister | 0 | PL | M | 664.050 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14562,7 +14573,7 @@
         "raw": "15d | Nobel Mendy cambia de Peter LIM a Mister | 0 | PL | M | 1.536.640 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14573,7 +14584,7 @@
         "raw": "15d | Alejandro Catena cambia de Alex Ballena a Mister | 9 | AB | M | 8.219.520 | Comentar | Rodando Nazário ha comentado esta publicación"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14584,7 +14595,7 @@
         "raw": "15d | Victor Chust cambia de Mister a Alex Ballena | 7 | M | AB | 1.900.000 | Álex Berenguer cambia de Mister a Peter LIM | 5"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14595,7 +14606,7 @@
         "raw": "1.900.000 | Álex Berenguer cambia de Mister a Peter LIM | 5 | M | PL | 1.770.780 | Raphinha cambia de Mister a Heung Min Dad | 29"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14606,7 +14617,7 @@
         "raw": "1.770.780 | Raphinha cambia de Mister a Heung Min Dad | 29 | M | HM | 20.600.350 | Comentar · 1 | RN"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14617,7 +14628,7 @@
         "raw": "15d | Clemens Riedel cambia de Rodando Nazário a Mister | 6 | RN | M | 1.626.900 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14628,7 +14639,7 @@
         "raw": "15d | David Mella cambia de Heung Min Dad a Mister | 4 | HM | M | 2.302.560 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14639,7 +14650,7 @@
         "raw": "15d | Zakaria Eddahchouri cambia de Heung Min Dad a Mister | 2 | HM | M | 1.322.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14650,7 +14661,7 @@
         "raw": "15d | Tani Oluwaseyi cambia de Heung Min Dad a Mister | 3 | HM | M | 1.071.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14661,7 +14672,7 @@
         "raw": "15d | Augusto Batalla cambia de Heung Min Dad a Mister | 7 | HM | M | 7.630.240 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -14672,7 +14683,7 @@
         "raw": "15d | Hugo Sotelo cambia de Heung Min Dad a Mister | 5 | HM | M | 1.526.720 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "16d",
         "source": "feed",
         "playerId": null,
@@ -14683,7 +14694,7 @@
         "raw": "16d | José Luis Gayà cambia de Don Manuel Ruíz de Lopera a Mister | 4 | DM | M | 2.030.100 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "16d",
         "source": "feed",
         "playerId": null,
@@ -14694,7 +14705,7 @@
         "raw": "16d | Arnaut Danjuma cambia de Rodando Nazário a Mister | 2 | RN | M | 1.895.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "16d",
         "source": "feed",
         "playerId": null,
@@ -14705,7 +14716,7 @@
         "raw": "16d | Ryunosuke Sato cambia de Don Manuel Ruíz de Lopera a Heung Min Dad por pago de cláusula | 9 | DM | HM | 4.832.500 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "16d",
         "source": "feed",
         "playerId": null,
@@ -14716,7 +14727,7 @@
         "raw": "16d | Ayoze Pérez cambia de Heung Min Dad a Mikel Poyarzabal por pago de cláusula | 9 | HM | MP | 3.960.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "16d",
         "source": "feed",
         "playerId": null,
@@ -14727,7 +14738,7 @@
         "raw": "16d | Leandro Cabrera cambia de Don Manuel Ruíz de Lopera a Mister | 0 | DM | M | 8.951.730 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "16d",
         "source": "feed",
         "playerId": null,
@@ -14738,7 +14749,7 @@
         "raw": "16d | Marc Cucurella cambia de Mister a Alex Ballena | 8 | M | AB | 14.500.000 | Julen Agirrezabala cambia de Mister a Heung Min Dad | 11"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14749,7 +14760,7 @@
         "raw": "14.500.000 | Julen Agirrezabala cambia de Mister a Heung Min Dad | 11 | M | HM | 1.889.505 | Yuri Berchiche cambia de Mister a Rodando Nazário | -9"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14760,18 +14771,18 @@
         "raw": "1.889.505 | Yuri Berchiche cambia de Mister a Rodando Nazário | -9 | M | RN | 5.224.510 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "16d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "17d",
         "source": "feed",
         "playerId": null,
         "playerName": "Jeremy Toljan",
         "from": "Olivito",
         "to": "Mister",
         "price": 1540880,
-        "raw": "16d | Jeremy Toljan cambia de Olivito a Mister | 9 | O | M | 1.540.880 | Comentar | Nuevos movimientos de jugadores"
+        "raw": "17d | Jeremy Toljan cambia de Olivito a Mister | 9 | O | M | 1.540.880 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -14782,7 +14793,7 @@
         "raw": "17d | Rodrigo Mendoza cambia de Heung Min Dad a Mister | 7 | HM | M | 1.089.920 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -14793,7 +14804,7 @@
         "raw": "17d | Adrián Niño cambia de Heung Min Dad a Mister | 0 | HM | M | 1.273.980 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -14804,7 +14815,7 @@
         "raw": "17d | Javi Rodríguez cambia de Heung Min Dad a Mister | 7 | HM | M | 2.017.770 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -14815,7 +14826,7 @@
         "raw": "17d | Gustavo Puerta cambia de Rodando Nazário a Mister | 12 | RN | M | 5.850.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -14826,7 +14837,7 @@
         "raw": "17d | José Giménez cambia de Alex Ballena a Mister | 5 | AB | M | 1.158.750 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -14837,7 +14848,7 @@
         "raw": "17d | Rubén Sánchez cambia de Alex Ballena a Mister | 0 | AB | M | 230.520 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -14848,7 +14859,7 @@
         "raw": "17d | Miguel Rodríguez cambia de Alex Ballena a Mister | 0 | AB | M | 983.250 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -14859,7 +14870,7 @@
         "raw": "17d | Giovani Lo Celso cambia de Mikel Poyarzabal a Mister | 0 | MP | M | 7.846.650 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -14870,7 +14881,7 @@
         "raw": "17d | Leo Román cambia de Olivito a Mister | 13 | O | M | 10.425.450 | Comentar | 17d"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -14881,7 +14892,7 @@
         "raw": "17d | Daniel Vivian cambia de Heung Min Dad a Mister | 0 | HM | M | 4.118.970 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -14892,7 +14903,7 @@
         "raw": "17d | Robin Le Normand cambia de Don Manuel Ruíz de Lopera a Mister | -3 | DM | M | 2.575.650 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -14903,7 +14914,7 @@
         "raw": "17d | Jonathan Dubasin cambia de Mister a Heung Min Dad | 4 | M | HM | 1.582.790 | Nelson Deossa cambia de Mister a Heung Min Dad | 6"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14914,7 +14925,7 @@
         "raw": "1.582.790 | Nelson Deossa cambia de Mister a Heung Min Dad | 6 | M | HM | 925.340 | Georges Mikautadze cambia de Mister a Rodando Nazário | 17"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14925,7 +14936,7 @@
         "raw": "925.340 | Georges Mikautadze cambia de Mister a Rodando Nazário | 17 | M | RN | 16.601.510 | Ferran Jutglà cambia de Mister a Rodando Nazário | 4"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -14936,7 +14947,7 @@
         "raw": "16.601.510 | Ferran Jutglà cambia de Mister a Rodando Nazário | 4 | M | RN | 8.227.770 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -14947,7 +14958,7 @@
         "raw": "18d | Abel Bretones cambia de Don Manuel Ruíz de Lopera a Mister | 5 | DM | M | 1.675.800 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -14958,7 +14969,7 @@
         "raw": "18d | Lucas Boyé cambia de Rodando Nazário a Mister | 12 | RN | M | 7.502.560 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -14969,7 +14980,7 @@
         "raw": "18d | Aymeric Laporte cambia de Rodando Nazário a Mister | 5 | RN | M | 9.451.050 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -14980,7 +14991,7 @@
         "raw": "18d | Mikel Jauregizar cambia de Heung Min Dad a Mister | 3 | HM | M | 2.002.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -14991,7 +15002,7 @@
         "raw": "18d | Beñat Turrientes cambia de Mikel Poyarzabal a Mister | 9 | MP | M | 2.030.130 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -15002,7 +15013,7 @@
         "raw": "18d | Julio Díaz cambia de Mikel Poyarzabal a Mister | 4 | MP | M | 833.250 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -15013,7 +15024,7 @@
         "raw": "18d | Andrés Castrín cambia de Mikel Poyarzabal a Mister | 7 | MP | M | 1.529.550 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -15024,7 +15035,7 @@
         "raw": "18d | Marc Aguado cambia de Heung Min Dad a Mister | 16 | HM | M | 1.672.650 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -15035,7 +15046,7 @@
         "raw": "18d | Raúl Moro cambia de Mister a Mikel Poyarzabal | 2 | M | MP | 2.120.910 | Álvaro Valles cambia de Mister a Don Manuel Ruíz de Lopera | 16"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -15046,29 +15057,29 @@
         "raw": "2.120.910 | Álvaro Valles cambia de Mister a Don Manuel Ruíz de Lopera | 16 | M | DM | 6.279.180 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "18d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "19d",
         "source": "feed",
         "playerId": null,
         "playerName": "Alemão",
         "from": "Olivito",
         "to": "Mister",
         "price": 1532640,
-        "raw": "18d | Alemão cambia de Olivito a Mister | 3 | O | M | 1.532.640 | Comentar | Nuevas transacciones en el mercado"
+        "raw": "19d | Alemão cambia de Olivito a Mister | 3 | O | M | 1.532.640 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "18d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "19d",
         "source": "feed",
         "playerId": null,
         "playerName": "Unai López",
         "from": "Olivito",
         "to": "Mister",
         "price": 1508000,
-        "raw": "18d | Unai López cambia de Olivito a Mister | 9 | O | M | 1.508.000 | Comentar | Nuevo mensaje"
+        "raw": "19d | Unai López cambia de Olivito a Mister | 9 | O | M | 1.508.000 | Comentar | Nuevo mensaje"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -15079,7 +15090,7 @@
         "raw": "19d | Johnny Cardoso cambia de Don Manuel Ruíz de Lopera a Mister | 1 | DM | M | 1.145.460 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -15090,7 +15101,7 @@
         "raw": "19d | Pedro Bigas cambia de Don Manuel Ruíz de Lopera a Mister | 3 | DM | M | 1.700.840 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -15101,7 +15112,7 @@
         "raw": "19d | José Salinas cambia de Don Manuel Ruíz de Lopera a Mister | 3 | DM | M | 871.080 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -15112,7 +15123,7 @@
         "raw": "19d | Iago Aspas cambia de Heung Min Dad a Mister | 11 | HM | M | 2.851.680 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -15123,7 +15134,7 @@
         "raw": "19d | Gabriel Moscardo cambia de Heung Min Dad a Mister | 3 | HM | M | 3.071.250 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -15134,7 +15145,7 @@
         "raw": "19d | Nico Williams cambia de Mister a Olivito | 6 | M | O | 12.823.000 | David Mella cambia de Mister a Heung Min Dad | 4"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -15145,7 +15156,7 @@
         "raw": "12.823.000 | David Mella cambia de Mister a Heung Min Dad | 4 | M | HM | 2.000.040 | Urko González cambia de Mister a Rodando Nazário | 10"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -15156,18 +15167,18 @@
         "raw": "2.000.040 | Urko González cambia de Mister a Rodando Nazário | 10 | M | RN | 1.606.610 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": "19d",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
+        "dateText": "20d",
         "source": "feed",
         "playerId": null,
         "playerName": "Unai Simón",
         "from": "Olivito",
         "to": "Mister",
         "price": 8123430,
-        "raw": "19d | Unai Simón cambia de Olivito a Mister | 7 | O | M | 8.123.430 | Comentar | Nuevos movimientos de jugadores"
+        "raw": "20d | Unai Simón cambia de Olivito a Mister | 7 | O | M | 8.123.430 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "20d",
         "source": "feed",
         "playerId": null,
@@ -15178,7 +15189,7 @@
         "raw": "20d | Roony Bardghji cambia de Don Manuel Ruíz de Lopera a Mister | 0 | DM | M | 1.045.450 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "20d",
         "source": "feed",
         "playerId": null,
@@ -15189,7 +15200,7 @@
         "raw": "20d | Javi Rueda cambia de Don Manuel Ruíz de Lopera a Mister | 4 | DM | M | 1.359.750 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "20d",
         "source": "feed",
         "playerId": null,
@@ -15200,7 +15211,7 @@
         "raw": "20d | Jonathan Asp Jensen cambia de Mister a Olivito | 4 | M | O | 1.702.000 | Marc Bartra cambia de Mister a Heung Min Dad | 11"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -15211,7 +15222,7 @@
         "raw": "1.702.000 | Marc Bartra cambia de Mister a Heung Min Dad | 11 | M | HM | 1.450.200 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "21d",
         "source": "feed",
         "playerId": null,
@@ -15222,7 +15233,7 @@
         "raw": "21d | David Affengruber cambia de Heung Min Dad a Mister | 6 | HM | M | 8.611.830 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "21d",
         "source": "feed",
         "playerId": null,
@@ -15233,7 +15244,7 @@
         "raw": "21d | Lucas Torró cambia de Mikel Poyarzabal a Mister | 4 | MP | M | 1.268.960 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "21d",
         "source": "feed",
         "playerId": null,
@@ -15244,7 +15255,7 @@
         "raw": "21d | Karim Adeyemi cambia de Mikel Poyarzabal a Mister | 14 | MP | M | 10.632.300 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "21d",
         "source": "feed",
         "playerId": null,
@@ -15255,7 +15266,7 @@
         "raw": "21d | Takefusa Kubo cambia de Rodando Nazário a Mister | 8 | RN | M | 10.565.100 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "scrapedAt": "2026-08-30T12:49:02.962Z",
         "dateText": "21d",
         "source": "feed",
         "playerId": null,
@@ -15263,40 +15274,40 @@
         "from": "Mister",
         "to": "Olivito",
         "price": 683000,
-        "raw": "21d | Fran González cambia de Mister a Olivito | 0 | M | O | 683.000 | Juan Foyth cambia de Mister a Don Manuel Ruíz de Lopera | 12"
+        "raw": "21d | Fran González cambia de Mister a Olivito | 0 | M | O | 683.000 | Juan Foyth cambia de Mister a"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": null,
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "5h",
         "source": "feed",
         "playerId": null,
-        "playerName": "Juan Foyth",
+        "playerName": "Isi Palazón",
         "from": "Mister",
-        "to": "Don Manuel Ruíz de Lopera",
-        "price": 2112329,
-        "raw": "683.000 | Juan Foyth cambia de Mister a Don Manuel Ruíz de Lopera | 12 | M | DM | 2.112.329 | Marc Aguado cambia de Mister a Heung Min Dad | 16"
+        "to": "Alex Ballena",
+        "price": 5740000,
+        "raw": "5h | Isi Palazón cambia de Mister a Alex Ballena | 7 | M | AB | 5.740.000 | Saba Sazonov cambia de Mister a Mikel Poyarzabal | 3"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": null,
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "9h",
         "source": "feed",
         "playerId": null,
-        "playerName": "Marc Aguado",
-        "from": "Mister",
-        "to": "Heung Min Dad",
-        "price": 1437400,
-        "raw": "2.112.329 | Marc Aguado cambia de Mister a Heung Min Dad | 16 | M | HM | 1.437.400 | Miguel Loureiro cambia de Mister a Heung Min Dad | 2"
+        "playerName": "Jon Aramburu",
+        "from": "Mikel Poyarzabal",
+        "to": "Mister",
+        "price": 5085150,
+        "raw": "9h | Jon Aramburu cambia de Mikel Poyarzabal a Mister | 10 | MP | M | 5.085.150 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-08-30T07:57:30.287Z",
-        "dateText": null,
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "9h",
         "source": "feed",
         "playerId": null,
-        "playerName": "Miguel Loureiro",
-        "from": "Mister",
-        "to": "Heung Min Dad",
-        "price": 1410130,
-        "raw": "1.437.400 | Miguel Loureiro cambia de Mister a Heung Min Dad | 2 | M | HM | 1.410.130 | Comentar | Nuevos movimientos de jugadores"
+        "playerName": "Asier Villalibre",
+        "from": "Mikel Poyarzabal",
+        "to": "Mister",
+        "price": 3762720,
+        "raw": "9h | Asier Villalibre cambia de Mikel Poyarzabal a Mister | 7 | MP | M | 3.762.720 | Comentar | Nuevas transacciones en el mercado"
       },
       {
         "scrapedAt": "2026-08-30T07:40:08.335Z",
@@ -15333,6 +15344,61 @@
       },
       {
         "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "2d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Carlos Espí",
+        "from": "Mikel Poyarzabal",
+        "to": "Mister",
+        "price": 9018680,
+        "raw": "2d | Carlos Espí cambia de Mikel Poyarzabal a Mister | 15 | MP | M | 9.018.680 | Comentar | Nuevas transacciones en el mercado"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "3d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Aimar Oroz",
+        "from": "Mikel Poyarzabal",
+        "to": "Mister",
+        "price": 5841150,
+        "raw": "3d | Aimar Oroz cambia de Mikel Poyarzabal a Mister | 4 | MP | M | 5.841.150 | Comentar | Nuevas transacciones en el mercado"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "3d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Álvaro García",
+        "from": "Mikel Poyarzabal",
+        "to": "Mister",
+        "price": 7781650,
+        "raw": "3d | Álvaro García cambia de Mikel Poyarzabal a Mister | 12 | MP | M | 7.781.650 | Comentar | Nuevas transacciones en el mercado"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "3d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Rubén García",
+        "from": "Don Manuel Ruíz de Lopera",
+        "to": "Mister",
+        "price": 5462100,
+        "raw": "3d | Rubén García cambia de Don Manuel Ruíz de Lopera a Mister | 8 | DM | M | 5.462.100 | Comentar | Nuevos movimientos de jugadores"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "4d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Mario Martín",
+        "from": "Alex Ballena",
+        "to": "Mister",
+        "price": 2142400,
+        "raw": "4d | Mario Martín cambia de Alex Ballena a Mister | 3 | AB | M | 2.142.400 | Comentar | Nuevos movimientos de jugadores"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
         "dateText": "6d",
         "source": "feed",
         "playerId": null,
@@ -15352,6 +15418,182 @@
         "to": "Mister",
         "price": 15017100,
         "raw": "7d | João Cancelo cambia de Don Manuel Ruíz de Lopera a Mister | 3 | DM | M | 15.017.100 | Comentar | Nuevas transacciones en el mercado"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "8d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Kiko Femenía",
+        "from": "Alex Ballena",
+        "to": "Mister",
+        "price": 1244400,
+        "raw": "8d | Kiko Femenía cambia de Alex Ballena a Mister | -8 | AB | M | 1.244.400 | Comentar | Nuevas transacciones en el mercado"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "8d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Sergio Gómez",
+        "from": "Don Manuel Ruíz de Lopera",
+        "to": "Mister",
+        "price": 5403840,
+        "raw": "8d | Sergio Gómez cambia de Don Manuel Ruíz de Lopera a Mister | 12 | DM | M | 5.403.840 | Comentar | Nuevas transacciones en el mercado"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "8d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Luis Rioja",
+        "from": "Peter LIM",
+        "to": "Mister",
+        "price": 4314670,
+        "raw": "8d | Luis Rioja cambia de Peter LIM a Mister | 5 | PL | M | 4.314.670 | Comentar | Nuevas transacciones en el mercado"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "8d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Fran García",
+        "from": "Peter LIM",
+        "to": "Don Manuel Ruíz de Lopera por pago de cláusula",
+        "price": 4576365,
+        "raw": "8d | Fran García cambia de Peter LIM a Don Manuel Ruíz de Lopera por pago de cláusula | 10 | PL | DM | 4.576.365 | Comentar | Nuevas transacciones en el mercado"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "8d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Julián Álvarez",
+        "from": "Don Manuel Ruíz de Lopera",
+        "to": "Mister",
+        "price": 14056620,
+        "raw": "8d | Julián Álvarez cambia de Don Manuel Ruíz de Lopera a Mister | 1 | DM | M | 14.056.620 | Comentar | Nuevas transacciones en el mercado"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "11d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Alberto Moleiro",
+        "from": "Don Manuel Ruíz de Lopera",
+        "to": "Mister",
+        "price": 13758220,
+        "raw": "11d | Alberto Moleiro cambia de Don Manuel Ruíz de Lopera a Mister | 8 | DM | M | 13.758.220 | Comentar · 2 | DM"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "16d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Jeremy Toljan",
+        "from": "Olivito",
+        "to": "Mister",
+        "price": 1540880,
+        "raw": "16d | Jeremy Toljan cambia de Olivito a Mister | 9 | O | M | 1.540.880 | Comentar | Nuevos movimientos de jugadores"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "18d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Alemão",
+        "from": "Olivito",
+        "to": "Mister",
+        "price": 1532640,
+        "raw": "18d | Alemão cambia de Olivito a Mister | 3 | O | M | 1.532.640 | Comentar | Nuevas transacciones en el mercado"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "18d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Unai López",
+        "from": "Olivito",
+        "to": "Mister",
+        "price": 1508000,
+        "raw": "18d | Unai López cambia de Olivito a Mister | 9 | O | M | 1.508.000 | Comentar | Nuevo mensaje"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": "19d",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Unai Simón",
+        "from": "Olivito",
+        "to": "Mister",
+        "price": 8123430,
+        "raw": "19d | Unai Simón cambia de Olivito a Mister | 7 | O | M | 8.123.430 | Comentar | Nuevos movimientos de jugadores"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": null,
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Juan Foyth",
+        "from": "Mister",
+        "to": "Don Manuel Ruíz de Lopera",
+        "price": 2112329,
+        "raw": "683.000 | Juan Foyth cambia de Mister a Don Manuel Ruíz de Lopera | 12 | M | DM | 2.112.329 | Marc Aguado cambia de Mister a Heung Min Dad | 16"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": null,
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Marc Aguado",
+        "from": "Mister",
+        "to": "Heung Min Dad",
+        "price": 1437400,
+        "raw": "2.112.329 | Marc Aguado cambia de Mister a Heung Min Dad | 16 | M | HM | 1.437.400 | Miguel Loureiro cambia de Mister a Heung Min Dad | 2"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:40:08.335Z",
+        "dateText": null,
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Miguel Loureiro",
+        "from": "Mister",
+        "to": "Heung Min Dad",
+        "price": 1410130,
+        "raw": "1.437.400 | Miguel Loureiro cambia de Mister a Heung Min Dad | 2 | M | HM | 1.410.130 | Comentar | Nuevos movimientos de jugadores"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "dateText": "12h",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Umaru Konare",
+        "from": "Olivito",
+        "to": "Mister",
+        "price": 368600,
+        "raw": "12h | Umaru Konare cambia de Olivito a Mister | 2 | O | M | 368.600 | Comentar | Nuevas transacciones en el mercado"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "dateText": "12h",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Facundo González",
+        "from": "Olivito",
+        "to": "Mister",
+        "price": 1933310,
+        "raw": "12h | Facundo González cambia de Olivito a Mister | 7 | O | M | 1.933.310 | Comentar | Nuevas transacciones en el mercado"
+      },
+      {
+        "scrapedAt": "2026-08-30T07:57:30.287Z",
+        "dateText": "12h",
+        "source": "feed",
+        "playerId": null,
+        "playerName": "Fran González",
+        "from": "Olivito",
+        "to": "Mister",
+        "price": 340470,
+        "raw": "12h | Fran González cambia de Olivito a Mister | 0 | O | M | 340.470 | Comentar | Nuevos movimientos de jugadores"
       },
       {
         "scrapedAt": "2026-08-30T07:57:30.287Z",
@@ -17073,13 +17315,103 @@
     "completed_trades": [
       {
         "user_name": "Rodando Nazário",
+        "player_name": "Pablo Barrios",
+        "buy_price": 7295635,
+        "sell_price": 10800000,
+        "profit": 3504365,
+        "roi": 0.48033721533492285,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Rodando Nazário",
+        "player_name": "Julen Agirrezabala",
+        "buy_price": 2834257,
+        "sell_price": 5668514,
+        "profit": 2834257,
+        "roi": 1,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Mikel Poyarzabal",
+        "player_name": "Aimar Oroz",
+        "buy_price": 3203623,
+        "sell_price": 5841150,
+        "profit": 2637527,
+        "roi": 0.823295063120723,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Heung Min Dad",
+        "player_name": "Ayoze Pérez",
+        "buy_price": 1966870,
+        "sell_price": 3960000,
+        "profit": 1993130,
+        "roi": 1.0133511619985052,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Heung Min Dad",
+        "player_name": "Sergio Carreira",
+        "buy_price": 3519270,
+        "sell_price": 5118680,
+        "profit": 1599410,
+        "roi": 0.4544720922236714,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Peter LIM",
+        "player_name": "Fran García",
+        "buy_price": 3050910,
+        "sell_price": 4576365,
+        "profit": 1525455,
+        "roi": 0.5,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Heung Min Dad",
+        "player_name": "Denzel Dumfries",
+        "buy_price": 7604170,
+        "sell_price": 9009660,
+        "profit": 1405490,
+        "roi": 0.1848314806218167,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Don Manuel Ruíz de Lopera",
+        "player_name": "Sergio Gómez",
+        "buy_price": 4039810,
+        "sell_price": 5403840,
+        "profit": 1364030,
+        "roi": 0.33764706756010804,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Heung Min Dad",
+        "player_name": "Julen Agirrezabala",
+        "buy_price": 1889505,
+        "sell_price": 2834257,
+        "profit": 944752,
+        "roi": 0.4999997353804303,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Rodando Nazário",
         "player_name": "Urko González",
         "buy_price": 1606610,
         "sell_price": 2491570,
         "profit": 884960,
         "roi": 0.5508244066699448,
         "buy_seen_at": "2026-08-30T07:57:30.287Z",
-        "sell_seen_at": "2026-08-30T07:57:30.287Z"
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
       },
       {
         "user_name": "Don Manuel Ruíz de Lopera",
@@ -17089,7 +17421,7 @@
         "profit": 814390,
         "roi": 0.2338010943771065,
         "buy_seen_at": "2026-08-30T07:57:30.287Z",
-        "sell_seen_at": "2026-08-30T07:57:30.287Z"
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
       },
       {
         "user_name": "Heung Min Dad",
@@ -17099,7 +17431,17 @@
         "profit": 812450,
         "roi": 0.09102826251365508,
         "buy_seen_at": "2026-08-30T07:57:30.287Z",
-        "sell_seen_at": "2026-08-30T07:57:30.287Z"
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Don Manuel Ruíz de Lopera",
+        "player_name": "Isaac Romero",
+        "buy_price": 1516220,
+        "sell_price": 2258880,
+        "profit": 742660,
+        "roi": 0.4898101858569337,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
       },
       {
         "user_name": "Don Manuel Ruíz de Lopera",
@@ -17109,7 +17451,7 @@
         "profit": 696480,
         "roi": 0.14614677628514233,
         "buy_seen_at": "2026-08-30T07:57:30.287Z",
-        "sell_seen_at": "2026-08-30T07:57:30.287Z"
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
       },
       {
         "user_name": "Rodando Nazário",
@@ -17119,7 +17461,57 @@
         "profit": 590390,
         "roi": 0.07175577343557246,
         "buy_seen_at": "2026-08-30T07:57:30.287Z",
-        "sell_seen_at": "2026-08-30T07:57:30.287Z"
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Don Manuel Ruíz de Lopera",
+        "player_name": "Abel Bretones",
+        "buy_price": 1230110,
+        "sell_price": 1675800,
+        "profit": 445690,
+        "roi": 0.3623171911455073,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Heung Min Dad",
+        "player_name": "Lucas Cepeda",
+        "buy_price": 1335010,
+        "sell_price": 1764880,
+        "profit": 429870,
+        "roi": 0.32199758803304845,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Rodando Nazário",
+        "player_name": "Marc Bernal",
+        "buy_price": 8404480,
+        "sell_price": 8829160,
+        "profit": 424680,
+        "roi": 0.05053019342065184,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Heung Min Dad",
+        "player_name": "Bernardo Silva",
+        "buy_price": 10194000,
+        "sell_price": 10578880,
+        "profit": 384880,
+        "roi": 0.037755542475966256,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Heung Min Dad",
+        "player_name": "Miguel Loureiro",
+        "buy_price": 1410130,
+        "sell_price": 1789920,
+        "profit": 379790,
+        "roi": 0.26932977810556474,
+        "buy_seen_at": "2026-08-30T07:40:08.335Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
       },
       {
         "user_name": "Heung Min Dad",
@@ -17129,7 +17521,27 @@
         "profit": 277770,
         "roi": 0.17549390632996165,
         "buy_seen_at": "2026-08-30T07:57:30.287Z",
-        "sell_seen_at": "2026-08-30T07:57:30.287Z"
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Heung Min Dad",
+        "player_name": "Marc Aguado",
+        "buy_price": 1437400,
+        "sell_price": 1672650,
+        "profit": 235250,
+        "roi": 0.16366355920411854,
+        "buy_seen_at": "2026-08-30T07:40:08.335Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Mikel Poyarzabal",
+        "player_name": "Martín Satriano",
+        "buy_price": 6988050,
+        "sell_price": 7177040,
+        "profit": 188990,
+        "roi": 0.027044740664419975,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
       },
       {
         "user_name": "Mikel Poyarzabal",
@@ -17139,7 +17551,7 @@
         "profit": 184910,
         "roi": 0.05168245379156523,
         "buy_seen_at": "2026-08-30T07:57:30.287Z",
-        "sell_seen_at": "2026-08-30T07:57:30.287Z"
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
       },
       {
         "user_name": "Don Manuel Ruíz de Lopera",
@@ -17149,7 +17561,7 @@
         "profit": 64460,
         "roi": 0.012818830117688236,
         "buy_seen_at": "2026-08-30T07:57:30.287Z",
-        "sell_seen_at": "2026-08-30T07:57:30.287Z"
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
       },
       {
         "user_name": "Don Manuel Ruíz de Lopera",
@@ -17159,7 +17571,17 @@
         "profit": 4400,
         "roi": 0.0022342283787626436,
         "buy_seen_at": "2026-08-30T07:57:30.287Z",
-        "sell_seen_at": "2026-08-30T07:57:30.287Z"
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Peter LIM",
+        "player_name": "Alex Baena",
+        "buy_price": 10860950,
+        "sell_price": 10799760,
+        "profit": -61190,
+        "roi": -0.005633945465175698,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
       },
       {
         "user_name": "Olivito",
@@ -17169,7 +17591,7 @@
         "profit": -331690,
         "roi": -0.14644150110375276,
         "buy_seen_at": "2026-08-30T07:57:30.287Z",
-        "sell_seen_at": "2026-08-30T07:57:30.287Z"
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
       },
       {
         "user_name": "Heung Min Dad",
@@ -17188,8 +17610,8 @@
         "sell_price": 1507800,
         "profit": -517760,
         "roi": -0.25561326250518374,
-        "buy_seen_at": "2026-08-30T07:57:30.287Z",
-        "sell_seen_at": "2026-08-30T07:57:30.287Z"
+        "buy_seen_at": "2026-08-30T12:49:02.962Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
       },
       {
         "user_name": "Rodando Nazário",
@@ -17208,8 +17630,38 @@
         "sell_price": 2638150,
         "profit": -1117630,
         "roi": -0.2975760028542673,
+        "buy_seen_at": "2026-08-30T12:49:02.962Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Peter LIM",
+        "player_name": "Arda Güler",
+        "buy_price": 13371540,
+        "sell_price": 11945280,
+        "profit": -1426260,
+        "roi": -0.10666385472428755,
         "buy_seen_at": "2026-08-30T07:57:30.287Z",
-        "sell_seen_at": "2026-08-30T07:57:30.287Z"
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Peter LIM",
+        "player_name": "Luis Rioja",
+        "buy_price": 5945000,
+        "sell_price": 4314670,
+        "profit": -1630330,
+        "roi": -0.2742354920100925,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
+      },
+      {
+        "user_name": "Olivito",
+        "player_name": "Nico Williams",
+        "buy_price": 12823000,
+        "sell_price": 11110320,
+        "profit": -1712680,
+        "roi": -0.13356312875302193,
+        "buy_seen_at": "2026-08-30T07:57:30.287Z",
+        "sell_seen_at": "2026-08-30T12:49:02.962Z"
       },
       {
         "user_name": "Heung Min Dad",
@@ -17224,22 +17676,28 @@
     ],
     "trade_summary": [
       {
+        "user_name": "Rodando Nazário",
+        "completed_trades": 7,
+        "profit": 6003392,
+        "roi": 0.1673171626824204
+      },
+      {
+        "user_name": "Heung Min Dad",
+        "completed_trades": 13,
+        "profit": 4593015,
+        "roi": 0.09263093565873802
+      },
+      {
         "user_name": "Don Manuel Ruíz de Lopera",
-        "completed_trades": 4,
-        "profit": 1579730,
-        "roi": 0.10361072960979302
+        "completed_trades": 7,
+        "profit": 4132110,
+        "roi": 0.1875425499661416
       },
       {
         "user_name": "Mikel Poyarzabal",
-        "completed_trades": 1,
-        "profit": 184910,
-        "roi": 0.05168245379156523
-      },
-      {
-        "user_name": "Peter LIM",
-        "completed_trades": 0,
-        "profit": 0,
-        "roi": null
+        "completed_trades": 3,
+        "profit": 3011427,
+        "roi": 0.21870298253028092
       },
       {
         "user_name": "Alex Ballena",
@@ -17248,22 +17706,16 @@
         "roi": null
       },
       {
-        "user_name": "Olivito",
-        "completed_trades": 1,
-        "profit": -331690,
-        "roi": -0.14644150110375276
-      },
-      {
-        "user_name": "Rodando Nazário",
+        "user_name": "Peter LIM",
         "completed_trades": 4,
-        "profit": -759910,
-        "roi": -0.04380909884387932
+        "profit": -1592325,
+        "roi": -0.047920604061585874
       },
       {
-        "user_name": "Heung Min Dad",
-        "completed_trades": 5,
-        "profit": -2779557,
-        "roi": -0.13741357508530144
+        "user_name": "Olivito",
+        "completed_trades": 2,
+        "profit": -2044370,
+        "roi": -0.13549642099681866
       }
     ],
     "signing_points": [
@@ -19036,8 +19488,8 @@
     ],
     "coverage": {
       "closed_rounds": 2,
-      "transfers_visible": 369,
-      "market_snapshots": 6,
+      "transfers_visible": 391,
+      "market_snapshots": 7,
       "notes": [
         "Las métricas deportivas salen de alineaciones cerradas y del detalle jugador-jornada.",
         "Las compras/ventas históricas dependen del feed visible y de los snapshots diarios acumulados desde ahora.",
@@ -19046,11 +19498,11 @@
     }
   },
   "market": {
-    "playerCount": 45,
-    "averageValue": 4039289,
+    "playerCount": 46,
+    "averageValue": 3957109,
     "trendCounts": {
       "down": 17,
-      "up": 28
+      "up": 29
     },
     "topSellers": [
       {
@@ -19080,9 +19532,13 @@
       {
         "seller": "Peter LIM",
         "count": 1
+      },
+      {
+        "seller": "Alex Ballena",
+        "count": 1
       }
     ],
-    "historySnapshots": 6,
+    "historySnapshots": 7,
     "latestPlayers": [
       {
         "playerId": "27516",
@@ -19104,7 +19560,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/14.png?version=20221205131749",
         "seller": "Peter LIM",
-        "expiresInText": "1d 19h",
+        "expiresInText": "1d 14h",
         "ownerId": "12113243",
         "askingPrice": 7021000,
         "bidLabel": "7.021.000",
@@ -19129,7 +19585,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/14.png?version=20221205131749",
         "seller": "Mikel Poyarzabal",
-        "expiresInText": "1d 19h",
+        "expiresInText": "1d 14h",
         "ownerId": "13365280",
         "askingPrice": 16600000,
         "bidLabel": "16.600.000",
@@ -19155,7 +19611,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/15.png?version=20221205131749",
         "seller": "Olivito",
-        "expiresInText": "1d 19h",
+        "expiresInText": "1d 14h",
         "ownerId": "10359824",
         "askingPrice": 0,
         "bidLabel": "En venta",
@@ -19180,7 +19636,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/19.png?version=20221205131749",
         "seller": "Olivito",
-        "expiresInText": "1d 19h",
+        "expiresInText": "1d 14h",
         "ownerId": "10359824",
         "askingPrice": 0,
         "bidLabel": "En venta",
@@ -19206,7 +19662,58 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/15.png?version=20221205131749",
         "seller": "Olivito",
-        "expiresInText": "1d 19h",
+        "expiresInText": "1d 14h",
+        "ownerId": "10359824",
+        "askingPrice": 0,
+        "bidLabel": "En venta",
+        "isAlreadyForSaleByUser": true
+      },
+      {
+        "playerId": "28621",
+        "name": "A. Abqar",
+        "href": "players/28621/abdel-abqar",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/28621/abdel-abqar",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/9.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/28621.png?version=20251003195813",
+        "positionId": 2,
+        "position": "defender",
+        "points": 2,
+        "marketValue": 1724000,
+        "valueTrend": "down",
+        "average": 1,
+        "streak": [
+          2,
+          0
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/50.png?version=20221205131749",
+        "seller": "Alex Ballena",
+        "expiresInText": "1d 14h",
+        "ownerId": "15420188",
+        "askingPrice": 1724000,
+        "bidLabel": "1.724.000",
+        "isAlreadyForSaleByUser": false
+      },
+      {
+        "playerId": "28612",
+        "name": "M. Ryan",
+        "href": "players/28612/mathew-ryan",
+        "absoluteUrl": "https://mister.mundodeportivo.com/players/28612/mathew-ryan",
+        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/12.png?version=20221205131749",
+        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/28612.png?version=20250829183411",
+        "positionId": 1,
+        "position": "goalkeeper",
+        "points": 17,
+        "marketValue": 9176000,
+        "valueTrend": "up",
+        "average": 5.7,
+        "streak": [
+          4,
+          9,
+          4
+        ],
+        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/13.png?version=20260621192402",
+        "seller": "Olivito",
+        "expiresInText": "1d 14h",
         "ownerId": "10359824",
         "askingPrice": 0,
         "bidLabel": "En venta",
@@ -19232,36 +19739,11 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/6.png?version=20260626093814",
         "seller": "Rodando Nazário",
-        "expiresInText": "19h 19m",
+        "expiresInText": "14h 10m",
         "ownerId": "8769466",
         "askingPrice": 14000000,
         "bidLabel": "14.000.000",
         "isAlreadyForSaleByUser": false
-      },
-      {
-        "playerId": "24789",
-        "name": "N. Williams",
-        "href": "players/24789/nico-williams",
-        "absoluteUrl": "https://mister.mundodeportivo.com/players/24789/nico-williams",
-        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/1.png?version=20221205131749",
-        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/24789.png?version=20260414174608",
-        "positionId": 4,
-        "position": "forward",
-        "points": 6,
-        "marketValue": 10641000,
-        "valueTrend": "down",
-        "average": 3,
-        "streak": [
-          2,
-          4
-        ],
-        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/5.png?version=20221205131749",
-        "seller": "Olivito",
-        "expiresInText": "19h 19m",
-        "ownerId": "10359824",
-        "askingPrice": 0,
-        "bidLabel": "En venta",
-        "isAlreadyForSaleByUser": true
       },
       {
         "playerId": "3060",
@@ -19283,7 +19765,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/50.png?version=20221205131749",
         "seller": "Heung Min Dad",
-        "expiresInText": "19h 19m",
+        "expiresInText": "14h 10m",
         "ownerId": "8771310",
         "askingPrice": 1162000,
         "bidLabel": "1.162.000",
@@ -19308,7 +19790,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/15.png?version=20221205131749",
         "seller": "Libre",
-        "expiresInText": "19h 19m",
+        "expiresInText": "14h 10m",
         "ownerId": "0",
         "askingPrice": 405000,
         "bidLabel": "405.000",
@@ -19334,7 +19816,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/17.png?version=20221205131749",
         "seller": "Libre",
-        "expiresInText": "19h 19m",
+        "expiresInText": "14h 10m",
         "ownerId": "0",
         "askingPrice": 9886000,
         "bidLabel": "9.886.000",
@@ -19359,7 +19841,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/6.png?version=20260626093814",
         "seller": "Mikel Poyarzabal",
-        "expiresInText": "19h 19m",
+        "expiresInText": "14h 10m",
         "ownerId": "13365280",
         "askingPrice": 6553000,
         "bidLabel": "6.553.000",
@@ -19384,7 +19866,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/19.png?version=20221205131749",
         "seller": "Rodando Nazário",
-        "expiresInText": "19h 19m",
+        "expiresInText": "14h 10m",
         "ownerId": "8769466",
         "askingPrice": 5469000,
         "bidLabel": "5.469.000",
@@ -19410,7 +19892,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/17.png?version=20221205131749",
         "seller": "Heung Min Dad",
-        "expiresInText": "19h 19m",
+        "expiresInText": "14h 10m",
         "ownerId": "8771310",
         "askingPrice": 5174000,
         "bidLabel": "5.174.000",
@@ -19436,7 +19918,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/15.png?version=20221205131749",
         "seller": "Don Manuel Ruíz de Lopera",
-        "expiresInText": "19h 19m",
+        "expiresInText": "14h 10m",
         "ownerId": "8785696",
         "askingPrice": 5148000,
         "bidLabel": "5.148.000",
@@ -19461,7 +19943,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/5.png?version=20221205131749",
         "seller": "Libre",
-        "expiresInText": "19h 19m",
+        "expiresInText": "14h 10m",
         "ownerId": "0",
         "askingPrice": 4964000,
         "bidLabel": "4.964.000",
@@ -19486,7 +19968,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/6.png?version=20260626093814",
         "seller": "Libre",
-        "expiresInText": "19h 19m",
+        "expiresInText": "14h 10m",
         "ownerId": "0",
         "askingPrice": 3648000,
         "bidLabel": "3.648.000",
@@ -19512,7 +19994,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/50.png?version=20221205131749",
         "seller": "Rodando Nazário",
-        "expiresInText": "19h 19m",
+        "expiresInText": "14h 10m",
         "ownerId": "8769466",
         "askingPrice": 3410000,
         "bidLabel": "3.410.000",
@@ -19538,7 +20020,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/8.png?version=20221205131749",
         "seller": "Don Manuel Ruíz de Lopera",
-        "expiresInText": "19h 19m",
+        "expiresInText": "14h 10m",
         "ownerId": "8785696",
         "askingPrice": 3287000,
         "bidLabel": "3.287.000",
@@ -19563,36 +20045,10 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/9.png?version=20221205131749",
         "seller": "Mikel Poyarzabal",
-        "expiresInText": "19h 19m",
+        "expiresInText": "14h 10m",
         "ownerId": "13365280",
         "askingPrice": 2999000,
         "bidLabel": "2.999.000",
-        "isAlreadyForSaleByUser": false
-      },
-      {
-        "playerId": "64468",
-        "name": "T. Dolan",
-        "href": "players/64468/tyrhys-dolan",
-        "absoluteUrl": "https://mister.mundodeportivo.com/players/64468/tyrhys-dolan",
-        "teamLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/8.png?version=20221205131749",
-        "photoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/players/64468.png?version=20250725131445",
-        "positionId": 3,
-        "position": "midfielder",
-        "points": 14,
-        "marketValue": 3286000,
-        "valueTrend": "up",
-        "average": 4.7,
-        "streak": [
-          10,
-          2,
-          2
-        ],
-        "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/17.png?version=20221205131749",
-        "seller": "Rodando Nazário",
-        "expiresInText": "19h 19m",
-        "ownerId": "8769466",
-        "askingPrice": 2827000,
-        "bidLabel": "2.827.000",
         "isAlreadyForSaleByUser": false
       }
     ]
@@ -24625,8 +25081,8 @@
     "playerProfiles": 128
   },
   "calendar": {
-    "updatedAt": "2026-08-29T13:09:00.697Z",
-    "scrapedAt": "2026-08-29T13:09:00.697Z",
+    "updatedAt": "2026-08-30T12:49:36.059Z",
+    "scrapedAt": "2026-08-30T12:49:36.059Z",
     "source": "https://www.laliga.com/laliga-easports/calendario",
     "fallbackSource": "https://as.com/resultados/futbol/primera/calendario/",
     "status": "as-calendar-dates",
