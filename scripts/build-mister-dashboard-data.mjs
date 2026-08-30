@@ -7,6 +7,7 @@ const MISTER_DIR = path.join(ROOT, "data", "mister");
 const LATEST_DIR = path.join(MISTER_DIR, "latest");
 const CERDO_DIR = path.join(ROOT, "data", "cerdo");
 const LALIGA_DIR = path.join(ROOT, "data", "laliga");
+const LINEUP_AWARD_START_ROUND = Number(process.env.MISTER_LINEUP_AWARD_START_ROUND || 3);
 
 const FALLBACK_CLOSED_ROUNDS = [
   {
@@ -43,6 +44,7 @@ const AWARD_DEFINITIONS = [
   { id: "efficient", icon: "💎", kind: "good", name: "Mayor eficiencia de plantilla", requirement: "team_value_snapshot" },
   { id: "inefficient", icon: "🧯", kind: "bad", name: "Menor eficiencia de plantilla", requirement: "team_value_snapshot" },
   { id: "goals", icon: "⚽", kind: "good", name: "Más goles", requirement: "player_round_events" },
+  { id: "assists", icon: "🎯", kind: "good", name: "Más asistencias", requirement: "player_round_events" },
   { id: "red", icon: "🟥", kind: "bad", name: "Recibió roja", requirement: "player_round_events" },
   { id: "dnp", icon: "🧊", kind: "bad", name: "Más jugadores sin jugar", requirement: "lineup_slots" },
   { id: "dependency", icon: "🧲", kind: "bad", name: "Mayor dependencia", requirement: "player_round_points" },
@@ -50,9 +52,9 @@ const AWARD_DEFINITIONS = [
   { id: "captain", icon: "👑", kind: "good", name: "Capitán adecuado", requirement: "captain_selection" },
   { id: "bench", icon: "🪑", kind: "bad", name: "Peor alineador", requirement: "bench_points" },
   { id: "directorGood", icon: "🧠", kind: "good", name: "Mejor director deportivo", requirement: "roster_delta" },
-  { id: "directorBad", icon: "📉", kind: "bad", name: "Peor director deportivo", requirement: "roster_delta" },
+  { id: "directorBad", icon: "🧨", kind: "bad", name: "Peor director deportivo", requirement: "roster_delta" },
   { id: "trader", icon: "📈", kind: "good", name: "Mejor trader", requirement: "daily_value_snapshots" },
-  { id: "traderBad", icon: "💸", kind: "bad", name: "Peor trader", requirement: "daily_value_snapshots" },
+  { id: "traderBad", icon: "📉", kind: "bad", name: "Peor trader", requirement: "daily_value_snapshots" },
   { id: "negative", icon: "☠", kind: "bad", name: "No puntuó por estar en negativo", requirement: "negative_balance_status" }
 ];
 
@@ -78,6 +80,15 @@ const BIWENGER_VIEWS = [
   { id: "tables", name: "Tablas de operaciones y fichajes", status: "partial", needs: ["market_history"] },
   { id: "team_profile", name: "Perfil individual de equipo", status: "partial", needs: ["round_points", "market_history", "current_roster"] }
 ];
+
+const POSITION_LABELS = {
+  goalkeeper: "Portería",
+  defender: "Defensa",
+  midfielder: "Centro del campo",
+  forward: "Delantera"
+};
+
+const POSITION_ORDER = ["goalkeeper", "defender", "midfielder", "forward"];
 
 async function readJson(relativePath, fallback = null) {
   try {
@@ -111,6 +122,12 @@ function parseUserLine(text) {
     .replace(/\s+\d+\s+jugadores.*$/i, "")
     .trim();
   return { rank, initials, name, points, value, playedText };
+}
+
+function numberOrNull(value) {
+  if (value === "-" || value === "?" || value == null || value === "") return null;
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : null;
 }
 
 function parseStandings(users = []) {
@@ -215,11 +232,41 @@ function buildPlayerLookup(deep) {
     }
     lookup.set(String(player.playerId), { ...player, rounds });
   }
+  for (const round of deep?.rounds || []) {
+    for (const detail of round.playerDetails || []) {
+      if (!detail?.playerId || detail.error) continue;
+      const profile = lookup.get(String(detail.playerId)) || {
+        playerId: String(detail.playerId),
+        name: detail.name,
+        position: detail.position,
+        marketValue: detail.value,
+        rounds: new Map()
+      };
+      const current = profile.rounds.get(String(detail.gameweekId)) || {};
+      current.final = detail.points?.final ?? current.final ?? null;
+      current.providers = {
+        ...(current.providers || {}),
+        final: detail.points?.final,
+        as: detail.points?.as,
+        marca: detail.points?.marca,
+        mundoDeportivo: detail.points?.mundoDeportivo,
+        sofascore: detail.points?.sofascore,
+        marcaStats: detail.points?.marcaStats
+      };
+      current.events = detail.events || current.events || {};
+      current.stats = detail.stats || current.stats || {};
+      current.detail = detail;
+      profile.rounds.set(String(detail.gameweekId), current);
+      lookup.set(String(detail.playerId), profile);
+    }
+  }
   return lookup;
 }
 
 function scoreForPlayer(player, playerLookup, system = "final") {
-  if (!player?.playerId) return player.points ?? 0;
+  if (!player?.playerId) return numberOrNull(player?.points);
+  if (system === "final") return numberOrNull(player.providerPoints?.final) ?? numberOrNull(player.points);
+  if (player.providerPoints && Number.isFinite(player.providerPoints[system])) return player.providerPoints[system];
   const profile = playerLookup.get(String(player.playerId));
   const round = profile?.rounds?.get(String(player.gameweekId));
   if (system === "final") return round?.final ?? player.points ?? 0;
@@ -227,7 +274,7 @@ function scoreForPlayer(player, playerLookup, system = "final") {
 }
 
 function roundRowsBySystem(round, playerLookup) {
-  const systems = ["final", "as", "marca", "mundoDeportivo", "sofascore"];
+  const systems = ["final", "as", "marca", "mundoDeportivo", "sofascore", "marcaStats"];
   const rowsBySystem = {};
   for (const system of systems) {
     rowsBySystem[system] = (round.userRounds || []).map((userRound) => {
@@ -278,6 +325,22 @@ function buildDeepRounds(deep, fallbackRounds, playerLookup) {
   }).sort((a, b) => a.round - b.round);
 }
 
+function slimRoundForDashboard(round) {
+  return {
+    round: round.round,
+    gameweekId: round.gameweekId,
+    status: round.status,
+    rows: round.rows || [],
+    rowsBySystem: round.rowsBySystem || { final: round.rows || [] },
+    matches: round.matches || [],
+    bestXi: (round.bestXi || []).slice(0, 11),
+    summary: {
+      userRounds: round.userRounds?.length || 0,
+      playerDetails: round.playerDetails?.length || 0
+    }
+  };
+}
+
 function isClosedRound(round, feedClosedRounds) {
   if (feedClosedRounds.some((item) => item.round === round.round)) return true;
   if (round.status === "closed" && !round.rows?.some((row) => row.played)) return true;
@@ -285,9 +348,28 @@ function isClosedRound(round, feedClosedRounds) {
 }
 
 function eventCount(player, playerLookup, matcher) {
+  const directEvents = Object.keys(player?.events || {});
+  const directEventCount = directEvents
+    .filter((icon) => matcher.test(icon))
+    .reduce((total, key) => total + (Number(player.events[key]?.count) || 1), 0);
+  if (directEventCount) return directEventCount;
   const profile = playerLookup.get(String(player.playerId));
   const round = profile?.rounds?.get(String(player.gameweekId));
+  const eventKeys = Object.keys(round?.events || {});
+  const endpointCount = eventKeys
+    .filter((icon) => matcher.test(icon))
+    .reduce((total, key) => total + (Number(round.events[key]?.count) || 1), 0);
+  if (endpointCount) return endpointCount;
   return (round?.eventIcons || []).filter((icon) => matcher.test(icon)).length;
+}
+
+function statCount(player, playerLookup, key) {
+  const direct = player?.stats?.[key]?.value;
+  if (Number.isFinite(direct)) return direct;
+  const profile = playerLookup.get(String(player?.playerId));
+  const round = profile?.rounds?.get(String(player?.gameweekId));
+  const value = round?.stats?.[key]?.value;
+  return Number.isFinite(value) ? value : 0;
 }
 
 function playerPosition(player, playerLookup) {
@@ -371,8 +453,10 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
         ...player,
         position: playerPosition(player, playerLookup),
         finalPoints: playerFinalPoints(player, playerLookup) ?? player.points ?? null,
-        goals: eventCount(player, playerLookup, /goal/i),
-        reds: eventCount(player, playerLookup, /red/i)
+        goals: statCount(player, playerLookup, "goals") || eventCount(player, playerLookup, /^goal$/i),
+        assists: statCount(player, playerLookup, "goalAssist") || eventCount(player, playerLookup, /assist/i),
+        yellows: statCount(player, playerLookup, "yellowCard") || eventCount(player, playerLookup, /yellow/i),
+        reds: statCount(player, playerLookup, "redCard") + statCount(player, playerLookup, "doubleYellowCard") || eventCount(player, playerLookup, /red/i)
       }));
       const benchScored = bench.map((player) => ({
         ...player,
@@ -398,6 +482,8 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
       return {
         team: userRound.manager.name,
         goals: scored.reduce((sum, player) => sum + player.goals, 0),
+        assists: scored.reduce((sum, player) => sum + player.assists, 0),
+        yellows: scored.reduce((sum, player) => sum + player.yellows, 0),
         reds: scored.reduce((sum, player) => sum + player.reds, 0),
         dnp,
         benchMistakes: benchMistakes.length,
@@ -412,10 +498,12 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
 
     const goalRows = eventRows.filter((row) => row.goals > 0).sort((a, b) => b.goals - a.goals);
     if (goalRows.length) add(goalRows[0].team, "goals", round.round, `${goalRows[0].goals} goles`);
+    const assistRows = eventRows.filter((row) => row.assists > 0).sort((a, b) => b.assists - a.assists);
+    if (assistRows.length) add(assistRows[0].team, "assists", round.round, `${assistRows[0].assists} asistencias`);
     eventRows.filter((row) => row.reds > 0).forEach((row) => add(row.team, "red", round.round, `${row.reds} roja(s)`));
     const dnpRows = eventRows.filter((row) => row.dnp > 0).sort((a, b) => b.dnp - a.dnp);
     if (dnpRows.length) add(dnpRows[0].team, "dnp", round.round, `${dnpRows[0].dnp} sin jugar`);
-    const benchRows = eventRows.filter((row) => row.benchMistakes > 0).sort((a, b) => b.benchMistakes - a.benchMistakes);
+    const benchRows = eventRows.filter((row) => round.round >= LINEUP_AWARD_START_ROUND && row.benchMistakes > 0).sort((a, b) => b.benchMistakes - a.benchMistakes);
     if (benchRows.length) add(benchRows[0].team, "bench", round.round, `${benchRows[0].benchMistakes} cambios claros`);
 
     const dependencyRows = eventRows.filter((row) => Number.isFinite(row.dependency));
@@ -429,7 +517,7 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
       .filter((row) => row.captain?.playerId && row.bestCaptain?.player?.playerId && String(row.captain.playerId) === String(row.bestCaptain.player.playerId))
       .forEach((row) => add(row.team, "captain", round.round, row.captain.name));
 
-    const directorRows = eventRows.filter((row) => Number.isFinite(row.directorDelta));
+    const directorRows = eventRows.filter((row) => round.round >= LINEUP_AWARD_START_ROUND && Number.isFinite(row.directorDelta));
     if (directorRows.length) {
       directorRows.sort((a, b) => b.directorDelta - a.directorDelta);
       add(directorRows[0].team, "directorGood", round.round, `${directorRows[0].directorDelta > 0 ? "+" : ""}${directorRows[0].directorDelta} pts`);
@@ -483,6 +571,558 @@ function buildVolatility(teams, closedRounds) {
   }).sort((a, b) => a.volatility - b.volatility);
 }
 
+function buildDetailedCharts(teams, closedRounds, playerLookup) {
+  const teamRows = new Map(teams.map((team) => [team.name, {
+    ...team,
+    goals: 0,
+    assists: 0,
+    yellowCards: 0,
+    redCards: 0,
+    dnp: 0,
+    points: 0,
+    pointsByPosition: { goalkeeper: 0, defender: 0, midfielder: 0, forward: 0 },
+    playersByPosition: { goalkeeper: 0, defender: 0, midfielder: 0, forward: 0 },
+    topPlayerPoints: 0,
+    rounds: []
+  }]));
+  const playerRows = new Map();
+  const roundBreakdown = [];
+
+  for (const round of closedRounds) {
+    const roundTeams = [];
+    for (const userRound of round.userRounds || []) {
+      const teamName = userRound.manager.name;
+      const row = teamRows.get(teamName) || {
+        name: teamName,
+        initials: userRound.manager.initials,
+        goals: 0,
+        assists: 0,
+        yellowCards: 0,
+        redCards: 0,
+        dnp: 0,
+        points: 0,
+        pointsByPosition: { goalkeeper: 0, defender: 0, midfielder: 0, forward: 0 },
+        playersByPosition: { goalkeeper: 0, defender: 0, midfielder: 0, forward: 0 },
+        topPlayerPoints: 0,
+        rounds: []
+      };
+      const lineup = userRound.lineup || [];
+      let roundGoals = 0;
+      let roundAssists = 0;
+      let roundYellows = 0;
+      let roundReds = 0;
+      let roundDnp = 0;
+      let roundTop = 0;
+      const roundByPosition = { goalkeeper: 0, defender: 0, midfielder: 0, forward: 0 };
+
+      for (const player of lineup) {
+        const points = playerFinalPoints(player, playerLookup) ?? 0;
+        const position = playerPosition(player, playerLookup);
+        const goals = statCount(player, playerLookup, "goals") || eventCount(player, playerLookup, /^goal$/i);
+        const assists = statCount(player, playerLookup, "goalAssist") || eventCount(player, playerLookup, /assist/i);
+        const yellowCards = statCount(player, playerLookup, "yellowCard") || eventCount(player, playerLookup, /yellow/i);
+        const redCards = statCount(player, playerLookup, "redCard") + statCount(player, playerLookup, "doubleYellowCard") || eventCount(player, playerLookup, /red/i);
+        roundGoals += goals;
+        roundAssists += assists;
+        roundYellows += yellowCards;
+        roundReds += redCards;
+        if (!Number.isFinite(playerFinalPoints(player, playerLookup))) roundDnp += 1;
+        roundTop = Math.max(roundTop, Number(points) || 0);
+        if (position) {
+          row.pointsByPosition[position] = (row.pointsByPosition[position] || 0) + (Number(points) || 0);
+          row.playersByPosition[position] = (row.playersByPosition[position] || 0) + 1;
+          roundByPosition[position] = (roundByPosition[position] || 0) + (Number(points) || 0);
+        }
+
+        const playerKey = String(player.playerId || player.name);
+        const playerRow = playerRows.get(playerKey) || {
+          playerId: player.playerId,
+          name: player.name,
+          team: teamName,
+          position,
+          points: 0,
+          goals: 0,
+          assists: 0,
+          yellowCards: 0,
+          redCards: 0,
+          appearances: 0
+        };
+        playerRow.points += Number(points) || 0;
+        playerRow.goals += goals;
+        playerRow.assists += assists;
+        playerRow.yellowCards += yellowCards;
+        playerRow.redCards += redCards;
+        playerRow.appearances += 1;
+        playerRows.set(playerKey, playerRow);
+      }
+
+      const standingsPoints = round.rows.find((item) => item.name === teamName)?.points ?? sum(lineup.map((player) => playerFinalPoints(player, playerLookup) ?? 0));
+      row.goals += roundGoals;
+      row.assists += roundAssists;
+      row.yellowCards += roundYellows;
+      row.redCards += roundReds;
+      row.dnp += roundDnp;
+      row.points += standingsPoints;
+      row.topPlayerPoints += roundTop;
+      row.rounds.push({
+        round: round.round,
+        points: standingsPoints,
+        goals: roundGoals,
+        assists: roundAssists,
+        yellowCards: roundYellows,
+        redCards: roundReds,
+        dnp: roundDnp,
+        dependency: standingsPoints > 0 ? roundTop / standingsPoints : null,
+        pointsByPosition: roundByPosition
+      });
+      teamRows.set(teamName, row);
+      roundTeams.push({
+        name: teamName,
+        initials: userRound.manager.initials,
+        points: standingsPoints,
+        goals: roundGoals,
+        assists: roundAssists,
+        yellowCards: roundYellows,
+        redCards: roundReds,
+        dnp: roundDnp,
+        dependency: standingsPoints > 0 ? roundTop / standingsPoints : null,
+        pointsByPosition: roundByPosition
+      });
+    }
+    roundBreakdown.push({ round: round.round, teams: roundTeams });
+  }
+
+  const teamsSummary = [...teamRows.values()].map((row) => ({
+    ...row,
+    dependency: row.points > 0 ? row.topPlayerPoints / row.points : null,
+    disciplineScore: row.yellowCards + row.redCards * 3
+  }));
+
+  return {
+    teams: teamsSummary,
+    byRound: roundBreakdown,
+    goalsByTeam: teamsSummary.slice().sort((a, b) => b.goals - a.goals),
+    assistsByTeam: teamsSummary.slice().sort((a, b) => b.assists - a.assists),
+    disciplineByTeam: teamsSummary.slice().sort((a, b) => b.disciplineScore - a.disciplineScore),
+    dependencyByTeam: teamsSummary.slice().sort((a, b) => (b.dependency || 0) - (a.dependency || 0)),
+    positionPointsByTeam: teamsSummary.map((row) => ({
+      name: row.name,
+      initials: row.initials,
+      ...row.pointsByPosition
+    })),
+    topPlayers: [...playerRows.values()].sort((a, b) => b.points - a.points).slice(0, 25),
+    topScorers: [...playerRows.values()].sort((a, b) => b.goals - a.goals).slice(0, 25),
+    topAssistants: [...playerRows.values()].sort((a, b) => b.assists - a.assists).slice(0, 25)
+  };
+}
+
+function teamKey(name) {
+  return String(name || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+}
+
+function buildBiwengerStats(teams, closedRounds, playerLookup, teamValues, transfersData, transferHistory, marketHistory) {
+  const teamNames = new Set(teams.map((team) => team.name));
+  const teamsRows = teams.map((team) => ({
+    user_name: team.name,
+    initials: team.initials,
+    team_value: teamValues.get(team.name) || null
+  }));
+  const positionProgress = [];
+  const roundCountsMap = new Map(teams.map((team) => [team.name, {
+    user_name: team.name,
+    wins: 0,
+    losses: 0,
+    avg_position: 0,
+    rounds: 0
+  }]));
+  const teamAgg = new Map(teams.map((team) => [team.name, {
+    user_name: team.name,
+    initials: team.initials,
+    points: 0,
+    goals: 0,
+    assists: 0,
+    yellow_cards: 0,
+    red_cards: 0,
+    discipline_index: 0,
+    playerPoints: new Map(),
+    playerGoals: new Map(),
+    positionPoints: Object.fromEntries(POSITION_ORDER.map((position) => [position, 0])),
+    positionGoals: Object.fromEntries(POSITION_ORDER.map((position) => [position, 0])),
+    positionAssists: Object.fromEntries(POSITION_ORDER.map((position) => [position, 0])),
+    positionPlayers: Object.fromEntries(POSITION_ORDER.map((position) => [position, new Set()])),
+    playersSeen: new Map()
+  }]));
+
+  for (const round of closedRounds) {
+    const standings = cumulativeStandings(teams, closedRounds, round.round);
+    standings.forEach((row, index) => {
+      const lineupPoints = round.rows.find((item) => item.name === row.name)?.points ?? 0;
+      positionProgress.push({
+        round_order: round.round,
+        round_name: `J${round.round}`,
+        user_name: row.name,
+        initials: row.initials,
+        league_position: index + 1,
+        total_points_after_round: row.points,
+        lineup_points: lineupPoints,
+        team_value: round.rows.find((item) => item.name === row.name)?.value || teamValues.get(row.name) || null
+      });
+      const counts = roundCountsMap.get(row.name);
+      if (counts) {
+        counts.avg_position += index + 1;
+        counts.rounds += 1;
+      }
+    });
+
+    const sortedRound = [...round.rows].sort((a, b) => b.points - a.points);
+    if (sortedRound[0]) roundCountsMap.get(sortedRound[0].name).wins += 1;
+    if (sortedRound.at(-1)) roundCountsMap.get(sortedRound.at(-1).name).losses += 1;
+
+    for (const userRound of round.userRounds || []) {
+      const teamName = userRound.manager.name;
+      const agg = teamAgg.get(teamName);
+      if (!agg) continue;
+      const roundPoints = round.rows.find((row) => row.name === teamName)?.points ?? 0;
+      agg.points += Number(roundPoints) || 0;
+
+      for (const player of userRound.lineup || []) {
+        const playerId = String(player.playerId || player.name);
+        const playerName = player.name || playerLookup.get(playerId)?.name || playerId;
+        const points = playerFinalPoints(player, playerLookup) ?? 0;
+        const goals = statCount(player, playerLookup, "goals") || eventCount(player, playerLookup, /^goal$/i);
+        const assists = statCount(player, playerLookup, "goalAssist") || eventCount(player, playerLookup, /assist/i);
+        const yellowCards = statCount(player, playerLookup, "yellowCard") || eventCount(player, playerLookup, /yellow/i);
+        const redCards = statCount(player, playerLookup, "redCard") + statCount(player, playerLookup, "doubleYellowCard") || eventCount(player, playerLookup, /red/i);
+        const position = playerPosition(player, playerLookup) || "unknown";
+
+        agg.goals += goals;
+        agg.assists += assists;
+        agg.yellow_cards += yellowCards;
+        agg.red_cards += redCards;
+        agg.discipline_index += yellowCards * 2.5 + redCards * 5;
+        agg.playerPoints.set(playerName, (agg.playerPoints.get(playerName) || 0) + (Number(points) || 0));
+        agg.playerGoals.set(playerName, (agg.playerGoals.get(playerName) || 0) + goals);
+        if (POSITION_ORDER.includes(position)) {
+          agg.positionPoints[position] += Number(points) || 0;
+          agg.positionGoals[position] += goals;
+          agg.positionAssists[position] += assists;
+          agg.positionPlayers[position].add(playerName);
+        }
+        const seen = agg.playersSeen.get(playerName) || { player_name: playerName, rounds: 0, points: 0, goals: 0, assists: 0, position };
+        seen.rounds += 1;
+        seen.points += Number(points) || 0;
+        seen.goals += goals;
+        seen.assists += assists;
+        agg.playersSeen.set(playerName, seen);
+      }
+    }
+  }
+
+  const latestRound = Math.max(0, ...closedRounds.map((round) => round.round));
+  const latestStandings = latestRound
+    ? cumulativeStandings(teams, closedRounds, latestRound).map((row, index) => ({
+      league_position: index + 1,
+      user_name: row.name,
+      initials: row.initials,
+      total_points_after_round: row.points,
+      team_value: teamValues.get(row.name) || null
+    }))
+    : [];
+  const roundCounts = [...roundCountsMap.values()].map((row) => ({
+    ...row,
+    avg_position: row.rounds ? row.avg_position / row.rounds : null
+  }));
+  const volatility = buildVolatility(teams, closedRounds).map((row) => ({
+    user_name: row.name,
+    initials: row.initials,
+    average_points: row.average,
+    volatility: row.volatility,
+    points: row.points
+  }));
+
+  const teamGoals = [...teamAgg.values()].map((row) => ({
+    user_name: row.user_name,
+    initials: row.initials,
+    goals: row.goals,
+    assists: row.assists
+  })).sort((a, b) => b.goals - a.goals);
+  const goalDependence = [...teamAgg.values()].map((row) => {
+    const total = row.goals || 0;
+    const top = [...row.playerGoals.entries()].sort((a, b) => b[1] - a[1])[0] || [null, 0];
+    return {
+      user_name: row.user_name,
+      player_name: top[0],
+      goals: top[1],
+      total_goals: total,
+      share: total ? top[1] / total : 0
+    };
+  }).sort((a, b) => b.share - a.share);
+  const pointDependence = [...teamAgg.values()].map((row) => {
+    const total = row.points || 0;
+    const top = [...row.playerPoints.entries()].sort((a, b) => b[1] - a[1])[0] || [null, 0];
+    return {
+      user_name: row.user_name,
+      player_name: top[0],
+      points: top[1],
+      total_points: total,
+      share: total ? top[1] / total : 0
+    };
+  }).sort((a, b) => b.share - a.share);
+  const discipline = [...teamAgg.values()].map((row) => ({
+    user_name: row.user_name,
+    yellow_cards: row.yellow_cards,
+    red_cards: row.red_cards,
+    discipline_index: row.discipline_index
+  })).sort((a, b) => b.discipline_index - a.discipline_index);
+  const positionSummary = [...teamAgg.values()].flatMap((row) => {
+    const positionalTotal = Math.max(1, sum(POSITION_ORDER.map((position) => row.positionPoints[position] || 0)));
+    return POSITION_ORDER.map((position) => ({
+      user_name: row.user_name,
+      position_id: position,
+      position_name: POSITION_LABELS[position],
+      position_points: row.positionPoints[position] || 0,
+      position_goals: row.positionGoals[position] || 0,
+      position_assists: row.positionAssists[position] || 0,
+      players_used: row.positionPlayers[position]?.size || 0,
+      point_share: (row.positionPoints[position] || 0) / positionalTotal
+    }));
+  });
+  const positionBestPlayers = [...teamAgg.values()].flatMap((row) => {
+    return [...row.playersSeen.values()].map((player) => ({
+      user_name: row.user_name,
+      player_name: player.player_name,
+      position_id: player.position,
+      position_name: POSITION_LABELS[player.position] || "Sin posición",
+      points: player.points,
+      goals: player.goals,
+      assists: player.assists,
+      rounds: player.rounds
+    }));
+  }).sort((a, b) => b.points - a.points);
+  const loyalty = [...teamAgg.values()].map((row) => {
+    const players = [...row.playersSeen.values()];
+    return {
+      user_name: row.user_name,
+      players_used: players.length,
+      average_rounds_per_player: players.length ? sum(players.map((player) => player.rounds)) / players.length : 0,
+      lineup_slots: sum(players.map((player) => player.rounds))
+    };
+  }).sort((a, b) => b.average_rounds_per_player - a.average_rounds_per_player);
+  const concentration = [...teamAgg.values()].map((row) => {
+    const total = Math.max(1, row.points);
+    const shares = [...row.playerPoints.values()].map((points) => Math.max(0, points) / total);
+    return {
+      user_name: row.user_name,
+      concentration_index: shares.reduce((acc, share) => acc + share ** 2, 0),
+      top_player_share: Math.max(0, ...shares)
+    };
+  }).sort((a, b) => b.concentration_index - a.concentration_index);
+  const valueEfficiency = latestStandings.map((row) => ({
+    user_name: row.user_name,
+    total_points_after_round: row.total_points_after_round,
+    team_value: row.team_value,
+    points_per_million: row.team_value ? row.total_points_after_round / (row.team_value / 1000000) : null
+  })).sort((a, b) => (b.points_per_million || 0) - (a.points_per_million || 0));
+
+  const transfers = normalizeTransferRows(transfersData, transferHistory, deepPlayerMovements(playerLookup)).filter((row) => teamNames.has(row.from) || teamNames.has(row.to));
+  const marketActivitySummary = teams.map((team) => {
+    const purchases = transfers.filter((row) => teamKey(row.to) === teamKey(team.name));
+    const sales = transfers.filter((row) => teamKey(row.from) === teamKey(team.name));
+    return {
+      user_name: team.name,
+      purchases: purchases.length,
+      sales: sales.length,
+      market_volume: sum([...purchases, ...sales].map((row) => row.price || 0)),
+      visible_movements: purchases.length + sales.length
+    };
+  }).sort((a, b) => b.visible_movements - a.visible_movements);
+  const completedTrades = buildCompletedTrades(transfers);
+  const tradeSummary = teams.map((team) => {
+    const rows = completedTrades.filter((row) => teamKey(row.user_name) === teamKey(team.name));
+    const totalBuy = sum(rows.map((row) => row.buy_price || 0));
+    const profit = sum(rows.map((row) => row.profit || 0));
+    return {
+      user_name: team.name,
+      completed_trades: rows.length,
+      profit,
+      roi: totalBuy ? profit / totalBuy : null
+    };
+  }).sort((a, b) => b.profit - a.profit);
+  const currentSignings = buildCurrentSignings(closedRounds);
+  const signingPoints = currentSignings.map((signing) => ({
+    ...signing,
+    points_after_signing: estimateSigningPoints(signing, closedRounds, playerLookup),
+    first_round_points: estimateFirstRoundSigningPoints(signing, closedRounds, playerLookup)
+  })).sort((a, b) => (b.points_after_signing || 0) - (a.points_after_signing || 0));
+
+  return {
+    generated_from: "mister-json-endpoints",
+    teams: teamsRows,
+    latest_standings: latestStandings,
+    position_progress: positionProgress,
+    round_counts: roundCounts,
+    volatility,
+    team_goals: teamGoals,
+    goal_dependence: goalDependence,
+    point_dependence: pointDependence,
+    discipline,
+    position_summary: positionSummary,
+    position_best_players: positionBestPlayers,
+    value_efficiency: valueEfficiency,
+    loyalty,
+    concentration,
+    market_activity_summary: marketActivitySummary,
+    transfers,
+    completed_trades: completedTrades,
+    trade_summary: tradeSummary,
+    signing_points: signingPoints,
+    first_round_signing_points: signingPoints.filter((row) => Number.isFinite(row.first_round_points)).sort((a, b) => b.first_round_points - a.first_round_points),
+    coverage: {
+      closed_rounds: closedRounds.length,
+      transfers_visible: transfers.length,
+      market_snapshots: marketHistory.length,
+      notes: [
+        "Las métricas deportivas salen de alineaciones cerradas y del detalle jugador-jornada.",
+        "Las compras/ventas históricas dependen del feed visible y de los snapshots diarios acumulados desde ahora.",
+        "Banquillo histórico, mejor alineador y director deportivo no se reconstruyen antes del corte configurado."
+      ]
+    }
+  };
+}
+
+function deepPlayerMovements(playerLookup) {
+  return [...playerLookup.values()].flatMap((player) => player.movements || []);
+}
+
+function normalizeTransferRows(latest, history, playerMovements = []) {
+  const rows = [];
+  for (const transfer of latest?.transfers || []) rows.push(transfer);
+  for (const entry of history || []) {
+    if (Array.isArray(entry.transfers)) rows.push(...entry.transfers);
+    else if (entry.playerName) rows.push(entry);
+  }
+  rows.push(...playerMovements);
+  const seen = new Set();
+  return rows
+    .map((row) => ({
+      scrapedAt: row.scrapedAt || null,
+      dateText: row.dateText || null,
+      source: row.source || "feed",
+      playerId: row.playerId || null,
+      playerName: row.playerName || row.name || null,
+      from: row.from || null,
+      to: row.to || null,
+      price: numberOrNull(row.price),
+      raw: row.raw || null
+    }))
+    .filter((row) => row.playerName && row.from && row.to)
+    .filter((row) => {
+      const key = [row.playerName, row.from, row.to, row.price ?? "", row.dateText ?? ""].map(teamKey).join("|");
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+}
+
+function buildCompletedTrades(transfers) {
+  const byPlayer = new Map();
+  for (const transfer of transfers.filter((row) => Number.isFinite(row.price))) {
+    const key = teamKey(transfer.playerName);
+    if (!byPlayer.has(key)) byPlayer.set(key, []);
+    byPlayer.get(key).push(transfer);
+  }
+  const trades = [];
+  for (const movements of byPlayer.values()) {
+    const ordered = movements.slice().sort((a, b) => String(a.scrapedAt || "").localeCompare(String(b.scrapedAt || "")));
+    const openBuys = new Map();
+    for (const movement of ordered) {
+      if (movement.to && movement.to !== "Mister") {
+        openBuys.set(teamKey(movement.to), movement);
+      }
+      if (movement.from && movement.from !== "Mister") {
+        const buy = openBuys.get(teamKey(movement.from));
+        if (buy && Number.isFinite(buy.price) && Number.isFinite(movement.price)) {
+          const profit = movement.price - buy.price;
+          trades.push({
+            user_name: movement.from,
+            player_name: movement.playerName,
+            buy_price: buy.price,
+            sell_price: movement.price,
+            profit,
+            roi: buy.price ? profit / buy.price : null,
+            buy_seen_at: buy.scrapedAt,
+            sell_seen_at: movement.scrapedAt
+          });
+          openBuys.delete(teamKey(movement.from));
+        }
+      }
+    }
+  }
+  return trades.sort((a, b) => b.profit - a.profit);
+}
+
+function buildCurrentSignings(closedRounds) {
+  const latest = closedRounds.at(-1);
+  const signings = [];
+  for (const userRound of latest?.userRounds || []) {
+    for (const player of userRound.currentSquad || userRound.squad || []) {
+      if (!player?.playerId) continue;
+      signings.push({
+        user_name: userRound.manager.name,
+        player_id: player.playerId,
+        player_name: player.name,
+        position_id: player.position,
+        position_name: POSITION_LABELS[player.position] || player.position || "Sin posición",
+        buy_date: player.acquiredAt || null,
+        buy_price: player.acquisitionPrice,
+        market_value: player.marketValue
+      });
+    }
+  }
+  const seen = new Set();
+  return signings.filter((row) => {
+    const key = `${teamKey(row.user_name)}|${row.player_id}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function estimateSigningPoints(signing, closedRounds, playerLookup) {
+  let total = 0;
+  let found = false;
+  for (const round of closedRounds) {
+    for (const userRound of round.userRounds || []) {
+      if (teamKey(userRound.manager.name) !== teamKey(signing.user_name)) continue;
+      const player = (userRound.lineup || []).find((item) => String(item.playerId) === String(signing.player_id));
+      if (!player) continue;
+      const points = playerFinalPoints(player, playerLookup);
+      if (Number.isFinite(points)) {
+        total += points;
+        found = true;
+      }
+    }
+  }
+  return found ? total : null;
+}
+
+function estimateFirstRoundSigningPoints(signing, closedRounds, playerLookup) {
+  for (const round of closedRounds) {
+    for (const userRound of round.userRounds || []) {
+      if (teamKey(userRound.manager.name) !== teamKey(signing.user_name)) continue;
+      const player = (userRound.lineup || []).find((item) => String(item.playerId) === String(signing.player_id));
+      if (!player) continue;
+      const points = playerFinalPoints(player, playerLookup);
+      if (Number.isFinite(points)) return points;
+    }
+  }
+  return null;
+}
+
 function buildMarketSummary(market, history) {
   const players = market?.players || [];
   const totalValue = players.reduce((sum, player) => sum + (player.marketValue || 0), 0);
@@ -515,9 +1155,11 @@ async function main() {
   const team = await readJson("data/mister/latest/team.json", {});
   const search = await readJson("data/mister/latest/search.json", {});
   const deep = await readJson("data/mister/latest/deep.json", {});
+  const transfers = await readJson("data/mister/latest/transfers.json", { transfers: [] });
   const pigHistory = await readJson("data/cerdo/history.json", { rounds: [] });
   const calendar = await readJson("data/laliga/calendar.json", { rounds: [] });
   const marketHistory = await readJsonl("data/mister/market-history.jsonl");
+  const transferHistory = await readJsonl("data/mister/transfer-history.jsonl");
 
   const parsedStandings = parseStandings(standings.users || []);
   const closedRounds = parseClosedRoundsFromFeedText(feed.headlineText || "");
@@ -539,8 +1181,11 @@ async function main() {
     { id: "as", name: "AS" },
     { id: "marca", name: "Marca" },
     { id: "mundoDeportivo", name: "Mundo Deportivo" },
-    { id: "sofascore", name: "Sofascore" }
+    { id: "sofascore", name: "Sofascore" },
+    { id: "marcaStats", name: "Marca Stats" }
   ];
+  const detailedCharts = buildDetailedCharts(teams, effectiveClosedRounds, playerLookup);
+  const stats = buildBiwengerStats(teams, effectiveClosedRounds, playerLookup, teamValues, transfers, transferHistory, marketHistory);
 
   const dashboard = {
     meta: {
@@ -555,16 +1200,17 @@ async function main() {
       },
       latestClosedRound,
       liveRoundPolicy: "Las jornadas en juego se muestran, pero no suman ni desbloquean galardones hasta aparecer como Fin de la jornada en el feed.",
+      lineupAwardStartRound: LINEUP_AWARD_START_ROUND,
       limitations: [
-        "Las asistencias se han quitado porque Mister no las expone de forma directa en esta vista.",
-        "Banquillo histórico y director deportivo empiezan a ser fiables desde que existan snapshots semanales profundos.",
-        "Las clasificaciones por sistema de puntuación usan los popups de jugador que Mister expone; si falta un popup, ese jugador queda fuera de ese sistema alternativo."
+        "Peor alineador y director deportivo no se calculan para jornadas anteriores al corte configurado, aunque Mister permita recuperar parte del banquillo.",
+        "Las clasificaciones por sistema de puntuación usan el endpoint interno de jugador-jornada; si un jugador no puntuó, queda como sin dato en ese sistema.",
+        "El mercado diario depende de que la Action diaria siga ejecutándose y acumulando snapshots."
       ]
     },
     teams,
     currentStandings: parsedStandings.general,
-    closedRounds: effectiveClosedRounds,
-    liveRounds: liveRounds.length ? liveRounds : parsedStandings.live.length ? [{ round: latestClosedRound + 1, status: "in_progress", rows: parsedStandings.live, rowsBySystem: { final: parsedStandings.live } }] : [],
+    closedRounds: effectiveClosedRounds.map(slimRoundForDashboard),
+    liveRounds: liveRounds.length ? liveRounds.map(slimRoundForDashboard) : parsedStandings.live.length ? [{ round: latestClosedRound + 1, status: "in_progress", rows: parsedStandings.live, rowsBySystem: { final: parsedStandings.live } }] : [],
     cumulative: Array.from({ length: latestClosedRound + 1 }, (_, round) => ({ round, rows: cumulativeStandings(teams, effectiveClosedRounds, round) })),
     cumulativeBySystem: Object.fromEntries(scoringSystems.map((system) => [
       system.id,
@@ -580,6 +1226,7 @@ async function main() {
     charts: {
       availableViews: BIWENGER_VIEWS,
       volatility: buildVolatility(teams, effectiveClosedRounds),
+      ...detailedCharts,
       valueEfficiency: effectiveClosedRounds.flatMap((round) => round.rows.map((row) => ({
         round: round.round,
         name: row.name,
@@ -590,6 +1237,7 @@ async function main() {
         provisional: true
       })))
     },
+    stats,
     market: buildMarketSummary(market, marketHistory),
     players: {
       searchTop: (search.players || []).map(parsePlayerText).filter((player) => player.name).slice(0, 80),
@@ -602,7 +1250,10 @@ async function main() {
         average: player.average,
         marketValue: player.marketValue,
         goals: player.goals,
+        assists: player.assists,
         cards: player.cards,
+        yellowCards: player.totals?.yellowCards,
+        redCards: player.totals?.redCards,
         ownerNotice: player.ownerNotice,
         owner: player.owner || null,
         movements: player.movements || [],

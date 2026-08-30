@@ -39,6 +39,10 @@ jobs:
           MISTER_STORAGE_STATE_BASE64: ${{ secrets.MISTER_STORAGE_STATE_BASE64 }}
           MISTER_EMAIL: ${{ secrets.MISTER_EMAIL }}
           MISTER_PASSWORD: ${{ secrets.MISTER_PASSWORD }}
+          MISTER_LINEUP_AWARD_START_ROUND: 3
+          MISTER_PLAYER_DETAIL_CONCURRENCY: 8
+          MISTER_PLAYER_MOVEMENT_CONCURRENCY: 12
+          MISTER_PLAYER_MOVEMENT_LIMIT: 700
 
       - name: Update LaLiga calendar
         run: pnpm run calendar:laliga
@@ -50,4 +54,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Actualizar datos semanales Mister"
-          file_pattern: data/mister/** data/cerdo/** data/laliga/**
+          file_pattern: data/mister/latest/** data/mister/market-history.jsonl data/mister/transfer-history.jsonl data/cerdo/** data/laliga/**

@@ -1,5 +1,6 @@
 node_modules/
 data/private/
+data/mister/snapshots/
 playwright-report/
 test-results/
 .env

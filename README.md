@@ -71,7 +71,7 @@ Algunos sólo se pueden calcular con datos de puntos por equipo. Otros necesitan
 Hay dos workflows en GitHub Actions:
 
 - `.github/workflows/scrape-mister-market.yml`: se ejecuta a diario a las `07:10 UTC`, que normalmente son las `09:10` en España en horario de verano. Lee mercado, actualiza calendario y reconstruye datos.
-- `.github/workflows/scrape-mister-weekly.yml`: se ejecuta los martes a las `08:30 UTC`, normalmente `10:30` en España en horario de verano. Lee feed, clasificación, equipo, búsqueda, jornadas, managers, alineaciones visibles, fichas de jugadores, eventos y puntuaciones por proveedor cuando Mister las expone.
+- `.github/workflows/scrape-mister-weekly.yml`: se ejecuta los martes a las `08:30 UTC`, normalmente `10:30` en España en horario de verano. Lee feed, clasificación, equipo, búsqueda, jornadas, managers, alineaciones, banquillo, eventos y puntuaciones por proveedor desde los endpoints internos de Mister.
 
 Ambos pueden lanzarse también a mano desde la pestaña `Actions` de GitHub con `Run workflow`.
 
@@ -98,21 +98,30 @@ Conviene revisar de vez en cuando:
 
 ## Scraping profundo
 
-El scraper semanal genera `data/mister/latest/deep.json`. Ese archivo intenta guardar:
+El scraper semanal genera `data/mister/latest/deep.json`. La metodología buena es híbrida: abre una sola página autenticada para leer el `X-Auth` que usa Mister y después hace peticiones limpias a los endpoints JSON internos, sin abrir ficha por ficha ni depender de clicks visuales.
+
+Endpoints reales usados:
+
+- `POST /ajax/sw/players`: catálogo paginado de jugadores, valores, propietarios y rachas.
+- `POST /ajax/sw/gameweek`: jornadas, partidos, estado de jornada y jugadores destacados.
+- `POST /ajax/sw/users`: equipo por manager y jornada, alineación, banquillo, capitán, multiplicador y valor de equipo.
+- `POST /ajax/player-gameweek`: detalle jugador-jornada con Mixto, AS, Marca, Mundo Deportivo, Sofascore, Marca Stats, goles, asistencias, tarjetas, minutos y estadísticas.
+
+Ese archivo guarda:
 
 - IDs reales de jornada de Mister.
 - Managers de la liga.
 - Clasificaciones por jornada con valor de equipo.
 - Vista de jornada completa con partidos, once ideal y jugadores de la liga.
-- Alineaciones visibles por manager y jornada.
-- Fichas de jugadores encontrados en la liga.
-- Propietario visible, cláusula, últimos movimientos, precio de fichaje e historial de valor/puntos cuando aparecen en la ficha.
-- Puntos por jornada, goles y tarjetas visibles.
-- Popups de puntuación por jugador y jornada, con desglose de AS, Marca, Mundo Deportivo y Sofascore cuando están disponibles.
+- Alineaciones y banquillos por manager y jornada.
+- Capitán elegido y multiplicador.
+- Catálogo de todos los jugadores visibles en Mister.
+- Puntos por jornada, goles, asistencias, tarjetas, minutos y eventos.
+- Desglose de Mixto, AS, Marca, Mundo Deportivo, Sofascore y Marca Stats.
 
-La web usa esos datos para permitir que las clasificaciones de `General` y `Jornada` cambien entre `Mixto`, `AS`, `Marca`, `Mundo Deportivo` y `Sofascore`. Si falta un dato de proveedor en un jugador concreto, no se inventa: ese jugador queda fuera de esa suma alternativa hasta que Mister devuelva el popup.
+La web usa esos datos para permitir que las clasificaciones de `General` y `Jornada` cambien entre `Mixto`, `AS`, `Marca`, `Mundo Deportivo`, `Sofascore` y `Marca Stats`. Si falta un dato de proveedor en un jugador concreto, no se inventa: ese jugador queda fuera de esa suma alternativa hasta que Mister devuelva el detalle.
 
-Las asistencias se han retirado porque Mister no las muestra de forma directa en estas vistas. El banquillo histórico y los galardones de director deportivo sólo serán fiables desde que existan snapshots profundos semanales, porque no se puede reconstruir con seguridad lo que no quedó guardado.
+Las asistencias no aparecen como campo simple en la ficha, pero sí se recuperan del detalle estadístico `goalAssist`. Por criterio de liga, `Peor alineador` y `Mejor/peor director deportivo` no se otorgan para jornadas anteriores al corte configurado en `MISTER_LINEUP_AWARD_START_ROUND`, aunque Mister permita recuperar parte del banquillo histórico.
 
 ## Cómo replicarlo en otro proyecto
 

@@ -15,7 +15,8 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" type="image/png" sizes="192x192" href="img/icons/moneda-192.png">
   <link rel="apple-touch-icon" href="img/icons/moneda-192.png">
-  <link rel="stylesheet" href="style.css?v=deep-app-2">
+  <link rel="stylesheet" href="style.css?v=stats-v3">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 </head>
 <body>
   <div class="app-bg" aria-hidden="true"></div>
@@ -107,16 +108,6 @@
         <div id="award-detail" class="award-detail">Toca un icono para ver qué desbloquea.</div>
       </section>
 
-      <section class="panel">
-        <div class="subtabs" role="tablist" aria-label="Vistas de análisis general">
-          <button class="subtab active" type="button" data-subtab="summary">Resumen</button>
-          <button class="subtab" type="button" data-subtab="players">Jugadores</button>
-          <button class="subtab" type="button" data-subtab="market">Mercado</button>
-          <button class="subtab" type="button" data-subtab="management">Plantilla</button>
-          <button class="subtab" type="button" data-subtab="pending">Pendiente</button>
-        </div>
-        <div id="general-subtab" class="subtab-content"></div>
-      </section>
     </section>
 
     <section class="main-tab" id="tab-jornada" data-tab-panel="jornada">
@@ -143,6 +134,26 @@
         <div id="round-awards" class="round-awards"></div>
       </section>
     </section>
+
+    <section class="main-tab" id="tab-stats" data-tab-panel="stats">
+      <section class="panel stats-panel">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Stats</p>
+            <h2>Análisis de temporada</h2>
+          </div>
+        </div>
+        <div class="subtabs stats-subtabs" role="tablist" aria-label="Vistas estadísticas">
+          <button class="subtab active" type="button" data-stats-tab="general">General</button>
+          <button class="subtab" type="button" data-stats-tab="jugadores">Jugadores</button>
+          <button class="subtab" type="button" data-stats-tab="mercado">Mercado</button>
+          <button class="subtab" type="button" data-stats-tab="plantilla">Plantilla</button>
+          <button class="subtab" type="button" data-stats-tab="equipo">Equipo</button>
+          <button class="subtab" type="button" data-stats-tab="notas">Notas</button>
+        </div>
+        <div id="stats-content" class="stats-content"></div>
+      </section>
+    </section>
   </main>
 
   <nav class="app-tabs" aria-label="Pestañas principales">
@@ -158,10 +169,14 @@
       <span>◇</span>
       <strong>Jornada</strong>
     </button>
+    <button class="tab-button" type="button" data-tab="stats">
+      <span>✦</span>
+      <strong>Stats</strong>
+    </button>
   </nav>
 
   <audio id="evil-laugh" src="risa.mp3" preload="auto"></audio>
   <div id="coin-container"></div>
-  <script src="script.js?v=deep-app-2"></script>
+  <script src="script.js?v=stats-v3"></script>
 </body>
 </html>

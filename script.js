@@ -21,12 +21,12 @@ const els = {
   closedRoundNote: document.getElementById("closed-round-note"),
   awardGrid: document.getElementById("award-grid"),
   awardDetail: document.getElementById("award-detail"),
-  generalSubtab: document.getElementById("general-subtab"),
   roundSelect: document.getElementById("round-select"),
   roundScoringSelect: document.getElementById("round-scoring-select"),
   roundStatus: document.getElementById("round-status"),
   roundStandings: document.getElementById("round-standings"),
-  roundAwards: document.getElementById("round-awards")
+  roundAwards: document.getElementById("round-awards"),
+  statsContent: document.getElementById("stats-content")
 };
 
 const images = [
@@ -40,8 +40,8 @@ const images = [
 ];
 
 const BUILD_VERSION = {
-  label: "web deep-v2",
-  updatedAt: "2026-08-30T00:42:00+02:00"
+  label: "web stats-v3",
+  updatedAt: "2026-08-30T10:07:52+02:00"
 };
 
 const cardTeams = new Map([
@@ -101,7 +101,8 @@ const awardDefs = [
   { id: "loser", icon: "🕳", kind: "bad", name: "Perdedor de la jornada", desc: "Menos puntos en una jornada cerrada." },
   { id: "efficient", icon: "💎", kind: "good", name: "Mayor eficiencia de plantilla", desc: "Más puntos por millón de valor de equipo. En esta primera versión usa el valor actual hasta tener snapshot semanal." },
   { id: "inefficient", icon: "🧯", kind: "bad", name: "Menor eficiencia de plantilla", desc: "Menos puntos por millón de valor de equipo. En esta primera versión usa el valor actual hasta tener snapshot semanal." },
-  { id: "goals", icon: "⚽", kind: "good", name: "Más goles", desc: "Se desbloqueará cuando el scraper guarde eventos de jugadores por jornada." },
+  { id: "goals", icon: "⚽", kind: "good", name: "Más goles", desc: "Más goles sumados por los jugadores alineados." },
+  { id: "assists", icon: "🎯", kind: "good", name: "Más asistencias", desc: "Más asistencias detectadas en el detalle estadístico de Mister." },
   { id: "red", icon: "🟥", kind: "bad", name: "Recibió roja", desc: "Puede ganarlo más de un equipo en la misma jornada." },
   { id: "dnp", icon: "🧊", kind: "bad", name: "Más jugadores sin jugar", desc: "Necesita detalle de alineación y jugadores no utilizados." },
   { id: "dependency", icon: "🧲", kind: "bad", name: "Mayor dependencia", desc: "Mayor porcentaje de puntos concentrado en un solo jugador." },
@@ -109,9 +110,9 @@ const awardDefs = [
   { id: "captain", icon: "👑", kind: "good", name: "Capitán adecuado", desc: "Se desbloquea si el capitán elegido era el que más puntos extra podía dar con el multiplicador." },
   { id: "bench", icon: "🪑", kind: "bad", name: "Peor alineador", desc: "Más puntos útiles dejados en el banquillo frente a titulares de la misma posición." },
   { id: "directorGood", icon: "🧠", kind: "good", name: "Mejor director deportivo", desc: "Más puntos ganados por cambios de plantilla respecto a la jornada anterior." },
-  { id: "directorBad", icon: "📉", kind: "bad", name: "Peor director deportivo", desc: "Más puntos perdidos por cambios de plantilla respecto a la jornada anterior." },
+  { id: "directorBad", icon: "🧨", kind: "bad", name: "Peor director deportivo", desc: "Más puntos perdidos por cambios de plantilla respecto a la jornada anterior." },
   { id: "trader", icon: "📈", kind: "good", name: "Mejor trader", desc: "Mayor aumento de valor de equipo entre jornadas." },
-  { id: "traderBad", icon: "💸", kind: "bad", name: "Peor trader", desc: "Mayor bajada de valor de equipo entre jornadas." },
+  { id: "traderBad", icon: "📉", kind: "bad", name: "Peor trader", desc: "Mayor bajada de valor de equipo entre jornadas." },
   { id: "negative", icon: "☠", kind: "bad", name: "No puntuó por estar en negativo", desc: "Calavera para el equipo que no puntúe una jornada por saldo negativo." }
 ];
 
@@ -155,6 +156,7 @@ const state = {
   closedRounds: fallbackClosedRounds,
   liveRounds: [],
   selectedSubtab: "summary",
+  selectedStatsTab: "general",
   selectedScoringSystem: "final",
   selectedRoundScoringSystem: "final",
   raceTimer: null,
@@ -167,7 +169,7 @@ init();
 async function init() {
   registerServiceWorker();
   setupTabs();
-  setupSubtabs();
+  setupStatsTabs();
   setupEasterEgg();
   await loadData();
   normalizeData();
@@ -317,7 +319,7 @@ function renderAll() {
   renderAwards();
   setupRoundSelect();
   renderRound();
-  renderGeneralSubtab();
+  renderStatsTab();
 }
 
 function setupTabs() {
@@ -328,16 +330,17 @@ function setupTabs() {
       document.querySelectorAll("[data-tab-panel]").forEach(panel => {
         panel.classList.toggle("active", panel.dataset.tabPanel === tab);
       });
+      if (tab === "stats") renderStatsTab();
     });
   });
 }
 
-function setupSubtabs() {
-  document.querySelectorAll(".subtab").forEach(button => {
+function setupStatsTabs() {
+  document.querySelectorAll("[data-stats-tab]").forEach(button => {
     button.addEventListener("click", () => {
-      state.selectedSubtab = button.dataset.subtab;
-      document.querySelectorAll(".subtab").forEach(item => item.classList.toggle("active", item === button));
-      renderGeneralSubtab();
+      state.selectedStatsTab = button.dataset.statsTab;
+      document.querySelectorAll("[data-stats-tab]").forEach(item => item.classList.toggle("active", item === button));
+      renderStatsTab();
     });
   });
 }
@@ -478,7 +481,6 @@ function setupScoringSelects() {
       state.raceRowsReady = false;
       stopRaceAnimation();
       renderRace(Number(els.raceRange.value));
-      renderGeneralSubtab();
     });
   }
   if (els.roundScoringSelect) {
@@ -750,6 +752,349 @@ function renderRoundAwards(round) {
   `).join("");
 }
 
+const chartPalette = ["#66fff1", "#ff55df", "#a5ff6a", "#e8d26a", "#7aa8ff", "#ffffff", "#b67cff"];
+const fixedTeamPalette = {
+  "don manuel ruiz de lopera": "#66fff1",
+  "rodando nazario": "#ff55df",
+  "heung min dad": "#a5ff6a",
+  "mikel poyarzabal": "#7aa8ff",
+  "peter lim": "#e8d26a",
+  "olivito": "#f8fbff",
+  "alex ballena": "#b67cff"
+};
+
+function renderStatsTab() {
+  if (!els.statsContent) return;
+  const stats = state.dashboard?.stats;
+  if (!stats) {
+    els.statsContent.innerHTML = `<p class="info-tile">Todavía no hay datos estadísticos generados.</p>`;
+    return;
+  }
+
+  const tab = state.selectedStatsTab || "general";
+  els.statsContent.innerHTML = statsTemplate(tab, stats);
+  if (tab === "equipo") setupStatsTeamSelector(stats);
+  requestAnimationFrame(() => renderStatsCharts(tab, stats));
+}
+
+function statsTemplate(tab, stats) {
+  const templates = {
+    general: `
+      <div class="stats-grid">
+        ${chartCard("stats-positions", "Carrera de clasificación", "Evolución acumulada jornada a jornada.")}
+        ${chartCard("stats-wins", "Ganadores y farolillos", "Conteo de jornadas ganadas y perdidas.")}
+        ${chartCard("stats-volatility", "Regularidad", "Menor volatilidad significa equipo más estable.")}
+        ${chartCard("stats-value", "Valor por millón", "Puntos acumulados por cada millón de plantilla.")}
+      </div>
+    `,
+    jugadores: `
+      <div class="stats-grid">
+        ${chartCard("stats-goals", "Goles y asistencias", "Producción ofensiva por equipo.")}
+        ${chartCard("stats-goal-dependence", "Dependencia de gol", "Qué porcentaje de goles depende del máximo goleador.")}
+        ${chartCard("stats-point-dependence", "Dependencia de puntos", "Peso del jugador más importante en la puntuación.")}
+        ${chartCard("stats-discipline", "Índice de Palos", "Amarillas, rojas y castigo acumulado.")}
+        ${chartCard("stats-position-share", "Dependencia por posición", "Reparto porcentual de los puntos por línea.")}
+      </div>
+    `,
+    mercado: `
+      <div class="stats-grid">
+        ${chartCard("stats-roi", "ROI trading", "Rentabilidad media; beneficio absoluto en el tooltip.")}
+        ${chartCard("stats-signing-points", "Puntos por fichajes", "Puntos aportados por jugadores actualmente fichados.")}
+        ${chartCard("stats-first-signing", "Primera jornada tras fichar", "Impacto inicial de los fichajes detectados.")}
+        ${chartCard("stats-activity", "Actividad de mercado", "Compras, ventas y movimientos visibles.")}
+        ${chartCard("stats-volume", "Volumen de mercado", "Dinero movido en operaciones detectadas.")}
+      </div>
+      ${statsTable("Operaciones cerradas", stats.completed_trades, ["user_name", "player_name", "buy_price", "sell_price", "profit"])}
+    `,
+    plantilla: `
+      <div class="stats-grid">
+        ${chartCard("stats-loyalty", "Fidelidad de plantilla", "Promedio de jornadas repetidas por jugador.")}
+        ${chartCard("stats-concentration", "Concentración", "Cuánto depende cada equipo de pocos jugadores.")}
+        ${chartCard("stats-squad-value", "Eficiencia de plantilla", "Relación entre puntos y valor actual.")}
+      </div>
+      ${statsTable("Mejores jugadores por posición", stats.position_best_players?.slice(0, 30), ["user_name", "player_name", "position_name", "points", "goals", "assists"])}
+    `,
+    equipo: `
+      <div class="stats-team-toolbar">
+        <select id="stats-team-select" class="neon-select" aria-label="Elegir equipo en stats">
+          ${(stats.teams || []).map(team => `<option value="${escapeAttr(team.user_name)}">${escapeHtml(team.user_name)}</option>`).join("")}
+        </select>
+      </div>
+      <div id="stats-team-profile" class="stats-team-profile"></div>
+    `,
+    notas: `
+      <div class="stats-notes">
+        <div class="info-tile"><strong>Jornadas cerradas:</strong> ${stats.coverage?.closed_rounds || 0}</div>
+        <div class="info-tile"><strong>Transferencias visibles:</strong> ${stats.coverage?.transfers_visible || 0}</div>
+        <div class="info-tile"><strong>Snapshots de mercado:</strong> ${stats.coverage?.market_snapshots || 0}</div>
+        ${(stats.coverage?.notes || []).map(note => `<p class="info-tile">${escapeHtml(note)}</p>`).join("")}
+      </div>
+    `
+  };
+  return templates[tab] || templates.general;
+}
+
+function chartCard(id, title, note) {
+  return `
+    <article class="chart-card">
+      <div>
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(note)}</p>
+      </div>
+      <div id="${id}" class="plot"></div>
+    </article>
+  `;
+}
+
+function renderStatsCharts(tab, stats) {
+  if (!window.Plotly) {
+    els.statsContent.insertAdjacentHTML("afterbegin", `<p class="info-tile">No se pudo cargar Plotly. Revisa conexión y recarga.</p>`);
+    return;
+  }
+  if (tab === "general") {
+    plotPositionProgress("stats-positions", stats.position_progress || []);
+    plotGroupedBar("stats-wins", stats.round_counts || [], ["wins", "losses"], ["Ganadas", "Perdidas"]);
+    plotBar("stats-volatility", stats.volatility || [], "volatility", { label: "Volatilidad", ascending: true, decimals: 1 });
+    plotBar("stats-value", stats.value_efficiency || [], "points_per_million", { label: "Pts/M", decimals: 2 });
+  }
+  if (tab === "jugadores") {
+    plotGroupedBar("stats-goals", stats.team_goals || [], ["goals", "assists"], ["Goles", "Asistencias"]);
+    plotBar("stats-goal-dependence", stats.goal_dependence || [], "share", { label: "% del máximo goleador", percent: true, customY: row => `${row.user_name}<br>${row.player_name || "-"}` });
+    plotBar("stats-point-dependence", stats.point_dependence || [], "share", { label: "% del jugador clave", percent: true, customY: row => `${row.user_name}<br>${row.player_name || "-"}` });
+    plotGroupedBar("stats-discipline", stats.discipline || [], ["yellow_cards", "red_cards"], ["Amarillas", "Rojas"]);
+    plotStackedPositions("stats-position-share", stats.position_summary || [], "point_share", "% puntos", true);
+  }
+  if (tab === "mercado") {
+    plotBar("stats-roi", stats.trade_summary || [], "roi", { label: "ROI", percent: true, hoverKeys: ["profit", "completed_trades"] });
+    plotBar("stats-signing-points", stats.signing_points || [], "points_after_signing", { label: "Puntos", customY: row => `${row.player_name}<br>${row.user_name}` });
+    plotBar("stats-first-signing", stats.first_round_signing_points || [], "first_round_points", { label: "Puntos", customY: row => `${row.player_name}<br>${row.user_name}` });
+    plotGroupedBar("stats-activity", stats.market_activity_summary || [], ["purchases", "sales"], ["Compras", "Ventas"]);
+    plotBar("stats-volume", stats.market_activity_summary || [], "market_volume", { label: "Volumen", money: true });
+  }
+  if (tab === "plantilla") {
+    plotBar("stats-loyalty", stats.loyalty || [], "average_rounds_per_player", { label: "Jornadas/jugador", decimals: 1 });
+    plotBar("stats-concentration", stats.concentration || [], "concentration_index", { label: "Concentración", decimals: 3 });
+    plotBar("stats-squad-value", stats.value_efficiency || [], "points_per_million", { label: "Pts/M", decimals: 2 });
+  }
+}
+
+function basePlotLayout(height = 360) {
+  return {
+    height,
+    margin: { l: 118, r: 18, t: 14, b: 42 },
+    paper_bgcolor: "rgba(0,0,0,0)",
+    plot_bgcolor: "rgba(0,0,0,0)",
+    font: { family: "Inter, system-ui, sans-serif", color: "#f8fbff", size: 11 },
+    hoverlabel: { bgcolor: "#050713", bordercolor: "#66fff1", font: { color: "#f8fbff" } },
+    xaxis: { fixedrange: true, gridcolor: "rgba(102,255,241,.13)", zerolinecolor: "rgba(255,85,223,.24)" },
+    yaxis: { fixedrange: true, gridcolor: "rgba(102,255,241,.08)", zerolinecolor: "rgba(255,85,223,.16)" },
+    legend: { orientation: "h", y: -0.22, font: { size: 10 } },
+    barmode: "group"
+  };
+}
+
+const plotConfig = { responsive: true, displayModeBar: false, scrollZoom: false };
+
+function plotBar(id, rows, key, options = {}) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const dataRows = rows.filter(row => Number.isFinite(Number(row[key]))).slice(0, 12);
+  if (!dataRows.length) {
+    el.innerHTML = `<p class="empty-chart">Sin datos suficientes todavía.</p>`;
+    return;
+  }
+  const sorted = dataRows.sort((a, b) => options.ascending ? Number(a[key]) - Number(b[key]) : Number(b[key]) - Number(a[key]));
+  Plotly.newPlot(id, [{
+    type: "bar",
+    orientation: "h",
+    x: sorted.map(row => Number(row[key])),
+    y: sorted.map(row => options.customY ? options.customY(row) : row.user_name || row.name || row.player_name),
+    marker: { color: sorted.map(row => colorForRow(row)) },
+    text: sorted.map(row => formatPlotValue(row[key], options)),
+    customdata: sorted.map(row => (options.hoverKeys || []).map(hoverKey => row[hoverKey])),
+    textposition: "auto",
+    hovertemplate: hoverTemplate(options)
+  }], {
+    ...basePlotLayout(Math.max(320, sorted.length * 34 + 90)),
+    xaxis: { ...basePlotLayout().xaxis, title: options.label || "" },
+    yaxis: { ...basePlotLayout().yaxis, autorange: "reversed" }
+  }, plotConfig);
+}
+
+function plotGroupedBar(id, rows, keys, names) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const dataRows = rows.filter(row => keys.some(key => Number(row[key]))).slice(0, 12);
+  if (!dataRows.length) {
+    el.innerHTML = `<p class="empty-chart">Sin datos suficientes todavía.</p>`;
+    return;
+  }
+  Plotly.newPlot(id, keys.map((key, index) => ({
+    type: "bar",
+    orientation: "h",
+    name: names[index],
+    x: dataRows.map(row => Number(row[key]) || 0),
+    y: dataRows.map(row => row.user_name || row.name),
+    marker: { color: dataRows.map(row => colorForRow(row, index)), opacity: index === 0 ? 0.95 : 0.52 },
+    hovertemplate: `${names[index]}: %{x}<extra></extra>`
+  })), {
+    ...basePlotLayout(Math.max(320, dataRows.length * 36 + 110)),
+    yaxis: { ...basePlotLayout().yaxis, autorange: "reversed" }
+  }, plotConfig);
+}
+
+function plotStackedPositions(id, rows, valueKey, label, percent = false) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const teams = [...new Set(rows.map(row => row.user_name))];
+  if (!teams.length) {
+    el.innerHTML = `<p class="empty-chart">Sin datos suficientes todavía.</p>`;
+    return;
+  }
+  const positions = ["Portería", "Defensa", "Centro del campo", "Delantera"];
+  Plotly.newPlot(id, positions.map((position, index) => ({
+    type: "bar",
+    orientation: "h",
+    name: position,
+    x: teams.map(team => Number(rows.find(row => row.user_name === team && row.position_name === position)?.[valueKey]) || 0),
+    y: teams,
+    marker: { color: chartPalette[index] },
+    customdata: teams.map(team => Number(rows.find(row => row.user_name === team && row.position_name === position)?.position_points) || 0),
+    hovertemplate: `${position}: ${percent ? "%{x:.0%}" : "%{x} pts"}<br>Puntos: %{customdata}<extra></extra>`
+  })), {
+    ...basePlotLayout(Math.max(320, teams.length * 42 + 120)),
+    barmode: "stack",
+    xaxis: { ...basePlotLayout().xaxis, title: label, tickformat: percent ? ".0%" : "" },
+    yaxis: { ...basePlotLayout().yaxis, autorange: "reversed" }
+  }, plotConfig);
+}
+
+function plotPositionProgress(id, rows) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const rounds = [...new Set(rows.map(row => row.round_order))].sort((a, b) => a - b);
+  const teams = [...new Set(rows.map(row => row.user_name))];
+  if (!rounds.length || !teams.length) {
+    el.innerHTML = `<p class="empty-chart">Sin jornadas cerradas suficientes.</p>`;
+    return;
+  }
+  Plotly.newPlot(id, teams.map((team, index) => {
+    const teamRows = rounds.map(round => rows.find(row => row.user_name === team && row.round_order === round));
+    return {
+      type: "scatter",
+      mode: "lines+markers",
+      name: team,
+      x: rounds.map(round => `J${round}`),
+      y: teamRows.map(row => row?.league_position || null),
+      line: { color: teamColor(team), width: 3 },
+      marker: { size: 7, color: teamColor(team) }
+    };
+  }), {
+    ...basePlotLayout(380),
+    margin: { l: 54, r: 18, t: 14, b: 74 },
+    yaxis: { ...basePlotLayout().yaxis, autorange: "reversed", dtick: 1, title: "Posición" },
+    xaxis: { ...basePlotLayout().xaxis, title: "Jornada" }
+  }, plotConfig);
+}
+
+function teamColor(name) {
+  const key = normalizeTeamName(name);
+  if (fixedTeamPalette[key]) return fixedTeamPalette[key];
+  const index = state.teams.findIndex(team => sameTeam(team.name, name));
+  return chartPalette[(index < 0 ? 0 : index) % chartPalette.length];
+}
+
+function colorForRow(row, fallbackIndex = 0) {
+  const teamName = row.user_name || row.name || row.team || "";
+  return teamName ? teamColor(teamName) : chartPalette[fallbackIndex % chartPalette.length];
+}
+
+function hoverTemplate(options = {}) {
+  const extras = {
+    profit: "<br>Beneficio: %{customdata[0]:,.0f}€",
+    completed_trades: "<br>Operaciones: %{customdata[1]}"
+  };
+  const extraText = (options.hoverKeys || []).map(key => extras[key] || `<br>${key}: %{customdata}`).join("");
+  return `%{y}<br>%{text}${extraText}<extra></extra>`;
+}
+
+function setupStatsTeamSelector(stats) {
+  const select = document.getElementById("stats-team-select");
+  const profile = document.getElementById("stats-team-profile");
+  if (!select || !profile) return;
+  const render = () => {
+    const team = select.value;
+    const standings = stats.latest_standings?.find(row => sameTeam(row.user_name, team));
+    const awards = state.dashboard?.awards?.counts?.[team] || {};
+    const bestPlayers = (stats.position_best_players || []).filter(row => sameTeam(row.user_name, team)).slice(0, 8);
+    const color = teamColor(team);
+    profile.innerHTML = `
+      <h3 class="stats-team-title" style="--team-color:${escapeAttr(color)}">${escapeHtml(team)}</h3>
+      <div class="metric-grid">
+        <div class="metric"><strong>#${standings?.league_position || "-"}</strong><span>posición</span></div>
+        <div class="metric"><strong>${Math.round(standings?.total_points_after_round || 0)}</strong><span>puntos</span></div>
+        <div class="metric"><strong>${formatMoney(standings?.team_value || 0)}</strong><span>valor</span></div>
+        <div class="metric"><strong>${Object.values(awards).reduce((a, b) => a + b, 0)}</strong><span>galardones</span></div>
+      </div>
+      <div class="award-icons profile-awards">
+        ${awardDefs.map(def => {
+          const count = awards[def.id] || 0;
+          return `<button class="award-icon ${def.kind === "bad" ? "bad" : ""} ${count ? "" : "locked"}" type="button" title="${escapeAttr(def.name)}">${def.icon}${count ? `<span class="award-count">x${count}</span>` : ""}</button>`;
+        }).join("")}
+      </div>
+      ${statsTable("Jugadores destacados", bestPlayers, ["player_name", "position_name", "points", "goals", "assists"])}
+    `;
+  };
+  select.addEventListener("change", render);
+  render();
+}
+
+function statsTable(title, rows = [], columns = []) {
+  if (!rows?.length) return `<div class="chart-card table-card"><h3>${escapeHtml(title)}</h3><p class="empty-chart">Sin datos suficientes todavía.</p></div>`;
+  return `
+    <article class="chart-card table-card">
+      <h3>${escapeHtml(title)}</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr>${columns.map(column => `<th>${escapeHtml(tableHeader(column))}</th>`).join("")}</tr></thead>
+          <tbody>
+            ${rows.slice(0, 40).map(row => `<tr>${columns.map(column => `<td>${escapeHtml(formatTableValue(row[column], column))}</td>`).join("")}</tr>`).join("")}
+          </tbody>
+        </table>
+      </div>
+    </article>
+  `;
+}
+
+function tableHeader(key) {
+  return {
+    user_name: "Equipo",
+    player_name: "Jugador",
+    position_name: "Posición",
+    points: "Pts",
+    goals: "G",
+    assists: "A",
+    buy_price: "Compra",
+    sell_price: "Venta",
+    profit: "Beneficio"
+  }[key] || key.replaceAll("_", " ");
+}
+
+function formatTableValue(value, key) {
+  if (["buy_price", "sell_price", "profit", "team_value", "market_value"].includes(key)) return formatMoney(Number(value) || 0);
+  if (typeof value === "number") return Number.isInteger(value) ? value : value.toFixed(2);
+  return value ?? "-";
+}
+
+function formatPlotValue(value, options = {}) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return "-";
+  if (options.money) return formatMoney(number);
+  if (options.percent) return `${Math.round(number * 100)}%`;
+  if (Number.isFinite(options.decimals)) return number.toFixed(options.decimals);
+  return Math.round(number).toString();
+}
+
 function renderGeneralSubtab() {
   const latest = latestClosedRound();
   const standings = cumulativeStandings(latest, state.selectedScoringSystem);
@@ -784,9 +1129,12 @@ function renderGeneralSubtab() {
   if (state.selectedSubtab === "players") {
     const topPlayers = state.dashboard?.players?.searchTop || [];
     const profiles = state.dashboard?.players?.profiles || [];
-    const ownedProfiles = profiles.filter(player => player.owner?.managerName);
-    const topGoals = profiles.filter(player => Number.isFinite(player.goals)).sort((a, b) => (b.goals || 0) - (a.goals || 0)).slice(0, 8);
-    const topCards = profiles.filter(player => Number.isFinite(player.cards) && player.cards > 0).sort((a, b) => (b.cards || 0) - (a.cards || 0)).slice(0, 8);
+    const charts = state.dashboard?.charts || {};
+    const topGoals = charts.topScorers?.filter(player => player.goals > 0).slice(0, 8)
+      || profiles.filter(player => Number.isFinite(player.goals)).sort((a, b) => (b.goals || 0) - (a.goals || 0)).slice(0, 8);
+    const topAssists = charts.topAssistants?.filter(player => player.assists > 0).slice(0, 8)
+      || profiles.filter(player => Number.isFinite(player.assists)).sort((a, b) => (b.assists || 0) - (a.assists || 0)).slice(0, 8);
+    const discipline = charts.disciplineByTeam || [];
     els.generalSubtab.innerHTML = `
       <div class="metric-grid">
         ${topPlayers.slice(0, 4).map(player => `
@@ -798,8 +1146,9 @@ function renderGeneralSubtab() {
       </div>
       ${renderMiniBars(topPlayers.slice(0, 8), "points", "Top puntos")}
       ${renderMiniBars(topGoals, "goals", "Goles detectados", value => `${value} goles`)}
-      ${topCards.length ? renderMiniBars(topCards, "cards", "Tarjetas detectadas", value => `${value} tarjetas`) : ""}
-      <p class="info-tile">Perfiles profundos: ${profiles.length}. Con propietario o precio de fichaje visible: ${ownedProfiles.length}. Las asistencias se omiten porque Mister no las da en estas fichas.</p>
+      ${renderMiniBars(topAssists, "assists", "Asistencias detectadas", value => `${value} asist.`)}
+      ${renderMiniBars(discipline, "disciplineScore", "Disciplina", value => `${value} castigo`)}
+      <p class="info-tile">Perfiles profundos: ${profiles.length}. Las asistencias salen del detalle estadístico de jugador-jornada, no de la ficha simple.</p>
     `;
     return;
   }
@@ -849,8 +1198,13 @@ function renderGeneralSubtab() {
     return;
   }
 
-  const views = state.dashboard?.charts?.availableViews || [];
+  const charts = state.dashboard?.charts || {};
+  const views = charts.availableViews || [];
   els.generalSubtab.innerHTML = `
+    ${renderMiniBars(charts.goalsByTeam || [], "goals", "Goles por equipo", value => `${value} goles`)}
+    ${renderMiniBars(charts.assistsByTeam || [], "assists", "Asistencias por equipo", value => `${value} asist.`)}
+    ${renderMiniBars(charts.dependencyByTeam || [], "dependency", "Dependencia de un jugador", value => `${Math.round(value * 100)}%`)}
+    ${renderPositionBars(charts.positionPointsByTeam || [])}
     ${views.map(view => `
       <div class="info-tile">
         <strong>${escapeHtml(view.name)} <span class="status-badge ${escapeAttr(view.status)}">${escapeHtml(statusLabel(view.status))}</span></strong><br>
@@ -860,11 +1214,31 @@ function renderGeneralSubtab() {
   `;
 }
 
+function renderPositionBars(rows) {
+  if (!rows?.length) return "";
+  const compact = rows.map(row => ({
+    name: row.name,
+    total: ["goalkeeper", "defender", "midfielder", "forward"].reduce((sum, key) => sum + (Number(row[key]) || 0), 0),
+    text: `PT ${Math.round(row.goalkeeper || 0)} · DF ${Math.round(row.defender || 0)} · MC ${Math.round(row.midfielder || 0)} · DL ${Math.round(row.forward || 0)}`
+  })).sort((a, b) => b.total - a.total);
+  return `
+    <div class="mini-list" aria-label="Puntos por posición">
+      ${compact.map(row => `
+        <div class="info-tile position-tile">
+          <strong>${escapeHtml(row.name)}</strong><br>
+          ${escapeHtml(row.text)}
+        </div>
+      `).join("")}
+    </div>
+  `;
+}
+
 function renderMiniBars(rows, valueKey, title, formatter = value => Number(value).toFixed(1)) {
   if (!rows?.length) return "";
   const max = Math.max(1, ...rows.map(row => Number(row[valueKey]) || 0));
   return `
     <div class="mini-list" aria-label="${escapeAttr(title)}">
+      <div class="mini-list-title">${escapeHtml(title)}</div>
       ${rows.map(row => {
         const value = Number(row[valueKey]) || 0;
         return `

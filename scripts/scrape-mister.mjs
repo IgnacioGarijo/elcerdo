@@ -10,6 +10,9 @@ const LATEST_DIR = path.join(DATA_DIR, "latest");
 const SNAPSHOTS_DIR = path.join(DATA_DIR, "snapshots");
 const BASE_URL = "https://mister.mundodeportivo.com";
 const DEFAULT_COMMUNITY_ID = "1263883";
+const PLAYER_DETAIL_CONCURRENCY = Number(process.env.MISTER_PLAYER_DETAIL_CONCURRENCY || 8);
+const PLAYER_MOVEMENT_CONCURRENCY = Number(process.env.MISTER_PLAYER_MOVEMENT_CONCURRENCY || 12);
+const PLAYER_MOVEMENT_LIMIT = Number(process.env.MISTER_PLAYER_MOVEMENT_LIMIT || 700);
 
 const POSITION_NAMES = {
   1: "goalkeeper",
@@ -63,6 +66,15 @@ async function appendJsonl(filePath, data) {
   await fs.appendFile(filePath, `${JSON.stringify(data)}\n`, "utf8");
 }
 
+async function readJsonl(filePath) {
+  try {
+    const text = await fs.readFile(filePath, "utf8");
+    return text.split(/\r?\n/).filter(Boolean).map((line) => JSON.parse(line));
+  } catch {
+    return [];
+  }
+}
+
 async function runNodeScript(scriptPath) {
   await new Promise((resolve, reject) => {
     const child = spawn(process.execPath, [scriptPath], {
@@ -85,6 +97,14 @@ async function storageStateFromEnv() {
 
   if (process.env.MISTER_STORAGE_STATE_PATH) {
     return process.env.MISTER_STORAGE_STATE_PATH;
+  }
+
+  const localStatePath = path.join(ROOT, "data", "private", "mister-storage-state.json");
+  try {
+    await fs.access(localStatePath);
+    return localStatePath;
+  } catch {
+    return undefined;
   }
 
   return undefined;
@@ -222,7 +242,78 @@ async function scrapeFeed(page, metadata) {
     })).filter((card) => card.text)
   }));
 
-  return { ...metadata, page: "feed", url: page.url(), ...feed };
+  const transfers = parseFeedTransfers(feed.headlineText, metadata.scrapedAt);
+  return { ...metadata, page: "feed", url: page.url(), ...feed, transfers };
+}
+
+function parseFeedTransfers(text = "", scrapedAt = new Date().toISOString()) {
+  const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+  const transfers = [];
+  const pricePattern = /^[\d.]{4,}$/;
+
+  for (let i = 0; i < lines.length; i++) {
+    const movement = lines[i].match(/^(.+?)\s+cambia de\s+(.+?)\s+a\s+(.+)$/i);
+    if (!movement) continue;
+
+    const dateText = /^(ahora|\d+\s*(?:s|min|h|d|sem|mes|meses|año|años))$/i.test(lines[i - 1] || "") ? lines[i - 1] : null;
+    let price = null;
+    for (let j = i + 1; j < Math.min(lines.length, i + 8); j++) {
+      if (pricePattern.test(lines[j])) {
+        price = parseSpanishNumber(lines[j]);
+        break;
+      }
+      if (/^(.+?)\s+cambia de\s+(.+?)\s+a\s+(.+)$/i.test(lines[j])) break;
+    }
+
+    transfers.push({
+      scrapedAt,
+      dateText,
+      playerName: movement[1].trim(),
+      from: movement[2].trim(),
+      to: movement[3].trim(),
+      price,
+      raw: lines.slice(Math.max(0, i - 1), Math.min(lines.length, i + 7)).join(" | ")
+    });
+  }
+
+  return transfers;
+}
+
+function transferKey(transfer) {
+  return [
+    transfer.playerName,
+    transfer.from,
+    transfer.to,
+    transfer.price ?? "",
+    transfer.dateText ?? ""
+  ].map((part) => String(part || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")).join("|");
+}
+
+async function persistTransfers(transfers = [], metadata = {}) {
+  const latestPath = path.join(LATEST_DIR, "transfers.json");
+  await writeJson(latestPath, {
+    ...metadata,
+    count: transfers.length,
+    transfers
+  });
+
+  if (!transfers.length) return;
+  const historyPath = path.join(DATA_DIR, "transfer-history.jsonl");
+  const existing = await readJsonl(historyPath);
+  const seen = new Set(existing.flatMap((entry) => (entry.transfers || [entry]).map(transferKey)));
+  const fresh = transfers.filter((transfer) => {
+    const key = transferKey(transfer);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+  if (fresh.length) {
+    await appendJsonl(historyPath, {
+      ...metadata,
+      transferCount: fresh.length,
+      transfers: fresh
+    });
+  }
 }
 
 async function scrapeStandings(page, metadata) {
@@ -282,62 +373,526 @@ async function scrapeSearch(page, metadata) {
 
 async function scrapeDeep(page, metadata, basics = {}) {
   const standings = basics.standings || await scrapeStandings(page, metadata);
-  const gameweeks = extractGameweeksFromStandings(standings);
+  await page.goto(`${BASE_URL}/feed`, { waitUntil: "domcontentloaded" });
+  await page.waitForLoadState("networkidle", { timeout: 15000 }).catch(() => {});
+  const apiState = await createApiState(page);
+  const gameweekPanel = await apiPost(page, "/ajax/sw/gameweek", { post: "gameweek", comments: 0 }, apiState);
+  const gameweeks = extractGameweeksFromApi(gameweekPanel.data) || extractGameweeksFromStandings(standings);
   const managers = extractManagersFromStandings(standings);
+  const allPlayers = await fetchAllPlayers(page, apiState);
+  const playerMovementHistory = await fetchPlayerMovementHistories(page, allPlayers, metadata);
   const rounds = [];
-  const profilePlayers = new Map();
 
   for (const gameweek of gameweeks) {
-    console.log(`Scrape jornada profunda J${gameweek.round}`);
+    console.log(`Scrape jornada profunda J${gameweek.round} por endpoints`);
+    const gameweekData = await apiPost(page, "/ajax/sw/gameweek", {
+      post: "gameweek",
+      id: gameweek.gameweekId,
+      comments: 0
+    }, apiState);
     const standingsPage = await scrapeStandingsGameweek(page, gameweek, metadata);
-    const gameweekPanel = await scrapeGameweekPanel(page, gameweek, metadata);
     const userRounds = [];
+    const detailPairs = new Map();
 
     for (const manager of managers) {
       console.log(`Scrape alineacion J${gameweek.round}: ${manager.name}`);
-      const userRound = await scrapeUserRound(page, manager, gameweek, metadata);
+      const userRound = await fetchUserRound(page, manager, gameweek, apiState, metadata);
       userRounds.push(userRound);
-      for (const player of userRound.lineup) {
-        if (player.playerId && player.href) profilePlayers.set(player.playerId, player.href);
+      for (const player of [...userRound.lineup, ...userRound.bench]) {
+        if (!player.playerId || player.points === "-" || player.points === "?" || player.played === 0) continue;
+        detailPairs.set(`${player.playerId}:${gameweek.gameweekId}`, {
+          playerId: player.playerId,
+          gameweekId: gameweek.gameweekId
+        });
       }
     }
 
-    for (const player of gameweekPanel.bestXi) {
-      if (player.playerId && player.href) profilePlayers.set(player.playerId, player.href);
+    const playerDetails = await fetchPlayerGameweekDetails(page, [...detailPairs.values()], apiState);
+    const detailLookup = new Map(playerDetails.map((detail) => [`${detail.playerId}:${detail.gameweekId}`, detail]));
+    for (const userRound of userRounds) {
+      userRound.lineup = userRound.lineup.map((player) => enrichRoundPlayer(player, detailLookup, gameweek.gameweekId));
+      userRound.bench = userRound.bench.map((player) => enrichRoundPlayer(player, detailLookup, gameweek.gameweekId));
     }
 
     rounds.push({
       ...gameweek,
       standings: standingsPage.rows,
-      status: gameweekPanel.status || standingsPage.status,
-      matches: gameweekPanel.matches,
-      bestXi: gameweekPanel.bestXi,
-      leaguePlayers: gameweekPanel.players,
-      userRounds
+      status: normalizeGameweekStatus(gameweekData.data?.gameweekStatus || gameweek.status || standingsPage.status),
+      matches: normalizeMatches(gameweekData.data?.games || []),
+      bestXi: normalizeBestXi(gameweekData.data?.best_lineup || []),
+      leaguePlayers: normalizeLeaguePlayers(gameweekData.data?.players || []),
+      userRounds,
+      playerDetails
     });
-  }
-
-  const playerProfiles = [];
-  const importantPlayers = [...profilePlayers.entries()].slice(0, 60);
-  for (const [index, [playerId, href]] of importantPlayers.entries()) {
-    console.log(`Scrape perfil jugador ${index + 1}/${importantPlayers.length}: ${playerId}`);
-    playerProfiles.push(await scrapePlayerProfile(page, { playerId, href }, gameweeks, metadata).catch((error) => ({
-      ...metadata,
-      playerId,
-      href,
-      error: error.message
-    })));
   }
 
   return {
     ...metadata,
     page: "deep",
     url: page.url(),
+    method: "mister-json-endpoints",
+    apiEndpoints: ["/ajax/sw/players", "/ajax/sw/gameweek", "/ajax/sw/users", "/ajax/player-gameweek"],
     gameweeks,
     managers,
+    allPlayers,
+    playerMovementHistory,
     rounds,
-    playerProfiles
+    playerProfiles: buildPlayerProfilesFromDeep(allPlayers, rounds, playerMovementHistory)
   };
+}
+
+async function fetchPlayerMovementHistories(page, players, metadata) {
+  const refs = players.filter((player) => player.playerId && player.href).slice(0, PLAYER_MOVEMENT_LIMIT);
+  const histories = [];
+  for (let index = 0; index < refs.length; index += PLAYER_MOVEMENT_CONCURRENCY) {
+    const batch = refs.slice(index, index + PLAYER_MOVEMENT_CONCURRENCY);
+    const items = await Promise.all(batch.map(async (player) => {
+      try {
+        const response = await page.context().request.get(player.href, { timeout: 20000 });
+        if (!response.ok()) return { playerId: player.playerId, name: player.name, href: player.href, movements: [], error: `HTTP ${response.status()}` };
+        const html = await response.text();
+        return {
+          scrapedAt: metadata.scrapedAt,
+          playerId: player.playerId,
+          name: player.name,
+          href: player.href,
+          movements: parsePlayerMovementHtml(html, player, metadata.scrapedAt)
+        };
+      } catch (error) {
+        return { playerId: player.playerId, name: player.name, href: player.href, movements: [], error: error.message };
+      }
+    }));
+    histories.push(...items);
+    console.log(`Scrape movimientos jugador ${Math.min(index + batch.length, refs.length)}/${refs.length}`);
+  }
+  return histories;
+}
+
+function parsePlayerMovementHtml(html, player, scrapedAt) {
+  const movements = [];
+  const movementPattern = /<li>[\s\S]*?<div class="label">\s*([^<]+?)\s*<\/div>[\s\S]*?<div class="value">\s*De\s*<strong>([^<]+)<\/strong>\s*a\s*<strong>([^<]+)<\/strong>\s*<\/div>[\s\S]*?<div class="right">([^<]+)<\/div>[\s\S]*?<\/li>/gi;
+  for (const match of html.matchAll(movementPattern)) {
+    const [datePart, typePart] = decodeHtml(match[1]).split("·").map((part) => part.trim());
+    movements.push({
+      scrapedAt,
+      source: "player-profile",
+      dateText: datePart || null,
+      type: typePart || null,
+      playerId: player.playerId,
+      playerName: player.name,
+      from: decodeHtml(match[2]).trim(),
+      to: decodeHtml(match[3]).trim(),
+      price: parseSpanishNumber(decodeHtml(match[4])),
+      href: player.href
+    });
+  }
+  return movements;
+}
+
+function decodeHtml(value = "") {
+  return String(value)
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#039;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
+async function createApiState(page) {
+  await page.waitForFunction(() => window._FG_cfg?.auth, null, { timeout: 10000 }).catch(() => {});
+  const auth = await page.evaluate(() => window._FG_cfg?.auth || null);
+  if (!auth) throw new Error("No se pudo leer X-Auth de Mister. Revisa la sesion guardada.");
+  return { auth };
+}
+
+async function apiPost(page, endpoint, params, apiState) {
+  return page.evaluate(async ({ endpoint, params, auth }) => {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        "X-Auth": auth,
+        "X-Requested-With": "XMLHttpRequest",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      body: new URLSearchParams(params).toString()
+    });
+    const text = await response.text();
+    let json = null;
+    try {
+      json = JSON.parse(text);
+    } catch {
+      json = null;
+    }
+    return {
+      ok: response.ok,
+      status: response.status,
+      data: json?.data ?? null,
+      error: json?.msg || json?.message || (!response.ok ? text.slice(0, 300) : null)
+    };
+  }, { endpoint, params, auth: apiState.auth });
+}
+
+async function fetchAllPlayers(page, apiState) {
+  const players = [];
+  const seen = new Set();
+  for (let offset = 0; offset < 2000; offset += 50) {
+    const response = await apiPost(page, "/ajax/sw/players", {
+      post: "players",
+      position: 0,
+      value_from: 0,
+      value_to: 0,
+      clause_from: 0,
+      clause_to: 0,
+      team: 0,
+      injured: 0,
+      favs: 0,
+      owner: 0,
+      benched: 0,
+      stealable: 0,
+      offset,
+      order: 0,
+      name: "",
+      comments: 0
+    }, apiState);
+    const batch = response.data?.players || [];
+    for (const player of batch) {
+      if (seen.has(String(player.id))) continue;
+      seen.add(String(player.id));
+      players.push(normalizeSearchPlayer(player));
+    }
+    if (batch.length < 50) break;
+  }
+  return players;
+}
+
+async function fetchUserRound(page, manager, gameweek, apiState, metadata) {
+  const response = await apiPost(page, "/ajax/sw/users", {
+    post: "users",
+    id: manager.managerId,
+    qs: `gw=${gameweek.gameweekId}`,
+    comments: 0
+  }, apiState);
+  const data = response.data || {};
+  const lineup = flattenLineup(data.lineup).map((player) => normalizeRoundPlayer(player, "lineup", gameweek, manager));
+  const bench = (Array.isArray(data.bench) ? data.bench : []).map((player) => normalizeRoundPlayer(player, "bench", gameweek, manager));
+  return {
+    ...metadata,
+    manager,
+    round: gameweek.round,
+    gameweekId: gameweek.gameweekId,
+    selected: `J${gameweek.round}`,
+    userInfo: data.userInfo || null,
+    season: data.season || null,
+    userGameWeeks: data.userGameWeeks || {},
+    value: data.value || null,
+    currentSquad: (data.team_now || []).map(normalizeSearchPlayer),
+    lineup,
+    bench,
+    squad: (data.team_now || []).map(normalizeSearchPlayer)
+  };
+}
+
+async function fetchPlayerGameweekDetails(page, pairs, apiState) {
+  const results = [];
+  for (let index = 0; index < pairs.length; index += PLAYER_DETAIL_CONCURRENCY) {
+    const batch = pairs.slice(index, index + PLAYER_DETAIL_CONCURRENCY);
+    const details = await Promise.all(batch.map(async (pair) => {
+      const response = await apiPost(page, "/ajax/player-gameweek", {
+        id_gameweek: pair.gameweekId,
+        id_player: pair.playerId
+      }, apiState);
+      if (!response.ok || !response.data) {
+        return { ...pair, status: response.status, error: response.error || "Sin puntuacion" };
+      }
+      return normalizePlayerGameweekDetail(pair, response.data);
+    }));
+    results.push(...details);
+  }
+  return results;
+}
+
+function extractGameweeksFromApi(data) {
+  const gameweeks = data?.gameweeks;
+  if (!gameweeks || typeof gameweeks !== "object") return null;
+  const parsed = Object.values(gameweeks)
+    .map((item) => ({
+      round: Number(item.number),
+      gameweekId: String(item.id),
+      season: item.season,
+      status: normalizeGameweekStatus(item.internalStatus || item.status),
+      type: item.type || null,
+      firstMatchDate: item.firstMatchDate || null,
+      lastMatchDate: item.lastMatchDate || null,
+      href: `${BASE_URL}/standings?gw=${item.id}`
+    }))
+    .filter((item) => Number.isFinite(item.round) && item.gameweekId)
+    .sort((a, b) => a.round - b.round);
+  return parsed.length ? parsed : null;
+}
+
+function normalizeGameweekStatus(status) {
+  if (status && typeof status === "object") {
+    status = status.internalStatus || status.status || status.name || status.slug || status.label;
+  }
+  const value = String(status || "").toLowerCase();
+  if (["closed", "finished", "played"].includes(value)) return "closed";
+  if (["ongoing", "playing", "live", "in_progress"].includes(value)) return "in_progress";
+  if (["unstarted", "pending", "scheduled"].includes(value)) return "scheduled";
+  return value || "unknown";
+}
+
+function flattenLineup(lineup) {
+  if (!lineup?.positions) return [];
+  return Object.values(lineup.positions).flatMap((position) => Object.values(position || {}));
+}
+
+function normalizeSearchPlayer(player = {}) {
+  const playerId = player.playerId || player.id || player.id_player || null;
+  return {
+    playerId: playerId ? String(playerId) : null,
+    id: playerId ? Number(playerId) : null,
+    name: player.name || null,
+    short: player.short || null,
+    href: playerId ? `${BASE_URL}/players/${playerId}/${slugify(player.name || player.short || String(playerId))}` : null,
+    positionId: player.position ? Number(player.position) : null,
+    position: player.position ? POSITION_NAMES[player.position] || null : null,
+    teamId: player.id_team ?? null,
+    points: numberOrNull(player.points),
+    average: numberOrNull(player.avg),
+    streak: Array.isArray(player.streak) ? player.streak.map(numberOrNull) : [],
+    streakSum: numberOrNull(player.streak_sum),
+    marketValue: numberOrNull(player.value),
+    previousValue: numberOrNull(player.prev_value),
+    ownerId: player.id_uc ? String(player.id_uc) : null,
+    ownerName: player.uc_name || null,
+    acquiredAt: player.created || null,
+    acquisitionPrice: numberOrNull(player.price),
+    marketSalePrice: numberOrNull(player.market?.input),
+    marketActive: Boolean(player.market),
+    clause: typeof player.clause === "object" ? player.clause : numberOrNull(player.clause),
+    status: player.status || null,
+    isMine: Boolean(player.is_mine),
+    photoUrl: player.photoUrl || null,
+    teamLogoUrl: player.teamLogoUrl || null
+  };
+}
+
+function normalizeRoundPlayer(player = {}, slot, gameweek, manager) {
+  const normalized = normalizeSearchPlayer(player);
+  return {
+    ...normalized,
+    gameweekId: String(gameweek.gameweekId),
+    round: gameweek.round,
+    managerId: String(manager.managerId),
+    slot,
+    lineupSlot: player.slot ?? null,
+    points: numberOrNull(player.points),
+    livePoints: numberOrNull(player.livePoints),
+    played: player.played ?? null,
+    matchId: player.match_id ? String(player.match_id) : null,
+    matchStatus: player.match_status || null,
+    captain: Boolean(player.captain),
+    isCaptain: Boolean(player.captain),
+    captainMultiplier: numberOrNull(player.captain_multiplier),
+    bestXi: Boolean(player.best_xi),
+    gradedAt: {
+      as: player.as_graded_date || null,
+      marca: player.marca_graded_date || null,
+      sofascore: player.sofascore_graded_date || null,
+      mundoDeportivo: player.mundodeportivo_graded_date || null,
+      mixto: player.mixtos_graded_date || null,
+      marcaStats: player.marca_stats_graded_date || null
+    }
+  };
+}
+
+function enrichRoundPlayer(player, detailLookup, gameweekId) {
+  const detail = detailLookup.get(`${player.playerId}:${gameweekId}`);
+  if (!detail || detail.error) return { ...player, detail: detail || null };
+  return {
+    ...player,
+    points: detail.points?.final ?? player.points,
+    providerPoints: detail.points || {},
+    ratings: detail.ratings || {},
+    events: detail.events || {},
+    stats: detail.stats || {},
+    detail
+  };
+}
+
+function normalizePlayerGameweekDetail(pair, data = {}) {
+  const stats = parseMaybeJson(data.marca_stats_rating_detailed) || {};
+  return {
+    playerId: String(pair.playerId),
+    gameweekId: String(pair.gameweekId),
+    status: 200,
+    id: data.id ? String(data.id) : null,
+    name: data.name || null,
+    positionId: data.position ? Number(data.position) : null,
+    position: data.position ? POSITION_NAMES[data.position] || null : null,
+    teamId: data.id_team ?? null,
+    matchId: data.id_match ? String(data.id_match) : null,
+    gameweekLabel: data.gameweek || null,
+    value: numberOrNull(data.value),
+    points: {
+      final: numberOrNull(data.points),
+      mixto: numberOrNull(data.points_mix),
+      mixto2: numberOrNull(data.points_mix2),
+      as: numberOrNull(data.points_as),
+      marca: numberOrNull(data.points_marca),
+      mundoDeportivo: numberOrNull(data.points_md),
+      sofascore: numberOrNull(data.points_mr),
+      marcaStats: numberOrNull(data.points_marca_stats)
+    },
+    ratings: {
+      as: numberOrNull(data.rating_as),
+      marca: numberOrNull(data.rating_marca),
+      mundoDeportivo: numberOrNull(data.rating_md),
+      sofascore: numberOrNull(data.rating_ss),
+      marcaStats: numberOrNull(data.rating_marca_stats)
+    },
+    events: normalizeEvents(data.events),
+    stats: normalizeStats(stats),
+    rawStats: stats,
+    match: {
+      status: data.status || null,
+      homeId: data.id_home ?? null,
+      awayId: data.id_away ?? null,
+      home: data.home || null,
+      away: data.away || null,
+      goalsHome: numberOrNull(data.goals_home),
+      goalsAway: numberOrNull(data.goals_away)
+    },
+    gradedAt: {
+      as: data.as_graded_date || null,
+      marca: data.marca_graded_date || null,
+      mundoDeportivo: data.md_graded_date || null,
+      mixto: data.updated || null
+    }
+  };
+}
+
+function normalizeStats(stats = {}) {
+  return Object.fromEntries(Object.entries(stats).map(([key, value]) => [
+    key,
+    value && typeof value === "object"
+      ? { value: numberOrNull(value.value), rating: numberOrNull(value.rating) }
+      : { value: numberOrNull(value), rating: null }
+  ]));
+}
+
+function normalizeEvents(events = {}) {
+  if (!events || typeof events !== "object") return {};
+  return Object.fromEntries(Object.entries(events).map(([key, value]) => [
+    key,
+    {
+      count: numberOrNull(value?.count) || 0,
+      points: numberOrNull(value?.points) || 0
+    }
+  ]));
+}
+
+function normalizeMatches(games = []) {
+  return games.map((game) => ({
+    matchId: game.id ? String(game.id) : game.id_match ? String(game.id_match) : null,
+    homeId: game.id_home ?? null,
+    awayId: game.id_away ?? null,
+    home: game.home || game.home_name || null,
+    away: game.away || game.away_name || null,
+    goalsHome: numberOrNull(game.goals_home),
+    goalsAway: numberOrNull(game.goals_away),
+    status: game.status || null,
+    date: game.date || game.match_date || null,
+    stats: parseMaybeJson(game.stats) || game.stats || null
+  }));
+}
+
+function normalizeBestXi(players = []) {
+  return Array.isArray(players) ? players.map((player) => normalizeRoundPlayer(player, "bestXi", {
+    round: null,
+    gameweekId: player.id_gameweek || player.gameweekId || null
+  }, { managerId: player.id_uc || null })) : [];
+}
+
+function normalizeLeaguePlayers(players = []) {
+  return Array.isArray(players) ? players.map(normalizeSearchPlayer) : [];
+}
+
+function buildPlayerProfilesFromDeep(allPlayers, rounds, playerMovementHistory = []) {
+  const movementsByPlayer = new Map(playerMovementHistory.map((item) => [String(item.playerId), item.movements || []]));
+  const byId = new Map((allPlayers || []).map((player) => [String(player.playerId), {
+    ...player,
+    movements: movementsByPlayer.get(String(player.playerId)) || [],
+    gameweeks: [],
+    providerScores: [],
+    totals: { goals: 0, assists: 0, yellowCards: 0, redCards: 0 }
+  }]));
+  for (const round of rounds || []) {
+    for (const detail of round.playerDetails || []) {
+      if (!detail?.playerId || detail.error) continue;
+      const profile = byId.get(String(detail.playerId)) || { playerId: String(detail.playerId), name: detail.name, gameweeks: [], providerScores: [], totals: { goals: 0, assists: 0, yellowCards: 0, redCards: 0 } };
+      profile.name ||= detail.name;
+      profile.position ||= detail.position;
+      profile.positionId ||= detail.positionId;
+      profile.marketValue ||= detail.value;
+      profile.gameweeks.push({
+        gameweekId: detail.gameweekId,
+        label: detail.gameweekLabel,
+        points: detail.points?.final,
+        status: "played",
+        eventIcons: Object.keys(detail.events || {})
+      });
+      profile.providerScores.push({
+        gameweekId: detail.gameweekId,
+        label: detail.gameweekLabel,
+        finalPoints: detail.points?.final,
+        providers: [
+          { name: "AS", points: detail.points?.as },
+          { name: "Marca", points: detail.points?.marca },
+          { name: "Mundo Deportivo", points: detail.points?.mundoDeportivo },
+          { name: "Sofascore", points: detail.points?.sofascore },
+          { name: "Marca Stats", points: detail.points?.marcaStats }
+        ].filter((provider) => Number.isFinite(provider.points))
+      });
+      profile.totals.goals += statValue(detail, "goals");
+      profile.totals.assists += statValue(detail, "goalAssist");
+      profile.totals.yellowCards += statValue(detail, "yellowCard");
+      profile.totals.redCards += statValue(detail, "redCard") + statValue(detail, "doubleYellowCard");
+      profile.goals = profile.totals.goals;
+      profile.assists = profile.totals.assists;
+      profile.cards = profile.totals.yellowCards + profile.totals.redCards;
+      byId.set(String(detail.playerId), profile);
+    }
+  }
+  return [...byId.values()].filter((player) => player.gameweeks?.length).sort((a, b) => (b.points || 0) - (a.points || 0));
+}
+
+function statValue(detail, key) {
+  return numberOrNull(detail?.stats?.[key]?.value) || 0;
+}
+
+function numberOrNull(value) {
+  if (value === "-" || value === "?" || value == null || value === "") return null;
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function parseMaybeJson(value) {
+  if (!value || typeof value !== "string") return value || null;
+  try {
+    return JSON.parse(value);
+  } catch {
+    return null;
+  }
+}
+
+function slugify(value) {
+  return String(value || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 }
 
 function extractGameweeksFromStandings(standings) {
@@ -729,6 +1284,10 @@ async function main() {
           valueTrend: player.valueTrend
         }))
       });
+    }
+
+    if (results.feed) {
+      await persistTransfers(results.feed.transfers || [], metadata);
     }
 
     await writeJson(path.join(snapshotDir, "run.json"), {
