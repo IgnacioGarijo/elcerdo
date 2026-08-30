@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-08-30T07:59:15.511Z",
+    "generatedAt": "2026-08-30T12:44:05.387Z",
     "sources": {
       "standings": "2026-08-30T07:57:30.287Z",
       "feed": "2026-08-30T07:57:30.287Z",
@@ -13,7 +13,7 @@
     "liveRoundPolicy": "Las jornadas en juego se muestran, pero no suman ni desbloquean galardones hasta aparecer como Fin de la jornada en el feed.",
     "lineupAwardStartRound": 3,
     "limitations": [
-      "Peor alineador y director deportivo no se calculan para jornadas anteriores al corte configurado, aunque Mister permita recuperar parte del banquillo.",
+      "Peor alineador no se calcula para jornadas anteriores al corte configurado; director deportivo se calcula desde que hay XI anterior comparable.",
       "Las clasificaciones por sistema de puntuación usan el endpoint interno de jugador-jornada; si un jugador no puntuó, queda como sin dato en ese sistema.",
       "El mercado diario depende de que la Action diaria siga ejecutándose y acumulando snapshots."
     ]
@@ -7113,21 +7113,28 @@
         "winner": 1,
         "efficient": 2,
         "goals": 1,
-        "dependency": 1
+        "dependency": 1,
+        "captain": 1
       },
       "Rodando Nazário": {
         "assists": 2,
         "coral": 1,
         "winner": 1,
-        "goals": 1,
-        "captain": 1
+        "goals": 1
       },
-      "Heung Min Dad": {},
+      "Heung Min Dad": {
+        "captain": 1,
+        "goals": 1,
+        "assists": 1,
+        "directorGood": 1
+      },
       "Mikel Poyarzabal": {
+        "assists": 1,
         "coral": 1
       },
       "Peter LIM": {
         "dnp": 1,
+        "directorBad": 1,
         "traderBad": 1
       },
       "Olivito": {},
@@ -7212,6 +7219,20 @@
         "provisional": false
       },
       {
+        "round": 1,
+        "awardId": "captain",
+        "teamName": "Don Manuel Ruíz de Lopera",
+        "value": "Roberto Fernández",
+        "provisional": false
+      },
+      {
+        "round": 1,
+        "awardId": "captain",
+        "teamName": "Heung Min Dad",
+        "value": "Raphinha",
+        "provisional": false
+      },
+      {
         "round": 2,
         "awardId": "winner",
         "teamName": "Rodando Nazário",
@@ -7248,9 +7269,30 @@
       },
       {
         "round": 2,
+        "awardId": "goals",
+        "teamName": "Heung Min Dad",
+        "value": "3 goles",
+        "provisional": false
+      },
+      {
+        "round": 2,
         "awardId": "assists",
         "teamName": "Rodando Nazário",
-        "value": "1 asistencias",
+        "value": "1 asistencia",
+        "provisional": false
+      },
+      {
+        "round": 2,
+        "awardId": "assists",
+        "teamName": "Heung Min Dad",
+        "value": "1 asistencia",
+        "provisional": false
+      },
+      {
+        "round": 2,
+        "awardId": "assists",
+        "teamName": "Mikel Poyarzabal",
+        "value": "1 asistencia",
         "provisional": false
       },
       {
@@ -7276,9 +7318,16 @@
       },
       {
         "round": 2,
-        "awardId": "captain",
-        "teamName": "Rodando Nazário",
-        "value": "Aitor Paredes",
+        "awardId": "directorGood",
+        "teamName": "Heung Min Dad",
+        "value": "+9 pts",
+        "provisional": false
+      },
+      {
+        "round": 2,
+        "awardId": "directorBad",
+        "teamName": "Peter LIM",
+        "value": "-8 pts",
         "provisional": false
       },
       {
@@ -18992,7 +19041,7 @@
       "notes": [
         "Las métricas deportivas salen de alineaciones cerradas y del detalle jugador-jornada.",
         "Las compras/ventas históricas dependen del feed visible y de los snapshots diarios acumulados desde ahora.",
-        "Banquillo histórico, mejor alineador y director deportivo no se reconstruyen antes del corte configurado."
+        "Peor alineador se calcula desde el corte configurado; director deportivo se calcula desde la primera jornada con XI anterior comparable."
       ]
     }
   },

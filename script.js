@@ -40,8 +40,8 @@ const images = [
 ];
 
 const BUILD_VERSION = {
-  label: "web awards-tooltip-v1",
-  updatedAt: "2026-08-30T10:29:58+02:00"
+  label: "web awards-v3",
+  updatedAt: "2026-08-30T14:43:36+02:00"
 };
 
 const cardTeams = new Map([
@@ -99,15 +99,15 @@ const jornadaSchedule = [
 const awardDefs = [
   { id: "winner", icon: "🏆", kind: "good", name: "Ganador de la jornada", desc: "Más puntos en una jornada cerrada." },
   { id: "loser", icon: "🕳", kind: "bad", name: "Perdedor de la jornada", desc: "Menos puntos en una jornada cerrada." },
-  { id: "efficient", icon: "💎", kind: "good", name: "Mayor eficiencia de plantilla", desc: "Más puntos por millón de valor de equipo. En esta primera versión usa el valor actual hasta tener snapshot semanal." },
-  { id: "inefficient", icon: "🧯", kind: "bad", name: "Menor eficiencia de plantilla", desc: "Menos puntos por millón de valor de equipo. En esta primera versión usa el valor actual hasta tener snapshot semanal." },
+  { id: "efficient", icon: "💎", kind: "good", name: "Mayor eficiencia de plantilla", desc: "Más puntos por millón de valor de equipo." },
+  { id: "inefficient", icon: "🧯", kind: "bad", name: "Menor eficiencia de plantilla", desc: "Menos puntos por millón de valor de equipo." },
   { id: "goals", icon: "⚽", kind: "good", name: "Más goles", desc: "Más goles sumados por los jugadores alineados." },
-  { id: "assists", icon: "🎯", kind: "good", name: "Más asistencias", desc: "Más asistencias detectadas en el detalle estadístico de Mister." },
-  { id: "red", icon: "🟥", kind: "bad", name: "Recibió roja", desc: "Puede ganarlo más de un equipo en la misma jornada." },
-  { id: "dnp", icon: "🧊", kind: "bad", name: "Más jugadores sin jugar", desc: "Necesita detalle de alineación y jugadores no utilizados." },
+  { id: "assists", icon: "🎯", kind: "good", name: "Más asistencias", desc: "Más asistencias sumadas por los jugadores alineados." },
+  { id: "red", icon: "🟥", kind: "bad", name: "Recibió roja", desc: "Jugadores alineados expulsados." },
+  { id: "dnp", icon: "🧊", kind: "bad", name: "Más jugadores sin jugar", desc: "Más jugadores alineados que no jugaron." },
   { id: "dependency", icon: "🧲", kind: "bad", name: "Mayor dependencia", desc: "Mayor porcentaje de puntos concentrado en un solo jugador." },
   { id: "coral", icon: "🧬", kind: "good", name: "Equipo más coral", desc: "Menor dependencia de un solo jugador entre equipos con puntos positivos." },
-  { id: "captain", icon: "👑", kind: "good", name: "Capitán adecuado", desc: "Se desbloquea si el capitán elegido era el que más puntos extra podía dar con el multiplicador." },
+  { id: "captain", icon: "👑", kind: "good", name: "Capitán adecuado", desc: "Eligió al mejor capitán posible." },
   { id: "bench", icon: "🪑", kind: "bad", name: "Peor alineador", desc: "Más puntos útiles dejados en el banquillo frente a titulares de la misma posición." },
   { id: "directorGood", icon: "🧠", kind: "good", name: "Mejor director deportivo", desc: "Más puntos ganados por cambios de plantilla respecto a la jornada anterior." },
   { id: "directorBad", icon: "🧨", kind: "bad", name: "Peor director deportivo", desc: "Más puntos perdidos por cambios de plantilla respecto a la jornada anterior." },

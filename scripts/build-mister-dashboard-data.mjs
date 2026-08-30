@@ -387,8 +387,43 @@ function playerFinalPoints(player, playerLookup, fallbackGameweekId = null) {
 function captainMultiplier(player, playerLookup) {
   const value = player.marketValue || playerLookup.get(String(player.playerId))?.marketValue || 0;
   if (value > 10000000) return 1.5;
-  if (value >= 5000000) return 2;
+  if (value > 5000000) return 2;
   return 3;
+}
+
+function playerBasePoints(player, playerLookup, fallbackGameweekId = null) {
+  const points = playerFinalPoints(player, playerLookup, fallbackGameweekId);
+  if (!Number.isFinite(points)) return null;
+  const multiplier = Number(player.captainMultiplier) || (player.isCaptain ? captainMultiplier(player, playerLookup) : 1);
+  return player.isCaptain && multiplier > 0 ? points / multiplier : points;
+}
+
+function captainChoiceResult(scored, playerLookup) {
+  const candidates = scored
+    .map((player) => {
+      const basePoints = playerBasePoints(player, playerLookup);
+      if (!Number.isFinite(basePoints)) return null;
+      const multiplier = Number(player.captainMultiplier) || captainMultiplier(player, playerLookup);
+      return {
+        player,
+        basePoints,
+        multiplier,
+        captainPoints: basePoints * multiplier,
+        extra: basePoints * (multiplier - 1)
+      };
+    })
+    .filter(Boolean);
+  const chosen = candidates.find((item) => item.player.isCaptain);
+  if (!chosen || !candidates.length) return { chosen: null, best: null, isCorrect: false };
+  const bestCaptainPoints = Math.max(...candidates.map((item) => item.captainPoints));
+  const bestBasePoints = Math.max(...candidates.map((item) => item.basePoints));
+  const best = candidates.find((item) => item.captainPoints === bestCaptainPoints) || candidates[0];
+  const tolerance = 0.001;
+  return {
+    chosen,
+    best,
+    isCorrect: Math.abs(chosen.captainPoints - bestCaptainPoints) <= tolerance || Math.abs(chosen.basePoints - bestBasePoints) <= tolerance
+  };
 }
 
 function cumulativeStandings(teams, closedRounds, roundNumber) {
@@ -431,8 +466,8 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
 
   for (const round of closedRounds) {
     const rows = [...round.rows].sort((a, b) => b.points - a.points);
-    add(rows[0].name, "winner", round.round, `${rows[0].points} pts`);
-    add(rows.at(-1).name, "loser", round.round, `${rows.at(-1).points} pts`);
+    awardExtremes(rows, "points", "max").forEach((row) => add(row.name, "winner", round.round, `${row.points} pts`));
+    awardExtremes(rows, "points", "min").forEach((row) => add(row.name, "loser", round.round, `${row.points} pts`));
     const withValue = rows
       .map((row) => {
         const value = row.value || teamValues.get(row.name) || 0;
@@ -440,9 +475,8 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
       })
       .filter((row) => row.value && Number.isFinite(row.efficiency));
     if (withValue.length) {
-      withValue.sort((a, b) => b.efficiency - a.efficiency);
-      add(withValue[0].name, "efficient", round.round, `${(withValue[0].points / (withValue[0].value || teamValues.get(withValue[0].name)) * 1000000).toFixed(2)} pts/M`, !withValue[0].value);
-      add(withValue.at(-1).name, "inefficient", round.round, `${(withValue.at(-1).points / (withValue.at(-1).value || teamValues.get(withValue.at(-1).name)) * 1000000).toFixed(2)} pts/M`, !withValue.at(-1).value);
+      awardExtremes(withValue, "efficiency", "max").forEach((row) => add(row.name, "efficient", round.round, `${(row.points / row.value * 1000000).toFixed(2)} pts/M`, false));
+      awardExtremes(withValue, "efficiency", "min").forEach((row) => add(row.name, "inefficient", round.round, `${(row.points / row.value * 1000000).toFixed(2)} pts/M`, false));
     }
 
     const userRounds = round.userRounds || [];
@@ -465,11 +499,7 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
       }));
       const total = scored.reduce((sum, player) => sum + Math.max(0, Number(player.finalPoints) || 0), 0);
       const top = scored.reduce((best, player) => Number(player.finalPoints) > Number(best?.finalPoints ?? -Infinity) ? player : best, null);
-      const captain = scored.find((player) => player.isCaptain);
-      const bestCaptain = scored.reduce((best, player) => {
-        const extra = (Number(player.finalPoints) || 0) * (captainMultiplier(player, playerLookup) - 1);
-        return extra > (best?.extra ?? -Infinity) ? { player, extra } : best;
-      }, null);
+      const captainResult = captainChoiceResult(scored, playerLookup);
       const dnp = scored.filter((player) => !Number.isFinite(player.finalPoints)).length;
       const benchMistakes = benchScored.filter((benchPlayer) => {
         if (!Number.isFinite(benchPlayer.finalPoints)) return false;
@@ -489,39 +519,42 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
         benchMistakes: benchMistakes.length,
         dependency: total > 0 && top ? top.finalPoints / total : null,
         coral: total > 0 && top ? top.finalPoints / total : null,
-        captain,
-        bestCaptain,
+        captain: captainResult.chosen?.player || null,
+        bestCaptain: captainResult.best,
+        captainCorrect: captainResult.isCorrect,
         directorDelta,
         zero: rows.find((row) => row.name === userRound.manager.name)?.points === 0
       };
     });
 
-    const goalRows = eventRows.filter((row) => row.goals > 0).sort((a, b) => b.goals - a.goals);
-    if (goalRows.length) add(goalRows[0].team, "goals", round.round, `${goalRows[0].goals} goles`);
-    const assistRows = eventRows.filter((row) => row.assists > 0).sort((a, b) => b.assists - a.assists);
-    if (assistRows.length) add(assistRows[0].team, "assists", round.round, `${assistRows[0].assists} asistencias`);
+    awardExtremes(eventRows.filter((row) => row.goals > 0), "goals", "max")
+      .forEach((row) => add(row.team, "goals", round.round, `${row.goals} ${row.goals === 1 ? "gol" : "goles"}`));
+    awardExtremes(eventRows.filter((row) => row.assists > 0), "assists", "max")
+      .forEach((row) => add(row.team, "assists", round.round, `${row.assists} ${row.assists === 1 ? "asistencia" : "asistencias"}`));
     eventRows.filter((row) => row.reds > 0).forEach((row) => add(row.team, "red", round.round, `${row.reds} roja(s)`));
-    const dnpRows = eventRows.filter((row) => row.dnp > 0).sort((a, b) => b.dnp - a.dnp);
-    if (dnpRows.length) add(dnpRows[0].team, "dnp", round.round, `${dnpRows[0].dnp} sin jugar`);
-    const benchRows = eventRows.filter((row) => round.round >= LINEUP_AWARD_START_ROUND && row.benchMistakes > 0).sort((a, b) => b.benchMistakes - a.benchMistakes);
-    if (benchRows.length) add(benchRows[0].team, "bench", round.round, `${benchRows[0].benchMistakes} cambios claros`);
+    awardExtremes(eventRows.filter((row) => row.dnp > 0), "dnp", "max")
+      .forEach((row) => add(row.team, "dnp", round.round, `${row.dnp} sin jugar`));
+    awardExtremes(eventRows.filter((row) => round.round >= LINEUP_AWARD_START_ROUND && row.benchMistakes > 0), "benchMistakes", "max")
+      .forEach((row) => add(row.team, "bench", round.round, `${row.benchMistakes} cambios claros`));
 
     const dependencyRows = eventRows.filter((row) => Number.isFinite(row.dependency));
     if (dependencyRows.length) {
-      dependencyRows.sort((a, b) => b.dependency - a.dependency);
-      add(dependencyRows[0].team, "dependency", round.round, `${Math.round(dependencyRows[0].dependency * 100)}%`);
-      add(dependencyRows.at(-1).team, "coral", round.round, `${Math.round(dependencyRows.at(-1).coral * 100)}%`);
+      awardExtremes(dependencyRows, "dependency", "max")
+        .forEach((row) => add(row.team, "dependency", round.round, `${Math.round(row.dependency * 100)}%`));
+      awardExtremes(dependencyRows, "coral", "min")
+        .forEach((row) => add(row.team, "coral", round.round, `${Math.round(row.coral * 100)}%`));
     }
 
     eventRows
-      .filter((row) => row.captain?.playerId && row.bestCaptain?.player?.playerId && String(row.captain.playerId) === String(row.bestCaptain.player.playerId))
+      .filter((row) => row.captainCorrect && row.captain?.playerId)
       .forEach((row) => add(row.team, "captain", round.round, row.captain.name));
 
-    const directorRows = eventRows.filter((row) => round.round >= LINEUP_AWARD_START_ROUND && Number.isFinite(row.directorDelta));
+    const directorRows = eventRows.filter((row) => Number.isFinite(row.directorDelta));
     if (directorRows.length) {
-      directorRows.sort((a, b) => b.directorDelta - a.directorDelta);
-      add(directorRows[0].team, "directorGood", round.round, `${directorRows[0].directorDelta > 0 ? "+" : ""}${directorRows[0].directorDelta} pts`);
-      add(directorRows.at(-1).team, "directorBad", round.round, `${directorRows.at(-1).directorDelta > 0 ? "+" : ""}${directorRows.at(-1).directorDelta} pts`);
+      awardExtremes(directorRows, "directorDelta", "max")
+        .forEach((row) => add(row.team, "directorGood", round.round, `${row.directorDelta > 0 ? "+" : ""}${row.directorDelta} pts`));
+      awardExtremes(directorRows, "directorDelta", "min")
+        .forEach((row) => add(row.team, "directorBad", round.round, `${row.directorDelta > 0 ? "+" : ""}${row.directorDelta} pts`));
     }
 
     const valueDeltas = rows.map((row) => {
@@ -529,9 +562,10 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
       return previous && row.value && previous.value ? { name: row.name, delta: row.value - previous.value } : null;
     }).filter(Boolean);
     if (valueDeltas.length) {
-      valueDeltas.sort((a, b) => b.delta - a.delta);
-      add(valueDeltas[0].name, "trader", round.round, formatMoneyDelta(valueDeltas[0].delta));
-      add(valueDeltas.at(-1).name, "traderBad", round.round, formatMoneyDelta(valueDeltas.at(-1).delta));
+      awardExtremes(valueDeltas, "delta", "max")
+        .forEach((row) => add(row.name, "trader", round.round, formatMoneyDelta(row.delta)));
+      awardExtremes(valueDeltas, "delta", "min")
+        .forEach((row) => add(row.name, "traderBad", round.round, formatMoneyDelta(row.delta)));
     }
 
     eventRows.filter((row) => row.zero).forEach((row) => add(row.team, "negative", round.round, "0 pts"));
@@ -544,6 +578,16 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
     counts: Object.fromEntries(Array.from(counts.entries())),
     byRound
   };
+}
+
+function awardExtremes(rows, key, direction) {
+  const values = rows
+    .map((row) => Number(row[key]))
+    .filter((value) => Number.isFinite(value));
+  if (!values.length) return [];
+  const target = direction === "min" ? Math.min(...values) : Math.max(...values);
+  const tolerance = Math.max(Math.abs(target) * 1e-9, 1e-12);
+  return rows.filter((row) => Number.isFinite(Number(row[key])) && Math.abs(Number(row[key]) - target) <= tolerance);
 }
 
 function lineupChangeDelta(previousLineup, currentLineup, gameweekId, playerLookup) {
@@ -988,7 +1032,7 @@ function buildBiwengerStats(teams, closedRounds, playerLookup, teamValues, trans
       notes: [
         "Las métricas deportivas salen de alineaciones cerradas y del detalle jugador-jornada.",
         "Las compras/ventas históricas dependen del feed visible y de los snapshots diarios acumulados desde ahora.",
-        "Banquillo histórico, mejor alineador y director deportivo no se reconstruyen antes del corte configurado."
+        "Peor alineador se calcula desde el corte configurado; director deportivo se calcula desde la primera jornada con XI anterior comparable."
       ]
     }
   };
@@ -1202,7 +1246,7 @@ async function main() {
       liveRoundPolicy: "Las jornadas en juego se muestran, pero no suman ni desbloquean galardones hasta aparecer como Fin de la jornada en el feed.",
       lineupAwardStartRound: LINEUP_AWARD_START_ROUND,
       limitations: [
-        "Peor alineador y director deportivo no se calculan para jornadas anteriores al corte configurado, aunque Mister permita recuperar parte del banquillo.",
+        "Peor alineador no se calcula para jornadas anteriores al corte configurado; director deportivo se calcula desde que hay XI anterior comparable.",
         "Las clasificaciones por sistema de puntuación usan el endpoint interno de jugador-jornada; si un jugador no puntuó, queda como sin dato en ese sistema.",
         "El mercado diario depende de que la Action diaria siga ejecutándose y acumulando snapshots."
       ]
