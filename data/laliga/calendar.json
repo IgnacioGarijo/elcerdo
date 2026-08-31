@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-30T12:49:36.059Z",
-  "scrapedAt": "2026-08-30T12:49:36.059Z",
+  "updatedAt": "2026-08-31T15:03:15.087Z",
+  "scrapedAt": "2026-08-31T15:03:15.087Z",
   "source": "https://www.laliga.com/laliga-easports/calendario",
   "fallbackSource": "https://as.com/resultados/futbol/primera/calendario/",
   "status": "as-calendar-dates",
@@ -105,21 +105,21 @@
     },
     {
       "round": 5,
-      "firstKickoffLocal": "2026-09-13T19:00:00",
+      "firstKickoffLocal": "2026-09-11T19:00:00",
       "start": {
         "year": 2026,
         "month": 9,
-        "day": 13,
+        "day": 11,
         "hour": 19,
         "minute": 0
       },
-      "date": "2026-09-13",
+      "date": "2026-09-11",
       "kickoffTime": "19:00",
       "confidence": "as-calendar-date",
       "matches": [
         {
           "round": 5,
-          "date": "2026-09-13",
+          "date": "2026-09-11",
           "kickoffTime": null,
           "home": null,
           "away": null,
@@ -153,21 +153,21 @@
     },
     {
       "round": 7,
-      "firstKickoffLocal": "2026-09-20T19:00:00",
+      "firstKickoffLocal": "2026-09-18T19:00:00",
       "start": {
         "year": 2026,
         "month": 9,
-        "day": 20,
+        "day": 18,
         "hour": 19,
         "minute": 0
       },
-      "date": "2026-09-20",
+      "date": "2026-09-18",
       "kickoffTime": "19:00",
       "confidence": "as-calendar-date",
       "matches": [
         {
           "round": 7,
-          "date": "2026-09-20",
+          "date": "2026-09-18",
           "kickoffTime": null,
           "home": null,
           "away": null,
