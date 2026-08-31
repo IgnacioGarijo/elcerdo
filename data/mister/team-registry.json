@@ -1,0 +1,68 @@
+{
+  "updatedAt": "2026-08-31T16:21:42.957Z",
+  "teams": [
+    {
+      "managerId": "15420188",
+      "currentName": "Alex Ballena",
+      "initials": "AB",
+      "color": "#b67cff",
+      "aliases": [
+        "Alex Ballena"
+      ]
+    },
+    {
+      "managerId": "8785696",
+      "currentName": "Don Manuel Ruíz de Lopera",
+      "initials": "DM",
+      "color": "#66fff1",
+      "aliases": [
+        "Don Manuel Ruíz de Lopera"
+      ]
+    },
+    {
+      "managerId": "8771310",
+      "currentName": "Heung Min Dad",
+      "initials": "HM",
+      "color": "#a5ff6a",
+      "aliases": [
+        "Heung Min Dad"
+      ]
+    },
+    {
+      "managerId": "13365280",
+      "currentName": "Mikel Poyarzabal",
+      "initials": "MP",
+      "color": "#7aa8ff",
+      "aliases": [
+        "Mikel Poyarzabal"
+      ]
+    },
+    {
+      "managerId": "10359824",
+      "currentName": "Olivito",
+      "initials": "O",
+      "color": "#f8fbff",
+      "aliases": [
+        "Olivito"
+      ]
+    },
+    {
+      "managerId": "12113243",
+      "currentName": "Peter LIM",
+      "initials": "PL",
+      "color": "#e8d26a",
+      "aliases": [
+        "Peter LIM"
+      ]
+    },
+    {
+      "managerId": "8769466",
+      "currentName": "Rodando Nazário",
+      "initials": "RN",
+      "color": "#ff55df",
+      "aliases": [
+        "Rodando Nazário"
+      ]
+    }
+  ]
+}

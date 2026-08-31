@@ -96,6 +96,20 @@ Conviene revisar de vez en cuando:
 - Que `data/cerdo/history.json` guarde bien las tarjetas reales de cada jornada.
 - Que la cabecera de la web muestre fechas distintas para versión web y datos, así se sabe si se actualizó código, datos o ambas cosas.
 
+## Identidad de equipos
+
+Mister permite que un equipo cambie de nombre durante la temporada. Para que eso no rompa las clasificaciones, gráficos, galardones, mercado ni aciertos del cerdo, la identidad real del equipo debe ser siempre el `managerId`, no el texto del nombre.
+
+El archivo `data/mister/team-registry.json` guarda:
+
+- `managerId`: clave estable.
+- `currentName`: nombre visible actual.
+- `initials`: iniciales visibles.
+- `color`: color fijo de ese equipo en todos los gráficos.
+- `aliases`: nombres antiguos o alternativos que deben resolverse al mismo equipo.
+
+Cada vez que corre el builder semanal, compara los managers actuales de Mister con ese registro. Si detecta el mismo `managerId` con un nombre nuevo, actualiza `currentName` y conserva los nombres anteriores en `aliases`. Los datos antiguos que sólo tengan el nombre escrito, como snapshots de mercado, transferencias visibles o tarjetas históricas del cerdo, se deben resolver contra esos alias antes de agregarse.
+
 ## Scraping profundo
 
 El scraper semanal genera `data/mister/latest/deep.json`. La metodología buena es híbrida: abre una sola página autenticada para leer el `X-Auth` que usa Mister y después hace peticiones limpias a los endpoints JSON internos, sin abrir ficha por ficha ni depender de clicks visuales.

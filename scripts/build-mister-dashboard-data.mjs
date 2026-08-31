@@ -7,7 +7,28 @@ const MISTER_DIR = path.join(ROOT, "data", "mister");
 const LATEST_DIR = path.join(MISTER_DIR, "latest");
 const CERDO_DIR = path.join(ROOT, "data", "cerdo");
 const LALIGA_DIR = path.join(ROOT, "data", "laliga");
+const TEAM_REGISTRY_PATH = path.join(MISTER_DIR, "team-registry.json");
 const LINEUP_AWARD_START_ROUND = Number(process.env.MISTER_LINEUP_AWARD_START_ROUND || 3);
+
+const TEAM_COLORS = [
+  "#66fff1",
+  "#ff55df",
+  "#a5ff6a",
+  "#7aa8ff",
+  "#e8d26a",
+  "#f8fbff",
+  "#b67cff"
+];
+
+const INITIAL_TEAM_COLORS = {
+  "don manuel ruiz de lopera": "#66fff1",
+  "rodando nazario": "#ff55df",
+  "heung min dad": "#a5ff6a",
+  "mikel poyarzabal": "#7aa8ff",
+  "peter lim": "#e8d26a",
+  "olivito": "#f8fbff",
+  "alex ballena": "#b67cff"
+};
 
 const FALLBACK_CLOSED_ROUNDS = [
   {
@@ -105,6 +126,137 @@ async function readJsonl(relativePath) {
   } catch {
     return [];
   }
+}
+
+function teamKey(name) {
+  return String(name || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+}
+
+async function readTeamRegistry() {
+  try {
+    return JSON.parse(await fs.readFile(TEAM_REGISTRY_PATH, "utf8"));
+  } catch {
+    return { teams: [] };
+  }
+}
+
+function buildTeamIdentity(registry) {
+  const byId = new Map();
+  const byAlias = new Map();
+  for (const team of registry?.teams || []) {
+    const id = String(team.managerId || "");
+    if (!id) continue;
+    const normalizedTeam = {
+      managerId: id,
+      currentName: team.currentName || team.name || "",
+      initials: team.initials || "",
+      color: team.color || TEAM_COLORS[byId.size % TEAM_COLORS.length],
+      aliases: [...new Set([team.currentName, team.name, ...(team.aliases || [])].filter(Boolean))]
+    };
+    byId.set(id, normalizedTeam);
+    for (const alias of normalizedTeam.aliases) byAlias.set(teamKey(alias), normalizedTeam);
+  }
+  return { byId, byAlias };
+}
+
+function mergeTeamRegistry(existingRegistry, managers = []) {
+  const existing = buildTeamIdentity(existingRegistry);
+  const merged = new Map(existing.byId);
+  for (const manager of managers || []) {
+    const managerId = String(manager.managerId || "");
+    if (!managerId) continue;
+    const previous = merged.get(managerId);
+    const previousAliases = previous?.aliases || [];
+    const aliases = [...new Set([...previousAliases, previous?.currentName, manager.name].filter(Boolean))];
+    const color = previous?.color || INITIAL_TEAM_COLORS[teamKey(manager.name)] || TEAM_COLORS[merged.size % TEAM_COLORS.length];
+    merged.set(managerId, {
+      managerId,
+      currentName: manager.name,
+      initials: manager.initials || previous?.initials || initialsFor(manager.name),
+      color,
+      aliases
+    });
+  }
+  return {
+    updatedAt: new Date().toISOString(),
+    teams: [...merged.values()].sort((a, b) => a.currentName.localeCompare(b.currentName))
+  };
+}
+
+function resolveTeam(input, identity) {
+  const managerId = String(input?.managerId || input?.id || "");
+  if (managerId && identity.byId.has(managerId)) return identity.byId.get(managerId);
+  const name = input?.name || input?.user_name || input?.teamName || input;
+  return identity.byAlias.get(teamKey(name)) || null;
+}
+
+function canonicalTeam(input, identity) {
+  const resolved = resolveTeam(input, identity);
+  if (!resolved) {
+    const name = input?.name || input?.user_name || input || "";
+    return {
+      managerId: input?.managerId || null,
+      name,
+      user_name: input?.user_name || name,
+      initials: input?.initials || initialsFor(name),
+      color: null,
+      aliases: []
+    };
+  }
+  return {
+    managerId: resolved.managerId,
+    name: resolved.currentName,
+    user_name: resolved.currentName,
+    initials: resolved.initials,
+    color: resolved.color,
+    aliases: resolved.aliases
+  };
+}
+
+function canonicalizeTeamName(name, identity) {
+  return resolveTeam(name, identity)?.currentName || name;
+}
+
+function canonicalizeTeamRow(row, identity) {
+  const team = canonicalTeam(row, identity);
+  return {
+    ...row,
+    managerId: team.managerId || row.managerId || null,
+    name: team.name || row.name,
+    user_name: row.user_name ? team.user_name : row.user_name,
+    initials: team.initials || row.initials,
+    color: team.color || row.color || null,
+    aliases: team.aliases?.length ? team.aliases : row.aliases
+  };
+}
+
+function canonicalizeRounds(rounds, identity) {
+  return (rounds || []).map((round) => {
+    const rows = (round.rows || []).map((row) => canonicalizeTeamRow(row, identity));
+    const rowsBySystem = Object.fromEntries(Object.entries(round.rowsBySystem || {}).map(([system, systemRows]) => [
+      system,
+      (systemRows || []).map((row) => canonicalizeTeamRow(row, identity))
+    ]));
+    const userRounds = (round.userRounds || []).map((userRound) => ({
+      ...userRound,
+      manager: canonicalizeTeamRow(userRound.manager || {}, identity)
+    }));
+    return { ...round, rows, rowsBySystem, userRounds };
+  });
+}
+
+function initialsFor(name) {
+  return String(name || "")
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
 }
 
 function parseUserLine(text) {
@@ -637,8 +789,10 @@ function buildDetailedCharts(teams, closedRounds, playerLookup) {
     for (const userRound of round.userRounds || []) {
       const teamName = userRound.manager.name;
       const row = teamRows.get(teamName) || {
+        managerId: userRound.manager.managerId || null,
         name: teamName,
         initials: userRound.manager.initials,
+        color: userRound.manager.color || null,
         goals: 0,
         assists: 0,
         yellowCards: 0,
@@ -721,8 +875,10 @@ function buildDetailedCharts(teams, closedRounds, playerLookup) {
       });
       teamRows.set(teamName, row);
       roundTeams.push({
+        managerId: userRound.manager.managerId || null,
         name: teamName,
         initials: userRound.manager.initials,
+        color: userRound.manager.color || null,
         points: standingsPoints,
         goals: roundGoals,
         assists: roundAssists,
@@ -760,19 +916,14 @@ function buildDetailedCharts(teams, closedRounds, playerLookup) {
   };
 }
 
-function teamKey(name) {
-  return String(name || "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .trim();
-}
-
-function buildBiwengerStats(teams, closedRounds, playerLookup, teamValues, transfersData, transferHistory, marketHistory) {
+function buildBiwengerStats(teams, closedRounds, playerLookup, teamValues, transfersData, transferHistory, marketHistory, identity) {
   const teamNames = new Set(teams.map((team) => team.name));
   const teamsRows = teams.map((team) => ({
+    manager_id: team.managerId || null,
     user_name: team.name,
     initials: team.initials,
+    color: team.color || null,
+    aliases: team.aliases || [],
     team_value: teamValues.get(team.name) || null
   }));
   const positionProgress = [];
@@ -784,8 +935,10 @@ function buildBiwengerStats(teams, closedRounds, playerLookup, teamValues, trans
     rounds: 0
   }]));
   const teamAgg = new Map(teams.map((team) => [team.name, {
+    manager_id: team.managerId || null,
     user_name: team.name,
     initials: team.initials,
+    color: team.color || null,
     points: 0,
     goals: 0,
     assists: 0,
@@ -806,10 +959,12 @@ function buildBiwengerStats(teams, closedRounds, playerLookup, teamValues, trans
     standings.forEach((row, index) => {
       const lineupPoints = round.rows.find((item) => item.name === row.name)?.points ?? 0;
       positionProgress.push({
+        manager_id: row.managerId || null,
         round_order: round.round,
         round_name: `J${round.round}`,
         user_name: row.name,
         initials: row.initials,
+        color: row.color || null,
         league_position: index + 1,
         total_points_after_round: row.points,
         lineup_points: lineupPoints,
@@ -871,7 +1026,9 @@ function buildBiwengerStats(teams, closedRounds, playerLookup, teamValues, trans
     ? cumulativeStandings(teams, closedRounds, latestRound).map((row, index) => ({
       league_position: index + 1,
       user_name: row.name,
+      manager_id: row.managerId || null,
       initials: row.initials,
+      color: row.color || null,
       total_points_after_round: row.points,
       team_value: teamValues.get(row.name) || null
     }))
@@ -882,7 +1039,9 @@ function buildBiwengerStats(teams, closedRounds, playerLookup, teamValues, trans
   }));
   const volatility = buildVolatility(teams, closedRounds).map((row) => ({
     user_name: row.name,
+    manager_id: row.managerId || null,
     initials: row.initials,
+    color: row.color || null,
     average_points: row.average,
     volatility: row.volatility,
     points: row.points
@@ -972,7 +1131,13 @@ function buildBiwengerStats(teams, closedRounds, playerLookup, teamValues, trans
     points_per_million: row.team_value ? row.total_points_after_round / (row.team_value / 1000000) : null
   })).sort((a, b) => (b.points_per_million || 0) - (a.points_per_million || 0));
 
-  const transfers = normalizeTransferRows(transfersData, transferHistory, deepPlayerMovements(playerLookup)).filter((row) => teamNames.has(row.from) || teamNames.has(row.to));
+  const transfers = normalizeTransferRows(transfersData, transferHistory, deepPlayerMovements(playerLookup))
+    .map((row) => ({
+      ...row,
+      from: canonicalizeTeamName(row.from, identity),
+      to: canonicalizeTeamName(row.to, identity)
+    }))
+    .filter((row) => teamNames.has(row.from) || teamNames.has(row.to));
   const marketActivitySummary = teams.map((team) => {
     const purchases = transfers.filter((row) => teamKey(row.to) === teamKey(team.name));
     const sales = transfers.filter((row) => teamKey(row.from) === teamKey(team.name));
@@ -1204,21 +1369,26 @@ async function main() {
   const calendar = await readJson("data/laliga/calendar.json", { rounds: [] });
   const marketHistory = await readJsonl("data/mister/market-history.jsonl");
   const transferHistory = await readJsonl("data/mister/transfer-history.jsonl");
+  const existingRegistry = await readTeamRegistry();
+  const teamRegistry = mergeTeamRegistry(existingRegistry, deep.managers || []);
+  const teamIdentity = buildTeamIdentity(teamRegistry);
 
   const parsedStandings = parseStandings(standings.users || []);
   const closedRounds = parseClosedRoundsFromFeedText(feed.headlineText || "");
   const playerLookup = buildPlayerLookup(deep);
-  const deepRounds = buildDeepRounds(deep, closedRounds.length ? closedRounds : FALLBACK_CLOSED_ROUNDS, playerLookup);
+  const deepRounds = canonicalizeRounds(buildDeepRounds(deep, closedRounds.length ? closedRounds : FALLBACK_CLOSED_ROUNDS, playerLookup), teamIdentity);
+  const feedClosedRounds = canonicalizeRounds(closedRounds, teamIdentity);
   const effectiveClosedRounds = deepRounds.length
     ? deepRounds.filter((round) => isClosedRound(round, closedRounds))
-    : closedRounds.length ? closedRounds : FALLBACK_CLOSED_ROUNDS;
+    : feedClosedRounds.length ? feedClosedRounds : canonicalizeRounds(FALLBACK_CLOSED_ROUNDS, teamIdentity);
   const liveRounds = deepRounds.filter((round) => !isClosedRound(round, closedRounds));
-  const teams = parsedStandings.general.length
-    ? parsedStandings.general.map((row) => ({ name: row.name, initials: row.initials }))
+  const currentStandings = parsedStandings.general.map((row) => canonicalizeTeamRow(row, teamIdentity));
+  const teams = currentStandings.length
+    ? currentStandings.map((row) => canonicalizeTeamRow(row, teamIdentity))
     : deep?.managers?.length
-      ? deep.managers.map((row) => ({ name: row.name, initials: row.initials, managerId: row.managerId }))
+      ? deep.managers.map((row) => canonicalizeTeamRow(row, teamIdentity))
       : effectiveClosedRounds[0].rows.map((row) => ({ name: row.name, initials: row.initials }));
-  const teamValues = new Map(parsedStandings.general.map((row) => [row.name, row.value || 0]));
+  const teamValues = new Map(currentStandings.map((row) => [row.name, row.value || 0]));
   const latestClosedRound = Math.max(0, ...effectiveClosedRounds.map((round) => round.round));
   const scoringSystems = [
     { id: "final", name: "Mixto" },
@@ -1229,7 +1399,7 @@ async function main() {
     { id: "marcaStats", name: "Marca Stats" }
   ];
   const detailedCharts = buildDetailedCharts(teams, effectiveClosedRounds, playerLookup);
-  const stats = buildBiwengerStats(teams, effectiveClosedRounds, playerLookup, teamValues, transfers, transferHistory, marketHistory);
+  const stats = buildBiwengerStats(teams, effectiveClosedRounds, playerLookup, teamValues, transfers, transferHistory, marketHistory, teamIdentity);
 
   const dashboard = {
     meta: {
@@ -1251,10 +1421,16 @@ async function main() {
         "El mercado diario depende de que la Action diaria siga ejecutándose y acumulando snapshots."
       ]
     },
+    teamRegistry,
     teams,
-    currentStandings: parsedStandings.general,
+    currentStandings,
     closedRounds: effectiveClosedRounds.map(slimRoundForDashboard),
-    liveRounds: liveRounds.length ? liveRounds.map(slimRoundForDashboard) : parsedStandings.live.length ? [{ round: latestClosedRound + 1, status: "in_progress", rows: parsedStandings.live, rowsBySystem: { final: parsedStandings.live } }] : [],
+    liveRounds: liveRounds.length ? liveRounds.map(slimRoundForDashboard) : parsedStandings.live.length ? [{
+      round: latestClosedRound + 1,
+      status: "in_progress",
+      rows: parsedStandings.live.map((row) => canonicalizeTeamRow(row, teamIdentity)),
+      rowsBySystem: { final: parsedStandings.live.map((row) => canonicalizeTeamRow(row, teamIdentity)) }
+    }] : [],
     cumulative: Array.from({ length: latestClosedRound + 1 }, (_, round) => ({ round, rows: cumulativeStandings(teams, effectiveClosedRounds, round) })),
     cumulativeBySystem: Object.fromEntries(scoringSystems.map((system) => [
       system.id,
@@ -1316,6 +1492,8 @@ async function main() {
     pig: pigHistory
   };
 
+  await fs.mkdir(MISTER_DIR, { recursive: true });
+  await fs.writeFile(TEAM_REGISTRY_PATH, `${JSON.stringify(teamRegistry, null, 2)}\n`, "utf8");
   await fs.mkdir(LATEST_DIR, { recursive: true });
   await fs.writeFile(path.join(LATEST_DIR, "dashboard.json"), `${JSON.stringify(dashboard, null, 2)}\n`, "utf8");
   await fs.mkdir(CERDO_DIR, { recursive: true });

@@ -40,8 +40,8 @@ const images = [
 ];
 
 const BUILD_VERSION = {
-  label: "web awards-v3",
-  updatedAt: "2026-08-30T14:43:36+02:00"
+  label: "web team-id-v1",
+  updatedAt: "2026-08-31T18:17:24+02:00"
 };
 
 const cardTeams = new Map([
@@ -152,6 +152,7 @@ const state = {
   dashboard: null,
   pigHistory: { rounds: [] },
   teams: [],
+  teamIdentity: { byName: new Map(), byId: new Map() },
   teamValues: new Map(),
   closedRounds: fallbackClosedRounds,
   liveRounds: [],
@@ -217,11 +218,12 @@ async function safeJson(url) {
 function normalizeData() {
   if (state.dashboard) {
     state.teams = state.dashboard.teams || [];
+    buildTeamIdentity();
     state.closedRounds = state.dashboard.closedRounds || fallbackClosedRounds;
     state.liveRounds = state.dashboard.liveRounds || [];
     state.marketRaw = state.marketRaw || { players: state.dashboard.market?.latestPlayers || [] };
     for (const row of state.dashboard.currentStandings || []) {
-      state.teamValues.set(row.name, row.value || 0);
+      state.teamValues.set(canonicalTeamName(row.name), row.value || 0);
     }
     return;
   }
@@ -230,8 +232,9 @@ function normalizeData() {
   state.teams = parsedStandings.general.length
     ? parsedStandings.general.map(row => ({ name: row.name, initials: row.initials }))
     : fallbackClosedRounds[0].rows.map(row => ({ name: row.name, initials: row.initials }));
+  buildTeamIdentity();
 
-  parsedStandings.general.forEach(row => state.teamValues.set(row.name, row.value || 0));
+  parsedStandings.general.forEach(row => state.teamValues.set(canonicalTeamName(row.name), row.value || 0));
 
   const feedRounds = parseClosedRoundsFromFeedText(state.feedRaw?.headlineText || "");
   state.closedRounds = feedRounds.length ? feedRounds : fallbackClosedRounds;
@@ -321,6 +324,25 @@ function renderAll() {
   setupRoundSelect();
   renderRound();
   renderStatsTab();
+}
+
+function buildTeamIdentity() {
+  const byName = new Map();
+  const byId = new Map();
+  const registryTeams = state.dashboard?.teamRegistry?.teams || state.teams || [];
+  for (const team of registryTeams) {
+    const canonical = {
+      managerId: team.managerId ? String(team.managerId) : null,
+      name: team.currentName || team.name,
+      initials: team.initials,
+      color: team.color,
+      aliases: [...new Set([team.currentName, team.name, ...(team.aliases || [])].filter(Boolean))]
+    };
+    if (!canonical.name) continue;
+    if (canonical.managerId) byId.set(canonical.managerId, canonical);
+    for (const alias of canonical.aliases) byName.set(normalizeTeamName(alias), canonical);
+  }
+  state.teamIdentity = { byName, byId };
 }
 
 function setupTabs() {
@@ -1035,9 +1057,11 @@ function plotPositionProgress(id, rows) {
 }
 
 function teamColor(name) {
-  const key = normalizeTeamName(name);
+  const canonical = resolveTeam(name);
+  if (canonical?.color) return canonical.color;
+  const key = normalizeTeamName(canonical?.name || name);
   if (fixedTeamPalette[key]) return fixedTeamPalette[key];
-  const index = state.teams.findIndex(team => sameTeam(team.name, name));
+  const index = state.teams.findIndex(team => sameTeam(team.name, canonical?.name || name));
   return chartPalette[(index < 0 ? 0 : index) % chartPalette.length];
 }
 
@@ -1061,12 +1085,13 @@ function setupStatsTeamSelector(stats) {
   if (!select || !profile) return;
   const render = () => {
     const team = select.value;
-    const standings = stats.latest_standings?.find(row => sameTeam(row.user_name, team));
-    const awards = state.dashboard?.awards?.counts?.[team] || {};
-    const bestPlayers = (stats.position_best_players || []).filter(row => sameTeam(row.user_name, team)).slice(0, 8);
-    const color = teamColor(team);
+    const teamName = canonicalTeamName(team);
+    const standings = stats.latest_standings?.find(row => sameTeam(row.user_name, teamName));
+    const awards = state.dashboard?.awards?.counts?.[teamName] || state.dashboard?.awards?.counts?.[team] || {};
+    const bestPlayers = (stats.position_best_players || []).filter(row => sameTeam(row.user_name, teamName)).slice(0, 8);
+    const color = teamColor(teamName);
     profile.innerHTML = `
-      <h3 class="stats-team-title" style="--team-color:${escapeAttr(color)}">${escapeHtml(team)}</h3>
+      <h3 class="stats-team-title" style="--team-color:${escapeAttr(color)}">${escapeHtml(teamName)}</h3>
       <div class="metric-grid">
         <div class="metric"><strong>#${standings?.league_position || "-"}</strong><span>posición</span></div>
         <div class="metric"><strong>${Math.round(standings?.total_points_after_round || 0)}</strong><span>puntos</span></div>
@@ -1547,11 +1572,25 @@ function initialsFor(name) {
 }
 
 function teamInitials(name) {
-  return state.teams.find(team => sameTeam(team.name, name))?.initials || initialsFor(name);
+  const canonical = resolveTeam(name);
+  return canonical?.initials || state.teams.find(team => sameTeam(team.name, name))?.initials || initialsFor(name);
 }
 
 function sameTeam(a, b) {
-  return normalizeTeamName(a) === normalizeTeamName(b);
+  return normalizeTeamName(canonicalTeamName(a)) === normalizeTeamName(canonicalTeamName(b));
+}
+
+function resolveTeam(value) {
+  if (value && typeof value === "object") {
+    const managerId = value.managerId ? String(value.managerId) : null;
+    if (managerId && state.teamIdentity.byId.has(managerId)) return state.teamIdentity.byId.get(managerId);
+    value = value.name || value.user_name || value.currentName || "";
+  }
+  return state.teamIdentity.byName.get(normalizeTeamName(value)) || null;
+}
+
+function canonicalTeamName(value) {
+  return resolveTeam(value)?.name || value || "";
 }
 
 function normalizeTeamName(value) {

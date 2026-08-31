@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-08-31T15:03:15.758Z",
+    "generatedAt": "2026-08-31T16:21:43.045Z",
     "sources": {
       "standings": "2026-08-30T07:57:30.287Z",
       "feed": "2026-08-31T15:02:40.721Z",
@@ -18,34 +18,165 @@
       "El mercado diario depende de que la Action diaria siga ejecutándose y acumulando snapshots."
     ]
   },
+  "teamRegistry": {
+    "updatedAt": "2026-08-31T16:21:42.957Z",
+    "teams": [
+      {
+        "managerId": "15420188",
+        "currentName": "Alex Ballena",
+        "initials": "AB",
+        "color": "#b67cff",
+        "aliases": [
+          "Alex Ballena"
+        ]
+      },
+      {
+        "managerId": "8785696",
+        "currentName": "Don Manuel Ruíz de Lopera",
+        "initials": "DM",
+        "color": "#66fff1",
+        "aliases": [
+          "Don Manuel Ruíz de Lopera"
+        ]
+      },
+      {
+        "managerId": "8771310",
+        "currentName": "Heung Min Dad",
+        "initials": "HM",
+        "color": "#a5ff6a",
+        "aliases": [
+          "Heung Min Dad"
+        ]
+      },
+      {
+        "managerId": "13365280",
+        "currentName": "Mikel Poyarzabal",
+        "initials": "MP",
+        "color": "#7aa8ff",
+        "aliases": [
+          "Mikel Poyarzabal"
+        ]
+      },
+      {
+        "managerId": "10359824",
+        "currentName": "Olivito",
+        "initials": "O",
+        "color": "#f8fbff",
+        "aliases": [
+          "Olivito"
+        ]
+      },
+      {
+        "managerId": "12113243",
+        "currentName": "Peter LIM",
+        "initials": "PL",
+        "color": "#e8d26a",
+        "aliases": [
+          "Peter LIM"
+        ]
+      },
+      {
+        "managerId": "8769466",
+        "currentName": "Rodando Nazário",
+        "initials": "RN",
+        "color": "#ff55df",
+        "aliases": [
+          "Rodando Nazário"
+        ]
+      }
+    ]
+  },
   "teams": [
     {
+      "rank": 1,
+      "initials": "DM",
       "name": "Don Manuel Ruíz de Lopera",
-      "initials": "DM"
+      "points": 161,
+      "value": 83343000,
+      "playedText": "",
+      "managerId": "8785696",
+      "color": "#66fff1",
+      "aliases": [
+        "Don Manuel Ruíz de Lopera"
+      ]
     },
     {
+      "rank": 2,
+      "initials": "RN",
       "name": "Rodando Nazário",
-      "initials": "RN"
+      "points": 153,
+      "value": 85929000,
+      "playedText": "",
+      "managerId": "8769466",
+      "color": "#ff55df",
+      "aliases": [
+        "Rodando Nazário"
+      ]
     },
     {
+      "rank": 3,
+      "initials": "HM",
       "name": "Heung Min Dad",
-      "initials": "HM"
+      "points": 151,
+      "value": 63602000,
+      "playedText": "",
+      "managerId": "8771310",
+      "color": "#a5ff6a",
+      "aliases": [
+        "Heung Min Dad"
+      ]
     },
     {
+      "rank": 4,
+      "initials": "MP",
       "name": "Mikel Poyarzabal",
-      "initials": "MP"
+      "points": 125,
+      "value": 69770000,
+      "playedText": "",
+      "managerId": "13365280",
+      "color": "#7aa8ff",
+      "aliases": [
+        "Mikel Poyarzabal"
+      ]
     },
     {
+      "rank": 5,
+      "initials": "PL",
       "name": "Peter LIM",
-      "initials": "PL"
+      "points": 106,
+      "value": 53948000,
+      "playedText": "",
+      "managerId": "12113243",
+      "color": "#e8d26a",
+      "aliases": [
+        "Peter LIM"
+      ]
     },
     {
+      "rank": 6,
+      "initials": "O",
       "name": "Olivito",
-      "initials": "O"
+      "points": 88,
+      "value": 86396000,
+      "playedText": "",
+      "managerId": "10359824",
+      "color": "#f8fbff",
+      "aliases": [
+        "Olivito"
+      ]
     },
     {
+      "rank": 7,
+      "initials": "AB",
       "name": "Alex Ballena",
-      "initials": "AB"
+      "points": 49,
+      "value": 65475000,
+      "playedText": "",
+      "managerId": "15420188",
+      "color": "#b67cff",
+      "aliases": [
+        "Alex Ballena"
+      ]
     }
   ],
   "currentStandings": [
@@ -55,7 +186,12 @@
       "name": "Don Manuel Ruíz de Lopera",
       "points": 161,
       "value": 83343000,
-      "playedText": ""
+      "playedText": "",
+      "managerId": "8785696",
+      "color": "#66fff1",
+      "aliases": [
+        "Don Manuel Ruíz de Lopera"
+      ]
     },
     {
       "rank": 2,
@@ -63,7 +199,12 @@
       "name": "Rodando Nazário",
       "points": 153,
       "value": 85929000,
-      "playedText": ""
+      "playedText": "",
+      "managerId": "8769466",
+      "color": "#ff55df",
+      "aliases": [
+        "Rodando Nazário"
+      ]
     },
     {
       "rank": 3,
@@ -71,7 +212,12 @@
       "name": "Heung Min Dad",
       "points": 151,
       "value": 63602000,
-      "playedText": ""
+      "playedText": "",
+      "managerId": "8771310",
+      "color": "#a5ff6a",
+      "aliases": [
+        "Heung Min Dad"
+      ]
     },
     {
       "rank": 4,
@@ -79,7 +225,12 @@
       "name": "Mikel Poyarzabal",
       "points": 125,
       "value": 69770000,
-      "playedText": ""
+      "playedText": "",
+      "managerId": "13365280",
+      "color": "#7aa8ff",
+      "aliases": [
+        "Mikel Poyarzabal"
+      ]
     },
     {
       "rank": 5,
@@ -87,7 +238,12 @@
       "name": "Peter LIM",
       "points": 106,
       "value": 53948000,
-      "playedText": ""
+      "playedText": "",
+      "managerId": "12113243",
+      "color": "#e8d26a",
+      "aliases": [
+        "Peter LIM"
+      ]
     },
     {
       "rank": 6,
@@ -95,7 +251,12 @@
       "name": "Olivito",
       "points": 88,
       "value": 86396000,
-      "playedText": ""
+      "playedText": "",
+      "managerId": "10359824",
+      "color": "#f8fbff",
+      "aliases": [
+        "Olivito"
+      ]
     },
     {
       "rank": 7,
@@ -103,7 +264,12 @@
       "name": "Alex Ballena",
       "points": 49,
       "value": 65475000,
-      "playedText": ""
+      "playedText": "",
+      "managerId": "15420188",
+      "color": "#b67cff",
+      "aliases": [
+        "Alex Ballena"
+      ]
     }
   ],
   "closedRounds": [
@@ -120,7 +286,11 @@
           "value": 45497000,
           "played": "10",
           "managerId": "8785696",
-          "href": "https://mister.mundodeportivo.com/users/8785696/don-manuel-ruiz-de-lopera"
+          "href": "https://mister.mundodeportivo.com/users/8785696/don-manuel-ruiz-de-lopera",
+          "color": "#66fff1",
+          "aliases": [
+            "Don Manuel Ruíz de Lopera"
+          ]
         },
         {
           "rank": 2,
@@ -130,7 +300,11 @@
           "value": 63148000,
           "played": "10",
           "managerId": "8771310",
-          "href": "https://mister.mundodeportivo.com/users/8771310/heung-min-dad"
+          "href": "https://mister.mundodeportivo.com/users/8771310/heung-min-dad",
+          "color": "#a5ff6a",
+          "aliases": [
+            "Heung Min Dad"
+          ]
         },
         {
           "rank": 3,
@@ -140,7 +314,11 @@
           "value": 62308000,
           "played": "10",
           "managerId": "8769466",
-          "href": "https://mister.mundodeportivo.com/users/8769466/rodando-nazario"
+          "href": "https://mister.mundodeportivo.com/users/8769466/rodando-nazario",
+          "color": "#ff55df",
+          "aliases": [
+            "Rodando Nazário"
+          ]
         },
         {
           "rank": 4,
@@ -150,7 +328,11 @@
           "value": 49522000,
           "played": "7",
           "managerId": "12113243",
-          "href": "https://mister.mundodeportivo.com/users/12113243/peter-lim"
+          "href": "https://mister.mundodeportivo.com/users/12113243/peter-lim",
+          "color": "#e8d26a",
+          "aliases": [
+            "Peter LIM"
+          ]
         },
         {
           "rank": 5,
@@ -160,7 +342,11 @@
           "value": 46164000,
           "played": "10",
           "managerId": "13365280",
-          "href": "https://mister.mundodeportivo.com/users/13365280/mikel-poyarzabal"
+          "href": "https://mister.mundodeportivo.com/users/13365280/mikel-poyarzabal",
+          "color": "#7aa8ff",
+          "aliases": [
+            "Mikel Poyarzabal"
+          ]
         },
         {
           "rank": 6,
@@ -170,7 +356,11 @@
           "value": 56327000,
           "played": "9",
           "managerId": "10359824",
-          "href": "https://mister.mundodeportivo.com/users/10359824/olivito"
+          "href": "https://mister.mundodeportivo.com/users/10359824/olivito",
+          "color": "#f8fbff",
+          "aliases": [
+            "Olivito"
+          ]
         },
         {
           "rank": 7,
@@ -180,7 +370,11 @@
           "value": 49497000,
           "played": "9",
           "managerId": "15420188",
-          "href": "https://mister.mundodeportivo.com/users/15420188/alex-ballena"
+          "href": "https://mister.mundodeportivo.com/users/15420188/alex-ballena",
+          "color": "#b67cff",
+          "aliases": [
+            "Alex Ballena"
+          ]
         }
       ],
       "rowsBySystem": {
@@ -194,7 +388,11 @@
             "value": 45497000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 2,
@@ -205,7 +403,11 @@
             "value": 63148000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 3,
@@ -216,7 +418,11 @@
             "value": 62308000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 4,
@@ -227,7 +433,11 @@
             "value": 49522000,
             "played": 7,
             "availablePlayers": 7,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
             "rank": 5,
@@ -238,7 +448,11 @@
             "value": 46164000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 6,
@@ -249,7 +463,11 @@
             "value": 56327000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 7,
@@ -260,7 +478,11 @@
             "value": 49497000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ],
         "as": [
@@ -273,7 +495,11 @@
             "value": 63148000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 2,
@@ -284,7 +510,11 @@
             "value": 49522000,
             "played": 7,
             "availablePlayers": 7,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
             "rank": 3,
@@ -295,7 +525,11 @@
             "value": 45497000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 4,
@@ -306,7 +540,11 @@
             "value": 62308000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 5,
@@ -317,7 +555,11 @@
             "value": 46164000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 6,
@@ -328,7 +570,11 @@
             "value": 56327000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 7,
@@ -339,7 +585,11 @@
             "value": 49497000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ],
         "marca": [
@@ -352,7 +602,11 @@
             "value": 63148000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 2,
@@ -363,7 +617,11 @@
             "value": 46164000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 3,
@@ -374,7 +632,11 @@
             "value": 45497000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 4,
@@ -385,7 +647,11 @@
             "value": 62308000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 5,
@@ -396,7 +662,11 @@
             "value": 49522000,
             "played": 7,
             "availablePlayers": 7,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
             "rank": 6,
@@ -407,7 +677,11 @@
             "value": 56327000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 7,
@@ -418,7 +692,11 @@
             "value": 49497000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ],
         "mundoDeportivo": [
@@ -431,7 +709,11 @@
             "value": 45497000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 2,
@@ -442,7 +724,11 @@
             "value": 49522000,
             "played": 7,
             "availablePlayers": 7,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
             "rank": 3,
@@ -453,7 +739,11 @@
             "value": 63148000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 4,
@@ -464,7 +754,11 @@
             "value": 62308000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 5,
@@ -475,7 +769,11 @@
             "value": 46164000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 6,
@@ -486,7 +784,11 @@
             "value": 56327000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 7,
@@ -497,7 +799,11 @@
             "value": 49497000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ],
         "sofascore": [
@@ -510,7 +816,11 @@
             "value": 45497000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 2,
@@ -521,7 +831,11 @@
             "value": 49522000,
             "played": 7,
             "availablePlayers": 7,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
             "rank": 3,
@@ -532,7 +846,11 @@
             "value": 63148000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 4,
@@ -543,7 +861,11 @@
             "value": 46164000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 5,
@@ -554,7 +876,11 @@
             "value": 62308000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 6,
@@ -565,7 +891,11 @@
             "value": 49497000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
             "rank": 7,
@@ -576,7 +906,11 @@
             "value": 56327000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           }
         ],
         "marcaStats": [
@@ -589,7 +923,11 @@
             "value": 46164000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 2,
@@ -600,7 +938,11 @@
             "value": 62308000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 3,
@@ -611,7 +953,11 @@
             "value": 45497000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 4,
@@ -622,7 +968,11 @@
             "value": 63148000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 5,
@@ -633,7 +983,11 @@
             "value": 49522000,
             "played": 7,
             "availablePlayers": 7,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
             "rank": 6,
@@ -644,7 +998,11 @@
             "value": 49497000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
             "rank": 7,
@@ -655,7 +1013,11 @@
             "value": 56327000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           }
         ]
       },
@@ -2386,7 +2748,11 @@
           "value": 62259000,
           "played": "10",
           "managerId": "8769466",
-          "href": "https://mister.mundodeportivo.com/users/8769466/rodando-nazario"
+          "href": "https://mister.mundodeportivo.com/users/8769466/rodando-nazario",
+          "color": "#ff55df",
+          "aliases": [
+            "Rodando Nazário"
+          ]
         },
         {
           "rank": 2,
@@ -2396,7 +2762,11 @@
           "value": 63286000,
           "played": "11",
           "managerId": "8771310",
-          "href": "https://mister.mundodeportivo.com/users/8771310/heung-min-dad"
+          "href": "https://mister.mundodeportivo.com/users/8771310/heung-min-dad",
+          "color": "#a5ff6a",
+          "aliases": [
+            "Heung Min Dad"
+          ]
         },
         {
           "rank": 3,
@@ -2406,7 +2776,11 @@
           "value": 41842000,
           "played": "11",
           "managerId": "8785696",
-          "href": "https://mister.mundodeportivo.com/users/8785696/don-manuel-ruiz-de-lopera"
+          "href": "https://mister.mundodeportivo.com/users/8785696/don-manuel-ruiz-de-lopera",
+          "color": "#66fff1",
+          "aliases": [
+            "Don Manuel Ruíz de Lopera"
+          ]
         },
         {
           "rank": 4,
@@ -2416,7 +2790,11 @@
           "value": 49781000,
           "played": "11",
           "managerId": "13365280",
-          "href": "https://mister.mundodeportivo.com/users/13365280/mikel-poyarzabal"
+          "href": "https://mister.mundodeportivo.com/users/13365280/mikel-poyarzabal",
+          "color": "#7aa8ff",
+          "aliases": [
+            "Mikel Poyarzabal"
+          ]
         },
         {
           "rank": 5,
@@ -2426,7 +2804,11 @@
           "value": 43062000,
           "played": "9",
           "managerId": "12113243",
-          "href": "https://mister.mundodeportivo.com/users/12113243/peter-lim"
+          "href": "https://mister.mundodeportivo.com/users/12113243/peter-lim",
+          "color": "#e8d26a",
+          "aliases": [
+            "Peter LIM"
+          ]
         },
         {
           "rank": 6,
@@ -2436,7 +2818,11 @@
           "value": 57071000,
           "played": "9",
           "managerId": "10359824",
-          "href": "https://mister.mundodeportivo.com/users/10359824/olivito"
+          "href": "https://mister.mundodeportivo.com/users/10359824/olivito",
+          "color": "#f8fbff",
+          "aliases": [
+            "Olivito"
+          ]
         },
         {
           "rank": 7,
@@ -2446,7 +2832,11 @@
           "value": 56183000,
           "played": "7",
           "managerId": "15420188",
-          "href": "https://mister.mundodeportivo.com/users/15420188/alex-ballena"
+          "href": "https://mister.mundodeportivo.com/users/15420188/alex-ballena",
+          "color": "#b67cff",
+          "aliases": [
+            "Alex Ballena"
+          ]
         }
       ],
       "rowsBySystem": {
@@ -2460,7 +2850,11 @@
             "value": 62259000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 2,
@@ -2471,7 +2865,11 @@
             "value": 63286000,
             "played": 11,
             "availablePlayers": 11,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 3,
@@ -2482,7 +2880,11 @@
             "value": 41842000,
             "played": 11,
             "availablePlayers": 11,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 4,
@@ -2493,7 +2895,11 @@
             "value": 49781000,
             "played": 11,
             "availablePlayers": 11,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 5,
@@ -2504,7 +2910,11 @@
             "value": 43062000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
             "rank": 6,
@@ -2515,7 +2925,11 @@
             "value": 57071000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 7,
@@ -2526,7 +2940,11 @@
             "value": 56183000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ],
         "as": [
@@ -2539,7 +2957,11 @@
             "value": 63286000,
             "played": 11,
             "availablePlayers": 11,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 2,
@@ -2550,7 +2972,11 @@
             "value": 62259000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 3,
@@ -2561,7 +2987,11 @@
             "value": 41842000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 4,
@@ -2572,7 +3002,11 @@
             "value": 49781000,
             "played": 11,
             "availablePlayers": 11,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 5,
@@ -2583,7 +3017,11 @@
             "value": 43062000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
             "rank": 6,
@@ -2594,7 +3032,11 @@
             "value": 57071000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 7,
@@ -2605,7 +3047,11 @@
             "value": 56183000,
             "played": 5,
             "availablePlayers": 5,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ],
         "marca": [
@@ -2618,7 +3064,11 @@
             "value": 62259000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 2,
@@ -2629,7 +3079,11 @@
             "value": 63286000,
             "played": 11,
             "availablePlayers": 11,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 3,
@@ -2640,7 +3094,11 @@
             "value": 41842000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 4,
@@ -2651,7 +3109,11 @@
             "value": 49781000,
             "played": 11,
             "availablePlayers": 11,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 5,
@@ -2662,7 +3124,11 @@
             "value": 43062000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
             "rank": 6,
@@ -2673,7 +3139,11 @@
             "value": 57071000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 7,
@@ -2684,7 +3154,11 @@
             "value": 56183000,
             "played": 5,
             "availablePlayers": 5,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ],
         "mundoDeportivo": [
@@ -2697,7 +3171,11 @@
             "value": 63286000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 2,
@@ -2708,7 +3186,11 @@
             "value": 62259000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 3,
@@ -2719,7 +3201,11 @@
             "value": 49781000,
             "played": 11,
             "availablePlayers": 11,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 4,
@@ -2730,7 +3216,11 @@
             "value": 41842000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 5,
@@ -2741,7 +3231,11 @@
             "value": 43062000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
             "rank": 6,
@@ -2752,7 +3246,11 @@
             "value": 57071000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 7,
@@ -2763,7 +3261,11 @@
             "value": 56183000,
             "played": 5,
             "availablePlayers": 5,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ],
         "sofascore": [
@@ -2776,7 +3278,11 @@
             "value": 63286000,
             "played": 11,
             "availablePlayers": 11,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 2,
@@ -2787,7 +3293,11 @@
             "value": 62259000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 3,
@@ -2798,7 +3308,11 @@
             "value": 49781000,
             "played": 11,
             "availablePlayers": 11,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 4,
@@ -2809,7 +3323,11 @@
             "value": 41842000,
             "played": 11,
             "availablePlayers": 11,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 5,
@@ -2820,7 +3338,11 @@
             "value": 43062000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
             "rank": 6,
@@ -2831,7 +3353,11 @@
             "value": 57071000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 7,
@@ -2842,7 +3368,11 @@
             "value": 56183000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ],
         "marcaStats": [
@@ -2855,7 +3385,11 @@
             "value": 63286000,
             "played": 11,
             "availablePlayers": 11,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 2,
@@ -2866,7 +3400,11 @@
             "value": 62259000,
             "played": 10,
             "availablePlayers": 10,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 3,
@@ -2877,7 +3415,11 @@
             "value": 49781000,
             "played": 11,
             "availablePlayers": 11,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 4,
@@ -2888,7 +3430,11 @@
             "value": 41842000,
             "played": 11,
             "availablePlayers": 11,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 5,
@@ -2899,7 +3445,11 @@
             "value": 43062000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
             "rank": 6,
@@ -2910,7 +3460,11 @@
             "value": 57071000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 7,
@@ -2921,7 +3475,11 @@
             "value": 56183000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ]
       },
@@ -4642,7 +5200,11 @@
           "value": 71372000,
           "played": "9",
           "managerId": "8785696",
-          "href": "https://mister.mundodeportivo.com/users/8785696/don-manuel-ruiz-de-lopera"
+          "href": "https://mister.mundodeportivo.com/users/8785696/don-manuel-ruiz-de-lopera",
+          "color": "#66fff1",
+          "aliases": [
+            "Don Manuel Ruíz de Lopera"
+          ]
         },
         {
           "rank": 2,
@@ -4652,7 +5214,11 @@
           "value": 62216000,
           "played": "8",
           "managerId": "10359824",
-          "href": "https://mister.mundodeportivo.com/users/10359824/olivito"
+          "href": "https://mister.mundodeportivo.com/users/10359824/olivito",
+          "color": "#f8fbff",
+          "aliases": [
+            "Olivito"
+          ]
         },
         {
           "rank": 3,
@@ -4662,7 +5228,11 @@
           "value": 58850000,
           "played": "7",
           "managerId": "13365280",
-          "href": "https://mister.mundodeportivo.com/users/13365280/mikel-poyarzabal"
+          "href": "https://mister.mundodeportivo.com/users/13365280/mikel-poyarzabal",
+          "color": "#7aa8ff",
+          "aliases": [
+            "Mikel Poyarzabal"
+          ]
         },
         {
           "rank": 4,
@@ -4672,7 +5242,11 @@
           "value": 58088000,
           "played": "8",
           "managerId": "8771310",
-          "href": "https://mister.mundodeportivo.com/users/8771310/heung-min-dad"
+          "href": "https://mister.mundodeportivo.com/users/8771310/heung-min-dad",
+          "color": "#a5ff6a",
+          "aliases": [
+            "Heung Min Dad"
+          ]
         },
         {
           "rank": 5,
@@ -4682,7 +5256,11 @@
           "value": 48362000,
           "played": "4",
           "managerId": "12113243",
-          "href": "https://mister.mundodeportivo.com/users/12113243/peter-lim"
+          "href": "https://mister.mundodeportivo.com/users/12113243/peter-lim",
+          "color": "#e8d26a",
+          "aliases": [
+            "Peter LIM"
+          ]
         },
         {
           "rank": 6,
@@ -4692,7 +5270,11 @@
           "value": 80094000,
           "played": "6",
           "managerId": "8769466",
-          "href": "https://mister.mundodeportivo.com/users/8769466/rodando-nazario"
+          "href": "https://mister.mundodeportivo.com/users/8769466/rodando-nazario",
+          "color": "#ff55df",
+          "aliases": [
+            "Rodando Nazário"
+          ]
         },
         {
           "rank": 7,
@@ -4702,7 +5284,11 @@
           "value": 58478000,
           "played": "6",
           "managerId": "15420188",
-          "href": "https://mister.mundodeportivo.com/users/15420188/alex-ballena"
+          "href": "https://mister.mundodeportivo.com/users/15420188/alex-ballena",
+          "color": "#b67cff",
+          "aliases": [
+            "Alex Ballena"
+          ]
         }
       ],
       "rowsBySystem": {
@@ -4716,7 +5302,11 @@
             "value": 71372000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 2,
@@ -4727,7 +5317,11 @@
             "value": 62216000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 3,
@@ -4738,7 +5332,11 @@
             "value": 58850000,
             "played": 7,
             "availablePlayers": 7,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 4,
@@ -4749,7 +5347,11 @@
             "value": 58088000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 5,
@@ -4760,7 +5362,11 @@
             "value": 48362000,
             "played": 4,
             "availablePlayers": 4,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
             "rank": 6,
@@ -4771,7 +5377,11 @@
             "value": 80094000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 7,
@@ -4782,7 +5392,11 @@
             "value": 58478000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ],
         "as": [
@@ -4795,7 +5409,11 @@
             "value": 62216000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 2,
@@ -4806,7 +5424,11 @@
             "value": 71372000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 3,
@@ -4817,7 +5439,11 @@
             "value": 58088000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 4,
@@ -4828,7 +5454,11 @@
             "value": 58850000,
             "played": 7,
             "availablePlayers": 7,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 5,
@@ -4839,7 +5469,11 @@
             "value": 80094000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 6,
@@ -4850,7 +5484,11 @@
             "value": 58478000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
             "rank": 7,
@@ -4861,7 +5499,11 @@
             "value": 48362000,
             "played": 4,
             "availablePlayers": 4,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           }
         ],
         "marca": [
@@ -4874,7 +5516,11 @@
             "value": 71372000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 2,
@@ -4885,7 +5531,11 @@
             "value": 58850000,
             "played": 7,
             "availablePlayers": 7,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 3,
@@ -4896,7 +5546,11 @@
             "value": 62216000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 4,
@@ -4907,7 +5561,11 @@
             "value": 58088000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 5,
@@ -4918,7 +5576,11 @@
             "value": 80094000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 6,
@@ -4929,7 +5591,11 @@
             "value": 58478000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
             "rank": 7,
@@ -4940,7 +5606,11 @@
             "value": 48362000,
             "played": 4,
             "availablePlayers": 4,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           }
         ],
         "mundoDeportivo": [
@@ -4953,7 +5623,11 @@
             "value": 62216000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 2,
@@ -4964,7 +5638,11 @@
             "value": 71372000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 3,
@@ -4975,7 +5653,11 @@
             "value": 58850000,
             "played": 7,
             "availablePlayers": 7,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 4,
@@ -4986,7 +5668,11 @@
             "value": 80094000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 5,
@@ -4997,7 +5683,11 @@
             "value": 58478000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
             "rank": 6,
@@ -5008,7 +5698,11 @@
             "value": 58088000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 7,
@@ -5019,7 +5713,11 @@
             "value": 48362000,
             "played": 4,
             "availablePlayers": 4,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           }
         ],
         "sofascore": [
@@ -5032,7 +5730,11 @@
             "value": 71372000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 2,
@@ -5043,7 +5745,11 @@
             "value": 58850000,
             "played": 7,
             "availablePlayers": 7,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 3,
@@ -5054,7 +5760,11 @@
             "value": 62216000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 4,
@@ -5065,7 +5775,11 @@
             "value": 58088000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 5,
@@ -5076,7 +5790,11 @@
             "value": 80094000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 6,
@@ -5087,7 +5805,11 @@
             "value": 58478000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
             "rank": 7,
@@ -5098,7 +5820,11 @@
             "value": 48362000,
             "played": 4,
             "availablePlayers": 4,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           }
         ],
         "marcaStats": [
@@ -5111,7 +5837,11 @@
             "value": 71372000,
             "played": 9,
             "availablePlayers": 9,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
             "rank": 2,
@@ -5122,7 +5852,11 @@
             "value": 62216000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
             "rank": 3,
@@ -5133,7 +5867,11 @@
             "value": 58850000,
             "played": 7,
             "availablePlayers": 7,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
             "rank": 4,
@@ -5144,7 +5882,11 @@
             "value": 58088000,
             "played": 8,
             "availablePlayers": 8,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
             "rank": 5,
@@ -5155,7 +5897,11 @@
             "value": 80094000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
             "rank": 6,
@@ -5166,7 +5912,11 @@
             "value": 58478000,
             "played": 6,
             "availablePlayers": 6,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
             "rank": 7,
@@ -5177,7 +5927,11 @@
             "value": 48362000,
             "played": 4,
             "availablePlayers": 4,
-            "totalLineupPlayers": 11
+            "totalLineupPlayers": 11,
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           }
         ]
       },
@@ -6135,39 +6889,95 @@
       "round": 0,
       "rows": [
         {
-          "name": "Alex Ballena",
+          "rank": 7,
           "initials": "AB",
-          "points": 0
+          "name": "Alex Ballena",
+          "points": 0,
+          "value": 65475000,
+          "playedText": "",
+          "managerId": "15420188",
+          "color": "#b67cff",
+          "aliases": [
+            "Alex Ballena"
+          ]
         },
         {
-          "name": "Don Manuel Ruíz de Lopera",
+          "rank": 1,
           "initials": "DM",
-          "points": 0
+          "name": "Don Manuel Ruíz de Lopera",
+          "points": 0,
+          "value": 83343000,
+          "playedText": "",
+          "managerId": "8785696",
+          "color": "#66fff1",
+          "aliases": [
+            "Don Manuel Ruíz de Lopera"
+          ]
         },
         {
-          "name": "Heung Min Dad",
+          "rank": 3,
           "initials": "HM",
-          "points": 0
+          "name": "Heung Min Dad",
+          "points": 0,
+          "value": 63602000,
+          "playedText": "",
+          "managerId": "8771310",
+          "color": "#a5ff6a",
+          "aliases": [
+            "Heung Min Dad"
+          ]
         },
         {
-          "name": "Mikel Poyarzabal",
+          "rank": 4,
           "initials": "MP",
-          "points": 0
+          "name": "Mikel Poyarzabal",
+          "points": 0,
+          "value": 69770000,
+          "playedText": "",
+          "managerId": "13365280",
+          "color": "#7aa8ff",
+          "aliases": [
+            "Mikel Poyarzabal"
+          ]
         },
         {
-          "name": "Olivito",
+          "rank": 6,
           "initials": "O",
-          "points": 0
+          "name": "Olivito",
+          "points": 0,
+          "value": 86396000,
+          "playedText": "",
+          "managerId": "10359824",
+          "color": "#f8fbff",
+          "aliases": [
+            "Olivito"
+          ]
         },
         {
-          "name": "Peter LIM",
+          "rank": 5,
           "initials": "PL",
-          "points": 0
+          "name": "Peter LIM",
+          "points": 0,
+          "value": 53948000,
+          "playedText": "",
+          "managerId": "12113243",
+          "color": "#e8d26a",
+          "aliases": [
+            "Peter LIM"
+          ]
         },
         {
-          "name": "Rodando Nazário",
+          "rank": 2,
           "initials": "RN",
-          "points": 0
+          "name": "Rodando Nazário",
+          "points": 0,
+          "value": 85929000,
+          "playedText": "",
+          "managerId": "8769466",
+          "color": "#ff55df",
+          "aliases": [
+            "Rodando Nazário"
+          ]
         }
       ]
     },
@@ -6175,39 +6985,95 @@
       "round": 1,
       "rows": [
         {
-          "name": "Don Manuel Ruíz de Lopera",
+          "rank": 1,
           "initials": "DM",
-          "points": 62
+          "name": "Don Manuel Ruíz de Lopera",
+          "points": 62,
+          "value": 83343000,
+          "playedText": "",
+          "managerId": "8785696",
+          "color": "#66fff1",
+          "aliases": [
+            "Don Manuel Ruíz de Lopera"
+          ]
         },
         {
-          "name": "Heung Min Dad",
+          "rank": 3,
           "initials": "HM",
-          "points": 53
+          "name": "Heung Min Dad",
+          "points": 53,
+          "value": 63602000,
+          "playedText": "",
+          "managerId": "8771310",
+          "color": "#a5ff6a",
+          "aliases": [
+            "Heung Min Dad"
+          ]
         },
         {
-          "name": "Rodando Nazário",
+          "rank": 2,
           "initials": "RN",
-          "points": 52
+          "name": "Rodando Nazário",
+          "points": 52,
+          "value": 85929000,
+          "playedText": "",
+          "managerId": "8769466",
+          "color": "#ff55df",
+          "aliases": [
+            "Rodando Nazário"
+          ]
         },
         {
-          "name": "Peter LIM",
+          "rank": 5,
           "initials": "PL",
-          "points": 48
+          "name": "Peter LIM",
+          "points": 48,
+          "value": 53948000,
+          "playedText": "",
+          "managerId": "12113243",
+          "color": "#e8d26a",
+          "aliases": [
+            "Peter LIM"
+          ]
         },
         {
-          "name": "Mikel Poyarzabal",
+          "rank": 4,
           "initials": "MP",
-          "points": 39
+          "name": "Mikel Poyarzabal",
+          "points": 39,
+          "value": 69770000,
+          "playedText": "",
+          "managerId": "13365280",
+          "color": "#7aa8ff",
+          "aliases": [
+            "Mikel Poyarzabal"
+          ]
         },
         {
-          "name": "Olivito",
+          "rank": 6,
           "initials": "O",
-          "points": 21
+          "name": "Olivito",
+          "points": 21,
+          "value": 86396000,
+          "playedText": "",
+          "managerId": "10359824",
+          "color": "#f8fbff",
+          "aliases": [
+            "Olivito"
+          ]
         },
         {
-          "name": "Alex Ballena",
+          "rank": 7,
           "initials": "AB",
-          "points": 18
+          "name": "Alex Ballena",
+          "points": 18,
+          "value": 65475000,
+          "playedText": "",
+          "managerId": "15420188",
+          "color": "#b67cff",
+          "aliases": [
+            "Alex Ballena"
+          ]
         }
       ]
     },
@@ -6215,39 +7081,95 @@
       "round": 2,
       "rows": [
         {
-          "name": "Rodando Nazário",
+          "rank": 2,
           "initials": "RN",
-          "points": 127
+          "name": "Rodando Nazário",
+          "points": 127,
+          "value": 85929000,
+          "playedText": "",
+          "managerId": "8769466",
+          "color": "#ff55df",
+          "aliases": [
+            "Rodando Nazário"
+          ]
         },
         {
-          "name": "Heung Min Dad",
+          "rank": 3,
           "initials": "HM",
-          "points": 124
+          "name": "Heung Min Dad",
+          "points": 124,
+          "value": 63602000,
+          "playedText": "",
+          "managerId": "8771310",
+          "color": "#a5ff6a",
+          "aliases": [
+            "Heung Min Dad"
+          ]
         },
         {
-          "name": "Don Manuel Ruíz de Lopera",
+          "rank": 1,
           "initials": "DM",
-          "points": 114
+          "name": "Don Manuel Ruíz de Lopera",
+          "points": 114,
+          "value": 83343000,
+          "playedText": "",
+          "managerId": "8785696",
+          "color": "#66fff1",
+          "aliases": [
+            "Don Manuel Ruíz de Lopera"
+          ]
         },
         {
-          "name": "Mikel Poyarzabal",
+          "rank": 4,
           "initials": "MP",
-          "points": 86
+          "name": "Mikel Poyarzabal",
+          "points": 86,
+          "value": 69770000,
+          "playedText": "",
+          "managerId": "13365280",
+          "color": "#7aa8ff",
+          "aliases": [
+            "Mikel Poyarzabal"
+          ]
         },
         {
-          "name": "Peter LIM",
+          "rank": 5,
           "initials": "PL",
-          "points": 80
+          "name": "Peter LIM",
+          "points": 80,
+          "value": 53948000,
+          "playedText": "",
+          "managerId": "12113243",
+          "color": "#e8d26a",
+          "aliases": [
+            "Peter LIM"
+          ]
         },
         {
-          "name": "Olivito",
+          "rank": 6,
           "initials": "O",
-          "points": 42
+          "name": "Olivito",
+          "points": 42,
+          "value": 86396000,
+          "playedText": "",
+          "managerId": "10359824",
+          "color": "#f8fbff",
+          "aliases": [
+            "Olivito"
+          ]
         },
         {
-          "name": "Alex Ballena",
+          "rank": 7,
           "initials": "AB",
-          "points": 28
+          "name": "Alex Ballena",
+          "points": 28,
+          "value": 65475000,
+          "playedText": "",
+          "managerId": "15420188",
+          "color": "#b67cff",
+          "aliases": [
+            "Alex Ballena"
+          ]
         }
       ]
     }
@@ -6258,39 +7180,95 @@
         "round": 0,
         "rows": [
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 0
+            "name": "Alex Ballena",
+            "points": 0,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 0
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 0,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 0
+            "name": "Heung Min Dad",
+            "points": 0,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 0
+            "name": "Mikel Poyarzabal",
+            "points": 0,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 0
+            "name": "Olivito",
+            "points": 0,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 0
+            "name": "Peter LIM",
+            "points": 0,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 0
+            "name": "Rodando Nazário",
+            "points": 0,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           }
         ]
       },
@@ -6298,39 +7276,95 @@
         "round": 1,
         "rows": [
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 62
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 62,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 53
+            "name": "Heung Min Dad",
+            "points": 53,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 52
+            "name": "Rodando Nazário",
+            "points": 52,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 48
+            "name": "Peter LIM",
+            "points": 48,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 39
+            "name": "Mikel Poyarzabal",
+            "points": 39,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 21
+            "name": "Olivito",
+            "points": 21,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 18
+            "name": "Alex Ballena",
+            "points": 18,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ]
       },
@@ -6338,39 +7372,95 @@
         "round": 2,
         "rows": [
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 127
+            "name": "Rodando Nazário",
+            "points": 127,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 124
+            "name": "Heung Min Dad",
+            "points": 124,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 114
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 114,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 86
+            "name": "Mikel Poyarzabal",
+            "points": 86,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 80
+            "name": "Peter LIM",
+            "points": 80,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 42
+            "name": "Olivito",
+            "points": 42,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 28
+            "name": "Alex Ballena",
+            "points": 28,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ]
       }
@@ -6380,39 +7470,95 @@
         "round": 0,
         "rows": [
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 0
+            "name": "Alex Ballena",
+            "points": 0,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 0
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 0,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 0
+            "name": "Heung Min Dad",
+            "points": 0,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 0
+            "name": "Mikel Poyarzabal",
+            "points": 0,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 0
+            "name": "Olivito",
+            "points": 0,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 0
+            "name": "Peter LIM",
+            "points": 0,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 0
+            "name": "Rodando Nazário",
+            "points": 0,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           }
         ]
       },
@@ -6420,39 +7566,95 @@
         "round": 1,
         "rows": [
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 51
+            "name": "Heung Min Dad",
+            "points": 51,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 49
+            "name": "Peter LIM",
+            "points": 49,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 39
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 39,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 36
+            "name": "Rodando Nazário",
+            "points": 36,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 26
+            "name": "Mikel Poyarzabal",
+            "points": 26,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 18
+            "name": "Olivito",
+            "points": 18,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 14
+            "name": "Alex Ballena",
+            "points": 14,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ]
       },
@@ -6460,39 +7662,95 @@
         "round": 2,
         "rows": [
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 103
+            "name": "Heung Min Dad",
+            "points": 103,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 85
+            "name": "Rodando Nazário",
+            "points": 85,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 83
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 83,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 83
+            "name": "Peter LIM",
+            "points": 83,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 68
+            "name": "Mikel Poyarzabal",
+            "points": 68,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 34
+            "name": "Olivito",
+            "points": 34,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 28
+            "name": "Alex Ballena",
+            "points": 28,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ]
       }
@@ -6502,39 +7760,95 @@
         "round": 0,
         "rows": [
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 0
+            "name": "Alex Ballena",
+            "points": 0,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 0
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 0,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 0
+            "name": "Heung Min Dad",
+            "points": 0,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 0
+            "name": "Mikel Poyarzabal",
+            "points": 0,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 0
+            "name": "Olivito",
+            "points": 0,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 0
+            "name": "Peter LIM",
+            "points": 0,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 0
+            "name": "Rodando Nazário",
+            "points": 0,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           }
         ]
       },
@@ -6542,39 +7856,95 @@
         "round": 1,
         "rows": [
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 43
+            "name": "Heung Min Dad",
+            "points": 43,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 40
+            "name": "Mikel Poyarzabal",
+            "points": 40,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 39
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 39,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 36
+            "name": "Rodando Nazário",
+            "points": 36,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 33
+            "name": "Peter LIM",
+            "points": 33,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 14
+            "name": "Olivito",
+            "points": 14,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 12
+            "name": "Alex Ballena",
+            "points": 12,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ]
       },
@@ -6582,39 +7952,95 @@
         "round": 2,
         "rows": [
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 95
+            "name": "Heung Min Dad",
+            "points": 95,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 89
+            "name": "Rodando Nazário",
+            "points": 89,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 75
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 75,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 74
+            "name": "Mikel Poyarzabal",
+            "points": 74,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 63
+            "name": "Peter LIM",
+            "points": 63,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 30
+            "name": "Olivito",
+            "points": 30,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 22
+            "name": "Alex Ballena",
+            "points": 22,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ]
       }
@@ -6624,39 +8050,95 @@
         "round": 0,
         "rows": [
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 0
+            "name": "Alex Ballena",
+            "points": 0,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 0
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 0,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 0
+            "name": "Heung Min Dad",
+            "points": 0,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 0
+            "name": "Mikel Poyarzabal",
+            "points": 0,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 0
+            "name": "Olivito",
+            "points": 0,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 0
+            "name": "Peter LIM",
+            "points": 0,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 0
+            "name": "Rodando Nazário",
+            "points": 0,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           }
         ]
       },
@@ -6664,39 +8146,95 @@
         "round": 1,
         "rows": [
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 49
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 49,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 49
+            "name": "Peter LIM",
+            "points": 49,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 47
+            "name": "Heung Min Dad",
+            "points": 47,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 46
+            "name": "Rodando Nazário",
+            "points": 46,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 34
+            "name": "Mikel Poyarzabal",
+            "points": 34,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 14
+            "name": "Olivito",
+            "points": 14,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 8
+            "name": "Alex Ballena",
+            "points": 8,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ]
       },
@@ -6704,39 +8242,95 @@
         "round": 2,
         "rows": [
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 117
+            "name": "Heung Min Dad",
+            "points": 117,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 103
+            "name": "Rodando Nazário",
+            "points": 103,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 81
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 81,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 80
+            "name": "Mikel Poyarzabal",
+            "points": 80,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 67
+            "name": "Peter LIM",
+            "points": 67,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 30
+            "name": "Olivito",
+            "points": 30,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 22
+            "name": "Alex Ballena",
+            "points": 22,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ]
       }
@@ -6746,39 +8340,95 @@
         "round": 0,
         "rows": [
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 0
+            "name": "Alex Ballena",
+            "points": 0,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 0
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 0,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 0
+            "name": "Heung Min Dad",
+            "points": 0,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 0
+            "name": "Mikel Poyarzabal",
+            "points": 0,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 0
+            "name": "Olivito",
+            "points": 0,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 0
+            "name": "Peter LIM",
+            "points": 0,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 0
+            "name": "Rodando Nazário",
+            "points": 0,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           }
         ]
       },
@@ -6786,39 +8436,95 @@
         "round": 1,
         "rows": [
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 54
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 54,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 46
+            "name": "Peter LIM",
+            "points": 46,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 43
+            "name": "Heung Min Dad",
+            "points": 43,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 32
+            "name": "Mikel Poyarzabal",
+            "points": 32,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 32
+            "name": "Rodando Nazário",
+            "points": 32,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 16
+            "name": "Alex Ballena",
+            "points": 16,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 16
+            "name": "Olivito",
+            "points": 16,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           }
         ]
       },
@@ -6826,39 +8532,95 @@
         "round": 2,
         "rows": [
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 113
+            "name": "Heung Min Dad",
+            "points": 113,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 98
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 98,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 91
+            "name": "Rodando Nazário",
+            "points": 91,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 83
+            "name": "Peter LIM",
+            "points": 83,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 77
+            "name": "Mikel Poyarzabal",
+            "points": 77,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 45
+            "name": "Olivito",
+            "points": 45,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 31
+            "name": "Alex Ballena",
+            "points": 31,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ]
       }
@@ -6868,39 +8630,95 @@
         "round": 0,
         "rows": [
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 0
+            "name": "Alex Ballena",
+            "points": 0,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 0
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 0,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 0
+            "name": "Heung Min Dad",
+            "points": 0,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 0
+            "name": "Mikel Poyarzabal",
+            "points": 0,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 0
+            "name": "Olivito",
+            "points": 0,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 0
+            "name": "Peter LIM",
+            "points": 0,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 0
+            "name": "Rodando Nazário",
+            "points": 0,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           }
         ]
       },
@@ -6908,39 +8726,95 @@
         "round": 1,
         "rows": [
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 49
+            "name": "Mikel Poyarzabal",
+            "points": 49,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 46
+            "name": "Rodando Nazário",
+            "points": 46,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 43
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 43,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 42
+            "name": "Heung Min Dad",
+            "points": 42,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 35
+            "name": "Peter LIM",
+            "points": 35,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 22
+            "name": "Alex Ballena",
+            "points": 22,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 20
+            "name": "Olivito",
+            "points": 20,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           }
         ]
       },
@@ -6948,39 +8822,95 @@
         "round": 2,
         "rows": [
           {
-            "name": "Rodando Nazário",
+            "rank": 2,
             "initials": "RN",
-            "points": 114
+            "name": "Rodando Nazário",
+            "points": 114,
+            "value": 85929000,
+            "playedText": "",
+            "managerId": "8769466",
+            "color": "#ff55df",
+            "aliases": [
+              "Rodando Nazário"
+            ]
           },
           {
-            "name": "Heung Min Dad",
+            "rank": 3,
             "initials": "HM",
-            "points": 112
+            "name": "Heung Min Dad",
+            "points": 112,
+            "value": 63602000,
+            "playedText": "",
+            "managerId": "8771310",
+            "color": "#a5ff6a",
+            "aliases": [
+              "Heung Min Dad"
+            ]
           },
           {
-            "name": "Mikel Poyarzabal",
+            "rank": 4,
             "initials": "MP",
-            "points": 103
+            "name": "Mikel Poyarzabal",
+            "points": 103,
+            "value": 69770000,
+            "playedText": "",
+            "managerId": "13365280",
+            "color": "#7aa8ff",
+            "aliases": [
+              "Mikel Poyarzabal"
+            ]
           },
           {
-            "name": "Don Manuel Ruíz de Lopera",
+            "rank": 1,
             "initials": "DM",
-            "points": 93
+            "name": "Don Manuel Ruíz de Lopera",
+            "points": 93,
+            "value": 83343000,
+            "playedText": "",
+            "managerId": "8785696",
+            "color": "#66fff1",
+            "aliases": [
+              "Don Manuel Ruíz de Lopera"
+            ]
           },
           {
-            "name": "Peter LIM",
+            "rank": 5,
             "initials": "PL",
-            "points": 70
+            "name": "Peter LIM",
+            "points": 70,
+            "value": 53948000,
+            "playedText": "",
+            "managerId": "12113243",
+            "color": "#e8d26a",
+            "aliases": [
+              "Peter LIM"
+            ]
           },
           {
-            "name": "Olivito",
+            "rank": 6,
             "initials": "O",
-            "points": 44
+            "name": "Olivito",
+            "points": 44,
+            "value": 86396000,
+            "playedText": "",
+            "managerId": "10359824",
+            "color": "#f8fbff",
+            "aliases": [
+              "Olivito"
+            ]
           },
           {
-            "name": "Alex Ballena",
+            "rank": 7,
             "initials": "AB",
-            "points": 36
+            "name": "Alex Ballena",
+            "points": 36,
+            "value": 65475000,
+            "playedText": "",
+            "managerId": "15420188",
+            "color": "#b67cff",
+            "aliases": [
+              "Alex Ballena"
+            ]
           }
         ]
       }
@@ -7516,86 +9446,150 @@
     ],
     "volatility": [
       {
-        "name": "Olivito",
+        "rank": 6,
         "initials": "O",
-        "average": 21,
-        "volatility": 0,
+        "name": "Olivito",
         "points": [
           21,
           21
-        ]
+        ],
+        "value": 86396000,
+        "playedText": "",
+        "managerId": "10359824",
+        "color": "#f8fbff",
+        "aliases": [
+          "Olivito"
+        ],
+        "average": 21,
+        "volatility": 0
       },
       {
-        "name": "Mikel Poyarzabal",
+        "rank": 4,
         "initials": "MP",
-        "average": 43,
-        "volatility": 4,
+        "name": "Mikel Poyarzabal",
         "points": [
           39,
           47
-        ]
+        ],
+        "value": 69770000,
+        "playedText": "",
+        "managerId": "13365280",
+        "color": "#7aa8ff",
+        "aliases": [
+          "Mikel Poyarzabal"
+        ],
+        "average": 43,
+        "volatility": 4
       },
       {
-        "name": "Alex Ballena",
+        "rank": 7,
         "initials": "AB",
-        "average": 14,
-        "volatility": 4,
+        "name": "Alex Ballena",
         "points": [
           18,
           10
-        ]
+        ],
+        "value": 65475000,
+        "playedText": "",
+        "managerId": "15420188",
+        "color": "#b67cff",
+        "aliases": [
+          "Alex Ballena"
+        ],
+        "average": 14,
+        "volatility": 4
       },
       {
-        "name": "Don Manuel Ruíz de Lopera",
+        "rank": 1,
         "initials": "DM",
-        "average": 57,
-        "volatility": 5,
+        "name": "Don Manuel Ruíz de Lopera",
         "points": [
           62,
           52
-        ]
+        ],
+        "value": 83343000,
+        "playedText": "",
+        "managerId": "8785696",
+        "color": "#66fff1",
+        "aliases": [
+          "Don Manuel Ruíz de Lopera"
+        ],
+        "average": 57,
+        "volatility": 5
       },
       {
-        "name": "Peter LIM",
+        "rank": 5,
         "initials": "PL",
-        "average": 40,
-        "volatility": 8,
+        "name": "Peter LIM",
         "points": [
           48,
           32
-        ]
+        ],
+        "value": 53948000,
+        "playedText": "",
+        "managerId": "12113243",
+        "color": "#e8d26a",
+        "aliases": [
+          "Peter LIM"
+        ],
+        "average": 40,
+        "volatility": 8
       },
       {
-        "name": "Heung Min Dad",
+        "rank": 3,
         "initials": "HM",
-        "average": 62,
-        "volatility": 9,
+        "name": "Heung Min Dad",
         "points": [
           53,
           71
-        ]
+        ],
+        "value": 63602000,
+        "playedText": "",
+        "managerId": "8771310",
+        "color": "#a5ff6a",
+        "aliases": [
+          "Heung Min Dad"
+        ],
+        "average": 62,
+        "volatility": 9
       },
       {
-        "name": "Rodando Nazário",
+        "rank": 2,
         "initials": "RN",
-        "average": 63.5,
-        "volatility": 11.5,
+        "name": "Rodando Nazário",
         "points": [
           52,
           75
-        ]
+        ],
+        "value": 85929000,
+        "playedText": "",
+        "managerId": "8769466",
+        "color": "#ff55df",
+        "aliases": [
+          "Rodando Nazário"
+        ],
+        "average": 63.5,
+        "volatility": 11.5
       }
     ],
     "teams": [
       {
-        "name": "Don Manuel Ruíz de Lopera",
+        "rank": 1,
         "initials": "DM",
+        "name": "Don Manuel Ruíz de Lopera",
+        "points": 114,
+        "value": 83343000,
+        "playedText": "",
+        "managerId": "8785696",
+        "color": "#66fff1",
+        "aliases": [
+          "Don Manuel Ruíz de Lopera"
+        ],
         "goals": 3,
         "assists": 0,
         "yellowCards": 8,
         "redCards": 0,
         "dnp": 1,
-        "points": 114,
         "pointsByPosition": {
           "goalkeeper": 13,
           "defender": 27,
@@ -7647,14 +9641,22 @@
         "disciplineScore": 8
       },
       {
-        "name": "Rodando Nazário",
+        "rank": 2,
         "initials": "RN",
+        "name": "Rodando Nazário",
+        "points": 127,
+        "value": 85929000,
+        "playedText": "",
+        "managerId": "8769466",
+        "color": "#ff55df",
+        "aliases": [
+          "Rodando Nazário"
+        ],
         "goals": 3,
         "assists": 3,
         "yellowCards": 2,
         "redCards": 0,
         "dnp": 2,
-        "points": 127,
         "pointsByPosition": {
           "goalkeeper": 1,
           "defender": 33,
@@ -7706,14 +9708,22 @@
         "disciplineScore": 2
       },
       {
-        "name": "Heung Min Dad",
+        "rank": 3,
         "initials": "HM",
+        "name": "Heung Min Dad",
+        "points": 124,
+        "value": 63602000,
+        "playedText": "",
+        "managerId": "8771310",
+        "color": "#a5ff6a",
+        "aliases": [
+          "Heung Min Dad"
+        ],
         "goals": 4,
         "assists": 1,
         "yellowCards": 5,
         "redCards": 0,
         "dnp": 1,
-        "points": 124,
         "pointsByPosition": {
           "goalkeeper": 7,
           "defender": 22,
@@ -7765,14 +9775,22 @@
         "disciplineScore": 5
       },
       {
-        "name": "Mikel Poyarzabal",
+        "rank": 4,
         "initials": "MP",
+        "name": "Mikel Poyarzabal",
+        "points": 86,
+        "value": 69770000,
+        "playedText": "",
+        "managerId": "13365280",
+        "color": "#7aa8ff",
+        "aliases": [
+          "Mikel Poyarzabal"
+        ],
         "goals": 1,
         "assists": 2,
         "yellowCards": 2,
         "redCards": 0,
         "dnp": 1,
-        "points": 86,
         "pointsByPosition": {
           "goalkeeper": 12,
           "defender": 17,
@@ -7824,14 +9842,22 @@
         "disciplineScore": 2
       },
       {
-        "name": "Peter LIM",
+        "rank": 5,
         "initials": "PL",
+        "name": "Peter LIM",
+        "points": 80,
+        "value": 53948000,
+        "playedText": "",
+        "managerId": "12113243",
+        "color": "#e8d26a",
+        "aliases": [
+          "Peter LIM"
+        ],
         "goals": 3,
         "assists": 1,
         "yellowCards": 1,
         "redCards": 0,
         "dnp": 6,
-        "points": 80,
         "pointsByPosition": {
           "goalkeeper": 7,
           "defender": 12,
@@ -7883,14 +9909,22 @@
         "disciplineScore": 1
       },
       {
-        "name": "Olivito",
+        "rank": 6,
         "initials": "O",
+        "name": "Olivito",
+        "points": 42,
+        "value": 86396000,
+        "playedText": "",
+        "managerId": "10359824",
+        "color": "#f8fbff",
+        "aliases": [
+          "Olivito"
+        ],
         "goals": 0,
         "assists": 0,
         "yellowCards": 3,
         "redCards": 0,
         "dnp": 4,
-        "points": 42,
         "pointsByPosition": {
           "goalkeeper": 0,
           "defender": 14,
@@ -7942,14 +9976,22 @@
         "disciplineScore": 3
       },
       {
-        "name": "Alex Ballena",
+        "rank": 7,
         "initials": "AB",
+        "name": "Alex Ballena",
+        "points": 28,
+        "value": 65475000,
+        "playedText": "",
+        "managerId": "15420188",
+        "color": "#b67cff",
+        "aliases": [
+          "Alex Ballena"
+        ],
         "goals": 0,
         "assists": 0,
         "yellowCards": 2,
         "redCards": 1,
         "dnp": 7,
-        "points": 28,
         "pointsByPosition": {
           "goalkeeper": 5,
           "defender": 6,
@@ -8006,8 +10048,10 @@
         "round": 1,
         "teams": [
           {
+            "managerId": "8785696",
             "name": "Don Manuel Ruíz de Lopera",
             "initials": "DM",
+            "color": "#66fff1",
             "points": 62,
             "goals": 3,
             "assists": 0,
@@ -8023,8 +10067,10 @@
             }
           },
           {
+            "managerId": "8769466",
             "name": "Rodando Nazário",
             "initials": "RN",
+            "color": "#ff55df",
             "points": 52,
             "goals": 0,
             "assists": 2,
@@ -8040,8 +10086,10 @@
             }
           },
           {
+            "managerId": "8771310",
             "name": "Heung Min Dad",
             "initials": "HM",
+            "color": "#a5ff6a",
             "points": 53,
             "goals": 1,
             "assists": 0,
@@ -8057,8 +10105,10 @@
             }
           },
           {
+            "managerId": "13365280",
             "name": "Mikel Poyarzabal",
             "initials": "MP",
+            "color": "#7aa8ff",
             "points": 39,
             "goals": 1,
             "assists": 1,
@@ -8074,8 +10124,10 @@
             }
           },
           {
+            "managerId": "12113243",
             "name": "Peter LIM",
             "initials": "PL",
+            "color": "#e8d26a",
             "points": 48,
             "goals": 2,
             "assists": 1,
@@ -8091,8 +10143,10 @@
             }
           },
           {
+            "managerId": "10359824",
             "name": "Olivito",
             "initials": "O",
+            "color": "#f8fbff",
             "points": 21,
             "goals": 0,
             "assists": 0,
@@ -8108,8 +10162,10 @@
             }
           },
           {
+            "managerId": "15420188",
             "name": "Alex Ballena",
             "initials": "AB",
+            "color": "#b67cff",
             "points": 18,
             "goals": 0,
             "assists": 0,
@@ -8130,8 +10186,10 @@
         "round": 2,
         "teams": [
           {
+            "managerId": "8785696",
             "name": "Don Manuel Ruíz de Lopera",
             "initials": "DM",
+            "color": "#66fff1",
             "points": 52,
             "goals": 0,
             "assists": 0,
@@ -8147,8 +10205,10 @@
             }
           },
           {
+            "managerId": "8769466",
             "name": "Rodando Nazário",
             "initials": "RN",
+            "color": "#ff55df",
             "points": 75,
             "goals": 3,
             "assists": 1,
@@ -8164,8 +10224,10 @@
             }
           },
           {
+            "managerId": "8771310",
             "name": "Heung Min Dad",
             "initials": "HM",
+            "color": "#a5ff6a",
             "points": 71,
             "goals": 3,
             "assists": 1,
@@ -8181,8 +10243,10 @@
             }
           },
           {
+            "managerId": "13365280",
             "name": "Mikel Poyarzabal",
             "initials": "MP",
+            "color": "#7aa8ff",
             "points": 47,
             "goals": 0,
             "assists": 1,
@@ -8198,8 +10262,10 @@
             }
           },
           {
+            "managerId": "12113243",
             "name": "Peter LIM",
             "initials": "PL",
+            "color": "#e8d26a",
             "points": 32,
             "goals": 1,
             "assists": 0,
@@ -8215,8 +10281,10 @@
             }
           },
           {
+            "managerId": "10359824",
             "name": "Olivito",
             "initials": "O",
+            "color": "#f8fbff",
             "points": 21,
             "goals": 0,
             "assists": 0,
@@ -8232,8 +10300,10 @@
             }
           },
           {
+            "managerId": "15420188",
             "name": "Alex Ballena",
             "initials": "AB",
+            "color": "#b67cff",
             "points": 10,
             "goals": 0,
             "assists": 0,
@@ -8253,14 +10323,22 @@
     ],
     "goalsByTeam": [
       {
-        "name": "Heung Min Dad",
+        "rank": 3,
         "initials": "HM",
+        "name": "Heung Min Dad",
+        "points": 124,
+        "value": 63602000,
+        "playedText": "",
+        "managerId": "8771310",
+        "color": "#a5ff6a",
+        "aliases": [
+          "Heung Min Dad"
+        ],
         "goals": 4,
         "assists": 1,
         "yellowCards": 5,
         "redCards": 0,
         "dnp": 1,
-        "points": 124,
         "pointsByPosition": {
           "goalkeeper": 7,
           "defender": 22,
@@ -8312,14 +10390,22 @@
         "disciplineScore": 5
       },
       {
-        "name": "Don Manuel Ruíz de Lopera",
+        "rank": 1,
         "initials": "DM",
+        "name": "Don Manuel Ruíz de Lopera",
+        "points": 114,
+        "value": 83343000,
+        "playedText": "",
+        "managerId": "8785696",
+        "color": "#66fff1",
+        "aliases": [
+          "Don Manuel Ruíz de Lopera"
+        ],
         "goals": 3,
         "assists": 0,
         "yellowCards": 8,
         "redCards": 0,
         "dnp": 1,
-        "points": 114,
         "pointsByPosition": {
           "goalkeeper": 13,
           "defender": 27,
@@ -8371,14 +10457,22 @@
         "disciplineScore": 8
       },
       {
-        "name": "Rodando Nazário",
+        "rank": 2,
         "initials": "RN",
+        "name": "Rodando Nazário",
+        "points": 127,
+        "value": 85929000,
+        "playedText": "",
+        "managerId": "8769466",
+        "color": "#ff55df",
+        "aliases": [
+          "Rodando Nazário"
+        ],
         "goals": 3,
         "assists": 3,
         "yellowCards": 2,
         "redCards": 0,
         "dnp": 2,
-        "points": 127,
         "pointsByPosition": {
           "goalkeeper": 1,
           "defender": 33,
@@ -8430,14 +10524,22 @@
         "disciplineScore": 2
       },
       {
-        "name": "Peter LIM",
+        "rank": 5,
         "initials": "PL",
+        "name": "Peter LIM",
+        "points": 80,
+        "value": 53948000,
+        "playedText": "",
+        "managerId": "12113243",
+        "color": "#e8d26a",
+        "aliases": [
+          "Peter LIM"
+        ],
         "goals": 3,
         "assists": 1,
         "yellowCards": 1,
         "redCards": 0,
         "dnp": 6,
-        "points": 80,
         "pointsByPosition": {
           "goalkeeper": 7,
           "defender": 12,
@@ -8489,14 +10591,22 @@
         "disciplineScore": 1
       },
       {
-        "name": "Mikel Poyarzabal",
+        "rank": 4,
         "initials": "MP",
+        "name": "Mikel Poyarzabal",
+        "points": 86,
+        "value": 69770000,
+        "playedText": "",
+        "managerId": "13365280",
+        "color": "#7aa8ff",
+        "aliases": [
+          "Mikel Poyarzabal"
+        ],
         "goals": 1,
         "assists": 2,
         "yellowCards": 2,
         "redCards": 0,
         "dnp": 1,
-        "points": 86,
         "pointsByPosition": {
           "goalkeeper": 12,
           "defender": 17,
@@ -8548,14 +10658,22 @@
         "disciplineScore": 2
       },
       {
-        "name": "Olivito",
+        "rank": 6,
         "initials": "O",
+        "name": "Olivito",
+        "points": 42,
+        "value": 86396000,
+        "playedText": "",
+        "managerId": "10359824",
+        "color": "#f8fbff",
+        "aliases": [
+          "Olivito"
+        ],
         "goals": 0,
         "assists": 0,
         "yellowCards": 3,
         "redCards": 0,
         "dnp": 4,
-        "points": 42,
         "pointsByPosition": {
           "goalkeeper": 0,
           "defender": 14,
@@ -8607,14 +10725,22 @@
         "disciplineScore": 3
       },
       {
-        "name": "Alex Ballena",
+        "rank": 7,
         "initials": "AB",
+        "name": "Alex Ballena",
+        "points": 28,
+        "value": 65475000,
+        "playedText": "",
+        "managerId": "15420188",
+        "color": "#b67cff",
+        "aliases": [
+          "Alex Ballena"
+        ],
         "goals": 0,
         "assists": 0,
         "yellowCards": 2,
         "redCards": 1,
         "dnp": 7,
-        "points": 28,
         "pointsByPosition": {
           "goalkeeper": 5,
           "defender": 6,
@@ -8668,14 +10794,22 @@
     ],
     "assistsByTeam": [
       {
-        "name": "Rodando Nazário",
+        "rank": 2,
         "initials": "RN",
+        "name": "Rodando Nazário",
+        "points": 127,
+        "value": 85929000,
+        "playedText": "",
+        "managerId": "8769466",
+        "color": "#ff55df",
+        "aliases": [
+          "Rodando Nazário"
+        ],
         "goals": 3,
         "assists": 3,
         "yellowCards": 2,
         "redCards": 0,
         "dnp": 2,
-        "points": 127,
         "pointsByPosition": {
           "goalkeeper": 1,
           "defender": 33,
@@ -8727,14 +10861,22 @@
         "disciplineScore": 2
       },
       {
-        "name": "Mikel Poyarzabal",
+        "rank": 4,
         "initials": "MP",
+        "name": "Mikel Poyarzabal",
+        "points": 86,
+        "value": 69770000,
+        "playedText": "",
+        "managerId": "13365280",
+        "color": "#7aa8ff",
+        "aliases": [
+          "Mikel Poyarzabal"
+        ],
         "goals": 1,
         "assists": 2,
         "yellowCards": 2,
         "redCards": 0,
         "dnp": 1,
-        "points": 86,
         "pointsByPosition": {
           "goalkeeper": 12,
           "defender": 17,
@@ -8786,14 +10928,22 @@
         "disciplineScore": 2
       },
       {
-        "name": "Heung Min Dad",
+        "rank": 3,
         "initials": "HM",
+        "name": "Heung Min Dad",
+        "points": 124,
+        "value": 63602000,
+        "playedText": "",
+        "managerId": "8771310",
+        "color": "#a5ff6a",
+        "aliases": [
+          "Heung Min Dad"
+        ],
         "goals": 4,
         "assists": 1,
         "yellowCards": 5,
         "redCards": 0,
         "dnp": 1,
-        "points": 124,
         "pointsByPosition": {
           "goalkeeper": 7,
           "defender": 22,
@@ -8845,14 +10995,22 @@
         "disciplineScore": 5
       },
       {
-        "name": "Peter LIM",
+        "rank": 5,
         "initials": "PL",
+        "name": "Peter LIM",
+        "points": 80,
+        "value": 53948000,
+        "playedText": "",
+        "managerId": "12113243",
+        "color": "#e8d26a",
+        "aliases": [
+          "Peter LIM"
+        ],
         "goals": 3,
         "assists": 1,
         "yellowCards": 1,
         "redCards": 0,
         "dnp": 6,
-        "points": 80,
         "pointsByPosition": {
           "goalkeeper": 7,
           "defender": 12,
@@ -8904,14 +11062,22 @@
         "disciplineScore": 1
       },
       {
-        "name": "Don Manuel Ruíz de Lopera",
+        "rank": 1,
         "initials": "DM",
+        "name": "Don Manuel Ruíz de Lopera",
+        "points": 114,
+        "value": 83343000,
+        "playedText": "",
+        "managerId": "8785696",
+        "color": "#66fff1",
+        "aliases": [
+          "Don Manuel Ruíz de Lopera"
+        ],
         "goals": 3,
         "assists": 0,
         "yellowCards": 8,
         "redCards": 0,
         "dnp": 1,
-        "points": 114,
         "pointsByPosition": {
           "goalkeeper": 13,
           "defender": 27,
@@ -8963,14 +11129,22 @@
         "disciplineScore": 8
       },
       {
-        "name": "Olivito",
+        "rank": 6,
         "initials": "O",
+        "name": "Olivito",
+        "points": 42,
+        "value": 86396000,
+        "playedText": "",
+        "managerId": "10359824",
+        "color": "#f8fbff",
+        "aliases": [
+          "Olivito"
+        ],
         "goals": 0,
         "assists": 0,
         "yellowCards": 3,
         "redCards": 0,
         "dnp": 4,
-        "points": 42,
         "pointsByPosition": {
           "goalkeeper": 0,
           "defender": 14,
@@ -9022,14 +11196,22 @@
         "disciplineScore": 3
       },
       {
-        "name": "Alex Ballena",
+        "rank": 7,
         "initials": "AB",
+        "name": "Alex Ballena",
+        "points": 28,
+        "value": 65475000,
+        "playedText": "",
+        "managerId": "15420188",
+        "color": "#b67cff",
+        "aliases": [
+          "Alex Ballena"
+        ],
         "goals": 0,
         "assists": 0,
         "yellowCards": 2,
         "redCards": 1,
         "dnp": 7,
-        "points": 28,
         "pointsByPosition": {
           "goalkeeper": 5,
           "defender": 6,
@@ -9083,14 +11265,22 @@
     ],
     "disciplineByTeam": [
       {
-        "name": "Don Manuel Ruíz de Lopera",
+        "rank": 1,
         "initials": "DM",
+        "name": "Don Manuel Ruíz de Lopera",
+        "points": 114,
+        "value": 83343000,
+        "playedText": "",
+        "managerId": "8785696",
+        "color": "#66fff1",
+        "aliases": [
+          "Don Manuel Ruíz de Lopera"
+        ],
         "goals": 3,
         "assists": 0,
         "yellowCards": 8,
         "redCards": 0,
         "dnp": 1,
-        "points": 114,
         "pointsByPosition": {
           "goalkeeper": 13,
           "defender": 27,
@@ -9142,14 +11332,22 @@
         "disciplineScore": 8
       },
       {
-        "name": "Heung Min Dad",
+        "rank": 3,
         "initials": "HM",
+        "name": "Heung Min Dad",
+        "points": 124,
+        "value": 63602000,
+        "playedText": "",
+        "managerId": "8771310",
+        "color": "#a5ff6a",
+        "aliases": [
+          "Heung Min Dad"
+        ],
         "goals": 4,
         "assists": 1,
         "yellowCards": 5,
         "redCards": 0,
         "dnp": 1,
-        "points": 124,
         "pointsByPosition": {
           "goalkeeper": 7,
           "defender": 22,
@@ -9201,14 +11399,22 @@
         "disciplineScore": 5
       },
       {
-        "name": "Alex Ballena",
+        "rank": 7,
         "initials": "AB",
+        "name": "Alex Ballena",
+        "points": 28,
+        "value": 65475000,
+        "playedText": "",
+        "managerId": "15420188",
+        "color": "#b67cff",
+        "aliases": [
+          "Alex Ballena"
+        ],
         "goals": 0,
         "assists": 0,
         "yellowCards": 2,
         "redCards": 1,
         "dnp": 7,
-        "points": 28,
         "pointsByPosition": {
           "goalkeeper": 5,
           "defender": 6,
@@ -9260,14 +11466,22 @@
         "disciplineScore": 5
       },
       {
-        "name": "Olivito",
+        "rank": 6,
         "initials": "O",
+        "name": "Olivito",
+        "points": 42,
+        "value": 86396000,
+        "playedText": "",
+        "managerId": "10359824",
+        "color": "#f8fbff",
+        "aliases": [
+          "Olivito"
+        ],
         "goals": 0,
         "assists": 0,
         "yellowCards": 3,
         "redCards": 0,
         "dnp": 4,
-        "points": 42,
         "pointsByPosition": {
           "goalkeeper": 0,
           "defender": 14,
@@ -9319,14 +11533,22 @@
         "disciplineScore": 3
       },
       {
-        "name": "Rodando Nazário",
+        "rank": 2,
         "initials": "RN",
+        "name": "Rodando Nazário",
+        "points": 127,
+        "value": 85929000,
+        "playedText": "",
+        "managerId": "8769466",
+        "color": "#ff55df",
+        "aliases": [
+          "Rodando Nazário"
+        ],
         "goals": 3,
         "assists": 3,
         "yellowCards": 2,
         "redCards": 0,
         "dnp": 2,
-        "points": 127,
         "pointsByPosition": {
           "goalkeeper": 1,
           "defender": 33,
@@ -9378,14 +11600,22 @@
         "disciplineScore": 2
       },
       {
-        "name": "Mikel Poyarzabal",
+        "rank": 4,
         "initials": "MP",
+        "name": "Mikel Poyarzabal",
+        "points": 86,
+        "value": 69770000,
+        "playedText": "",
+        "managerId": "13365280",
+        "color": "#7aa8ff",
+        "aliases": [
+          "Mikel Poyarzabal"
+        ],
         "goals": 1,
         "assists": 2,
         "yellowCards": 2,
         "redCards": 0,
         "dnp": 1,
-        "points": 86,
         "pointsByPosition": {
           "goalkeeper": 12,
           "defender": 17,
@@ -9437,14 +11667,22 @@
         "disciplineScore": 2
       },
       {
-        "name": "Peter LIM",
+        "rank": 5,
         "initials": "PL",
+        "name": "Peter LIM",
+        "points": 80,
+        "value": 53948000,
+        "playedText": "",
+        "managerId": "12113243",
+        "color": "#e8d26a",
+        "aliases": [
+          "Peter LIM"
+        ],
         "goals": 3,
         "assists": 1,
         "yellowCards": 1,
         "redCards": 0,
         "dnp": 6,
-        "points": 80,
         "pointsByPosition": {
           "goalkeeper": 7,
           "defender": 12,
@@ -9498,14 +11736,22 @@
     ],
     "dependencyByTeam": [
       {
-        "name": "Alex Ballena",
+        "rank": 7,
         "initials": "AB",
+        "name": "Alex Ballena",
+        "points": 28,
+        "value": 65475000,
+        "playedText": "",
+        "managerId": "15420188",
+        "color": "#b67cff",
+        "aliases": [
+          "Alex Ballena"
+        ],
         "goals": 0,
         "assists": 0,
         "yellowCards": 2,
         "redCards": 1,
         "dnp": 7,
-        "points": 28,
         "pointsByPosition": {
           "goalkeeper": 5,
           "defender": 6,
@@ -9557,14 +11803,22 @@
         "disciplineScore": 5
       },
       {
-        "name": "Peter LIM",
+        "rank": 5,
         "initials": "PL",
+        "name": "Peter LIM",
+        "points": 80,
+        "value": 53948000,
+        "playedText": "",
+        "managerId": "12113243",
+        "color": "#e8d26a",
+        "aliases": [
+          "Peter LIM"
+        ],
         "goals": 3,
         "assists": 1,
         "yellowCards": 1,
         "redCards": 0,
         "dnp": 6,
-        "points": 80,
         "pointsByPosition": {
           "goalkeeper": 7,
           "defender": 12,
@@ -9616,14 +11870,22 @@
         "disciplineScore": 1
       },
       {
-        "name": "Heung Min Dad",
+        "rank": 3,
         "initials": "HM",
+        "name": "Heung Min Dad",
+        "points": 124,
+        "value": 63602000,
+        "playedText": "",
+        "managerId": "8771310",
+        "color": "#a5ff6a",
+        "aliases": [
+          "Heung Min Dad"
+        ],
         "goals": 4,
         "assists": 1,
         "yellowCards": 5,
         "redCards": 0,
         "dnp": 1,
-        "points": 124,
         "pointsByPosition": {
           "goalkeeper": 7,
           "defender": 22,
@@ -9675,14 +11937,22 @@
         "disciplineScore": 5
       },
       {
-        "name": "Olivito",
+        "rank": 6,
         "initials": "O",
+        "name": "Olivito",
+        "points": 42,
+        "value": 86396000,
+        "playedText": "",
+        "managerId": "10359824",
+        "color": "#f8fbff",
+        "aliases": [
+          "Olivito"
+        ],
         "goals": 0,
         "assists": 0,
         "yellowCards": 3,
         "redCards": 0,
         "dnp": 4,
-        "points": 42,
         "pointsByPosition": {
           "goalkeeper": 0,
           "defender": 14,
@@ -9734,14 +12004,22 @@
         "disciplineScore": 3
       },
       {
-        "name": "Don Manuel Ruíz de Lopera",
+        "rank": 1,
         "initials": "DM",
+        "name": "Don Manuel Ruíz de Lopera",
+        "points": 114,
+        "value": 83343000,
+        "playedText": "",
+        "managerId": "8785696",
+        "color": "#66fff1",
+        "aliases": [
+          "Don Manuel Ruíz de Lopera"
+        ],
         "goals": 3,
         "assists": 0,
         "yellowCards": 8,
         "redCards": 0,
         "dnp": 1,
-        "points": 114,
         "pointsByPosition": {
           "goalkeeper": 13,
           "defender": 27,
@@ -9793,14 +12071,22 @@
         "disciplineScore": 8
       },
       {
-        "name": "Mikel Poyarzabal",
+        "rank": 4,
         "initials": "MP",
+        "name": "Mikel Poyarzabal",
+        "points": 86,
+        "value": 69770000,
+        "playedText": "",
+        "managerId": "13365280",
+        "color": "#7aa8ff",
+        "aliases": [
+          "Mikel Poyarzabal"
+        ],
         "goals": 1,
         "assists": 2,
         "yellowCards": 2,
         "redCards": 0,
         "dnp": 1,
-        "points": 86,
         "pointsByPosition": {
           "goalkeeper": 12,
           "defender": 17,
@@ -9852,14 +12138,22 @@
         "disciplineScore": 2
       },
       {
-        "name": "Rodando Nazário",
+        "rank": 2,
         "initials": "RN",
+        "name": "Rodando Nazário",
+        "points": 127,
+        "value": 85929000,
+        "playedText": "",
+        "managerId": "8769466",
+        "color": "#ff55df",
+        "aliases": [
+          "Rodando Nazário"
+        ],
         "goals": 3,
         "assists": 3,
         "yellowCards": 2,
         "redCards": 0,
         "dnp": 2,
-        "points": 127,
         "pointsByPosition": {
           "goalkeeper": 1,
           "defender": 33,
@@ -11008,38 +13302,73 @@
     "generated_from": "mister-json-endpoints",
     "teams": [
       {
+        "manager_id": "8785696",
         "user_name": "Don Manuel Ruíz de Lopera",
         "initials": "DM",
+        "color": "#66fff1",
+        "aliases": [
+          "Don Manuel Ruíz de Lopera"
+        ],
         "team_value": 83343000
       },
       {
+        "manager_id": "8769466",
         "user_name": "Rodando Nazário",
         "initials": "RN",
+        "color": "#ff55df",
+        "aliases": [
+          "Rodando Nazário"
+        ],
         "team_value": 85929000
       },
       {
+        "manager_id": "8771310",
         "user_name": "Heung Min Dad",
         "initials": "HM",
+        "color": "#a5ff6a",
+        "aliases": [
+          "Heung Min Dad"
+        ],
         "team_value": 63602000
       },
       {
+        "manager_id": "13365280",
         "user_name": "Mikel Poyarzabal",
         "initials": "MP",
+        "color": "#7aa8ff",
+        "aliases": [
+          "Mikel Poyarzabal"
+        ],
         "team_value": 69770000
       },
       {
+        "manager_id": "12113243",
         "user_name": "Peter LIM",
         "initials": "PL",
+        "color": "#e8d26a",
+        "aliases": [
+          "Peter LIM"
+        ],
         "team_value": 53948000
       },
       {
+        "manager_id": "10359824",
         "user_name": "Olivito",
         "initials": "O",
+        "color": "#f8fbff",
+        "aliases": [
+          "Olivito"
+        ],
         "team_value": 86396000
       },
       {
+        "manager_id": "15420188",
         "user_name": "Alex Ballena",
         "initials": "AB",
+        "color": "#b67cff",
+        "aliases": [
+          "Alex Ballena"
+        ],
         "team_value": 65475000
       }
     ],
@@ -11047,189 +13376,231 @@
       {
         "league_position": 1,
         "user_name": "Rodando Nazário",
+        "manager_id": "8769466",
         "initials": "RN",
+        "color": "#ff55df",
         "total_points_after_round": 127,
         "team_value": 85929000
       },
       {
         "league_position": 2,
         "user_name": "Heung Min Dad",
+        "manager_id": "8771310",
         "initials": "HM",
+        "color": "#a5ff6a",
         "total_points_after_round": 124,
         "team_value": 63602000
       },
       {
         "league_position": 3,
         "user_name": "Don Manuel Ruíz de Lopera",
+        "manager_id": "8785696",
         "initials": "DM",
+        "color": "#66fff1",
         "total_points_after_round": 114,
         "team_value": 83343000
       },
       {
         "league_position": 4,
         "user_name": "Mikel Poyarzabal",
+        "manager_id": "13365280",
         "initials": "MP",
+        "color": "#7aa8ff",
         "total_points_after_round": 86,
         "team_value": 69770000
       },
       {
         "league_position": 5,
         "user_name": "Peter LIM",
+        "manager_id": "12113243",
         "initials": "PL",
+        "color": "#e8d26a",
         "total_points_after_round": 80,
         "team_value": 53948000
       },
       {
         "league_position": 6,
         "user_name": "Olivito",
+        "manager_id": "10359824",
         "initials": "O",
+        "color": "#f8fbff",
         "total_points_after_round": 42,
         "team_value": 86396000
       },
       {
         "league_position": 7,
         "user_name": "Alex Ballena",
+        "manager_id": "15420188",
         "initials": "AB",
+        "color": "#b67cff",
         "total_points_after_round": 28,
         "team_value": 65475000
       }
     ],
     "position_progress": [
       {
+        "manager_id": "8785696",
         "round_order": 1,
         "round_name": "J1",
         "user_name": "Don Manuel Ruíz de Lopera",
         "initials": "DM",
+        "color": "#66fff1",
         "league_position": 1,
         "total_points_after_round": 62,
         "lineup_points": 62,
         "team_value": 45497000
       },
       {
+        "manager_id": "8771310",
         "round_order": 1,
         "round_name": "J1",
         "user_name": "Heung Min Dad",
         "initials": "HM",
+        "color": "#a5ff6a",
         "league_position": 2,
         "total_points_after_round": 53,
         "lineup_points": 53,
         "team_value": 63148000
       },
       {
+        "manager_id": "8769466",
         "round_order": 1,
         "round_name": "J1",
         "user_name": "Rodando Nazário",
         "initials": "RN",
+        "color": "#ff55df",
         "league_position": 3,
         "total_points_after_round": 52,
         "lineup_points": 52,
         "team_value": 62308000
       },
       {
+        "manager_id": "12113243",
         "round_order": 1,
         "round_name": "J1",
         "user_name": "Peter LIM",
         "initials": "PL",
+        "color": "#e8d26a",
         "league_position": 4,
         "total_points_after_round": 48,
         "lineup_points": 48,
         "team_value": 49522000
       },
       {
+        "manager_id": "13365280",
         "round_order": 1,
         "round_name": "J1",
         "user_name": "Mikel Poyarzabal",
         "initials": "MP",
+        "color": "#7aa8ff",
         "league_position": 5,
         "total_points_after_round": 39,
         "lineup_points": 39,
         "team_value": 46164000
       },
       {
+        "manager_id": "10359824",
         "round_order": 1,
         "round_name": "J1",
         "user_name": "Olivito",
         "initials": "O",
+        "color": "#f8fbff",
         "league_position": 6,
         "total_points_after_round": 21,
         "lineup_points": 21,
         "team_value": 56327000
       },
       {
+        "manager_id": "15420188",
         "round_order": 1,
         "round_name": "J1",
         "user_name": "Alex Ballena",
         "initials": "AB",
+        "color": "#b67cff",
         "league_position": 7,
         "total_points_after_round": 18,
         "lineup_points": 18,
         "team_value": 49497000
       },
       {
+        "manager_id": "8769466",
         "round_order": 2,
         "round_name": "J2",
         "user_name": "Rodando Nazário",
         "initials": "RN",
+        "color": "#ff55df",
         "league_position": 1,
         "total_points_after_round": 127,
         "lineup_points": 75,
         "team_value": 62259000
       },
       {
+        "manager_id": "8771310",
         "round_order": 2,
         "round_name": "J2",
         "user_name": "Heung Min Dad",
         "initials": "HM",
+        "color": "#a5ff6a",
         "league_position": 2,
         "total_points_after_round": 124,
         "lineup_points": 71,
         "team_value": 63286000
       },
       {
+        "manager_id": "8785696",
         "round_order": 2,
         "round_name": "J2",
         "user_name": "Don Manuel Ruíz de Lopera",
         "initials": "DM",
+        "color": "#66fff1",
         "league_position": 3,
         "total_points_after_round": 114,
         "lineup_points": 52,
         "team_value": 41842000
       },
       {
+        "manager_id": "13365280",
         "round_order": 2,
         "round_name": "J2",
         "user_name": "Mikel Poyarzabal",
         "initials": "MP",
+        "color": "#7aa8ff",
         "league_position": 4,
         "total_points_after_round": 86,
         "lineup_points": 47,
         "team_value": 49781000
       },
       {
+        "manager_id": "12113243",
         "round_order": 2,
         "round_name": "J2",
         "user_name": "Peter LIM",
         "initials": "PL",
+        "color": "#e8d26a",
         "league_position": 5,
         "total_points_after_round": 80,
         "lineup_points": 32,
         "team_value": 43062000
       },
       {
+        "manager_id": "10359824",
         "round_order": 2,
         "round_name": "J2",
         "user_name": "Olivito",
         "initials": "O",
+        "color": "#f8fbff",
         "league_position": 6,
         "total_points_after_round": 42,
         "lineup_points": 21,
         "team_value": 57071000
       },
       {
+        "manager_id": "15420188",
         "round_order": 2,
         "round_name": "J2",
         "user_name": "Alex Ballena",
         "initials": "AB",
+        "color": "#b67cff",
         "league_position": 7,
         "total_points_after_round": 28,
         "lineup_points": 10,
@@ -11290,7 +13661,9 @@
     "volatility": [
       {
         "user_name": "Olivito",
+        "manager_id": "10359824",
         "initials": "O",
+        "color": "#f8fbff",
         "average_points": 21,
         "volatility": 0,
         "points": [
@@ -11300,7 +13673,9 @@
       },
       {
         "user_name": "Mikel Poyarzabal",
+        "manager_id": "13365280",
         "initials": "MP",
+        "color": "#7aa8ff",
         "average_points": 43,
         "volatility": 4,
         "points": [
@@ -11310,7 +13685,9 @@
       },
       {
         "user_name": "Alex Ballena",
+        "manager_id": "15420188",
         "initials": "AB",
+        "color": "#b67cff",
         "average_points": 14,
         "volatility": 4,
         "points": [
@@ -11320,7 +13697,9 @@
       },
       {
         "user_name": "Don Manuel Ruíz de Lopera",
+        "manager_id": "8785696",
         "initials": "DM",
+        "color": "#66fff1",
         "average_points": 57,
         "volatility": 5,
         "points": [
@@ -11330,7 +13709,9 @@
       },
       {
         "user_name": "Peter LIM",
+        "manager_id": "12113243",
         "initials": "PL",
+        "color": "#e8d26a",
         "average_points": 40,
         "volatility": 8,
         "points": [
@@ -11340,7 +13721,9 @@
       },
       {
         "user_name": "Heung Min Dad",
+        "manager_id": "8771310",
         "initials": "HM",
+        "color": "#a5ff6a",
         "average_points": 62,
         "volatility": 9,
         "points": [
@@ -11350,7 +13733,9 @@
       },
       {
         "user_name": "Rodando Nazário",
+        "manager_id": "8769466",
         "initials": "RN",
+        "color": "#ff55df",
         "average_points": 63.5,
         "volatility": 11.5,
         "points": [
