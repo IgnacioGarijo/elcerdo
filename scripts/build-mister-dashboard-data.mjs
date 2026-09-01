@@ -39,7 +39,7 @@ const FALLBACK_CLOSED_ROUNDS = [
       { rank: 2, initials: "HM", name: "Heung Min Dad", bonus: 3050000, points: 53 },
       { rank: 3, initials: "RN", name: "Rodando Nazário", bonus: 3300000, points: 52 },
       { rank: 4, initials: "PL", name: "Peter LIM", bonus: 3400000, points: 48 },
-      { rank: 5, initials: "MP", name: "Mikel Poyarzabal", bonus: 3250000, points: 39 },
+      { rank: 5, initials: "LT", name: "Lolo Tierra", bonus: 3250000, points: 39 },
       { rank: 6, initials: "O", name: "Olivito", bonus: 2650000, points: 21 },
       { rank: 7, initials: "AB", name: "Alex Ballena", bonus: 2900000, points: 18 }
     ]
@@ -51,7 +51,7 @@ const FALLBACK_CLOSED_ROUNDS = [
       { rank: 1, initials: "RN", name: "Rodando Nazário", bonus: 3850000, points: 75 },
       { rank: 2, initials: "HM", name: "Heung Min Dad", bonus: 3950000, points: 71 },
       { rank: 3, initials: "DM", name: "Don Manuel Ruíz de Lopera", bonus: 3300000, points: 52 },
-      { rank: 4, initials: "MP", name: "Mikel Poyarzabal", bonus: 3350000, points: 47 },
+      { rank: 4, initials: "LT", name: "Lolo Tierra", bonus: 3350000, points: 47 },
       { rank: 5, initials: "PL", name: "Peter LIM", bonus: 2900000, points: 32 },
       { rank: 6, initials: "O", name: "Olivito", bonus: 2650000, points: 21 },
       { rank: 7, initials: "AB", name: "Alex Ballena", bonus: 2500000, points: 10 }
@@ -218,7 +218,13 @@ function canonicalTeam(input, identity) {
 }
 
 function canonicalizeTeamName(name, identity) {
-  return resolveTeam(name, identity)?.currentName || name;
+  const exact = resolveTeam(name, identity);
+  if (exact) return exact.currentName;
+  const key = teamKey(name);
+  for (const [aliasKey, team] of identity.byAlias.entries()) {
+    if (key.startsWith(`${aliasKey} `) || key.includes(` ${aliasKey} `)) return team.currentName;
+  }
+  return name;
 }
 
 function canonicalizeTeamRow(row, identity) {
@@ -1332,8 +1338,11 @@ function estimateFirstRoundSigningPoints(signing, closedRounds, playerLookup) {
   return null;
 }
 
-function buildMarketSummary(market, history) {
-  const players = market?.players || [];
+function buildMarketSummary(market, history, identity) {
+  const players = (market?.players || []).map((player) => ({
+    ...player,
+    seller: canonicalizeTeamName(player.seller, identity)
+  }));
   const totalValue = players.reduce((sum, player) => sum + (player.marketValue || 0), 0);
   const trendCounts = players.reduce((acc, player) => {
     acc[player.valueTrend || "flat"] = (acc[player.valueTrend || "flat"] || 0) + 1;
@@ -1458,10 +1467,16 @@ async function main() {
       })))
     },
     stats,
-    market: buildMarketSummary(market, marketHistory),
+    market: buildMarketSummary(market, marketHistory, teamIdentity),
     players: {
       searchTop: (search.players || []).map(parsePlayerText).filter((player) => player.name).slice(0, 80),
-      mySquad: (team.players || []).map(parsePlayerText).filter((player) => player.name),
+      mySquad: (team.players || []).map(parsePlayerText).filter((player) => player.name).map((player) => ({
+        ...player,
+        owner: player.owner ? {
+          ...player.owner,
+          managerName: canonicalizeTeamName(player.owner.managerName, teamIdentity)
+        } : player.owner
+      })),
       profiles: (deep.playerProfiles || []).map((player) => ({
         playerId: player.playerId,
         name: player.name,

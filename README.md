@@ -34,7 +34,7 @@ Relación actual de tarjetas:
 - `img/img1.jpg`: Peter LIM.
 - `img/img2.jpg`: Rodando Nazário.
 - `img/img3.jpg`: Alex Ballena.
-- `img/img4.jpg`: Mikel Poyarzabal.
+- `img/img4.jpg`: Lolo Tierra, antes Mikel Poyarzabal.
 - `img/img5.jpg`: Heung Min Dad.
 - `img/img6.jpg`: Don Manuel Ruíz de Lopera.
 - `img/img7.jpeg`: Olivito.

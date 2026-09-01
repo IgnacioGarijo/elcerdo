@@ -40,19 +40,19 @@ const images = [
 ];
 
 const BUILD_VERSION = {
-  label: "web team-id-v1",
-  updatedAt: "2026-08-31T18:17:24+02:00"
+  label: "web team-id-v2",
+  updatedAt: "2026-09-01T10:20:48+02:00"
 };
 
 const cardTeams = new Map([
-  ["img/img1.jpg", "Peter LIM"],
-  ["img/img2.jpg", "Rodando Nazário"],
-  ["img/img3.jpg", "Alex Ballena"],
-  ["img/img4.jpg", "Mikel Poyarzabal"],
-  ["img/img5.jpg", "Heung Min Dad"],
-  ["img/img6.jpg", "Don Manuel Ruíz de Lopera"],
-  ["img/img7.jpg", "Olivito"],
-  ["img/img7.jpeg", "Olivito"]
+  ["img/img1.jpg", { managerId: "12113243", fallbackName: "Peter LIM" }],
+  ["img/img2.jpg", { managerId: "8769466", fallbackName: "Rodando Nazário" }],
+  ["img/img3.jpg", { managerId: "15420188", fallbackName: "Alex Ballena" }],
+  ["img/img4.jpg", { managerId: "13365280", fallbackName: "Lolo Tierra" }],
+  ["img/img5.jpg", { managerId: "8771310", fallbackName: "Heung Min Dad" }],
+  ["img/img6.jpg", { managerId: "8785696", fallbackName: "Don Manuel Ruíz de Lopera" }],
+  ["img/img7.jpg", { managerId: "10359824", fallbackName: "Olivito" }],
+  ["img/img7.jpeg", { managerId: "10359824", fallbackName: "Olivito" }]
 ]);
 
 const jornadaSchedule = [
@@ -125,7 +125,7 @@ const fallbackClosedRounds = [
       { name: "Heung Min Dad", initials: "HM", points: 53, bonus: 3050000 },
       { name: "Rodando Nazário", initials: "RN", points: 52, bonus: 3300000 },
       { name: "Peter LIM", initials: "PL", points: 48, bonus: 3400000 },
-      { name: "Mikel Poyarzabal", initials: "MP", points: 39, bonus: 3250000 },
+      { name: "Lolo Tierra", initials: "LT", points: 39, bonus: 3250000 },
       { name: "Olivito", initials: "O", points: 21, bonus: 2650000 },
       { name: "Alex Ballena", initials: "AB", points: 18, bonus: 2900000 }
     ]
@@ -137,7 +137,7 @@ const fallbackClosedRounds = [
       { name: "Rodando Nazário", initials: "RN", points: 75, bonus: 3850000 },
       { name: "Heung Min Dad", initials: "HM", points: 71, bonus: 3950000 },
       { name: "Don Manuel Ruíz de Lopera", initials: "DM", points: 52, bonus: 3300000 },
-      { name: "Mikel Poyarzabal", initials: "MP", points: 47, bonus: 3350000 },
+      { name: "Lolo Tierra", initials: "LT", points: 47, bonus: 3350000 },
       { name: "Peter LIM", initials: "PL", points: 32, bonus: 2900000 },
       { name: "Olivito", initials: "O", points: 21, bonus: 2650000 },
       { name: "Alex Ballena", initials: "AB", points: 10, bonus: 2500000 }
@@ -484,7 +484,7 @@ function buildPigAccuracy() {
     const targets = ordered.slice(-2).map(row => row.name);
     const predictions = (pigRound.cards || []).slice(0, 2)
       .map(card => {
-        const team = cardTeams.get(card) || "Sin asignar";
+        const team = cardTeamName(card);
         const hit = targets.some(target => sameTeam(target, team));
         total += 1;
         if (hit) correct += 1;
@@ -505,12 +505,13 @@ function renderPigRoundDetail() {
   }
   const cards = cardsForRound(round.round);
   const accuracy = buildPigAccuracy().rounds.find(item => item.round === round.round);
+  const victims = (round.victims || []).map(canonicalTeamName);
   els.pigRoundDetail.innerHTML = `
-    <p class="mini-copy">J${round.round} · ${round.status === "closed" ? "cerrada" : "en curso"} · Víctimas: ${(round.victims || []).join(", ") || "pendiente"}</p>
+    <p class="mini-copy">J${round.round} · ${round.status === "closed" ? "cerrada" : "en curso"} · Víctimas: ${victims.join(", ") || "pendiente"}</p>
     <div class="round-card-images">
       ${cards.map((card, index) => {
         const prediction = accuracy?.predictions?.[index];
-        const team = prediction?.team || cardTeams.get(card) || "Sin asignar";
+        const team = prediction?.team || cardTeamName(card);
         const verdict = prediction ? (prediction.hit ? "Diana" : "Falló") : "Pendiente";
         return `
           <figure class="pig-card-result ${prediction?.hit ? "hit" : prediction ? "miss" : ""}">
@@ -1576,6 +1577,14 @@ function teamInitials(name) {
   return canonical?.initials || state.teams.find(team => sameTeam(team.name, name))?.initials || initialsFor(name);
 }
 
+function cardTeamName(card) {
+  const mapping = cardTeams.get(normalizeCardPath(card)) || cardTeams.get(card);
+  if (!mapping) return "Sin asignar";
+  if (typeof mapping === "string") return canonicalTeamName(mapping);
+  const team = resolveTeam({ managerId: mapping.managerId }) || resolveTeam(mapping.fallbackName);
+  return team?.name || canonicalTeamName(mapping.fallbackName) || "Sin asignar";
+}
+
 function sameTeam(a, b) {
   return normalizeTeamName(canonicalTeamName(a)) === normalizeTeamName(canonicalTeamName(b));
 }
@@ -1590,7 +1599,13 @@ function resolveTeam(value) {
 }
 
 function canonicalTeamName(value) {
-  return resolveTeam(value)?.name || value || "";
+  const resolved = resolveTeam(value);
+  if (resolved) return resolved.name;
+  const key = normalizeTeamName(value);
+  for (const [aliasKey, team] of state.teamIdentity.byName.entries()) {
+    if (key.startsWith(`${aliasKey} `) || key.includes(` ${aliasKey} `)) return team.name;
+  }
+  return value || "";
 }
 
 function normalizeTeamName(value) {

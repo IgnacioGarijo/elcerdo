@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T16:21:42.957Z",
+  "updatedAt": "2026-09-01T08:19:53.750Z",
   "teams": [
     {
       "managerId": "15420188",
@@ -30,10 +30,11 @@
     },
     {
       "managerId": "13365280",
-      "currentName": "Mikel Poyarzabal",
-      "initials": "MP",
+      "currentName": "Lolo Tierra",
+      "initials": "LT",
       "color": "#7aa8ff",
       "aliases": [
+        "Lolo Tierra",
         "Mikel Poyarzabal"
       ]
     },
