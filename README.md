@@ -68,12 +68,11 @@ Algunos sólo se pueden calcular con datos de puntos por equipo. Otros necesitan
 
 ## Automatización
 
-Hay dos workflows en GitHub Actions:
+Hay un workflow en GitHub Actions:
 
-- `.github/workflows/scrape-mister-market.yml`: se ejecuta a diario a las `07:10 UTC`, que normalmente son las `09:10` en España en horario de verano. Lee mercado, actualiza calendario y reconstruye datos.
-- `.github/workflows/scrape-mister-weekly.yml`: pese al nombre del archivo, se ejecuta a diario a las `08:30 UTC`, normalmente `10:30` en España en horario de verano. Lee feed, clasificación, equipo, búsqueda, jornadas, managers, alineaciones, banquillo, eventos y puntuaciones por proveedor desde los endpoints internos de Mister.
+- `.github/workflows/scrape-mister-daily.yml`: se ejecuta a diario a las `08:30 UTC`, normalmente `10:30` en España en horario de verano. Lee mercado, feed, clasificación, equipo, búsqueda, jornadas, managers, alineaciones, banquillo, eventos y puntuaciones por proveedor desde los endpoints internos de Mister. También actualiza el calendario y reconstruye los datos derivados de la web.
 
-Ambos pueden lanzarse también a mano desde la pestaña `Actions` de GitHub con `Run workflow`.
+Puede lanzarse también a mano desde la pestaña `Actions` de GitHub con `Run workflow`.
 
 Para que funcionen sin el ordenador encendido hacen falta secretos en GitHub:
 

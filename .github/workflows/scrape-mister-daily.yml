@@ -1,4 +1,4 @@
-name: Scrape Mister deep data
+name: Scrape Mister daily data
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  scrape-deep:
+  scrape-daily:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,8 +32,8 @@ jobs:
       - name: Install Playwright browser
         run: pnpm exec playwright install --with-deps chromium
 
-      - name: Scrape deep pages
-        run: pnpm run scrape:mister:weekly
+      - name: Scrape daily pages
+        run: pnpm run scrape:mister:daily
         env:
           MISTER_COMMUNITY_ID: ${{ secrets.MISTER_COMMUNITY_ID }}
           MISTER_STORAGE_STATE_BASE64: ${{ secrets.MISTER_STORAGE_STATE_BASE64 }}
@@ -53,5 +53,5 @@ jobs:
       - name: Commit data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Actualizar datos profundos Mister"
+          commit_message: "Actualizar datos diarios Mister"
           file_pattern: data/mister/latest/** data/mister/market-history.jsonl data/mister/transfer-history.jsonl data/cerdo/** data/laliga/**

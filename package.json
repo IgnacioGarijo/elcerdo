@@ -9,6 +9,7 @@
     "build:data": "node scripts/build-mister-dashboard-data.mjs",
     "calendar:laliga": "node scripts/update-laliga-calendar.mjs",
     "scrape:mister": "node scripts/scrape-mister.mjs --all",
+    "scrape:mister:daily": "node scripts/scrape-mister.mjs --market --feed --standings --team --search --deep",
     "scrape:mister:market": "node scripts/scrape-mister.mjs --market --feed",
     "scrape:mister:weekly": "node scripts/scrape-mister.mjs --feed --standings --team --search --deep"
   },
