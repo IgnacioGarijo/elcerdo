@@ -1,29 +1,29 @@
 {
-  "scrapedAt": "2026-09-01T09:35:18.925Z",
+  "scrapedAt": "2026-09-01T11:09:32.729Z",
   "source": "https://mister.mundodeportivo.com",
   "communityId": "1263883",
-  "count": 207,
+  "count": 205,
   "transfers": [
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "2h",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
+      "dateText": "4h",
       "playerName": "Isi Palazón",
       "from": "Alex Ballena",
       "to": "Mister",
       "price": 5660040,
-      "raw": "2h | Isi Palazón cambia de Alex Ballena a Mister | 7 | AB | M | 5.660.040 | Comentar | Nuevas transacciones en el mercado"
+      "raw": "4h | Isi Palazón cambia de Alex Ballena a Mister | 7 | AB | M | 5.660.040 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "7h",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
+      "dateText": "8h",
       "playerName": "Arda Güler",
       "from": "Mister",
       "to": "Lolo Tierra",
       "price": 14761990,
-      "raw": "7h | Arda Güler cambia de Mister a Lolo Tierra | 25 | M | LT | 14.761.990 | Nacho Pérez cambia de Mister a Olivito | 7"
+      "raw": "8h | Arda Güler cambia de Mister a Lolo Tierra | 25 | M | LT | 14.761.990 | Nacho Pérez cambia de Mister a Olivito | 7"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Nacho Pérez",
       "from": "Mister",
@@ -32,7 +32,7 @@
       "raw": "14.761.990 | Nacho Pérez cambia de Mister a Olivito | 7 | M | O | 1.098.000 | Aitor Ruibal cambia de Mister a Olivito | 0"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Aitor Ruibal",
       "from": "Mister",
@@ -41,52 +41,52 @@
       "raw": "1.098.000 | Aitor Ruibal cambia de Mister a Olivito | 0 | M | O | 162.000 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "15h",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
+      "dateText": "16h",
       "playerName": "Abdel Abqar",
       "from": "Alex Ballena",
       "to": "Mister",
       "price": 1792960,
-      "raw": "15h | Abdel Abqar cambia de Alex Ballena a Mister | 2 | AB | M | 1.792.960 | Comentar | Nuevas transacciones en el mercado"
+      "raw": "16h | Abdel Abqar cambia de Alex Ballena a Mister | 2 | AB | M | 1.792.960 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "17h",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
+      "dateText": "19h",
       "playerName": "Joaquín Muñoz",
       "from": "Rodando Nazário",
       "to": "Mister",
       "price": 2305140,
-      "raw": "17h | Joaquín Muñoz cambia de Rodando Nazário a Mister | 10 | RN | M | 2.305.140 | Comentar | Nuevas transacciones en el mercado"
+      "raw": "19h | Joaquín Muñoz cambia de Rodando Nazário a Mister | 10 | RN | M | 2.305.140 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "17h",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
+      "dateText": "19h",
       "playerName": "Einar Galilea",
       "from": "Rodando Nazário",
       "to": "Mister",
       "price": 2121600,
-      "raw": "17h | Einar Galilea cambia de Rodando Nazário a Mister | 10 | RN | M | 2.121.600 | Comentar | LT"
+      "raw": "19h | Einar Galilea cambia de Rodando Nazário a Mister | 10 | RN | M | 2.121.600 | Comentar | LT"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "20h",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
+      "dateText": "21h",
       "playerName": "Javi Guerra",
       "from": "Lolo Tierra",
       "to": "Mister",
       "price": 6861920,
-      "raw": "20h | Javi Guerra cambia de Lolo Tierra a Mister | 9 | LT | M | 6.861.920 | Comentar | Nuevas transacciones en el mercado"
+      "raw": "21h | Javi Guerra cambia de Lolo Tierra a Mister | 9 | LT | M | 6.861.920 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "20h",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
+      "dateText": "21h",
       "playerName": "Héctor Bellerín",
       "from": "Olivito",
       "to": "Mister",
       "price": 5217980,
-      "raw": "20h | Héctor Bellerín cambia de Olivito a Mister | 5 | O | M | 5.217.980 | Comentar | Nuevos movimientos de jugadores"
+      "raw": "21h | Héctor Bellerín cambia de Olivito a Mister | 5 | O | M | 5.217.980 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "1d",
       "playerName": "Pablo Maffeo",
       "from": "Lolo Tierra",
@@ -95,7 +95,7 @@
       "raw": "1d | Pablo Maffeo cambia de Lolo Tierra a Mister | 6 | LT | M | 4.299.000 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "1d",
       "playerName": "Andrés Martín",
       "from": "Peter LIM",
@@ -104,7 +104,7 @@
       "raw": "1d | Andrés Martín cambia de Peter LIM a Mister | 14 | PL | M | 6.797.760 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "1d",
       "playerName": "Edu Expósito",
       "from": "Mister",
@@ -113,7 +113,7 @@
       "raw": "1d | Edu Expósito cambia de Mister a Lolo Tierra | 15 | M | LT | 9.959.820 | Luis Rioja cambia de Mister a Peter LIM | 5"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Luis Rioja",
       "from": "Mister",
@@ -122,7 +122,7 @@
       "raw": "9.959.820 | Luis Rioja cambia de Mister a Peter LIM | 5 | M | PL | 3.717.030 | Bright Ede cambia de Mister a Olivito | 8"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Bright Ede",
       "from": "Mister",
@@ -131,7 +131,7 @@
       "raw": "3.717.030 | Bright Ede cambia de Mister a Olivito | 8 | M | O | 1.421.000 | Ángel Recio cambia de Mister a Olivito | 7"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Ángel Recio",
       "from": "Mister",
@@ -140,7 +140,7 @@
       "raw": "1.421.000 | Ángel Recio cambia de Mister a Olivito | 7 | M | O | 759.000 | Miguel Sierra cambia de Mister a Rodando Nazário | 23"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Miguel Sierra",
       "from": "Mister",
@@ -149,7 +149,7 @@
       "raw": "759.000 | Miguel Sierra cambia de Mister a Rodando Nazário | 23 | M | RN | 3.149.910 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "2d",
       "playerName": "Nico Williams",
       "from": "Olivito",
@@ -158,7 +158,7 @@
       "raw": "2d | Nico Williams cambia de Olivito a Mister | 8 | O | M | 11.110.320 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "2d",
       "playerName": "Isi Palazón",
       "from": "Mister",
@@ -167,7 +167,7 @@
       "raw": "2d | Isi Palazón cambia de Mister a Alex Ballena | 7 | M | AB | 5.740.000 | Saba Sazonov cambia de Mister a Lolo Tierra | 3"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Saba Sazonov",
       "from": "Mister",
@@ -176,7 +176,7 @@
       "raw": "5.740.000 | Saba Sazonov cambia de Mister a Lolo Tierra | 3 | M | LT | 580.670 | Vinícius Júnior cambia de Mister a Olivito | 16"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Vinícius Júnior",
       "from": "Mister",
@@ -185,7 +185,7 @@
       "raw": "580.670 | Vinícius Júnior cambia de Mister a Olivito | 16 | M | O | 25.633.000 | Iago Aspas cambia de Mister a Olivito | 15"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Iago Aspas",
       "from": "Mister",
@@ -194,25 +194,25 @@
       "raw": "25.633.000 | Iago Aspas cambia de Mister a Olivito | 15 | M | O | 4.886.000 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "2d",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
+      "dateText": "3d",
       "playerName": "Jon Aramburu",
       "from": "Lolo Tierra",
       "to": "Mister",
       "price": 5085150,
-      "raw": "2d | Jon Aramburu cambia de Lolo Tierra a Mister | 10 | LT | M | 5.085.150 | Comentar | Nuevas transacciones en el mercado"
+      "raw": "3d | Jon Aramburu cambia de Lolo Tierra a Mister | 10 | LT | M | 5.085.150 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "2d",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
+      "dateText": "3d",
       "playerName": "Asier Villalibre",
       "from": "Lolo Tierra",
       "to": "Mister",
       "price": 3762720,
-      "raw": "2d | Asier Villalibre cambia de Lolo Tierra a Mister | 7 | LT | M | 3.762.720 | Comentar | Nuevas transacciones en el mercado"
+      "raw": "3d | Asier Villalibre cambia de Lolo Tierra a Mister | 7 | LT | M | 3.762.720 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "3d",
       "playerName": "Umaru Konare",
       "from": "Olivito",
@@ -221,7 +221,7 @@
       "raw": "3d | Umaru Konare cambia de Olivito a Mister | 2 | O | M | 368.600 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "3d",
       "playerName": "Facundo González",
       "from": "Olivito",
@@ -230,7 +230,7 @@
       "raw": "3d | Facundo González cambia de Olivito a Mister | 7 | O | M | 1.933.310 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "3d",
       "playerName": "Fran González",
       "from": "Olivito",
@@ -239,7 +239,7 @@
       "raw": "3d | Fran González cambia de Olivito a Mister | 0 | O | M | 340.470 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "3d",
       "playerName": "Enes Ünal",
       "from": "Mister",
@@ -248,7 +248,7 @@
       "raw": "3d | Enes Ünal cambia de Mister a Lolo Tierra | 14 | M | LT | 4.250.840 | Abel Bretones cambia de Mister a Rodando Nazário | 9"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Abel Bretones",
       "from": "Mister",
@@ -257,7 +257,7 @@
       "raw": "4.250.840 | Abel Bretones cambia de Mister a Rodando Nazário | 9 | M | RN | 2.831.010 | Arouna Sangante cambia de Mister a Rodando Nazário | 3"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Arouna Sangante",
       "from": "Mister",
@@ -266,7 +266,7 @@
       "raw": "2.831.010 | Arouna Sangante cambia de Mister a Rodando Nazário | 3 | M | RN | 2.560.780 | Comentar | Jornada 3"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "4d",
       "playerName": "José Salinas",
       "from": "Alex Ballena",
@@ -275,7 +275,7 @@
       "raw": "4d | José Salinas cambia de Alex Ballena a Mister | 5 | AB | M | 1.187.280 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "4d",
       "playerName": "Luismi Cruz",
       "from": "Don Manuel Ruíz de Lopera",
@@ -284,7 +284,7 @@
       "raw": "4d | Luismi Cruz cambia de Don Manuel Ruíz de Lopera a Mister | 12 | DM | M | 1.973.760 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "4d",
       "playerName": "José Luis Gayà",
       "from": "Rodando Nazário",
@@ -293,7 +293,7 @@
       "raw": "4d | José Luis Gayà cambia de Rodando Nazário a Mister | 4 | RN | M | 2.806.080 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "4d",
       "playerName": "David Soria",
       "from": "Lolo Tierra",
@@ -302,7 +302,7 @@
       "raw": "4d | David Soria cambia de Lolo Tierra a Mister | 17 | LT | M | 10.309.140 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "4d",
       "playerName": "Williot Swedberg",
       "from": "Don Manuel Ruíz de Lopera",
@@ -311,7 +311,7 @@
       "raw": "4d | Williot Swedberg cambia de Don Manuel Ruíz de Lopera a Mister | 5 | DM | M | 2.891.700 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "4d",
       "playerName": "Mikel Rodriguez",
       "from": "Mister",
@@ -320,7 +320,7 @@
       "raw": "4d | Mikel Rodriguez cambia de Mister a Alex Ballena | 17 | M | AB | 889.000 | Einar Galilea cambia de Mister a Rodando Nazário | 10"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Einar Galilea",
       "from": "Mister",
@@ -329,16 +329,16 @@
       "raw": "889.000 | Einar Galilea cambia de Mister a Rodando Nazário | 10 | M | RN | 2.110.660 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "4d",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
+      "dateText": "5d",
       "playerName": "Carlos Espí",
       "from": "Lolo Tierra",
       "to": "Mister",
       "price": 9018680,
-      "raw": "4d | Carlos Espí cambia de Lolo Tierra a Mister | 15 | LT | M | 9.018.680 | Comentar | Nuevas transacciones en el mercado"
+      "raw": "5d | Carlos Espí cambia de Lolo Tierra a Mister | 15 | LT | M | 9.018.680 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "5d",
       "playerName": "Sergio Carreira",
       "from": "Don Manuel Ruíz de Lopera",
@@ -347,7 +347,7 @@
       "raw": "5d | Sergio Carreira cambia de Don Manuel Ruíz de Lopera a Mister | 10 | DM | M | 5.093.000 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "5d",
       "playerName": "David Soria",
       "from": "Mister",
@@ -356,7 +356,7 @@
       "raw": "5d | David Soria cambia de Mister a Lolo Tierra | 17 | M | LT | 9.990.010 | Rodrigo Riquelme cambia de Mister a Lolo Tierra | 21"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Rodrigo Riquelme",
       "from": "Mister",
@@ -365,7 +365,7 @@
       "raw": "9.990.010 | Rodrigo Riquelme cambia de Mister a Lolo Tierra | 21 | M | LT | 2.681.460 | Sergio Canales cambia de Mister a Peter LIM | 11"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Sergio Canales",
       "from": "Mister",
@@ -374,7 +374,7 @@
       "raw": "2.681.460 | Sergio Canales cambia de Mister a Peter LIM | 11 | M | PL | 7.695.000 | Luismi Cruz cambia de Mister a Don Manuel Ruíz de Lopera | 12"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Luismi Cruz",
       "from": "Mister",
@@ -383,7 +383,7 @@
       "raw": "7.695.000 | Luismi Cruz cambia de Mister a Don Manuel Ruíz de Lopera | 12 | M | DM | 1.969.360 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "5d",
       "playerName": "Aimar Oroz",
       "from": "Lolo Tierra",
@@ -392,7 +392,7 @@
       "raw": "5d | Aimar Oroz cambia de Lolo Tierra a Mister | 7 | LT | M | 5.841.150 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "5d",
       "playerName": "Álvaro García",
       "from": "Lolo Tierra",
@@ -401,7 +401,7 @@
       "raw": "5d | Álvaro García cambia de Lolo Tierra a Mister | 17 | LT | M | 7.781.650 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "6d",
       "playerName": "Rubén García",
       "from": "Don Manuel Ruíz de Lopera",
@@ -410,7 +410,7 @@
       "raw": "6d | Rubén García cambia de Don Manuel Ruíz de Lopera a Mister | 10 | DM | M | 5.462.100 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "6d",
       "playerName": "Pau Navarro",
       "from": "Olivito",
@@ -419,7 +419,7 @@
       "raw": "6d | Pau Navarro cambia de Olivito a Mister | 0 | O | M | 1.719.120 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "6d",
       "playerName": "Carlos Álvarez",
       "from": "Olivito",
@@ -428,7 +428,7 @@
       "raw": "6d | Carlos Álvarez cambia de Olivito a Mister | 1 | O | M | 4.090.000 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "6d",
       "playerName": "Jon Martin",
       "from": "Olivito",
@@ -437,7 +437,7 @@
       "raw": "6d | Jon Martin cambia de Olivito a Mister | 10 | O | M | 7.173.920 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "6d",
       "playerName": "Sergio Martinez",
       "from": "Mister",
@@ -446,7 +446,7 @@
       "raw": "6d | Sergio Martinez cambia de Mister a Alex Ballena | 15 | M | AB | 1.143.000 | Ángel Ortiz cambia de Mister a Alex Ballena | 4"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Ángel Ortiz",
       "from": "Mister",
@@ -455,7 +455,7 @@
       "raw": "1.143.000 | Ángel Ortiz cambia de Mister a Alex Ballena | 4 | M | AB | 263.000 | Mathew Ryan cambia de Mister a Olivito | 17"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Mathew Ryan",
       "from": "Mister",
@@ -464,7 +464,7 @@
       "raw": "263.000 | Mathew Ryan cambia de Mister a Olivito | 17 | M | O | 9.096.000 | Javi Galán cambia de Mister a Olivito | 5"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Javi Galán",
       "from": "Mister",
@@ -473,7 +473,7 @@
       "raw": "9.096.000 | Javi Galán cambia de Mister a Olivito | 5 | M | O | 3.649.000 | Ibrahima Konaté cambia de Mister a Don Manuel Ruíz de Lopera | 9"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Ibrahima Konaté",
       "from": "Mister",
@@ -482,7 +482,7 @@
       "raw": "3.649.000 | Ibrahima Konaté cambia de Mister a Don Manuel Ruíz de Lopera | 9 | M | DM | 10.629.899 | Sergio Carreira cambia de Mister a Don Manuel Ruíz de Lopera | 10"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Sergio Carreira",
       "from": "Mister",
@@ -491,7 +491,7 @@
       "raw": "10.629.899 | Sergio Carreira cambia de Mister a Don Manuel Ruíz de Lopera | 10 | M | DM | 5.028.540 | Dani Cárdenas cambia de Mister a Don Manuel Ruíz de Lopera | 4"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Dani Cárdenas",
       "from": "Mister",
@@ -500,16 +500,16 @@
       "raw": "5.028.540 | Dani Cárdenas cambia de Mister a Don Manuel Ruíz de Lopera | 4 | M | DM | 637.260 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "6d",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
+      "dateText": "7d",
       "playerName": "Mario Martín",
       "from": "Alex Ballena",
       "to": "Mister",
       "price": 2142400,
-      "raw": "6d | Mario Martín cambia de Alex Ballena a Mister | 3 | AB | M | 2.142.400 | Comentar | Nuevos movimientos de jugadores"
+      "raw": "7d | Mario Martín cambia de Alex Ballena a Mister | 3 | AB | M | 2.142.400 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "7d",
       "playerName": "Etta Eyong",
       "from": "Don Manuel Ruíz de Lopera",
@@ -518,7 +518,7 @@
       "raw": "7d | Etta Eyong cambia de Don Manuel Ruíz de Lopera a Mister | 4 | DM | M | 4.297.650 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "7d",
       "playerName": "Urko González",
       "from": "Rodando Nazário",
@@ -527,7 +527,7 @@
       "raw": "7d | Urko González cambia de Rodando Nazário a Mister | 10 | RN | M | 2.491.570 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "7d",
       "playerName": "Gorka Guruzeta",
       "from": "Olivito",
@@ -536,7 +536,7 @@
       "raw": "7d | Gorka Guruzeta cambia de Olivito a Mister | 2 | O | M | 7.250.170 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "7d",
       "playerName": "Pablo Barrios",
       "from": "Rodando Nazário",
@@ -545,7 +545,7 @@
       "raw": "7d | Pablo Barrios cambia de Rodando Nazário a Olivito | 21 | RN | O | 10.800.000 | Comentar | Fin de la jornada 2"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "7d",
       "playerName": "Javi Rueda",
       "from": "Lolo Tierra",
@@ -554,7 +554,7 @@
       "raw": "7d | Javi Rueda cambia de Lolo Tierra a Mister | 7 | LT | M | 1.986.400 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "7d",
       "playerName": "Jonathan Dubasin",
       "from": "Heung Min Dad",
@@ -563,7 +563,7 @@
       "raw": "7d | Jonathan Dubasin cambia de Heung Min Dad a Mister | 7 | HM | M | 1.860.560 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "7d",
       "playerName": "Isaac Romero",
       "from": "Mister",
@@ -572,7 +572,7 @@
       "raw": "7d | Isaac Romero cambia de Mister a Alex Ballena | 14 | M | AB | 3.278.000 | Fermín López cambia de Mister a Lolo Tierra | 35"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Fermín López",
       "from": "Mister",
@@ -581,7 +581,7 @@
       "raw": "3.278.000 | Fermín López cambia de Mister a Lolo Tierra | 35 | M | LT | 16.488.620 | Carlos Espí cambia de Mister a Lolo Tierra | 15"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Carlos Espí",
       "from": "Mister",
@@ -590,7 +590,7 @@
       "raw": "16.488.620 | Carlos Espí cambia de Mister a Lolo Tierra | 15 | M | LT | 8.555.490 | Pablo Maffeo cambia de Mister a Lolo Tierra | 6"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Pablo Maffeo",
       "from": "Mister",
@@ -599,7 +599,7 @@
       "raw": "8.555.490 | Pablo Maffeo cambia de Mister a Lolo Tierra | 6 | M | LT | 3.958.360 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "8d",
       "playerName": "Lucas Cepeda",
       "from": "Heung Min Dad",
@@ -608,7 +608,7 @@
       "raw": "8d | Lucas Cepeda cambia de Heung Min Dad a Mister | 9 | HM | M | 1.764.880 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "8d",
       "playerName": "Mikel Jauregizar",
       "from": "Rodando Nazário",
@@ -617,7 +617,7 @@
       "raw": "8d | Mikel Jauregizar cambia de Rodando Nazário a Mister | 5 | RN | M | 2.820.930 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "8d",
       "playerName": "Alejandro Balde",
       "from": "Don Manuel Ruíz de Lopera",
@@ -626,7 +626,7 @@
       "raw": "8d | Alejandro Balde cambia de Don Manuel Ruíz de Lopera a Mister | 0 | DM | M | 6.446.960 | Comentar | Nuevas bajadas de cláusulas"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "8d",
       "playerName": "Fran Pérez",
       "from": "Mister",
@@ -635,7 +635,7 @@
       "raw": "8d | Fran Pérez cambia de Mister a Alex Ballena | 8 | M | AB | 358.000 | Rodri Hernández cambia de Mister a Don Manuel Ruíz de Lopera | 9"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Rodri Hernández",
       "from": "Mister",
@@ -644,7 +644,7 @@
       "raw": "358.000 | Rodri Hernández cambia de Mister a Don Manuel Ruíz de Lopera | 9 | M | DM | 13.777.000 | Williot Swedberg cambia de Mister a Don Manuel Ruíz de Lopera | 5"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Williot Swedberg",
       "from": "Mister",
@@ -653,7 +653,7 @@
       "raw": "13.777.000 | Williot Swedberg cambia de Mister a Don Manuel Ruíz de Lopera | 5 | M | DM | 2.631.660 | Mariano Díaz cambia de Mister a Heung Min Dad | 25"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Mariano Díaz",
       "from": "Mister",
@@ -662,7 +662,7 @@
       "raw": "2.631.660 | Mariano Díaz cambia de Mister a Heung Min Dad | 25 | M | HM | 3.274.659 | Tyrhys Dolan cambia de Mister a Rodando Nazário | 14"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Tyrhys Dolan",
       "from": "Mister",
@@ -671,7 +671,7 @@
       "raw": "3.274.659 | Tyrhys Dolan cambia de Mister a Rodando Nazário | 14 | M | RN | 2.755.510 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "9d",
       "playerName": "Martín Satriano",
       "from": "Lolo Tierra",
@@ -680,7 +680,7 @@
       "raw": "9d | Martín Satriano cambia de Lolo Tierra a Mister | 8 | LT | M | 7.177.040 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "9d",
       "playerName": "Angeliño",
       "from": "Lolo Tierra",
@@ -689,7 +689,7 @@
       "raw": "9d | Angeliño cambia de Lolo Tierra a Mister | 0 | LT | M | 1.808.560 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "9d",
       "playerName": "Luismi Cruz",
       "from": "Rodando Nazário",
@@ -698,7 +698,7 @@
       "raw": "9d | Luismi Cruz cambia de Rodando Nazário a Mister | 12 | RN | M | 1.956.150 | Comentar | ⚽ PORRA Atlético - Villarreal / LaLiga"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "9d",
       "playerName": "Dean Huijsen",
       "from": "Heung Min Dad",
@@ -707,7 +707,7 @@
       "raw": "9d | Dean Huijsen cambia de Heung Min Dad a Mister | 11 | HM | M | 9.737.700 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "9d",
       "playerName": "Kang-In Lee",
       "from": "Mister",
@@ -716,7 +716,7 @@
       "raw": "9d | Kang-In Lee cambia de Mister a Don Manuel Ruíz de Lopera | 24 | M | DM | 12.270.000 | Pedri cambia de Mister a Rodando Nazário | 21"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Pedri",
       "from": "Mister",
@@ -725,7 +725,7 @@
       "raw": "12.270.000 | Pedri cambia de Mister a Rodando Nazário | 21 | M | RN | 22.925.020 | Joaquín Muñoz cambia de Mister a Rodando Nazário | 10"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Joaquín Muñoz",
       "from": "Mister",
@@ -734,7 +734,7 @@
       "raw": "22.925.020 | Joaquín Muñoz cambia de Mister a Rodando Nazário | 10 | M | RN | 2.129.450 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "10d",
       "playerName": "João Cancelo",
       "from": "Don Manuel Ruíz de Lopera",
@@ -743,7 +743,7 @@
       "raw": "10d | João Cancelo cambia de Don Manuel Ruíz de Lopera a Mister | 5 | DM | M | 15.017.100 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "10d",
       "playerName": "Ferran Jutglà",
       "from": "Rodando Nazário",
@@ -752,7 +752,7 @@
       "raw": "10d | Ferran Jutglà cambia de Rodando Nazário a Mister | 8 | RN | M | 8.818.160 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "10d",
       "playerName": "Kazunari Kita",
       "from": "Peter LIM",
@@ -761,7 +761,7 @@
       "raw": "10d | Kazunari Kita cambia de Peter LIM a Mister | 0 | PL | M | 168.960 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "10d",
       "playerName": "Maroan Sannadi",
       "from": "Peter LIM",
@@ -770,7 +770,7 @@
       "raw": "10d | Maroan Sannadi cambia de Peter LIM a Mister | 0 | PL | M | 351.230 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "10d",
       "playerName": "Pablo García",
       "from": "Alex Ballena",
@@ -779,7 +779,7 @@
       "raw": "10d | Pablo García cambia de Alex Ballena a Mister | 14 | AB | M | 791.040 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "10d",
       "playerName": "Sergio Carreira",
       "from": "Heung Min Dad",
@@ -788,7 +788,7 @@
       "raw": "10d | Sergio Carreira cambia de Heung Min Dad a Mister | 10 | HM | M | 5.118.680 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "10d",
       "playerName": "José Salinas",
       "from": "Mister",
@@ -797,7 +797,7 @@
       "raw": "10d | José Salinas cambia de Mister a Alex Ballena | 5 | M | AB | 1.216.000 | Ali Houary cambia de Mister a Alex Ballena | 6"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Ali Houary",
       "from": "Mister",
@@ -806,7 +806,7 @@
       "raw": "1.216.000 | Ali Houary cambia de Mister a Alex Ballena | 6 | M | AB | 353.000 | Laro Gómez cambia de Mister a Alex Ballena | 0"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Laro Gómez",
       "from": "Mister",
@@ -815,7 +815,7 @@
       "raw": "353.000 | Laro Gómez cambia de Mister a Alex Ballena | 0 | M | AB | 206.000 | Orel Mangala cambia de Mister a Peter LIM | 9"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Orel Mangala",
       "from": "Mister",
@@ -824,7 +824,7 @@
       "raw": "206.000 | Orel Mangala cambia de Mister a Peter LIM | 9 | M | PL | 2.668.960 | Iván Martín cambia de Mister a Peter LIM | 9"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Iván Martín",
       "from": "Mister",
@@ -833,7 +833,7 @@
       "raw": "2.668.960 | Iván Martín cambia de Mister a Peter LIM | 9 | M | PL | 187.000 | João Cancelo cambia de Mister a Don Manuel Ruíz de Lopera | 5"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "João Cancelo",
       "from": "Mister",
@@ -842,7 +842,7 @@
       "raw": "187.000 | João Cancelo cambia de Mister a Don Manuel Ruíz de Lopera | 5 | M | DM | 14.326.030 | Alejandro Balde cambia de Mister a Don Manuel Ruíz de Lopera | 0"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Alejandro Balde",
       "from": "Mister",
@@ -851,7 +851,7 @@
       "raw": "14.326.030 | Alejandro Balde cambia de Mister a Don Manuel Ruíz de Lopera | 0 | M | DM | 6.536.760 | Pablo Fornals cambia de Mister a Rodando Nazário | 8"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Pablo Fornals",
       "from": "Mister",
@@ -860,16 +860,16 @@
       "raw": "6.536.760 | Pablo Fornals cambia de Mister a Rodando Nazário | 8 | M | RN | 17.676.700 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "10d",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
+      "dateText": "11d",
       "playerName": "Kiko Femenía",
       "from": "Alex Ballena",
       "to": "Mister",
       "price": 1244400,
-      "raw": "10d | Kiko Femenía cambia de Alex Ballena a Mister | -4 | AB | M | 1.244.400 | Comentar | Nuevas transacciones en el mercado"
+      "raw": "11d | Kiko Femenía cambia de Alex Ballena a Mister | -4 | AB | M | 1.244.400 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "11d",
       "playerName": "Sergio Gómez",
       "from": "Don Manuel Ruíz de Lopera",
@@ -878,7 +878,7 @@
       "raw": "11d | Sergio Gómez cambia de Don Manuel Ruíz de Lopera a Mister | 12 | DM | M | 5.403.840 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "11d",
       "playerName": "Luis Rioja",
       "from": "Peter LIM",
@@ -887,7 +887,7 @@
       "raw": "11d | Luis Rioja cambia de Peter LIM a Mister | 5 | PL | M | 4.314.670 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "11d",
       "playerName": "Fran García",
       "from": "Peter LIM",
@@ -896,7 +896,7 @@
       "raw": "11d | Fran García cambia de Peter LIM a Don Manuel Ruíz de Lopera por pago de cláusula | 10 | PL | DM | 4.576.365 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "11d",
       "playerName": "Julián Álvarez",
       "from": "Don Manuel Ruíz de Lopera",
@@ -905,7 +905,7 @@
       "raw": "11d | Julián Álvarez cambia de Don Manuel Ruíz de Lopera a Mister | 1 | DM | M | 14.056.620 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "11d",
       "playerName": "Oso",
       "from": "Rodando Nazário",
@@ -914,7 +914,7 @@
       "raw": "11d | Oso cambia de Rodando Nazário a Mister | 14 | RN | M | 4.935.150 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "11d",
       "playerName": "Yeremay Hernández",
       "from": "Don Manuel Ruíz de Lopera",
@@ -923,7 +923,7 @@
       "raw": "11d | Yeremay Hernández cambia de Don Manuel Ruíz de Lopera a Mister | 5 | DM | M | 8.713.120 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "11d",
       "playerName": "Asier Villalibre",
       "from": "Mister",
@@ -932,7 +932,7 @@
       "raw": "11d | Asier Villalibre cambia de Mister a Lolo Tierra | 7 | M | LT | 3.577.810 | Juan Cruz cambia de Mister a Peter LIM | 8"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Juan Cruz",
       "from": "Mister",
@@ -941,7 +941,7 @@
       "raw": "3.577.810 | Juan Cruz cambia de Mister a Peter LIM | 8 | M | PL | 2.788.050 | Pierre-Emerick Aubameyang cambia de Mister a Heung Min Dad | 34"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Pierre-Emerick Aubameyang",
       "from": "Mister",
@@ -950,7 +950,7 @@
       "raw": "2.788.050 | Pierre-Emerick Aubameyang cambia de Mister a Heung Min Dad | 34 | M | HM | 6.616.460 | Javi Hernandez cambia de Mister a Heung Min Dad | 19"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Javi Hernandez",
       "from": "Mister",
@@ -959,7 +959,7 @@
       "raw": "6.616.460 | Javi Hernandez cambia de Mister a Heung Min Dad | 19 | M | HM | 2.138.850 | Álvaro Mantilla cambia de Mister a Heung Min Dad | 8"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Álvaro Mantilla",
       "from": "Mister",
@@ -968,7 +968,7 @@
       "raw": "2.138.850 | Álvaro Mantilla cambia de Mister a Heung Min Dad | 8 | M | HM | 2.025.560 | Igor Zubeldia cambia de Mister a Heung Min Dad | 9"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Igor Zubeldia",
       "from": "Mister",
@@ -977,7 +977,7 @@
       "raw": "2.025.560 | Igor Zubeldia cambia de Mister a Heung Min Dad | 9 | M | HM | 1.830.340 | Ángel Pérez cambia de Mister a Rodando Nazário | 17"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Ángel Pérez",
       "from": "Mister",
@@ -986,7 +986,7 @@
       "raw": "1.830.340 | Ángel Pérez cambia de Mister a Rodando Nazário | 17 | M | RN | 3.755.780 | José Luis Gayà cambia de Mister a Rodando Nazário | 4"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "José Luis Gayà",
       "from": "Mister",
@@ -995,7 +995,7 @@
       "raw": "3.755.780 | José Luis Gayà cambia de Mister a Rodando Nazário | 4 | M | RN | 2.922.640 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "11d",
       "playerName": "Marc Bernal",
       "from": "Rodando Nazário",
@@ -1004,7 +1004,7 @@
       "raw": "11d | Marc Bernal cambia de Rodando Nazário a Mister | 20 | RN | M | 8.829.160 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "12d",
       "playerName": "Bernardo Silva",
       "from": "Heung Min Dad",
@@ -1013,7 +1013,7 @@
       "raw": "12d | Bernardo Silva cambia de Heung Min Dad a Mister | 8 | HM | M | 10.578.880 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "12d",
       "playerName": "Carl Starfelt",
       "from": "Don Manuel Ruíz de Lopera",
@@ -1022,7 +1022,7 @@
       "raw": "12d | Carl Starfelt cambia de Don Manuel Ruíz de Lopera a Mister | 5 | DM | M | 2.223.000 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "12d",
       "playerName": "Mario Soriano",
       "from": "Alex Ballena",
@@ -1031,7 +1031,7 @@
       "raw": "12d | Mario Soriano cambia de Alex Ballena a Mister | 14 | AB | M | 3.543.200 | Comentar | Bonificaciones realizadas por el administrador"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "12d",
       "playerName": "Gonzalo Petit",
       "from": "Peter LIM",
@@ -1040,7 +1040,7 @@
       "raw": "12d | Gonzalo Petit cambia de Peter LIM a Mister | 0 | PL | M | 185.000 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "12d",
       "playerName": "Alex Baena",
       "from": "Peter LIM",
@@ -1049,7 +1049,7 @@
       "raw": "12d | Alex Baena cambia de Peter LIM a Mister | 33 | PL | M | 10.799.760 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "12d",
       "playerName": "Arda Güler",
       "from": "Peter LIM",
@@ -1058,7 +1058,7 @@
       "raw": "12d | Arda Güler cambia de Peter LIM a Mister | 25 | PL | M | 11.945.280 | Comentar | Fin de la jornada 1"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "12d",
       "playerName": "Yuri Berchiche",
       "from": "Rodando Nazário",
@@ -1067,7 +1067,7 @@
       "raw": "12d | Yuri Berchiche cambia de Rodando Nazário a Mister | -4 | RN | M | 5.372.850 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "12d",
       "playerName": "Isaac Romero",
       "from": "Don Manuel Ruíz de Lopera",
@@ -1076,7 +1076,7 @@
       "raw": "12d | Isaac Romero cambia de Don Manuel Ruíz de Lopera a Mister | 14 | DM | M | 2.258.880 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "12d",
       "playerName": "Denzel Dumfries",
       "from": "Heung Min Dad",
@@ -1085,7 +1085,7 @@
       "raw": "12d | Denzel Dumfries cambia de Heung Min Dad a Mister | 7 | HM | M | 9.009.660 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "12d",
       "playerName": "Javi Rueda",
       "from": "Mister",
@@ -1094,7 +1094,7 @@
       "raw": "12d | Javi Rueda cambia de Mister a Lolo Tierra | 7 | M | LT | 1.966.780 | Jude Bellingham cambia de Mister a Peter LIM | 34"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Jude Bellingham",
       "from": "Mister",
@@ -1103,7 +1103,7 @@
       "raw": "1.966.780 | Jude Bellingham cambia de Mister a Peter LIM | 34 | M | PL | 19.969.000 | Facundo González cambia de Mister a Olivito | 7"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Facundo González",
       "from": "Mister",
@@ -1112,7 +1112,7 @@
       "raw": "19.969.000 | Facundo González cambia de Mister a Olivito | 7 | M | O | 2.265.000 | Rubén García cambia de Mister a Don Manuel Ruíz de Lopera | 10"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Rubén García",
       "from": "Mister",
@@ -1121,7 +1121,7 @@
       "raw": "2.265.000 | Rubén García cambia de Mister a Don Manuel Ruíz de Lopera | 10 | M | DM | 4.765.620 | Etta Eyong cambia de Mister a Don Manuel Ruíz de Lopera | 4"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Etta Eyong",
       "from": "Mister",
@@ -1130,7 +1130,7 @@
       "raw": "4.765.620 | Etta Eyong cambia de Mister a Don Manuel Ruíz de Lopera | 4 | M | DM | 3.483.260 | Antony Santos cambia de Mister a Heung Min Dad | 15"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Antony Santos",
       "from": "Mister",
@@ -1139,7 +1139,7 @@
       "raw": "3.483.260 | Antony Santos cambia de Mister a Heung Min Dad | 15 | M | HM | 15.511.930 | Aitor Paredes cambia de Mister a Rodando Nazário | 13"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Aitor Paredes",
       "from": "Mister",
@@ -1148,7 +1148,7 @@
       "raw": "15.511.930 | Aitor Paredes cambia de Mister a Rodando Nazário | 13 | M | RN | 1.581.760 | Comentar | Concurso de la Quiniela de la jornada 2"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "13d",
       "playerName": "Robert Navarro",
       "from": "Alex Ballena",
@@ -1157,7 +1157,7 @@
       "raw": "13d | Robert Navarro cambia de Alex Ballena a Mister | 13 | AB | M | 1.564.490 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "13d",
       "playerName": "Mikel Jauregizar",
       "from": "Mister",
@@ -1166,7 +1166,7 @@
       "raw": "13d | Mikel Jauregizar cambia de Mister a Rodando Nazário | 5 | M | RN | 3.389.610 | Comentar | Don Manuel Ruíz de Lopera ha comentado esta publicación"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "14d",
       "playerName": "Alberto Moleiro",
       "from": "Don Manuel Ruíz de Lopera",
@@ -1175,7 +1175,7 @@
       "raw": "14d | Alberto Moleiro cambia de Don Manuel Ruíz de Lopera a Mister | 8 | DM | M | 13.758.220 | Comentar · 2 | DM"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "14d",
       "playerName": "Julen Agirrezabala",
       "from": "Rodando Nazário",
@@ -1184,7 +1184,7 @@
       "raw": "14d | Julen Agirrezabala cambia de Rodando Nazário a Heung Min Dad por pago de cláusula | 11 | RN | HM | 5.668.514 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "14d",
       "playerName": "Miguel Loureiro",
       "from": "Heung Min Dad",
@@ -1193,7 +1193,7 @@
       "raw": "14d | Miguel Loureiro cambia de Heung Min Dad a Mister | 4 | HM | M | 1.789.920 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "14d",
       "playerName": "Pablo Ramón",
       "from": "Mister",
@@ -1202,7 +1202,7 @@
       "raw": "14d | Pablo Ramón cambia de Mister a Heung Min Dad | 9 | M | HM | 700.000 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "15d",
       "playerName": "Matteo Ruggeri",
       "from": "Alex Ballena",
@@ -1211,7 +1211,7 @@
       "raw": "15d | Matteo Ruggeri cambia de Alex Ballena a Mister | 0 | AB | M | 1.457.040 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "15d",
       "playerName": "Juan Cruz",
       "from": "Alex Ballena",
@@ -1220,7 +1220,7 @@
       "raw": "15d | Juan Cruz cambia de Alex Ballena a Mister | 8 | AB | M | 2.307.900 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "15d",
       "playerName": "Pere Milla",
       "from": "Alex Ballena",
@@ -1229,7 +1229,7 @@
       "raw": "15d | Pere Milla cambia de Alex Ballena a Mister | 5 | AB | M | 2.384.500 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "15d",
       "playerName": "Julen Agirrezabala",
       "from": "Heung Min Dad",
@@ -1238,7 +1238,7 @@
       "raw": "15d | Julen Agirrezabala cambia de Heung Min Dad a Rodando Nazário por pago de cláusula | 11 | HM | RN | 2.834.257 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "15d",
       "playerName": "Davinchi",
       "from": "Don Manuel Ruíz de Lopera",
@@ -1247,7 +1247,7 @@
       "raw": "15d | Davinchi cambia de Don Manuel Ruíz de Lopera a Mister | 0 | DM | M | 1.540.880 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "15d",
       "playerName": "Iván Romero",
       "from": "Don Manuel Ruíz de Lopera",
@@ -1256,7 +1256,7 @@
       "raw": "15d | Iván Romero cambia de Don Manuel Ruíz de Lopera a Mister | 9 | DM | M | 7.808.320 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "15d",
       "playerName": "Alberto Moleiro",
       "from": "Mister",
@@ -1265,7 +1265,7 @@
       "raw": "15d | Alberto Moleiro cambia de Mister a Don Manuel Ruíz de Lopera | 8 | M | DM | 14.571.320 | Dean Huijsen cambia de Mister a Heung Min Dad | 11"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Dean Huijsen",
       "from": "Mister",
@@ -1274,7 +1274,7 @@
       "raw": "14.571.320 | Dean Huijsen cambia de Mister a Heung Min Dad | 11 | M | HM | 8.925.250 | Facundo Bernal cambia de Mister a Heung Min Dad | 10"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Facundo Bernal",
       "from": "Mister",
@@ -1283,7 +1283,7 @@
       "raw": "8.925.250 | Facundo Bernal cambia de Mister a Heung Min Dad | 10 | M | HM | 3.013.540 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "16d",
       "playerName": "Carles Aleñá",
       "from": "Don Manuel Ruíz de Lopera",
@@ -1292,7 +1292,7 @@
       "raw": "16d | Carles Aleñá cambia de Don Manuel Ruíz de Lopera a Mister | 2 | DM | M | 1.574.000 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "16d",
       "playerName": "Antonio Blanco",
       "from": "Heung Min Dad",
@@ -1301,7 +1301,7 @@
       "raw": "16d | Antonio Blanco cambia de Heung Min Dad a Mister | 13 | HM | M | 9.086.970 | Comentar | Nuevas bajadas de cláusulas"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "16d",
       "playerName": "Nicolas Pépé",
       "from": "Mister",
@@ -1310,7 +1310,7 @@
       "raw": "16d | Nicolas Pépé cambia de Mister a Alex Ballena | 22 | M | AB | 14.260.000 | Mario Martín cambia de Mister a Alex Ballena | 3"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Mario Martín",
       "from": "Mister",
@@ -1319,7 +1319,7 @@
       "raw": "14.260.000 | Mario Martín cambia de Mister a Alex Ballena | 3 | M | AB | 1.850.000 | Iván Romero cambia de Mister a Don Manuel Ruíz de Lopera | 9"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Iván Romero",
       "from": "Mister",
@@ -1328,7 +1328,7 @@
       "raw": "1.850.000 | Iván Romero cambia de Mister a Don Manuel Ruíz de Lopera | 9 | M | DM | 7.457.300 | Thiago Fernández cambia de Mister a Heung Min Dad | 8"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Thiago Fernández",
       "from": "Mister",
@@ -1337,7 +1337,7 @@
       "raw": "7.457.300 | Thiago Fernández cambia de Mister a Heung Min Dad | 8 | M | HM | 631.040 | Comentar | Jornada 1"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Álvaro Mantilla",
       "from": "Heung Min Dad",
@@ -1346,7 +1346,7 @@
       "raw": "17d | Álvaro Mantilla cambia de Heung Min Dad a Mister | 8 | HM | M | 1.507.800 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Renato Veiga",
       "from": "Heung Min Dad",
@@ -1355,7 +1355,7 @@
       "raw": "17d | Renato Veiga cambia de Heung Min Dad a Mister | 11 | HM | M | 6.431.680 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Nelson Deossa",
       "from": "Heung Min Dad",
@@ -1364,7 +1364,7 @@
       "raw": "17d | Nelson Deossa cambia de Heung Min Dad a Mister | 6 | HM | M | 979.680 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Nahuel Tenaglia",
       "from": "Heung Min Dad",
@@ -1373,7 +1373,7 @@
       "raw": "17d | Nahuel Tenaglia cambia de Heung Min Dad a Mister | 24 | HM | M | 6.667.100 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Marc Bartra",
       "from": "Heung Min Dad",
@@ -1382,7 +1382,7 @@
       "raw": "17d | Marc Bartra cambia de Heung Min Dad a Mister | 11 | HM | M | 1.581.120 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Ángel Pérez",
       "from": "Rodando Nazário",
@@ -1391,7 +1391,7 @@
       "raw": "17d | Ángel Pérez cambia de Rodando Nazário a Mister | 17 | RN | M | 2.638.150 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Jon Moncayola",
       "from": "Rodando Nazário",
@@ -1400,7 +1400,7 @@
       "raw": "17d | Jon Moncayola cambia de Rodando Nazário a Mister | 9 | RN | M | 3.633.000 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Jiri Letacek",
       "from": "Alex Ballena",
@@ -1409,7 +1409,7 @@
       "raw": "17d | Jiri Letacek cambia de Alex Ballena a Mister | 0 | AB | M | 194.000 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Carlos Dominguez",
       "from": "Peter LIM",
@@ -1418,7 +1418,7 @@
       "raw": "17d | Carlos Dominguez cambia de Peter LIM a Mister | 0 | PL | M | 664.050 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Nobel Mendy",
       "from": "Peter LIM",
@@ -1427,7 +1427,7 @@
       "raw": "17d | Nobel Mendy cambia de Peter LIM a Mister | 0 | PL | M | 1.536.640 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Alejandro Catena",
       "from": "Alex Ballena",
@@ -1436,7 +1436,7 @@
       "raw": "17d | Alejandro Catena cambia de Alex Ballena a Mister | 14 | AB | M | 8.219.520 | Comentar | Rodando Nazário ha comentado esta publicación"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Victor Chust",
       "from": "Mister",
@@ -1445,7 +1445,7 @@
       "raw": "17d | Victor Chust cambia de Mister a Alex Ballena | 7 | M | AB | 1.900.000 | Álex Berenguer cambia de Mister a Peter LIM | 17"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Álex Berenguer",
       "from": "Mister",
@@ -1454,7 +1454,7 @@
       "raw": "1.900.000 | Álex Berenguer cambia de Mister a Peter LIM | 17 | M | PL | 1.770.780 | Raphinha cambia de Mister a Heung Min Dad | 47"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Raphinha",
       "from": "Mister",
@@ -1463,7 +1463,7 @@
       "raw": "1.770.780 | Raphinha cambia de Mister a Heung Min Dad | 47 | M | HM | 20.600.350 | Comentar · 1 | RN"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Clemens Riedel",
       "from": "Rodando Nazário",
@@ -1472,7 +1472,7 @@
       "raw": "17d | Clemens Riedel cambia de Rodando Nazário a Mister | 6 | RN | M | 1.626.900 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "David Mella",
       "from": "Heung Min Dad",
@@ -1481,7 +1481,7 @@
       "raw": "17d | David Mella cambia de Heung Min Dad a Mister | 4 | HM | M | 2.302.560 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Zakaria Eddahchouri",
       "from": "Heung Min Dad",
@@ -1490,7 +1490,7 @@
       "raw": "17d | Zakaria Eddahchouri cambia de Heung Min Dad a Mister | 2 | HM | M | 1.322.000 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Tani Oluwaseyi",
       "from": "Heung Min Dad",
@@ -1499,7 +1499,7 @@
       "raw": "17d | Tani Oluwaseyi cambia de Heung Min Dad a Mister | 3 | HM | M | 1.071.000 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Augusto Batalla",
       "from": "Heung Min Dad",
@@ -1508,7 +1508,7 @@
       "raw": "17d | Augusto Batalla cambia de Heung Min Dad a Mister | 7 | HM | M | 7.630.240 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "17d",
       "playerName": "Hugo Sotelo",
       "from": "Heung Min Dad",
@@ -1517,7 +1517,7 @@
       "raw": "17d | Hugo Sotelo cambia de Heung Min Dad a Mister | 5 | HM | M | 1.526.720 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "18d",
       "playerName": "José Luis Gayà",
       "from": "Don Manuel Ruíz de Lopera",
@@ -1526,7 +1526,7 @@
       "raw": "18d | José Luis Gayà cambia de Don Manuel Ruíz de Lopera a Mister | 4 | DM | M | 2.030.100 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "18d",
       "playerName": "Arnaut Danjuma",
       "from": "Rodando Nazário",
@@ -1535,7 +1535,7 @@
       "raw": "18d | Arnaut Danjuma cambia de Rodando Nazário a Mister | 3 | RN | M | 1.895.000 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "18d",
       "playerName": "Ryunosuke Sato",
       "from": "Don Manuel Ruíz de Lopera",
@@ -1544,7 +1544,7 @@
       "raw": "18d | Ryunosuke Sato cambia de Don Manuel Ruíz de Lopera a Heung Min Dad por pago de cláusula | 11 | DM | HM | 4.832.500 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "18d",
       "playerName": "Ayoze Pérez",
       "from": "Heung Min Dad",
@@ -1553,7 +1553,7 @@
       "raw": "18d | Ayoze Pérez cambia de Heung Min Dad a Lolo Tierra por pago de cláusula | 9 | HM | LT | 3.960.000 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "18d",
       "playerName": "Leandro Cabrera",
       "from": "Don Manuel Ruíz de Lopera",
@@ -1562,7 +1562,7 @@
       "raw": "18d | Leandro Cabrera cambia de Don Manuel Ruíz de Lopera a Mister | 0 | DM | M | 8.951.730 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "18d",
       "playerName": "Marc Cucurella",
       "from": "Mister",
@@ -1571,7 +1571,7 @@
       "raw": "18d | Marc Cucurella cambia de Mister a Alex Ballena | 12 | M | AB | 14.500.000 | Julen Agirrezabala cambia de Mister a Heung Min Dad | 11"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Julen Agirrezabala",
       "from": "Mister",
@@ -1580,7 +1580,7 @@
       "raw": "14.500.000 | Julen Agirrezabala cambia de Mister a Heung Min Dad | 11 | M | HM | 1.889.505 | Yuri Berchiche cambia de Mister a Rodando Nazário | -4"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Yuri Berchiche",
       "from": "Mister",
@@ -1589,7 +1589,7 @@
       "raw": "1.889.505 | Yuri Berchiche cambia de Mister a Rodando Nazário | -4 | M | RN | 5.224.510 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "18d",
       "playerName": "Jeremy Toljan",
       "from": "Olivito",
@@ -1598,7 +1598,7 @@
       "raw": "18d | Jeremy Toljan cambia de Olivito a Mister | 9 | O | M | 1.540.880 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "19d",
       "playerName": "Rodrigo Mendoza",
       "from": "Heung Min Dad",
@@ -1607,7 +1607,7 @@
       "raw": "19d | Rodrigo Mendoza cambia de Heung Min Dad a Mister | 7 | HM | M | 1.089.920 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "19d",
       "playerName": "Adrián Niño",
       "from": "Heung Min Dad",
@@ -1616,7 +1616,7 @@
       "raw": "19d | Adrián Niño cambia de Heung Min Dad a Mister | 0 | HM | M | 1.273.980 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "19d",
       "playerName": "Javi Rodríguez",
       "from": "Heung Min Dad",
@@ -1625,7 +1625,7 @@
       "raw": "19d | Javi Rodríguez cambia de Heung Min Dad a Mister | 6 | HM | M | 2.017.770 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "19d",
       "playerName": "Gustavo Puerta",
       "from": "Rodando Nazário",
@@ -1634,7 +1634,7 @@
       "raw": "19d | Gustavo Puerta cambia de Rodando Nazário a Mister | 12 | RN | M | 5.850.000 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "19d",
       "playerName": "José Giménez",
       "from": "Alex Ballena",
@@ -1643,7 +1643,7 @@
       "raw": "19d | José Giménez cambia de Alex Ballena a Mister | 5 | AB | M | 1.158.750 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "19d",
       "playerName": "Rubén Sánchez",
       "from": "Alex Ballena",
@@ -1652,7 +1652,7 @@
       "raw": "19d | Rubén Sánchez cambia de Alex Ballena a Mister | 0 | AB | M | 230.520 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "19d",
       "playerName": "Miguel Rodríguez",
       "from": "Alex Ballena",
@@ -1661,7 +1661,7 @@
       "raw": "19d | Miguel Rodríguez cambia de Alex Ballena a Mister | 0 | AB | M | 983.250 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "19d",
       "playerName": "Giovani Lo Celso",
       "from": "Lolo Tierra",
@@ -1670,7 +1670,7 @@
       "raw": "19d | Giovani Lo Celso cambia de Lolo Tierra a Mister | 0 | LT | M | 7.846.650 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "19d",
       "playerName": "Leo Román",
       "from": "Olivito",
@@ -1679,7 +1679,7 @@
       "raw": "19d | Leo Román cambia de Olivito a Mister | 16 | O | M | 10.425.450 | Comentar | 19d"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "19d",
       "playerName": "Daniel Vivian",
       "from": "Heung Min Dad",
@@ -1688,7 +1688,7 @@
       "raw": "19d | Daniel Vivian cambia de Heung Min Dad a Mister | 0 | HM | M | 4.118.970 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "19d",
       "playerName": "Robin Le Normand",
       "from": "Don Manuel Ruíz de Lopera",
@@ -1697,7 +1697,7 @@
       "raw": "19d | Robin Le Normand cambia de Don Manuel Ruíz de Lopera a Mister | -3 | DM | M | 2.575.650 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "19d",
       "playerName": "Jonathan Dubasin",
       "from": "Mister",
@@ -1706,7 +1706,7 @@
       "raw": "19d | Jonathan Dubasin cambia de Mister a Heung Min Dad | 7 | M | HM | 1.582.790 | Nelson Deossa cambia de Mister a Heung Min Dad | 6"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Nelson Deossa",
       "from": "Mister",
@@ -1715,7 +1715,7 @@
       "raw": "1.582.790 | Nelson Deossa cambia de Mister a Heung Min Dad | 6 | M | HM | 925.340 | Georges Mikautadze cambia de Mister a Rodando Nazário | 17"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Georges Mikautadze",
       "from": "Mister",
@@ -1724,7 +1724,7 @@
       "raw": "925.340 | Georges Mikautadze cambia de Mister a Rodando Nazário | 17 | M | RN | 16.601.510 | Ferran Jutglà cambia de Mister a Rodando Nazário | 8"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Ferran Jutglà",
       "from": "Mister",
@@ -1733,7 +1733,7 @@
       "raw": "16.601.510 | Ferran Jutglà cambia de Mister a Rodando Nazário | 8 | M | RN | 8.227.770 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "20d",
       "playerName": "Abel Bretones",
       "from": "Don Manuel Ruíz de Lopera",
@@ -1742,7 +1742,7 @@
       "raw": "20d | Abel Bretones cambia de Don Manuel Ruíz de Lopera a Mister | 9 | DM | M | 1.675.800 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "20d",
       "playerName": "Lucas Boyé",
       "from": "Rodando Nazário",
@@ -1751,7 +1751,7 @@
       "raw": "20d | Lucas Boyé cambia de Rodando Nazário a Mister | 12 | RN | M | 7.502.560 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "20d",
       "playerName": "Aymeric Laporte",
       "from": "Rodando Nazário",
@@ -1760,7 +1760,7 @@
       "raw": "20d | Aymeric Laporte cambia de Rodando Nazário a Mister | 10 | RN | M | 9.451.050 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "20d",
       "playerName": "Mikel Jauregizar",
       "from": "Heung Min Dad",
@@ -1769,7 +1769,7 @@
       "raw": "20d | Mikel Jauregizar cambia de Heung Min Dad a Mister | 5 | HM | M | 2.002.000 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "20d",
       "playerName": "Beñat Turrientes",
       "from": "Lolo Tierra",
@@ -1778,7 +1778,7 @@
       "raw": "20d | Beñat Turrientes cambia de Lolo Tierra a Mister | 9 | LT | M | 2.030.130 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "20d",
       "playerName": "Julio Díaz",
       "from": "Lolo Tierra",
@@ -1787,7 +1787,7 @@
       "raw": "20d | Julio Díaz cambia de Lolo Tierra a Mister | 4 | LT | M | 833.250 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "20d",
       "playerName": "Andrés Castrín",
       "from": "Lolo Tierra",
@@ -1796,7 +1796,7 @@
       "raw": "20d | Andrés Castrín cambia de Lolo Tierra a Mister | 7 | LT | M | 1.529.550 | Comentar | Nuevos movimientos de jugadores"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "20d",
       "playerName": "Marc Aguado",
       "from": "Heung Min Dad",
@@ -1805,7 +1805,7 @@
       "raw": "20d | Marc Aguado cambia de Heung Min Dad a Mister | 16 | HM | M | 1.672.650 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "20d",
       "playerName": "Raúl Moro",
       "from": "Mister",
@@ -1814,7 +1814,7 @@
       "raw": "20d | Raúl Moro cambia de Mister a Lolo Tierra | 2 | M | LT | 2.120.910 | Álvaro Valles cambia de Mister a Don Manuel Ruíz de Lopera | 16"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": null,
       "playerName": "Álvaro Valles",
       "from": "Mister",
@@ -1823,49 +1823,31 @@
       "raw": "2.120.910 | Álvaro Valles cambia de Mister a Don Manuel Ruíz de Lopera | 16 | M | DM | 6.279.180 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "20d",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
+      "dateText": "21d",
       "playerName": "Alemão",
       "from": "Olivito",
       "to": "Mister",
       "price": 1532640,
-      "raw": "20d | Alemão cambia de Olivito a Mister | 6 | O | M | 1.532.640 | Comentar | Nuevas transacciones en el mercado"
+      "raw": "21d | Alemão cambia de Olivito a Mister | 6 | O | M | 1.532.640 | Comentar | Nuevas transacciones en el mercado"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "20d",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
+      "dateText": "21d",
       "playerName": "Unai López",
       "from": "Olivito",
       "to": "Mister",
       "price": 1508000,
-      "raw": "20d | Unai López cambia de Olivito a Mister | 11 | O | M | 1.508.000 | Comentar | Nuevo mensaje"
+      "raw": "21d | Unai López cambia de Olivito a Mister | 11 | O | M | 1.508.000 | Comentar | Nuevo mensaje"
     },
     {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
+      "scrapedAt": "2026-09-01T11:09:32.729Z",
       "dateText": "21d",
       "playerName": "Johnny Cardoso",
       "from": "Don Manuel Ruíz de Lopera",
       "to": "Mister",
       "price": 1145460,
       "raw": "21d | Johnny Cardoso cambia de Don Manuel Ruíz de Lopera a Mister | 1 | DM | M | 1.145.460 | Comentar | Nuevas transacciones en el mercado"
-    },
-    {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "21d",
-      "playerName": "Pedro Bigas",
-      "from": "Don Manuel Ruíz de Lopera",
-      "to": "Mister",
-      "price": 1700840,
-      "raw": "21d | Pedro Bigas cambia de Don Manuel Ruíz de Lopera a Mister | 3 | DM | M | 1.700.840 | Comentar | Nuevas transacciones en el mercado"
-    },
-    {
-      "scrapedAt": "2026-09-01T09:35:18.925Z",
-      "dateText": "21d",
-      "playerName": "José Salinas",
-      "from": "Don Manuel Ruíz de Lopera",
-      "to": "Mister",
-      "price": 871080,
-      "raw": "21d | José Salinas cambia de Don Manuel Ruíz de Lopera a Mister | 5 | DM | M | 871.080 | Comentar | Nuevas transacciones en"
     }
   ]
 }

@@ -41,7 +41,7 @@ const images = [
 
 const BUILD_VERSION = {
   label: "web team-id-v2",
-  updatedAt: "2026-09-01T10:20:48+02:00"
+  updatedAt: "2026-09-01T13:10:55+02:00"
 };
 
 const cardTeams = new Map([
@@ -1349,6 +1349,7 @@ function dateFromSpainTime({ year, month, day, hour, minute }) {
 function buildRoundEvents() {
   const revealBeforeStartMs = 24 * 60 * 60 * 1000;
   const visibleAfterStartMs = (4 * 24 + 6) * 60 * 60 * 1000;
+  const latestClosed = latestClosedRound();
   const dynamicSchedule = state.dashboard?.calendar?.rounds?.length
     ? state.dashboard.calendar.rounds.map(round => ({
       round: round.round,
@@ -1361,11 +1362,19 @@ function buildRoundEvents() {
       startDate: dateFromSpainTime(item.start)
     }));
 
-  return dynamicSchedule.map((item, index) => {
+  const relevantSchedule = dynamicSchedule
+    .map(item => ({
+      ...item,
+      startDate: item.startDate || dateFromSpainTime(item.start)
+    }))
+    .filter(item => Number(item.round) > latestClosed && item.startDate instanceof Date && !Number.isNaN(item.startDate.getTime()))
+    .sort((a, b) => a.startDate - b.startDate || Number(a.round) - Number(b.round));
+
+  return relevantSchedule.map((item, index) => {
     const startDate = item.startDate || dateFromSpainTime(item.start);
     const revealDate = new Date(startDate.getTime() - revealBeforeStartMs);
-    const nextStart = dynamicSchedule[index + 1]
-      ? dynamicSchedule[index + 1].startDate || dateFromSpainTime(dynamicSchedule[index + 1].start)
+    const nextStart = relevantSchedule[index + 1]
+      ? relevantSchedule[index + 1].startDate || dateFromSpainTime(relevantSchedule[index + 1].start)
       : null;
     const nextRevealDate = nextStart ? new Date(nextStart.getTime() - revealBeforeStartMs) : null;
     const naturalResetDate = new Date(startDate.getTime() + visibleAfterStartMs);

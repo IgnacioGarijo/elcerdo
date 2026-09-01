@@ -29,6 +29,8 @@ El archivo `data/cerdo/history.json` guarda el histórico manual o automatizado 
 
 La regla de acierto es simple: una tarjeta cuenta como acierto si representa a un equipo que termina último o penúltimo esa jornada. Las tarjetas deben coincidir siempre entre la visualización principal y el selector histórico. Para jornadas pasadas hay que guardar las cartas reales elegidas, no regenerarlas al vuelo.
 
+La cuenta atrás del cerdo no debe depender del número de jornada en orden estricto, porque LaLiga puede adelantar o aplazar jornadas. La web toma el calendario actualizado, descarta las jornadas que el dashboard ya tenga como cerradas y ordena las restantes por fecha real de inicio. La próxima sentencia siempre será la de la jornada no cerrada que empiece antes, revelando tarjetas 24 horas antes de su primer partido.
+
 Relación actual de tarjetas:
 
 - `img/img1.jpg`: Peter LIM.
