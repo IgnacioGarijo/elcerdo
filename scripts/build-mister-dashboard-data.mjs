@@ -255,6 +255,96 @@ function canonicalizeRounds(rounds, identity) {
   });
 }
 
+function dateFromSpainTime({ year, month, day, hour = 19, minute = 0 }) {
+  const utcGuess = new Date(Date.UTC(year, month - 1, day, hour, minute, 0));
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Europe/Madrid",
+    hour12: false,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+  }).formatToParts(utcGuess);
+  const get = (type) => parts.find((part) => part.type === type)?.value;
+  const spainTime = Date.UTC(get("year"), get("month") - 1, get("day"), get("hour"), get("minute"), get("second"));
+  return new Date(utcGuess.getTime() - (spainTime - utcGuess.getTime()));
+}
+
+function roundStartDate(roundCalendar) {
+  if (!roundCalendar) return null;
+  if (roundCalendar.start?.year && roundCalendar.start?.month && roundCalendar.start?.day) {
+    return dateFromSpainTime(roundCalendar.start);
+  }
+  const raw = roundCalendar.firstKickoff || roundCalendar.firstKickoffLocal || roundCalendar.date;
+  if (!raw) return null;
+  const parsed = new Date(raw);
+  return Number.isNaN(parsed.getTime()) ? null : parsed;
+}
+
+function nextCalendarRound(calendar, latestClosedRound) {
+  return (calendar?.rounds || [])
+    .map((round) => ({ ...round, startDate: roundStartDate(round) }))
+    .filter((round) => Number(round.round) > latestClosedRound && round.startDate instanceof Date && !Number.isNaN(round.startDate.getTime()))
+    .sort((a, b) => a.startDate - b.startDate || Number(a.round) - Number(b.round))[0] || null;
+}
+
+function rowsLookLikeSameScoreboard(rowsA = [], rowsB = []) {
+  if (!rowsA.length || rowsA.length !== rowsB.length) return false;
+  const byIdOrName = new Map(rowsB.map((row) => [String(row.managerId || row.name), Number(row.points)]));
+  return rowsA.every((row) => byIdOrName.get(String(row.managerId || row.name)) === Number(row.points));
+}
+
+function isMeaningfulLiveRound(round, latestClosedRound, latestClosedRows, calendar, now = new Date()) {
+  if (Number(round.round) <= latestClosedRound) return false;
+  const calendarRound = (calendar?.rounds || []).find((item) => Number(item.round) === Number(round.round));
+  const startDate = roundStartDate(calendarRound);
+  if (startDate && startDate > now) return false;
+  if (rowsLookLikeSameScoreboard(round.rows || [], latestClosedRows || [])) return false;
+  return true;
+}
+
+function buildParsedLiveRound(parsedStandings, calendar, latestClosedRound, latestClosedRows, identity, now = new Date()) {
+  if (!parsedStandings.live?.length) return null;
+  const calendarRound = nextCalendarRound(calendar, latestClosedRound);
+  if (!calendarRound?.startDate || calendarRound.startDate > now) return null;
+  const rows = parsedStandings.live.map((row) => canonicalizeTeamRow(row, identity));
+  if (rowsLookLikeSameScoreboard(rows, latestClosedRows || [])) return null;
+  return {
+    round: Number(calendarRound.round),
+    status: "in_progress",
+    rows,
+    rowsBySystem: { final: rows }
+  };
+}
+
+function reconcilePigHistory(pigHistory, closedRounds) {
+  const closedByRound = new Map((closedRounds || []).map((round) => [Number(round.round), round]));
+  let changed = false;
+  const rounds = (pigHistory?.rounds || []).map((pigRound) => {
+    const closedRound = closedByRound.get(Number(pigRound.round));
+    if (!closedRound?.rows?.length) return pigRound;
+    const ordered = [...closedRound.rows].sort((a, b) => Number(a.rank || 999) - Number(b.rank || 999));
+    const victims = ordered.slice(-2).reverse().map((row) => row.name).filter(Boolean);
+    const nextRound = {
+      ...pigRound,
+      status: "closed",
+      victims
+    };
+    if (JSON.stringify(nextRound) !== JSON.stringify(pigRound)) changed = true;
+    return nextRound;
+  });
+  return {
+    history: {
+      ...pigHistory,
+      updatedAt: changed ? new Date().toISOString() : pigHistory?.updatedAt,
+      rounds
+    },
+    changed
+  };
+}
+
 function initialsFor(name) {
   return String(name || "")
     .split(/\s+/)
@@ -1390,7 +1480,11 @@ async function main() {
   const effectiveClosedRounds = deepRounds.length
     ? deepRounds.filter((round) => isClosedRound(round, closedRounds))
     : feedClosedRounds.length ? feedClosedRounds : canonicalizeRounds(FALLBACK_CLOSED_ROUNDS, teamIdentity);
-  const liveRounds = deepRounds.filter((round) => !isClosedRound(round, closedRounds));
+  const latestClosedRound = Math.max(0, ...effectiveClosedRounds.map((round) => round.round));
+  const latestClosedRows = effectiveClosedRounds.find((round) => Number(round.round) === latestClosedRound)?.rows || [];
+  const liveRounds = deepRounds.filter((round) =>
+    !isClosedRound(round, closedRounds) && isMeaningfulLiveRound(round, latestClosedRound, latestClosedRows, calendar)
+  );
   const currentStandings = parsedStandings.general.map((row) => canonicalizeTeamRow(row, teamIdentity));
   const teams = currentStandings.length
     ? currentStandings.map((row) => canonicalizeTeamRow(row, teamIdentity))
@@ -1398,7 +1492,8 @@ async function main() {
       ? deep.managers.map((row) => canonicalizeTeamRow(row, teamIdentity))
       : effectiveClosedRounds[0].rows.map((row) => ({ name: row.name, initials: row.initials }));
   const teamValues = new Map(currentStandings.map((row) => [row.name, row.value || 0]));
-  const latestClosedRound = Math.max(0, ...effectiveClosedRounds.map((round) => round.round));
+  const parsedLiveRound = buildParsedLiveRound(parsedStandings, calendar, latestClosedRound, latestClosedRows, teamIdentity);
+  const reconciledPig = reconcilePigHistory(pigHistory, effectiveClosedRounds);
   const scoringSystems = [
     { id: "final", name: "Mixto" },
     { id: "as", name: "AS" },
@@ -1434,12 +1529,7 @@ async function main() {
     teams,
     currentStandings,
     closedRounds: effectiveClosedRounds.map(slimRoundForDashboard),
-    liveRounds: liveRounds.length ? liveRounds.map(slimRoundForDashboard) : parsedStandings.live.length ? [{
-      round: latestClosedRound + 1,
-      status: "in_progress",
-      rows: parsedStandings.live.map((row) => canonicalizeTeamRow(row, teamIdentity)),
-      rowsBySystem: { final: parsedStandings.live.map((row) => canonicalizeTeamRow(row, teamIdentity)) }
-    }] : [],
+    liveRounds: liveRounds.length ? liveRounds.map(slimRoundForDashboard) : parsedLiveRound ? [parsedLiveRound] : [],
     cumulative: Array.from({ length: latestClosedRound + 1 }, (_, round) => ({ round, rows: cumulativeStandings(teams, effectiveClosedRounds, round) })),
     cumulativeBySystem: Object.fromEntries(scoringSystems.map((system) => [
       system.id,
@@ -1504,7 +1594,7 @@ async function main() {
       playerProfiles: deep.playerProfiles?.length || 0
     },
     calendar,
-    pig: pigHistory
+    pig: reconciledPig.history
   };
 
   await fs.mkdir(MISTER_DIR, { recursive: true });
@@ -1512,6 +1602,9 @@ async function main() {
   await fs.mkdir(LATEST_DIR, { recursive: true });
   await fs.writeFile(path.join(LATEST_DIR, "dashboard.json"), `${JSON.stringify(dashboard, null, 2)}\n`, "utf8");
   await fs.mkdir(CERDO_DIR, { recursive: true });
+  if (reconciledPig.changed) {
+    await fs.writeFile(path.join(CERDO_DIR, "history.json"), `${JSON.stringify(reconciledPig.history, null, 2)}\n`, "utf8");
+  }
   await fs.mkdir(LALIGA_DIR, { recursive: true });
   console.log(`Dashboard Mister generado: J${latestClosedRound} cerrada, ${teams.length} equipos, ${market?.players?.length || 0} jugadores en mercado.`);
 }

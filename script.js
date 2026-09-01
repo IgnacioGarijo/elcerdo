@@ -40,8 +40,8 @@ const images = [
 ];
 
 const BUILD_VERSION = {
-  label: "web team-id-v2",
-  updatedAt: "2026-09-01T13:10:55+02:00"
+  label: "web round-close-v1",
+  updatedAt: "2026-09-01T13:35:00+02:00"
 };
 
 const cardTeams = new Map([

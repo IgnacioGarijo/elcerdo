@@ -29,7 +29,11 @@ El archivo `data/cerdo/history.json` guarda el histórico manual o automatizado 
 
 La regla de acierto es simple: una tarjeta cuenta como acierto si representa a un equipo que termina último o penúltimo esa jornada. Las tarjetas deben coincidir siempre entre la visualización principal y el selector histórico. Para jornadas pasadas hay que guardar las cartas reales elegidas, no regenerarlas al vuelo.
 
+Cuando el builder detecta que una jornada ya aparece cerrada en los datos de Mister, reconcilia automáticamente el histórico del cerdo: conserva las `cards` originales, marca la jornada como `closed` y rellena `victims` con el último y el penúltimo reales de esa jornada. Así se evita que una jornada quede medio abierta en el histórico o que se confundan los equipos elegidos por el cerdo con las víctimas reales.
+
 La cuenta atrás del cerdo no debe depender del número de jornada en orden estricto, porque LaLiga puede adelantar o aplazar jornadas. La web toma el calendario actualizado, descarta las jornadas que el dashboard ya tenga como cerradas y ordena las restantes por fecha real de inicio. La próxima sentencia siempre será la de la jornada no cerrada que empiece antes, revelando tarjetas 24 horas antes de su primer partido.
+
+Las jornadas en vivo sólo deben publicarse en `dashboard.liveRounds` cuando el calendario indique que esa jornada ya ha empezado y los datos no sean una copia de la última jornada cerrada. Mister puede dejar tablas residuales con puntos de la jornada anterior; esas tablas no se deben etiquetar como una jornada abierta nueva.
 
 Relación actual de tarjetas:
 
@@ -92,7 +96,7 @@ Si una jornada queda incompleta por partidos aplazados, se debe mantener como `i
 
 Conviene revisar de vez en cuando:
 
-- Que el workflow semanal no esté fallando en GitHub.
+- Que el workflow diario no esté fallando en GitHub.
 - Que la sesión de Mister no haya caducado.
 - Que `data/cerdo/history.json` guarde bien las tarjetas reales de cada jornada.
 - Que la cabecera de la web muestre fechas distintas para versión web y datos, así se sabe si se actualizó código, datos o ambas cosas.
@@ -109,7 +113,7 @@ El archivo `data/mister/team-registry.json` guarda:
 - `color`: color fijo de ese equipo en todos los gráficos.
 - `aliases`: nombres antiguos o alternativos que deben resolverse al mismo equipo.
 
-Cada vez que corre el builder semanal, compara los managers actuales de Mister con ese registro. Si detecta el mismo `managerId` con un nombre nuevo, actualiza `currentName` y conserva los nombres anteriores en `aliases`. Los datos antiguos que sólo tengan el nombre escrito, como snapshots de mercado, transferencias visibles o tarjetas históricas del cerdo, se deben resolver contra esos alias antes de agregarse.
+Cada vez que corre el builder diario, compara los managers actuales de Mister con ese registro. Si detecta el mismo `managerId` con un nombre nuevo, actualiza `currentName` y conserva los nombres anteriores en `aliases`. Los datos antiguos que sólo tengan el nombre escrito, como snapshots de mercado, transferencias visibles o tarjetas históricas del cerdo, se deben resolver contra esos alias antes de agregarse.
 
 ## Scraping profundo
 

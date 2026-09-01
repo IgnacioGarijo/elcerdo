@@ -1,24 +1,42 @@
 {
-  "updatedAt": "2026-08-29T13:26:15+02:00",
-  "note": "Histórico inicial editable. Las automatizaciones semanales podrán actualizar este archivo con las víctimas reales y las dos tarjetas de cada jornada.",
+  "updatedAt": "2026-09-01T11:25:13.310Z",
+  "note": "Histórico inicial editable. Las automatizaciones diarias podrán actualizar este archivo con las víctimas reales y conservar las dos tarjetas elegidas por el cerdo en cada jornada.",
   "rounds": [
     {
       "round": 1,
       "status": "closed",
-      "victims": ["Alex Ballena", "Olivito"],
-      "cards": ["img/img2.jpg", "img/img6.jpg"]
+      "victims": [
+        "Alex Ballena",
+        "Olivito"
+      ],
+      "cards": [
+        "img/img2.jpg",
+        "img/img6.jpg"
+      ]
     },
     {
       "round": 2,
       "status": "closed",
-      "victims": ["Alex Ballena", "Peter LIM"],
-      "cards": ["img/img4.jpg", "img/img1.jpg"]
+      "victims": [
+        "Alex Ballena",
+        "Olivito"
+      ],
+      "cards": [
+        "img/img4.jpg",
+        "img/img1.jpg"
+      ]
     },
     {
       "round": 3,
-      "status": "in_progress",
-      "victims": [],
-      "cards": ["img/img3.jpg", "img/img7.jpeg"]
+      "status": "closed",
+      "victims": [
+        "Alex Ballena",
+        "Rodando Nazário"
+      ],
+      "cards": [
+        "img/img3.jpg",
+        "img/img7.jpeg"
+      ]
     }
   ]
 }

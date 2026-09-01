@@ -1,13 +1,13 @@
 {
   "meta": {
-    "generatedAt": "2026-09-01T11:10:33.561Z",
+    "generatedAt": "2026-09-01T11:28:42.870Z",
     "sources": {
-      "standings": "2026-09-01T11:09:32.729Z",
-      "feed": "2026-09-01T11:09:32.729Z",
-      "market": "2026-09-01T11:09:32.729Z",
-      "team": "2026-09-01T11:09:32.729Z",
-      "search": "2026-09-01T11:09:32.729Z",
-      "calendar": "2026-08-31T15:03:15.087Z"
+      "standings": "2026-09-01T11:27:13.080Z",
+      "feed": "2026-09-01T11:27:13.080Z",
+      "market": "2026-09-01T11:27:13.080Z",
+      "team": "2026-09-01T11:27:13.080Z",
+      "search": "2026-09-01T11:27:13.080Z",
+      "calendar": "2026-09-01T11:28:42.080Z"
     },
     "latestClosedRound": 3,
     "liveRoundPolicy": "Las jornadas en juego se muestran, pero no suman ni desbloquean galardones hasta aparecer como Fin de la jornada en el feed.",
@@ -19,7 +19,7 @@
     ]
   },
   "teamRegistry": {
-    "updatedAt": "2026-09-01T11:10:33.515Z",
+    "updatedAt": "2026-09-01T11:28:42.817Z",
     "teams": [
       {
         "managerId": "15420188",
@@ -7672,202 +7672,7 @@
       }
     }
   ],
-  "liveRounds": [
-    {
-      "round": 4,
-      "status": "in_progress",
-      "rows": [
-        {
-          "rank": 1,
-          "initials": "HM",
-          "name": "Heung Min Dad",
-          "points": 84,
-          "value": 58088000,
-          "playedText": "10 / 11",
-          "managerId": "8771310",
-          "color": "#a5ff6a",
-          "aliases": [
-            "Heung Min Dad"
-          ]
-        },
-        {
-          "rank": 2,
-          "initials": "PL",
-          "name": "Peter LIM",
-          "points": 59,
-          "value": 48362000,
-          "playedText": "8 / 11",
-          "managerId": "12113243",
-          "color": "#e8d26a",
-          "aliases": [
-            "Peter LIM"
-          ]
-        },
-        {
-          "rank": 3,
-          "initials": "DM",
-          "name": "Don Manuel Ruíz de Lopera",
-          "points": 51,
-          "value": 71372000,
-          "playedText": "10 / 11",
-          "managerId": "8785696",
-          "color": "#66fff1",
-          "aliases": [
-            "Don Manuel Ruíz de Lopera"
-          ]
-        },
-        {
-          "rank": 4,
-          "initials": "O",
-          "name": "Olivito",
-          "points": 50,
-          "value": 62216000,
-          "playedText": "10 / 11",
-          "managerId": "10359824",
-          "color": "#f8fbff",
-          "aliases": [
-            "Olivito"
-          ]
-        },
-        {
-          "rank": 5,
-          "initials": "LT",
-          "name": "Lolo Tierra",
-          "points": 47,
-          "value": 58850000,
-          "playedText": "10 / 11",
-          "managerId": "13365280",
-          "color": "#7aa8ff",
-          "aliases": [
-            "Lolo Tierra",
-            "Mikel Poyarzabal"
-          ]
-        },
-        {
-          "rank": 6,
-          "initials": "RN",
-          "name": "Rodando Nazário",
-          "points": 45,
-          "value": 80094000,
-          "playedText": "11 / 11",
-          "managerId": "8769466",
-          "color": "#ff55df",
-          "aliases": [
-            "Rodando Nazário"
-          ]
-        },
-        {
-          "rank": 7,
-          "initials": "AB",
-          "name": "Alex Ballena",
-          "points": 35,
-          "value": 58478000,
-          "playedText": "9 / 11",
-          "managerId": "15420188",
-          "color": "#b67cff",
-          "aliases": [
-            "Alex Ballena"
-          ]
-        }
-      ],
-      "rowsBySystem": {
-        "final": [
-          {
-            "rank": 1,
-            "initials": "HM",
-            "name": "Heung Min Dad",
-            "points": 84,
-            "value": 58088000,
-            "playedText": "10 / 11",
-            "managerId": "8771310",
-            "color": "#a5ff6a",
-            "aliases": [
-              "Heung Min Dad"
-            ]
-          },
-          {
-            "rank": 2,
-            "initials": "PL",
-            "name": "Peter LIM",
-            "points": 59,
-            "value": 48362000,
-            "playedText": "8 / 11",
-            "managerId": "12113243",
-            "color": "#e8d26a",
-            "aliases": [
-              "Peter LIM"
-            ]
-          },
-          {
-            "rank": 3,
-            "initials": "DM",
-            "name": "Don Manuel Ruíz de Lopera",
-            "points": 51,
-            "value": 71372000,
-            "playedText": "10 / 11",
-            "managerId": "8785696",
-            "color": "#66fff1",
-            "aliases": [
-              "Don Manuel Ruíz de Lopera"
-            ]
-          },
-          {
-            "rank": 4,
-            "initials": "O",
-            "name": "Olivito",
-            "points": 50,
-            "value": 62216000,
-            "playedText": "10 / 11",
-            "managerId": "10359824",
-            "color": "#f8fbff",
-            "aliases": [
-              "Olivito"
-            ]
-          },
-          {
-            "rank": 5,
-            "initials": "LT",
-            "name": "Lolo Tierra",
-            "points": 47,
-            "value": 58850000,
-            "playedText": "10 / 11",
-            "managerId": "13365280",
-            "color": "#7aa8ff",
-            "aliases": [
-              "Lolo Tierra",
-              "Mikel Poyarzabal"
-            ]
-          },
-          {
-            "rank": 6,
-            "initials": "RN",
-            "name": "Rodando Nazário",
-            "points": 45,
-            "value": 80094000,
-            "playedText": "11 / 11",
-            "managerId": "8769466",
-            "color": "#ff55df",
-            "aliases": [
-              "Rodando Nazário"
-            ]
-          },
-          {
-            "rank": 7,
-            "initials": "AB",
-            "name": "Alex Ballena",
-            "points": 35,
-            "value": 58478000,
-            "playedText": "9 / 11",
-            "managerId": "15420188",
-            "color": "#b67cff",
-            "aliases": [
-              "Alex Ballena"
-            ]
-          }
-        ]
-      }
-    }
-  ],
+  "liveRounds": [],
   "cumulative": [
     {
       "round": 0,
@@ -18366,7 +18171,7 @@
     ],
     "transfers": [
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "4h",
         "source": "feed",
         "playerId": null,
@@ -18377,7 +18182,7 @@
         "raw": "4h | Isi Palazón cambia de Alex Ballena a Mister | 7 | AB | M | 5.660.040 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "8h",
         "source": "feed",
         "playerId": null,
@@ -18388,7 +18193,7 @@
         "raw": "8h | Arda Güler cambia de Mister a Lolo Tierra | 25 | M | LT | 14.761.990 | Nacho Pérez cambia de Mister a Olivito | 7"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18399,7 +18204,7 @@
         "raw": "14.761.990 | Nacho Pérez cambia de Mister a Olivito | 7 | M | O | 1.098.000 | Aitor Ruibal cambia de Mister a Olivito | 0"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18410,7 +18215,7 @@
         "raw": "1.098.000 | Aitor Ruibal cambia de Mister a Olivito | 0 | M | O | 162.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "16h",
         "source": "feed",
         "playerId": null,
@@ -18421,7 +18226,7 @@
         "raw": "16h | Abdel Abqar cambia de Alex Ballena a Mister | 2 | AB | M | 1.792.960 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "19h",
         "source": "feed",
         "playerId": null,
@@ -18432,7 +18237,7 @@
         "raw": "19h | Joaquín Muñoz cambia de Rodando Nazário a Mister | 10 | RN | M | 2.305.140 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "19h",
         "source": "feed",
         "playerId": null,
@@ -18443,7 +18248,7 @@
         "raw": "19h | Einar Galilea cambia de Rodando Nazário a Mister | 10 | RN | M | 2.121.600 | Comentar | LT"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "21h",
         "source": "feed",
         "playerId": null,
@@ -18454,7 +18259,7 @@
         "raw": "21h | Javi Guerra cambia de Lolo Tierra a Mister | 9 | LT | M | 6.861.920 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "21h",
         "source": "feed",
         "playerId": null,
@@ -18465,7 +18270,7 @@
         "raw": "21h | Héctor Bellerín cambia de Olivito a Mister | 5 | O | M | 5.217.980 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "1d",
         "source": "feed",
         "playerId": null,
@@ -18476,7 +18281,7 @@
         "raw": "1d | Pablo Maffeo cambia de Lolo Tierra a Mister | 6 | LT | M | 4.299.000 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "1d",
         "source": "feed",
         "playerId": null,
@@ -18487,7 +18292,7 @@
         "raw": "1d | Andrés Martín cambia de Peter LIM a Mister | 14 | PL | M | 6.797.760 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "1d",
         "source": "feed",
         "playerId": null,
@@ -18498,7 +18303,7 @@
         "raw": "1d | Edu Expósito cambia de Mister a Lolo Tierra | 15 | M | LT | 9.959.820 | Luis Rioja cambia de Mister a Peter LIM | 5"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18509,7 +18314,7 @@
         "raw": "9.959.820 | Luis Rioja cambia de Mister a Peter LIM | 5 | M | PL | 3.717.030 | Bright Ede cambia de Mister a Olivito | 8"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18520,7 +18325,7 @@
         "raw": "3.717.030 | Bright Ede cambia de Mister a Olivito | 8 | M | O | 1.421.000 | Ángel Recio cambia de Mister a Olivito | 7"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18531,7 +18336,7 @@
         "raw": "1.421.000 | Ángel Recio cambia de Mister a Olivito | 7 | M | O | 759.000 | Miguel Sierra cambia de Mister a Rodando Nazário | 23"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18542,7 +18347,7 @@
         "raw": "759.000 | Miguel Sierra cambia de Mister a Rodando Nazário | 23 | M | RN | 3.149.910 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "2d",
         "source": "feed",
         "playerId": null,
@@ -18553,7 +18358,7 @@
         "raw": "2d | Nico Williams cambia de Olivito a Mister | 8 | O | M | 11.110.320 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "2d",
         "source": "feed",
         "playerId": null,
@@ -18564,7 +18369,7 @@
         "raw": "2d | Isi Palazón cambia de Mister a Alex Ballena | 7 | M | AB | 5.740.000 | Saba Sazonov cambia de Mister a Lolo Tierra | 3"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18575,7 +18380,7 @@
         "raw": "5.740.000 | Saba Sazonov cambia de Mister a Lolo Tierra | 3 | M | LT | 580.670 | Vinícius Júnior cambia de Mister a Olivito | 16"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18586,7 +18391,7 @@
         "raw": "580.670 | Vinícius Júnior cambia de Mister a Olivito | 16 | M | O | 25.633.000 | Iago Aspas cambia de Mister a Olivito | 15"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18597,7 +18402,7 @@
         "raw": "25.633.000 | Iago Aspas cambia de Mister a Olivito | 15 | M | O | 4.886.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "3d",
         "source": "feed",
         "playerId": null,
@@ -18608,7 +18413,7 @@
         "raw": "3d | Jon Aramburu cambia de Lolo Tierra a Mister | 10 | LT | M | 5.085.150 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "3d",
         "source": "feed",
         "playerId": null,
@@ -18619,7 +18424,7 @@
         "raw": "3d | Asier Villalibre cambia de Lolo Tierra a Mister | 7 | LT | M | 3.762.720 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "3d",
         "source": "feed",
         "playerId": null,
@@ -18630,7 +18435,7 @@
         "raw": "3d | Umaru Konare cambia de Olivito a Mister | 2 | O | M | 368.600 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "3d",
         "source": "feed",
         "playerId": null,
@@ -18641,7 +18446,7 @@
         "raw": "3d | Facundo González cambia de Olivito a Mister | 7 | O | M | 1.933.310 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "3d",
         "source": "feed",
         "playerId": null,
@@ -18652,7 +18457,7 @@
         "raw": "3d | Fran González cambia de Olivito a Mister | 0 | O | M | 340.470 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "3d",
         "source": "feed",
         "playerId": null,
@@ -18663,7 +18468,7 @@
         "raw": "3d | Enes Ünal cambia de Mister a Lolo Tierra | 14 | M | LT | 4.250.840 | Abel Bretones cambia de Mister a Rodando Nazário | 9"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18674,7 +18479,7 @@
         "raw": "4.250.840 | Abel Bretones cambia de Mister a Rodando Nazário | 9 | M | RN | 2.831.010 | Arouna Sangante cambia de Mister a Rodando Nazário | 3"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18685,7 +18490,7 @@
         "raw": "2.831.010 | Arouna Sangante cambia de Mister a Rodando Nazário | 3 | M | RN | 2.560.780 | Comentar | Jornada 3"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "4d",
         "source": "feed",
         "playerId": null,
@@ -18696,7 +18501,7 @@
         "raw": "4d | José Salinas cambia de Alex Ballena a Mister | 5 | AB | M | 1.187.280 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "4d",
         "source": "feed",
         "playerId": null,
@@ -18707,7 +18512,7 @@
         "raw": "4d | Luismi Cruz cambia de Don Manuel Ruíz de Lopera a Mister | 12 | DM | M | 1.973.760 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "4d",
         "source": "feed",
         "playerId": null,
@@ -18718,7 +18523,7 @@
         "raw": "4d | José Luis Gayà cambia de Rodando Nazário a Mister | 4 | RN | M | 2.806.080 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "4d",
         "source": "feed",
         "playerId": null,
@@ -18729,7 +18534,7 @@
         "raw": "4d | David Soria cambia de Lolo Tierra a Mister | 17 | LT | M | 10.309.140 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "4d",
         "source": "feed",
         "playerId": null,
@@ -18740,7 +18545,7 @@
         "raw": "4d | Williot Swedberg cambia de Don Manuel Ruíz de Lopera a Mister | 5 | DM | M | 2.891.700 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "4d",
         "source": "feed",
         "playerId": null,
@@ -18751,7 +18556,7 @@
         "raw": "4d | Mikel Rodriguez cambia de Mister a Alex Ballena | 17 | M | AB | 889.000 | Einar Galilea cambia de Mister a Rodando Nazário | 10"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18762,7 +18567,7 @@
         "raw": "889.000 | Einar Galilea cambia de Mister a Rodando Nazário | 10 | M | RN | 2.110.660 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "5d",
         "source": "feed",
         "playerId": null,
@@ -18773,7 +18578,7 @@
         "raw": "5d | Carlos Espí cambia de Lolo Tierra a Mister | 15 | LT | M | 9.018.680 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "5d",
         "source": "feed",
         "playerId": null,
@@ -18784,7 +18589,7 @@
         "raw": "5d | Sergio Carreira cambia de Don Manuel Ruíz de Lopera a Mister | 10 | DM | M | 5.093.000 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "5d",
         "source": "feed",
         "playerId": null,
@@ -18795,7 +18600,7 @@
         "raw": "5d | David Soria cambia de Mister a Lolo Tierra | 17 | M | LT | 9.990.010 | Rodrigo Riquelme cambia de Mister a Lolo Tierra | 21"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18806,7 +18611,7 @@
         "raw": "9.990.010 | Rodrigo Riquelme cambia de Mister a Lolo Tierra | 21 | M | LT | 2.681.460 | Sergio Canales cambia de Mister a Peter LIM | 11"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18817,7 +18622,7 @@
         "raw": "2.681.460 | Sergio Canales cambia de Mister a Peter LIM | 11 | M | PL | 7.695.000 | Luismi Cruz cambia de Mister a Don Manuel Ruíz de Lopera | 12"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18828,7 +18633,7 @@
         "raw": "7.695.000 | Luismi Cruz cambia de Mister a Don Manuel Ruíz de Lopera | 12 | M | DM | 1.969.360 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "5d",
         "source": "feed",
         "playerId": null,
@@ -18839,7 +18644,7 @@
         "raw": "5d | Aimar Oroz cambia de Lolo Tierra a Mister | 7 | LT | M | 5.841.150 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "5d",
         "source": "feed",
         "playerId": null,
@@ -18850,7 +18655,7 @@
         "raw": "5d | Álvaro García cambia de Lolo Tierra a Mister | 17 | LT | M | 7.781.650 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "6d",
         "source": "feed",
         "playerId": null,
@@ -18861,7 +18666,7 @@
         "raw": "6d | Rubén García cambia de Don Manuel Ruíz de Lopera a Mister | 10 | DM | M | 5.462.100 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "6d",
         "source": "feed",
         "playerId": null,
@@ -18872,7 +18677,7 @@
         "raw": "6d | Pau Navarro cambia de Olivito a Mister | 0 | O | M | 1.719.120 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "6d",
         "source": "feed",
         "playerId": null,
@@ -18883,7 +18688,7 @@
         "raw": "6d | Carlos Álvarez cambia de Olivito a Mister | 1 | O | M | 4.090.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "6d",
         "source": "feed",
         "playerId": null,
@@ -18894,7 +18699,7 @@
         "raw": "6d | Jon Martin cambia de Olivito a Mister | 10 | O | M | 7.173.920 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "6d",
         "source": "feed",
         "playerId": null,
@@ -18905,7 +18710,7 @@
         "raw": "6d | Sergio Martinez cambia de Mister a Alex Ballena | 15 | M | AB | 1.143.000 | Ángel Ortiz cambia de Mister a Alex Ballena | 4"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18916,7 +18721,7 @@
         "raw": "1.143.000 | Ángel Ortiz cambia de Mister a Alex Ballena | 4 | M | AB | 263.000 | Mathew Ryan cambia de Mister a Olivito | 17"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18927,7 +18732,7 @@
         "raw": "263.000 | Mathew Ryan cambia de Mister a Olivito | 17 | M | O | 9.096.000 | Javi Galán cambia de Mister a Olivito | 5"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18938,7 +18743,7 @@
         "raw": "9.096.000 | Javi Galán cambia de Mister a Olivito | 5 | M | O | 3.649.000 | Ibrahima Konaté cambia de Mister a Don Manuel Ruíz de Lopera | 9"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18949,7 +18754,7 @@
         "raw": "3.649.000 | Ibrahima Konaté cambia de Mister a Don Manuel Ruíz de Lopera | 9 | M | DM | 10.629.899 | Sergio Carreira cambia de Mister a Don Manuel Ruíz de Lopera | 10"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18960,7 +18765,7 @@
         "raw": "10.629.899 | Sergio Carreira cambia de Mister a Don Manuel Ruíz de Lopera | 10 | M | DM | 5.028.540 | Dani Cárdenas cambia de Mister a Don Manuel Ruíz de Lopera | 4"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -18971,7 +18776,7 @@
         "raw": "5.028.540 | Dani Cárdenas cambia de Mister a Don Manuel Ruíz de Lopera | 4 | M | DM | 637.260 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "7d",
         "source": "feed",
         "playerId": null,
@@ -18982,7 +18787,7 @@
         "raw": "7d | Mario Martín cambia de Alex Ballena a Mister | 3 | AB | M | 2.142.400 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "7d",
         "source": "feed",
         "playerId": null,
@@ -18993,7 +18798,7 @@
         "raw": "7d | Etta Eyong cambia de Don Manuel Ruíz de Lopera a Mister | 4 | DM | M | 4.297.650 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "7d",
         "source": "feed",
         "playerId": null,
@@ -19004,7 +18809,7 @@
         "raw": "7d | Urko González cambia de Rodando Nazário a Mister | 10 | RN | M | 2.491.570 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "7d",
         "source": "feed",
         "playerId": null,
@@ -19015,7 +18820,7 @@
         "raw": "7d | Gorka Guruzeta cambia de Olivito a Mister | 2 | O | M | 7.250.170 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "7d",
         "source": "feed",
         "playerId": null,
@@ -19026,7 +18831,7 @@
         "raw": "7d | Pablo Barrios cambia de Rodando Nazário a Olivito | 21 | RN | O | 10.800.000 | Comentar | Fin de la jornada 2"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "7d",
         "source": "feed",
         "playerId": null,
@@ -19037,7 +18842,7 @@
         "raw": "7d | Javi Rueda cambia de Lolo Tierra a Mister | 7 | LT | M | 1.986.400 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "7d",
         "source": "feed",
         "playerId": null,
@@ -19048,7 +18853,7 @@
         "raw": "7d | Jonathan Dubasin cambia de Heung Min Dad a Mister | 7 | HM | M | 1.860.560 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "7d",
         "source": "feed",
         "playerId": null,
@@ -19059,7 +18864,7 @@
         "raw": "7d | Isaac Romero cambia de Mister a Alex Ballena | 14 | M | AB | 3.278.000 | Fermín López cambia de Mister a Lolo Tierra | 35"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19070,7 +18875,7 @@
         "raw": "3.278.000 | Fermín López cambia de Mister a Lolo Tierra | 35 | M | LT | 16.488.620 | Carlos Espí cambia de Mister a Lolo Tierra | 15"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19081,7 +18886,7 @@
         "raw": "16.488.620 | Carlos Espí cambia de Mister a Lolo Tierra | 15 | M | LT | 8.555.490 | Pablo Maffeo cambia de Mister a Lolo Tierra | 6"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19092,7 +18897,7 @@
         "raw": "8.555.490 | Pablo Maffeo cambia de Mister a Lolo Tierra | 6 | M | LT | 3.958.360 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "8d",
         "source": "feed",
         "playerId": null,
@@ -19103,7 +18908,7 @@
         "raw": "8d | Lucas Cepeda cambia de Heung Min Dad a Mister | 9 | HM | M | 1.764.880 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "8d",
         "source": "feed",
         "playerId": null,
@@ -19114,7 +18919,7 @@
         "raw": "8d | Mikel Jauregizar cambia de Rodando Nazário a Mister | 5 | RN | M | 2.820.930 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "8d",
         "source": "feed",
         "playerId": null,
@@ -19125,7 +18930,7 @@
         "raw": "8d | Alejandro Balde cambia de Don Manuel Ruíz de Lopera a Mister | 0 | DM | M | 6.446.960 | Comentar | Nuevas bajadas de cláusulas"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "8d",
         "source": "feed",
         "playerId": null,
@@ -19136,7 +18941,7 @@
         "raw": "8d | Fran Pérez cambia de Mister a Alex Ballena | 8 | M | AB | 358.000 | Rodri Hernández cambia de Mister a Don Manuel Ruíz de Lopera | 9"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19147,7 +18952,7 @@
         "raw": "358.000 | Rodri Hernández cambia de Mister a Don Manuel Ruíz de Lopera | 9 | M | DM | 13.777.000 | Williot Swedberg cambia de Mister a Don Manuel Ruíz de Lopera | 5"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19158,7 +18963,7 @@
         "raw": "13.777.000 | Williot Swedberg cambia de Mister a Don Manuel Ruíz de Lopera | 5 | M | DM | 2.631.660 | Mariano Díaz cambia de Mister a Heung Min Dad | 25"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19169,7 +18974,7 @@
         "raw": "2.631.660 | Mariano Díaz cambia de Mister a Heung Min Dad | 25 | M | HM | 3.274.659 | Tyrhys Dolan cambia de Mister a Rodando Nazário | 14"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19180,7 +18985,7 @@
         "raw": "3.274.659 | Tyrhys Dolan cambia de Mister a Rodando Nazário | 14 | M | RN | 2.755.510 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "9d",
         "source": "feed",
         "playerId": null,
@@ -19191,7 +18996,7 @@
         "raw": "9d | Martín Satriano cambia de Lolo Tierra a Mister | 8 | LT | M | 7.177.040 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "9d",
         "source": "feed",
         "playerId": null,
@@ -19202,7 +19007,7 @@
         "raw": "9d | Angeliño cambia de Lolo Tierra a Mister | 0 | LT | M | 1.808.560 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "9d",
         "source": "feed",
         "playerId": null,
@@ -19213,7 +19018,7 @@
         "raw": "9d | Luismi Cruz cambia de Rodando Nazário a Mister | 12 | RN | M | 1.956.150 | Comentar | ⚽ PORRA Atlético - Villarreal / LaLiga"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "9d",
         "source": "feed",
         "playerId": null,
@@ -19224,7 +19029,7 @@
         "raw": "9d | Dean Huijsen cambia de Heung Min Dad a Mister | 11 | HM | M | 9.737.700 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "9d",
         "source": "feed",
         "playerId": null,
@@ -19235,7 +19040,7 @@
         "raw": "9d | Kang-In Lee cambia de Mister a Don Manuel Ruíz de Lopera | 24 | M | DM | 12.270.000 | Pedri cambia de Mister a Rodando Nazário | 21"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19246,7 +19051,7 @@
         "raw": "12.270.000 | Pedri cambia de Mister a Rodando Nazário | 21 | M | RN | 22.925.020 | Joaquín Muñoz cambia de Mister a Rodando Nazário | 10"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19257,7 +19062,7 @@
         "raw": "22.925.020 | Joaquín Muñoz cambia de Mister a Rodando Nazário | 10 | M | RN | 2.129.450 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -19268,7 +19073,7 @@
         "raw": "10d | João Cancelo cambia de Don Manuel Ruíz de Lopera a Mister | 5 | DM | M | 15.017.100 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -19279,7 +19084,7 @@
         "raw": "10d | Ferran Jutglà cambia de Rodando Nazário a Mister | 8 | RN | M | 8.818.160 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -19290,7 +19095,7 @@
         "raw": "10d | Kazunari Kita cambia de Peter LIM a Mister | 0 | PL | M | 168.960 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -19301,7 +19106,7 @@
         "raw": "10d | Maroan Sannadi cambia de Peter LIM a Mister | 0 | PL | M | 351.230 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -19312,7 +19117,7 @@
         "raw": "10d | Pablo García cambia de Alex Ballena a Mister | 14 | AB | M | 791.040 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -19323,7 +19128,7 @@
         "raw": "10d | Sergio Carreira cambia de Heung Min Dad a Mister | 10 | HM | M | 5.118.680 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "10d",
         "source": "feed",
         "playerId": null,
@@ -19334,7 +19139,7 @@
         "raw": "10d | José Salinas cambia de Mister a Alex Ballena | 5 | M | AB | 1.216.000 | Ali Houary cambia de Mister a Alex Ballena | 6"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19345,7 +19150,7 @@
         "raw": "1.216.000 | Ali Houary cambia de Mister a Alex Ballena | 6 | M | AB | 353.000 | Laro Gómez cambia de Mister a Alex Ballena | 0"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19356,7 +19161,7 @@
         "raw": "353.000 | Laro Gómez cambia de Mister a Alex Ballena | 0 | M | AB | 206.000 | Orel Mangala cambia de Mister a Peter LIM | 9"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19367,7 +19172,7 @@
         "raw": "206.000 | Orel Mangala cambia de Mister a Peter LIM | 9 | M | PL | 2.668.960 | Iván Martín cambia de Mister a Peter LIM | 9"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19378,7 +19183,7 @@
         "raw": "2.668.960 | Iván Martín cambia de Mister a Peter LIM | 9 | M | PL | 187.000 | João Cancelo cambia de Mister a Don Manuel Ruíz de Lopera | 5"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19389,7 +19194,7 @@
         "raw": "187.000 | João Cancelo cambia de Mister a Don Manuel Ruíz de Lopera | 5 | M | DM | 14.326.030 | Alejandro Balde cambia de Mister a Don Manuel Ruíz de Lopera | 0"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19400,7 +19205,7 @@
         "raw": "14.326.030 | Alejandro Balde cambia de Mister a Don Manuel Ruíz de Lopera | 0 | M | DM | 6.536.760 | Pablo Fornals cambia de Mister a Rodando Nazário | 8"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19411,7 +19216,7 @@
         "raw": "6.536.760 | Pablo Fornals cambia de Mister a Rodando Nazário | 8 | M | RN | 17.676.700 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "11d",
         "source": "feed",
         "playerId": null,
@@ -19422,7 +19227,7 @@
         "raw": "11d | Kiko Femenía cambia de Alex Ballena a Mister | -4 | AB | M | 1.244.400 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "11d",
         "source": "feed",
         "playerId": null,
@@ -19433,7 +19238,7 @@
         "raw": "11d | Sergio Gómez cambia de Don Manuel Ruíz de Lopera a Mister | 12 | DM | M | 5.403.840 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "11d",
         "source": "feed",
         "playerId": null,
@@ -19444,7 +19249,7 @@
         "raw": "11d | Luis Rioja cambia de Peter LIM a Mister | 5 | PL | M | 4.314.670 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "11d",
         "source": "feed",
         "playerId": null,
@@ -19455,7 +19260,7 @@
         "raw": "11d | Fran García cambia de Peter LIM a Don Manuel Ruíz de Lopera por pago de cláusula | 10 | PL | DM | 4.576.365 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "11d",
         "source": "feed",
         "playerId": null,
@@ -19466,7 +19271,7 @@
         "raw": "11d | Julián Álvarez cambia de Don Manuel Ruíz de Lopera a Mister | 1 | DM | M | 14.056.620 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "11d",
         "source": "feed",
         "playerId": null,
@@ -19477,7 +19282,7 @@
         "raw": "11d | Oso cambia de Rodando Nazário a Mister | 14 | RN | M | 4.935.150 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "11d",
         "source": "feed",
         "playerId": null,
@@ -19488,7 +19293,7 @@
         "raw": "11d | Yeremay Hernández cambia de Don Manuel Ruíz de Lopera a Mister | 5 | DM | M | 8.713.120 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "11d",
         "source": "feed",
         "playerId": null,
@@ -19499,7 +19304,7 @@
         "raw": "11d | Asier Villalibre cambia de Mister a Lolo Tierra | 7 | M | LT | 3.577.810 | Juan Cruz cambia de Mister a Peter LIM | 8"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19510,7 +19315,7 @@
         "raw": "3.577.810 | Juan Cruz cambia de Mister a Peter LIM | 8 | M | PL | 2.788.050 | Pierre-Emerick Aubameyang cambia de Mister a Heung Min Dad | 34"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19521,7 +19326,7 @@
         "raw": "2.788.050 | Pierre-Emerick Aubameyang cambia de Mister a Heung Min Dad | 34 | M | HM | 6.616.460 | Javi Hernandez cambia de Mister a Heung Min Dad | 19"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19532,7 +19337,7 @@
         "raw": "6.616.460 | Javi Hernandez cambia de Mister a Heung Min Dad | 19 | M | HM | 2.138.850 | Álvaro Mantilla cambia de Mister a Heung Min Dad | 8"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19543,7 +19348,7 @@
         "raw": "2.138.850 | Álvaro Mantilla cambia de Mister a Heung Min Dad | 8 | M | HM | 2.025.560 | Igor Zubeldia cambia de Mister a Heung Min Dad | 9"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19554,7 +19359,7 @@
         "raw": "2.025.560 | Igor Zubeldia cambia de Mister a Heung Min Dad | 9 | M | HM | 1.830.340 | Ángel Pérez cambia de Mister a Rodando Nazário | 17"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19565,7 +19370,7 @@
         "raw": "1.830.340 | Ángel Pérez cambia de Mister a Rodando Nazário | 17 | M | RN | 3.755.780 | José Luis Gayà cambia de Mister a Rodando Nazário | 4"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19576,7 +19381,7 @@
         "raw": "3.755.780 | José Luis Gayà cambia de Mister a Rodando Nazário | 4 | M | RN | 2.922.640 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "11d",
         "source": "feed",
         "playerId": null,
@@ -19587,7 +19392,7 @@
         "raw": "11d | Marc Bernal cambia de Rodando Nazário a Mister | 20 | RN | M | 8.829.160 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "12d",
         "source": "feed",
         "playerId": null,
@@ -19598,7 +19403,7 @@
         "raw": "12d | Bernardo Silva cambia de Heung Min Dad a Mister | 8 | HM | M | 10.578.880 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "12d",
         "source": "feed",
         "playerId": null,
@@ -19609,7 +19414,7 @@
         "raw": "12d | Carl Starfelt cambia de Don Manuel Ruíz de Lopera a Mister | 5 | DM | M | 2.223.000 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "12d",
         "source": "feed",
         "playerId": null,
@@ -19620,7 +19425,7 @@
         "raw": "12d | Mario Soriano cambia de Alex Ballena a Mister | 14 | AB | M | 3.543.200 | Comentar | Bonificaciones realizadas por el administrador"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "12d",
         "source": "feed",
         "playerId": null,
@@ -19631,7 +19436,7 @@
         "raw": "12d | Gonzalo Petit cambia de Peter LIM a Mister | 0 | PL | M | 185.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "12d",
         "source": "feed",
         "playerId": null,
@@ -19642,7 +19447,7 @@
         "raw": "12d | Alex Baena cambia de Peter LIM a Mister | 33 | PL | M | 10.799.760 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "12d",
         "source": "feed",
         "playerId": null,
@@ -19653,7 +19458,7 @@
         "raw": "12d | Arda Güler cambia de Peter LIM a Mister | 25 | PL | M | 11.945.280 | Comentar | Fin de la jornada 1"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "12d",
         "source": "feed",
         "playerId": null,
@@ -19664,7 +19469,7 @@
         "raw": "12d | Yuri Berchiche cambia de Rodando Nazário a Mister | -4 | RN | M | 5.372.850 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "12d",
         "source": "feed",
         "playerId": null,
@@ -19675,7 +19480,7 @@
         "raw": "12d | Isaac Romero cambia de Don Manuel Ruíz de Lopera a Mister | 14 | DM | M | 2.258.880 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "12d",
         "source": "feed",
         "playerId": null,
@@ -19686,7 +19491,7 @@
         "raw": "12d | Denzel Dumfries cambia de Heung Min Dad a Mister | 7 | HM | M | 9.009.660 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "12d",
         "source": "feed",
         "playerId": null,
@@ -19697,7 +19502,7 @@
         "raw": "12d | Javi Rueda cambia de Mister a Lolo Tierra | 7 | M | LT | 1.966.780 | Jude Bellingham cambia de Mister a Peter LIM | 34"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19708,7 +19513,7 @@
         "raw": "1.966.780 | Jude Bellingham cambia de Mister a Peter LIM | 34 | M | PL | 19.969.000 | Facundo González cambia de Mister a Olivito | 7"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19719,7 +19524,7 @@
         "raw": "19.969.000 | Facundo González cambia de Mister a Olivito | 7 | M | O | 2.265.000 | Rubén García cambia de Mister a Don Manuel Ruíz de Lopera | 10"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19730,7 +19535,7 @@
         "raw": "2.265.000 | Rubén García cambia de Mister a Don Manuel Ruíz de Lopera | 10 | M | DM | 4.765.620 | Etta Eyong cambia de Mister a Don Manuel Ruíz de Lopera | 4"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19741,7 +19546,7 @@
         "raw": "4.765.620 | Etta Eyong cambia de Mister a Don Manuel Ruíz de Lopera | 4 | M | DM | 3.483.260 | Antony Santos cambia de Mister a Heung Min Dad | 15"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19752,7 +19557,7 @@
         "raw": "3.483.260 | Antony Santos cambia de Mister a Heung Min Dad | 15 | M | HM | 15.511.930 | Aitor Paredes cambia de Mister a Rodando Nazário | 13"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19763,7 +19568,7 @@
         "raw": "15.511.930 | Aitor Paredes cambia de Mister a Rodando Nazário | 13 | M | RN | 1.581.760 | Comentar | Concurso de la Quiniela de la jornada 2"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "13d",
         "source": "feed",
         "playerId": null,
@@ -19774,7 +19579,7 @@
         "raw": "13d | Robert Navarro cambia de Alex Ballena a Mister | 13 | AB | M | 1.564.490 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "13d",
         "source": "feed",
         "playerId": null,
@@ -19785,7 +19590,7 @@
         "raw": "13d | Mikel Jauregizar cambia de Mister a Rodando Nazário | 5 | M | RN | 3.389.610 | Comentar | Don Manuel Ruíz de Lopera ha comentado esta publicación"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "14d",
         "source": "feed",
         "playerId": null,
@@ -19796,7 +19601,7 @@
         "raw": "14d | Alberto Moleiro cambia de Don Manuel Ruíz de Lopera a Mister | 8 | DM | M | 13.758.220 | Comentar · 2 | DM"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "14d",
         "source": "feed",
         "playerId": null,
@@ -19807,7 +19612,7 @@
         "raw": "14d | Julen Agirrezabala cambia de Rodando Nazário a Heung Min Dad por pago de cláusula | 11 | RN | HM | 5.668.514 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "14d",
         "source": "feed",
         "playerId": null,
@@ -19818,7 +19623,7 @@
         "raw": "14d | Miguel Loureiro cambia de Heung Min Dad a Mister | 4 | HM | M | 1.789.920 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "14d",
         "source": "feed",
         "playerId": null,
@@ -19829,7 +19634,7 @@
         "raw": "14d | Pablo Ramón cambia de Mister a Heung Min Dad | 9 | M | HM | 700.000 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -19840,7 +19645,7 @@
         "raw": "15d | Matteo Ruggeri cambia de Alex Ballena a Mister | 0 | AB | M | 1.457.040 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -19851,7 +19656,7 @@
         "raw": "15d | Juan Cruz cambia de Alex Ballena a Mister | 8 | AB | M | 2.307.900 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -19862,7 +19667,7 @@
         "raw": "15d | Pere Milla cambia de Alex Ballena a Mister | 5 | AB | M | 2.384.500 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -19873,7 +19678,7 @@
         "raw": "15d | Julen Agirrezabala cambia de Heung Min Dad a Rodando Nazário por pago de cláusula | 11 | HM | RN | 2.834.257 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -19884,7 +19689,7 @@
         "raw": "15d | Davinchi cambia de Don Manuel Ruíz de Lopera a Mister | 0 | DM | M | 1.540.880 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -19895,7 +19700,7 @@
         "raw": "15d | Iván Romero cambia de Don Manuel Ruíz de Lopera a Mister | 9 | DM | M | 7.808.320 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "15d",
         "source": "feed",
         "playerId": null,
@@ -19906,7 +19711,7 @@
         "raw": "15d | Alberto Moleiro cambia de Mister a Don Manuel Ruíz de Lopera | 8 | M | DM | 14.571.320 | Dean Huijsen cambia de Mister a Heung Min Dad | 11"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19917,7 +19722,7 @@
         "raw": "14.571.320 | Dean Huijsen cambia de Mister a Heung Min Dad | 11 | M | HM | 8.925.250 | Facundo Bernal cambia de Mister a Heung Min Dad | 10"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19928,7 +19733,7 @@
         "raw": "8.925.250 | Facundo Bernal cambia de Mister a Heung Min Dad | 10 | M | HM | 3.013.540 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "16d",
         "source": "feed",
         "playerId": null,
@@ -19939,7 +19744,7 @@
         "raw": "16d | Carles Aleñá cambia de Don Manuel Ruíz de Lopera a Mister | 2 | DM | M | 1.574.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "16d",
         "source": "feed",
         "playerId": null,
@@ -19950,7 +19755,7 @@
         "raw": "16d | Antonio Blanco cambia de Heung Min Dad a Mister | 13 | HM | M | 9.086.970 | Comentar | Nuevas bajadas de cláusulas"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "16d",
         "source": "feed",
         "playerId": null,
@@ -19961,7 +19766,7 @@
         "raw": "16d | Nicolas Pépé cambia de Mister a Alex Ballena | 22 | M | AB | 14.260.000 | Mario Martín cambia de Mister a Alex Ballena | 3"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19972,7 +19777,7 @@
         "raw": "14.260.000 | Mario Martín cambia de Mister a Alex Ballena | 3 | M | AB | 1.850.000 | Iván Romero cambia de Mister a Don Manuel Ruíz de Lopera | 9"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19983,7 +19788,7 @@
         "raw": "1.850.000 | Iván Romero cambia de Mister a Don Manuel Ruíz de Lopera | 9 | M | DM | 7.457.300 | Thiago Fernández cambia de Mister a Heung Min Dad | 8"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -19994,7 +19799,7 @@
         "raw": "7.457.300 | Thiago Fernández cambia de Mister a Heung Min Dad | 8 | M | HM | 631.040 | Comentar | Jornada 1"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20005,7 +19810,7 @@
         "raw": "17d | Álvaro Mantilla cambia de Heung Min Dad a Mister | 8 | HM | M | 1.507.800 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20016,7 +19821,7 @@
         "raw": "17d | Renato Veiga cambia de Heung Min Dad a Mister | 11 | HM | M | 6.431.680 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20027,7 +19832,7 @@
         "raw": "17d | Nelson Deossa cambia de Heung Min Dad a Mister | 6 | HM | M | 979.680 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20038,7 +19843,7 @@
         "raw": "17d | Nahuel Tenaglia cambia de Heung Min Dad a Mister | 24 | HM | M | 6.667.100 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20049,7 +19854,7 @@
         "raw": "17d | Marc Bartra cambia de Heung Min Dad a Mister | 11 | HM | M | 1.581.120 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20060,7 +19865,7 @@
         "raw": "17d | Ángel Pérez cambia de Rodando Nazário a Mister | 17 | RN | M | 2.638.150 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20071,7 +19876,7 @@
         "raw": "17d | Jon Moncayola cambia de Rodando Nazário a Mister | 9 | RN | M | 3.633.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20082,7 +19887,7 @@
         "raw": "17d | Jiri Letacek cambia de Alex Ballena a Mister | 0 | AB | M | 194.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20093,7 +19898,7 @@
         "raw": "17d | Carlos Dominguez cambia de Peter LIM a Mister | 0 | PL | M | 664.050 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20104,7 +19909,7 @@
         "raw": "17d | Nobel Mendy cambia de Peter LIM a Mister | 0 | PL | M | 1.536.640 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20115,7 +19920,7 @@
         "raw": "17d | Alejandro Catena cambia de Alex Ballena a Mister | 14 | AB | M | 8.219.520 | Comentar | Rodando Nazário ha comentado esta publicación"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20126,7 +19931,7 @@
         "raw": "17d | Victor Chust cambia de Mister a Alex Ballena | 7 | M | AB | 1.900.000 | Álex Berenguer cambia de Mister a Peter LIM | 17"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -20137,7 +19942,7 @@
         "raw": "1.900.000 | Álex Berenguer cambia de Mister a Peter LIM | 17 | M | PL | 1.770.780 | Raphinha cambia de Mister a Heung Min Dad | 47"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -20148,7 +19953,7 @@
         "raw": "1.770.780 | Raphinha cambia de Mister a Heung Min Dad | 47 | M | HM | 20.600.350 | Comentar · 1 | RN"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20159,7 +19964,7 @@
         "raw": "17d | Clemens Riedel cambia de Rodando Nazário a Mister | 6 | RN | M | 1.626.900 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20170,7 +19975,7 @@
         "raw": "17d | David Mella cambia de Heung Min Dad a Mister | 4 | HM | M | 2.302.560 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20181,7 +19986,7 @@
         "raw": "17d | Zakaria Eddahchouri cambia de Heung Min Dad a Mister | 2 | HM | M | 1.322.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20192,7 +19997,7 @@
         "raw": "17d | Tani Oluwaseyi cambia de Heung Min Dad a Mister | 3 | HM | M | 1.071.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20203,7 +20008,7 @@
         "raw": "17d | Augusto Batalla cambia de Heung Min Dad a Mister | 7 | HM | M | 7.630.240 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17d",
         "source": "feed",
         "playerId": null,
@@ -20214,7 +20019,7 @@
         "raw": "17d | Hugo Sotelo cambia de Heung Min Dad a Mister | 5 | HM | M | 1.526.720 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -20225,7 +20030,7 @@
         "raw": "18d | José Luis Gayà cambia de Don Manuel Ruíz de Lopera a Mister | 4 | DM | M | 2.030.100 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -20236,7 +20041,7 @@
         "raw": "18d | Arnaut Danjuma cambia de Rodando Nazário a Mister | 3 | RN | M | 1.895.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -20247,7 +20052,7 @@
         "raw": "18d | Ryunosuke Sato cambia de Don Manuel Ruíz de Lopera a Heung Min Dad por pago de cláusula | 11 | DM | HM | 4.832.500 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -20258,7 +20063,7 @@
         "raw": "18d | Ayoze Pérez cambia de Heung Min Dad a Lolo Tierra por pago de cláusula | 9 | HM | LT | 3.960.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -20269,7 +20074,7 @@
         "raw": "18d | Leandro Cabrera cambia de Don Manuel Ruíz de Lopera a Mister | 0 | DM | M | 8.951.730 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -20280,7 +20085,7 @@
         "raw": "18d | Marc Cucurella cambia de Mister a Alex Ballena | 12 | M | AB | 14.500.000 | Julen Agirrezabala cambia de Mister a Heung Min Dad | 11"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -20291,7 +20096,7 @@
         "raw": "14.500.000 | Julen Agirrezabala cambia de Mister a Heung Min Dad | 11 | M | HM | 1.889.505 | Yuri Berchiche cambia de Mister a Rodando Nazário | -4"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -20302,7 +20107,7 @@
         "raw": "1.889.505 | Yuri Berchiche cambia de Mister a Rodando Nazário | -4 | M | RN | 5.224.510 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "18d",
         "source": "feed",
         "playerId": null,
@@ -20313,7 +20118,7 @@
         "raw": "18d | Jeremy Toljan cambia de Olivito a Mister | 9 | O | M | 1.540.880 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -20324,7 +20129,7 @@
         "raw": "19d | Rodrigo Mendoza cambia de Heung Min Dad a Mister | 7 | HM | M | 1.089.920 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -20335,7 +20140,7 @@
         "raw": "19d | Adrián Niño cambia de Heung Min Dad a Mister | 0 | HM | M | 1.273.980 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -20346,7 +20151,7 @@
         "raw": "19d | Javi Rodríguez cambia de Heung Min Dad a Mister | 6 | HM | M | 2.017.770 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -20357,7 +20162,7 @@
         "raw": "19d | Gustavo Puerta cambia de Rodando Nazário a Mister | 12 | RN | M | 5.850.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -20368,7 +20173,7 @@
         "raw": "19d | José Giménez cambia de Alex Ballena a Mister | 5 | AB | M | 1.158.750 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -20379,7 +20184,7 @@
         "raw": "19d | Rubén Sánchez cambia de Alex Ballena a Mister | 0 | AB | M | 230.520 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -20390,7 +20195,7 @@
         "raw": "19d | Miguel Rodríguez cambia de Alex Ballena a Mister | 0 | AB | M | 983.250 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -20401,7 +20206,7 @@
         "raw": "19d | Giovani Lo Celso cambia de Lolo Tierra a Mister | 0 | LT | M | 7.846.650 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -20412,7 +20217,7 @@
         "raw": "19d | Leo Román cambia de Olivito a Mister | 16 | O | M | 10.425.450 | Comentar | 19d"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -20423,7 +20228,7 @@
         "raw": "19d | Daniel Vivian cambia de Heung Min Dad a Mister | 0 | HM | M | 4.118.970 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -20434,7 +20239,7 @@
         "raw": "19d | Robin Le Normand cambia de Don Manuel Ruíz de Lopera a Mister | -3 | DM | M | 2.575.650 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "19d",
         "source": "feed",
         "playerId": null,
@@ -20445,7 +20250,7 @@
         "raw": "19d | Jonathan Dubasin cambia de Mister a Heung Min Dad | 7 | M | HM | 1.582.790 | Nelson Deossa cambia de Mister a Heung Min Dad | 6"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -20456,7 +20261,7 @@
         "raw": "1.582.790 | Nelson Deossa cambia de Mister a Heung Min Dad | 6 | M | HM | 925.340 | Georges Mikautadze cambia de Mister a Rodando Nazário | 17"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -20467,7 +20272,7 @@
         "raw": "925.340 | Georges Mikautadze cambia de Mister a Rodando Nazário | 17 | M | RN | 16.601.510 | Ferran Jutglà cambia de Mister a Rodando Nazário | 8"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -20478,7 +20283,7 @@
         "raw": "16.601.510 | Ferran Jutglà cambia de Mister a Rodando Nazário | 8 | M | RN | 8.227.770 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "20d",
         "source": "feed",
         "playerId": null,
@@ -20489,7 +20294,7 @@
         "raw": "20d | Abel Bretones cambia de Don Manuel Ruíz de Lopera a Mister | 9 | DM | M | 1.675.800 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "20d",
         "source": "feed",
         "playerId": null,
@@ -20500,7 +20305,7 @@
         "raw": "20d | Lucas Boyé cambia de Rodando Nazário a Mister | 12 | RN | M | 7.502.560 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "20d",
         "source": "feed",
         "playerId": null,
@@ -20511,7 +20316,7 @@
         "raw": "20d | Aymeric Laporte cambia de Rodando Nazário a Mister | 10 | RN | M | 9.451.050 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "20d",
         "source": "feed",
         "playerId": null,
@@ -20522,7 +20327,7 @@
         "raw": "20d | Mikel Jauregizar cambia de Heung Min Dad a Mister | 5 | HM | M | 2.002.000 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "20d",
         "source": "feed",
         "playerId": null,
@@ -20533,7 +20338,7 @@
         "raw": "20d | Beñat Turrientes cambia de Lolo Tierra a Mister | 9 | LT | M | 2.030.130 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "20d",
         "source": "feed",
         "playerId": null,
@@ -20544,7 +20349,7 @@
         "raw": "20d | Julio Díaz cambia de Lolo Tierra a Mister | 4 | LT | M | 833.250 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "20d",
         "source": "feed",
         "playerId": null,
@@ -20555,7 +20360,7 @@
         "raw": "20d | Andrés Castrín cambia de Lolo Tierra a Mister | 7 | LT | M | 1.529.550 | Comentar | Nuevos movimientos de jugadores"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "20d",
         "source": "feed",
         "playerId": null,
@@ -20566,7 +20371,7 @@
         "raw": "20d | Marc Aguado cambia de Heung Min Dad a Mister | 16 | HM | M | 1.672.650 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "20d",
         "source": "feed",
         "playerId": null,
@@ -20577,7 +20382,7 @@
         "raw": "20d | Raúl Moro cambia de Mister a Lolo Tierra | 2 | M | LT | 2.120.910 | Álvaro Valles cambia de Mister a Don Manuel Ruíz de Lopera | 16"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": null,
         "source": "feed",
         "playerId": null,
@@ -20588,7 +20393,7 @@
         "raw": "2.120.910 | Álvaro Valles cambia de Mister a Don Manuel Ruíz de Lopera | 16 | M | DM | 6.279.180 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "21d",
         "source": "feed",
         "playerId": null,
@@ -20599,7 +20404,7 @@
         "raw": "21d | Alemão cambia de Olivito a Mister | 6 | O | M | 1.532.640 | Comentar | Nuevas transacciones en el mercado"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "21d",
         "source": "feed",
         "playerId": null,
@@ -20610,7 +20415,7 @@
         "raw": "21d | Unai López cambia de Olivito a Mister | 11 | O | M | 1.508.000 | Comentar | Nuevo mensaje"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "21d",
         "source": "feed",
         "playerId": null,
@@ -24185,7 +23990,7 @@
         "raw": "21d | José Salinas cambia de Don Manuel Ruíz de Lopera a Mister | 5 | DM | M | 871.080 | Comentar | Nuevas transacciones en"
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "48657",
@@ -24196,7 +24001,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "55009",
@@ -24207,7 +24012,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "53114",
@@ -24218,7 +24023,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "36410",
@@ -24229,7 +24034,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "22502",
@@ -24240,7 +24045,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "2 ago 2026",
         "source": "player-profile",
         "playerId": "22502",
@@ -24251,7 +24056,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "60888",
@@ -24262,7 +24067,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "54817",
@@ -24273,7 +24078,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "20 ago 2026",
         "source": "player-profile",
         "playerId": "54817",
@@ -24284,7 +24089,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "1 ago 2026",
         "source": "player-profile",
         "playerId": "54817",
@@ -24295,7 +24100,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "3060",
@@ -24306,7 +24111,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "15653",
@@ -24317,7 +24122,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "1 ago 2026",
         "source": "player-profile",
         "playerId": "15653",
@@ -24328,7 +24133,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "71640",
@@ -24339,7 +24144,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "59382",
@@ -24350,7 +24155,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "22547",
@@ -24361,7 +24166,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "51135",
@@ -24372,7 +24177,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "30 jul 2026",
         "source": "player-profile",
         "playerId": "51135",
@@ -24383,7 +24188,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "19727",
@@ -24394,7 +24199,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "59484",
@@ -24405,7 +24210,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "7 ago 2026",
         "source": "player-profile",
         "playerId": "59484",
@@ -24416,7 +24221,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "66706",
@@ -24427,7 +24232,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "4 ago 2026",
         "source": "player-profile",
         "playerId": "66706",
@@ -24438,7 +24243,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "65704",
@@ -24449,7 +24254,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "31",
@@ -24460,7 +24265,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "28612",
@@ -24471,7 +24276,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "14911",
@@ -24482,7 +24287,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "68606",
@@ -24493,7 +24298,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "15 ago 2026",
         "source": "player-profile",
         "playerId": "68606",
@@ -24504,7 +24309,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "1762",
@@ -24515,7 +24320,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "71503",
@@ -24526,7 +24331,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "12900",
@@ -24537,7 +24342,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "53111",
@@ -24548,7 +24353,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "71061",
@@ -24559,7 +24364,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "70932",
@@ -24570,7 +24375,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "61013",
@@ -24581,7 +24386,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "6034",
@@ -24592,7 +24397,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "130",
@@ -24603,7 +24408,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "11 ago 2026",
         "source": "player-profile",
         "playerId": "130",
@@ -24614,7 +24419,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "27516",
@@ -24625,7 +24430,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "29223",
@@ -24636,7 +24441,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "1719",
@@ -24647,7 +24452,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "64468",
@@ -24658,7 +24463,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "56632",
@@ -24669,7 +24474,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "20 ago 2026",
         "source": "player-profile",
         "playerId": "56632",
@@ -24680,7 +24485,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "8 ago 2026",
         "source": "player-profile",
         "playerId": "56632",
@@ -24691,7 +24496,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "6044",
@@ -24702,7 +24507,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "61012",
@@ -24713,7 +24518,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "28773",
@@ -24724,7 +24529,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "24778",
@@ -24735,7 +24540,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "25867",
@@ -24746,7 +24551,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "5916",
@@ -24757,7 +24562,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "15107",
@@ -24768,7 +24573,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "22956",
@@ -24779,7 +24584,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "6 ago 2026",
         "source": "player-profile",
         "playerId": "22956",
@@ -24790,7 +24595,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "36046",
@@ -24801,7 +24606,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "23369",
@@ -24812,7 +24617,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "28780",
@@ -24823,7 +24628,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "27 ago 2026",
         "source": "player-profile",
         "playerId": "28780",
@@ -24834,7 +24639,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "23 ago 2026",
         "source": "player-profile",
         "playerId": "28780",
@@ -24845,7 +24650,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "68716",
@@ -24856,7 +24661,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "70999",
@@ -24867,7 +24672,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "63788",
@@ -24878,7 +24683,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17 ago 2026",
         "source": "player-profile",
         "playerId": "63788",
@@ -24889,7 +24694,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "364",
@@ -24900,7 +24705,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "70935",
@@ -24911,7 +24716,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "71138",
@@ -24922,7 +24727,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "28774",
@@ -24933,7 +24738,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17 ago 2026",
         "source": "player-profile",
         "playerId": "28774",
@@ -24944,7 +24749,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "14 ago 2026",
         "source": "player-profile",
         "playerId": "28774",
@@ -24955,7 +24760,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "1 ago 2026",
         "source": "player-profile",
         "playerId": "28774",
@@ -24966,7 +24771,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "59623",
@@ -24977,7 +24782,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "23664",
@@ -24988,7 +24793,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "26 ago 2026",
         "source": "player-profile",
         "playerId": "23664",
@@ -24999,7 +24804,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "22 ago 2026",
         "source": "player-profile",
         "playerId": "23664",
@@ -25010,7 +24815,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "5 ago 2026",
         "source": "player-profile",
         "playerId": "23664",
@@ -25021,7 +24826,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "270",
@@ -25032,7 +24837,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "20 ago 2026",
         "source": "player-profile",
         "playerId": "270",
@@ -25043,7 +24848,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "27520",
@@ -25054,7 +24859,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "31 jul 2026",
         "source": "player-profile",
         "playerId": "27520",
@@ -25065,7 +24870,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "56925",
@@ -25076,7 +24881,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "71132",
@@ -25087,7 +24892,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "29169",
@@ -25098,7 +24903,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "23172",
@@ -25109,7 +24914,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "11 ago 2026",
         "source": "player-profile",
         "playerId": "23172",
@@ -25120,7 +24925,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "22595",
@@ -25131,7 +24936,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "23 ago 2026",
         "source": "player-profile",
         "playerId": "22595",
@@ -25142,7 +24947,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "1737",
@@ -25153,7 +24958,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "28 ago 2026",
         "source": "player-profile",
         "playerId": "1737",
@@ -25164,7 +24969,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "616",
@@ -25175,7 +24980,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "70922",
@@ -25186,7 +24991,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "7 ago 2026",
         "source": "player-profile",
         "playerId": "70922",
@@ -25197,7 +25002,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "30 jul 2026",
         "source": "player-profile",
         "playerId": "70922",
@@ -25208,7 +25013,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "60858",
@@ -25219,7 +25024,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "27874",
@@ -25230,7 +25035,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "52372",
@@ -25241,7 +25046,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "8 ago 2026",
         "source": "player-profile",
         "playerId": "52372",
@@ -25252,7 +25057,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "52189",
@@ -25263,7 +25068,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "31 jul 2026",
         "source": "player-profile",
         "playerId": "52189",
@@ -25274,7 +25079,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "68498",
@@ -25285,7 +25090,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "78750",
@@ -25296,7 +25101,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "58986",
@@ -25307,7 +25112,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "12 ago 2026",
         "source": "player-profile",
         "playerId": "58986",
@@ -25318,7 +25123,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "4 ago 2026",
         "source": "player-profile",
         "playerId": "58986",
@@ -25329,7 +25134,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "5917",
@@ -25340,7 +25145,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "71004",
@@ -25351,7 +25156,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "68652",
@@ -25362,7 +25167,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "68593",
@@ -25373,7 +25178,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "8 ago 2026",
         "source": "player-profile",
         "playerId": "68593",
@@ -25384,7 +25189,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "68383",
@@ -25395,7 +25200,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "557",
@@ -25406,7 +25211,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "24789",
@@ -25417,7 +25222,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "11 ago 2026",
         "source": "player-profile",
         "playerId": "24789",
@@ -25428,7 +25233,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "70918",
@@ -25439,7 +25244,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "6 ago 2026",
         "source": "player-profile",
         "playerId": "70918",
@@ -25450,7 +25255,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "35059",
@@ -25461,7 +25266,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "13 ago 2026",
         "source": "player-profile",
         "playerId": "35059",
@@ -25472,7 +25277,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "68495",
@@ -25483,7 +25288,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "31 jul 2026",
         "source": "player-profile",
         "playerId": "68495",
@@ -25494,7 +25299,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "51060",
@@ -25505,7 +25310,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "17 ago 2026",
         "source": "player-profile",
         "playerId": "51060",
@@ -25516,7 +25321,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "70938",
@@ -25527,7 +25332,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "15 ago 2026",
         "source": "player-profile",
         "playerId": "70938",
@@ -25538,7 +25343,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "5 ago 2026",
         "source": "player-profile",
         "playerId": "70938",
@@ -25549,7 +25354,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "71139",
@@ -25560,7 +25365,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "49296",
@@ -25571,7 +25376,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "71124",
@@ -25582,7 +25387,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "2 ago 2026",
         "source": "player-profile",
         "playerId": "71124",
@@ -25593,7 +25398,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "340",
@@ -25604,7 +25409,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "22527",
@@ -25615,7 +25420,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "31 jul 2026",
         "source": "player-profile",
         "playerId": "22527",
@@ -25626,7 +25431,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "4886",
@@ -25637,7 +25442,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "21 ago 2026",
         "source": "player-profile",
         "playerId": "4886",
@@ -25648,7 +25453,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "25630",
@@ -25659,7 +25464,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "71037",
@@ -25670,7 +25475,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "20 ago 2026",
         "source": "player-profile",
         "playerId": "71037",
@@ -25681,7 +25486,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "48210",
@@ -25692,7 +25497,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "13 ago 2026",
         "source": "player-profile",
         "playerId": "48210",
@@ -25703,7 +25508,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "69281",
@@ -25714,7 +25519,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "71010",
@@ -25725,7 +25530,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "3728",
@@ -25736,7 +25541,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "71343",
@@ -25747,7 +25552,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "65269",
@@ -25758,7 +25563,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "15693",
@@ -25769,7 +25574,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "5 ago 2026",
         "source": "player-profile",
         "playerId": "15693",
@@ -25780,7 +25585,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "18109",
@@ -25791,7 +25596,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "21 ago 2026",
         "source": "player-profile",
         "playerId": "18109",
@@ -25802,7 +25607,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "31 jul 2026",
         "source": "player-profile",
         "playerId": "18109",
@@ -25813,7 +25618,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "4753",
@@ -25824,7 +25629,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "31496",
@@ -25835,7 +25640,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "6065",
@@ -25846,7 +25651,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "61009",
@@ -25857,7 +25662,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "24742",
@@ -25868,7 +25673,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "56924",
@@ -25879,7 +25684,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "20 ago 2026",
         "source": "player-profile",
         "playerId": "56924",
@@ -25890,7 +25695,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "63866",
@@ -25901,7 +25706,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "70917",
@@ -25912,7 +25717,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "71790",
@@ -25923,7 +25728,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "33734",
@@ -25934,7 +25739,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "58436",
@@ -25945,7 +25750,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "28621",
@@ -25956,7 +25761,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "1 ago 2026",
         "source": "player-profile",
         "playerId": "28621",
@@ -25967,7 +25772,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "5920",
@@ -25978,7 +25783,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "14791",
@@ -25989,7 +25794,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "28777",
@@ -26000,7 +25805,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "64151",
@@ -26011,7 +25816,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "61093",
@@ -26022,7 +25827,7 @@
         "raw": null
       },
       {
-        "scrapedAt": "2026-09-01T11:09:32.729Z",
+        "scrapedAt": "2026-09-01T11:27:13.080Z",
         "dateText": "Puntos",
         "source": "player-profile",
         "playerId": "48960",
@@ -26052,7 +25857,7 @@
         "profit": 2834257,
         "roi": 1,
         "buy_seen_at": "2026-08-31T15:02:40.721Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Rodando Nazário",
@@ -26061,8 +25866,8 @@
         "sell_price": 5668514,
         "profit": 2834257,
         "roi": 1,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Rodando Nazário",
@@ -26081,8 +25886,8 @@
         "sell_price": 4297650,
         "profit": 814390,
         "roi": 0.2338010943771065,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Heung Min Dad",
@@ -26091,8 +25896,8 @@
         "sell_price": 9737700,
         "profit": 812450,
         "roi": 0.09102826251365508,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Don Manuel Ruíz de Lopera",
@@ -26101,8 +25906,8 @@
         "sell_price": 5462100,
         "profit": 696480,
         "roi": 0.14614677628514233,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Peter LIM",
@@ -26111,8 +25916,8 @@
         "sell_price": 4314670,
         "profit": 597640,
         "roi": 0.16078428207466713,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Peter LIM",
@@ -26121,8 +25926,8 @@
         "sell_price": 4314670,
         "profit": 597640,
         "roi": 0.16078428207466713,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Rodando Nazário",
@@ -26131,8 +25936,8 @@
         "sell_price": 8818160,
         "profit": 590390,
         "roi": 0.07175577343557246,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Lolo Tierra",
@@ -26182,7 +25987,7 @@
         "profit": 319130,
         "roi": 0.031944912968055086,
         "buy_seen_at": "2026-08-31T15:02:40.721Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Heung Min Dad",
@@ -26211,8 +26016,8 @@
         "sell_price": 1860560,
         "profit": 277770,
         "roi": 0.17549390632996165,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Heung Min Dad",
@@ -26251,8 +26056,8 @@
         "sell_price": 3762720,
         "profit": 184910,
         "roi": 0.05168245379156523,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Rodando Nazário",
@@ -26261,8 +26066,8 @@
         "sell_price": 2305140,
         "profit": 175690,
         "roi": 0.0825048721500857,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Heung Min Dad",
@@ -26281,8 +26086,8 @@
         "sell_price": 5093000,
         "profit": 64460,
         "roi": 0.012818830117688236,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Lolo Tierra",
@@ -26302,7 +26107,7 @@
         "profit": 19620,
         "roi": 0.00997569631580553,
         "buy_seen_at": "2026-08-31T15:02:40.721Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Rodando Nazário",
@@ -26311,8 +26116,8 @@
         "sell_price": 2121600,
         "profit": 10940,
         "roi": 0.0051832128339002964,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Don Manuel Ruíz de Lopera",
@@ -26321,8 +26126,8 @@
         "sell_price": 1973760,
         "profit": 4400,
         "roi": 0.0022342283787626436,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Alex Ballena",
@@ -26351,8 +26156,8 @@
         "sell_price": 1933310,
         "profit": -331690,
         "roi": -0.14644150110375276,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Olivito",
@@ -26371,8 +26176,8 @@
         "sell_price": 1507800,
         "profit": -517760,
         "roi": -0.25561326250518374,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Heung Min Dad",
@@ -26381,8 +26186,8 @@
         "sell_price": 1507800,
         "profit": -517760,
         "roi": -0.25561326250518374,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Rodando Nazário",
@@ -26411,8 +26216,8 @@
         "sell_price": 2638150,
         "profit": -1117630,
         "roi": -0.2975760028542673,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Rodando Nazário",
@@ -26421,8 +26226,8 @@
         "sell_price": 2638150,
         "profit": -1117630,
         "roi": -0.2975760028542673,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Olivito",
@@ -26442,7 +26247,7 @@
         "profit": -1712680,
         "roi": -0.13356312875302193,
         "buy_seen_at": "2026-08-31T15:02:40.721Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Heung Min Dad",
@@ -26471,8 +26276,8 @@
         "sell_price": 2834257,
         "profit": -2834257,
         "roi": -0.5,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       },
       {
         "user_name": "Heung Min Dad",
@@ -26481,8 +26286,8 @@
         "sell_price": 2834257,
         "profit": -2834257,
         "roi": -0.5,
-        "buy_seen_at": "2026-09-01T11:09:32.729Z",
-        "sell_seen_at": "2026-09-01T11:09:32.729Z"
+        "buy_seen_at": "2026-09-01T11:27:13.080Z",
+        "sell_seen_at": "2026-09-01T11:27:13.080Z"
       }
     ],
     "trade_summary": [
@@ -28552,7 +28357,7 @@
     "coverage": {
       "closed_rounds": 3,
       "transfers_visible": 697,
-      "market_snapshots": 10,
+      "market_snapshots": 11,
       "notes": [
         "Las métricas deportivas salen de alineaciones cerradas y del detalle jugador-jornada.",
         "Las compras/ventas históricas dependen del feed visible y de los snapshots diarios acumulados desde ahora.",
@@ -28602,7 +28407,7 @@
         "count": 1
       }
     ],
-    "historySnapshots": 10,
+    "historySnapshots": 11,
     "latestPlayers": [
       {
         "playerId": "65704",
@@ -29066,7 +28871,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/16.png?version=20221205131749",
         "seller": "Libre",
-        "expiresInText": "15h 50m",
+        "expiresInText": "15h 32m",
         "ownerId": "0",
         "askingPrice": 7608000,
         "bidLabel": "7.608.000",
@@ -29092,7 +28897,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/13.png?version=20260621192402",
         "seller": "Libre",
-        "expiresInText": "15h 50m",
+        "expiresInText": "15h 32m",
         "ownerId": "0",
         "askingPrice": 3956000,
         "bidLabel": "3.956.000",
@@ -29118,7 +28923,7 @@
         ],
         "nextRivalLogoUrl": "https://cdn-mister.mundodeportivo.com/file/cdn-common/teams/1490.png?version=20260619162046",
         "seller": "Libre",
-        "expiresInText": "15h 50m",
+        "expiresInText": "15h 32m",
         "ownerId": "0",
         "askingPrice": 1830000,
         "bidLabel": "1.830.000",
@@ -30035,7 +29840,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30064,7 +29869,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30093,7 +29898,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30122,7 +29927,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30151,7 +29956,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30163,7 +29968,7 @@
             "href": "https://mister.mundodeportivo.com/players/22502/alex-baena"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "2 ago 2026",
             "type": "Fichaje",
@@ -30192,7 +29997,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30221,7 +30026,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30233,7 +30038,7 @@
             "href": "https://mister.mundodeportivo.com/players/54817/arda-guler"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "20 ago 2026",
             "type": "Fichaje",
@@ -30245,7 +30050,7 @@
             "href": "https://mister.mundodeportivo.com/players/54817/arda-guler"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "1 ago 2026",
             "type": "Fichaje",
@@ -30274,7 +30079,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30303,7 +30108,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30315,7 +30120,7 @@
             "href": "https://mister.mundodeportivo.com/players/15653/kang-in-lee"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "1 ago 2026",
             "type": "Fichaje",
@@ -30344,7 +30149,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30373,7 +30178,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30402,7 +30207,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30431,7 +30236,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30443,7 +30248,7 @@
             "href": "https://mister.mundodeportivo.com/players/51135/pablo-barrios"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "30 jul 2026",
             "type": "Fichaje",
@@ -30472,7 +30277,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30501,7 +30306,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30513,7 +30318,7 @@
             "href": "https://mister.mundodeportivo.com/players/59484/marc-bernal"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "7 ago 2026",
             "type": "Fichaje",
@@ -30558,7 +30363,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30570,7 +30375,7 @@
             "href": "https://mister.mundodeportivo.com/players/66706/javi-hernandez"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "4 ago 2026",
             "type": "Fichaje",
@@ -30615,7 +30420,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30644,7 +30449,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30673,7 +30478,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30702,7 +30507,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30731,7 +30536,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30743,7 +30548,7 @@
             "href": "https://mister.mundodeportivo.com/players/68606/angel-perez"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "15 ago 2026",
             "type": "Fichaje",
@@ -30772,7 +30577,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30801,7 +30606,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30830,7 +30635,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30859,7 +30664,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30888,7 +30693,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30933,7 +30738,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30962,7 +30767,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -30991,7 +30796,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31036,7 +30841,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31048,7 +30853,7 @@
             "href": "https://mister.mundodeportivo.com/players/130/iago-aspas"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "11 ago 2026",
             "type": "Fichaje",
@@ -31077,7 +30882,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31106,7 +30911,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31135,7 +30940,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31164,7 +30969,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31193,7 +30998,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31205,7 +31010,7 @@
             "href": "https://mister.mundodeportivo.com/players/56632/isaac-romero"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "20 ago 2026",
             "type": "Fichaje",
@@ -31217,7 +31022,7 @@
             "href": "https://mister.mundodeportivo.com/players/56632/isaac-romero"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "8 ago 2026",
             "type": "Fichaje",
@@ -31246,7 +31051,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31275,7 +31080,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31304,7 +31109,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31333,7 +31138,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31362,7 +31167,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31407,7 +31212,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31436,7 +31241,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31481,7 +31286,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31493,7 +31298,7 @@
             "href": "https://mister.mundodeportivo.com/players/22956/sergio-gomez"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "6 ago 2026",
             "type": "Fichaje",
@@ -31522,7 +31327,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31551,7 +31356,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31580,7 +31385,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31592,7 +31397,7 @@
             "href": "https://mister.mundodeportivo.com/players/28780/luismi-cruz"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "27 ago 2026",
             "type": "Fichaje",
@@ -31604,7 +31409,7 @@
             "href": "https://mister.mundodeportivo.com/players/28780/luismi-cruz"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "23 ago 2026",
             "type": "Fichaje",
@@ -31633,7 +31438,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31662,7 +31467,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31691,7 +31496,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31703,7 +31508,7 @@
             "href": "https://mister.mundodeportivo.com/players/63788/dean-huijsen"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "17 ago 2026",
             "type": "Fichaje",
@@ -31748,7 +31553,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31777,7 +31582,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31806,7 +31611,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31835,7 +31640,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31847,7 +31652,7 @@
             "href": "https://mister.mundodeportivo.com/players/28774/julen-agirrezabala"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "17 ago 2026",
             "type": "Cláusula",
@@ -31859,7 +31664,7 @@
             "href": "https://mister.mundodeportivo.com/players/28774/julen-agirrezabala"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "14 ago 2026",
             "type": "Fichaje",
@@ -31871,7 +31676,7 @@
             "href": "https://mister.mundodeportivo.com/players/28774/julen-agirrezabala"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "1 ago 2026",
             "type": "Fichaje",
@@ -31900,7 +31705,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31929,7 +31734,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -31941,7 +31746,7 @@
             "href": "https://mister.mundodeportivo.com/players/23664/sergio-carreira"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "26 ago 2026",
             "type": "Fichaje",
@@ -31953,7 +31758,7 @@
             "href": "https://mister.mundodeportivo.com/players/23664/sergio-carreira"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "22 ago 2026",
             "type": "Fichaje",
@@ -31965,7 +31770,7 @@
             "href": "https://mister.mundodeportivo.com/players/23664/sergio-carreira"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "5 ago 2026",
             "type": "Fichaje",
@@ -31994,7 +31799,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32006,7 +31811,7 @@
             "href": "https://mister.mundodeportivo.com/players/270/ruben-garcia"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "20 ago 2026",
             "type": "Fichaje",
@@ -32035,7 +31840,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32047,7 +31852,7 @@
             "href": "https://mister.mundodeportivo.com/players/27520/fran-garcia"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "31 jul 2026",
             "type": "Fichaje",
@@ -32076,7 +31881,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32105,7 +31910,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32134,7 +31939,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32163,7 +31968,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32175,7 +31980,7 @@
             "href": "https://mister.mundodeportivo.com/players/23172/urko-gonzalez"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "11 ago 2026",
             "type": "Fichaje",
@@ -32204,7 +32009,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32216,7 +32021,7 @@
             "href": "https://mister.mundodeportivo.com/players/22595/joaquin-munoz"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "23 ago 2026",
             "type": "Fichaje",
@@ -32245,7 +32050,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32257,7 +32062,7 @@
             "href": "https://mister.mundodeportivo.com/players/1737/einar-galilea"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "28 ago 2026",
             "type": "Fichaje",
@@ -32286,7 +32091,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32315,7 +32120,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32327,7 +32132,7 @@
             "href": "https://mister.mundodeportivo.com/players/70922/ibrahima-konate"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "7 ago 2026",
             "type": "Fichaje",
@@ -32339,7 +32144,7 @@
             "href": "https://mister.mundodeportivo.com/players/70922/ibrahima-konate"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "30 jul 2026",
             "type": "Fichaje",
@@ -32368,7 +32173,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32397,7 +32202,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32426,7 +32231,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32438,7 +32243,7 @@
             "href": "https://mister.mundodeportivo.com/players/52372/javi-guerra"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "8 ago 2026",
             "type": "Fichaje",
@@ -32467,7 +32272,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32479,7 +32284,7 @@
             "href": "https://mister.mundodeportivo.com/players/52189/ayoze-perez"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "31 jul 2026",
             "type": "Fichaje",
@@ -32508,7 +32313,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32537,7 +32342,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32566,7 +32371,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32578,7 +32383,7 @@
             "href": "https://mister.mundodeportivo.com/players/58986/abel-bretones"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "12 ago 2026",
             "type": "Fichaje",
@@ -32590,7 +32395,7 @@
             "href": "https://mister.mundodeportivo.com/players/58986/abel-bretones"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "4 ago 2026",
             "type": "Fichaje",
@@ -32619,7 +32424,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32648,7 +32453,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32693,7 +32498,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32722,7 +32527,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32734,7 +32539,7 @@
             "href": "https://mister.mundodeportivo.com/players/68593/lucas-cepeda"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "8 ago 2026",
             "type": "Fichaje",
@@ -32763,7 +32568,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32792,7 +32597,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32821,7 +32626,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32833,7 +32638,7 @@
             "href": "https://mister.mundodeportivo.com/players/24789/nico-williams"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "11 ago 2026",
             "type": "Fichaje",
@@ -32862,7 +32667,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32874,7 +32679,7 @@
             "href": "https://mister.mundodeportivo.com/players/70918/bernardo-silva"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "6 ago 2026",
             "type": "Fichaje",
@@ -32903,7 +32708,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32915,7 +32720,7 @@
             "href": "https://mister.mundodeportivo.com/players/35059/ferran-jutgla"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "13 ago 2026",
             "type": "Fichaje",
@@ -32944,7 +32749,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32956,7 +32761,7 @@
             "href": "https://mister.mundodeportivo.com/players/68495/martin-satriano"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "31 jul 2026",
             "type": "Fichaje",
@@ -32985,7 +32790,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -32997,7 +32802,7 @@
             "href": "https://mister.mundodeportivo.com/players/51060/juan-cruz"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "17 ago 2026",
             "type": "Fichaje",
@@ -33026,7 +32831,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33038,7 +32843,7 @@
             "href": "https://mister.mundodeportivo.com/players/70938/alvaro-mantilla"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "15 ago 2026",
             "type": "Fichaje",
@@ -33050,7 +32855,7 @@
             "href": "https://mister.mundodeportivo.com/players/70938/alvaro-mantilla"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "5 ago 2026",
             "type": "Fichaje",
@@ -33079,7 +32884,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33108,7 +32913,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33137,7 +32942,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33149,7 +32954,7 @@
             "href": "https://mister.mundodeportivo.com/players/71124/denzel-dumfries"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "2 ago 2026",
             "type": "Fichaje",
@@ -33178,7 +32983,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33223,7 +33028,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33235,7 +33040,7 @@
             "href": "https://mister.mundodeportivo.com/players/22527/aimar-oroz"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "31 jul 2026",
             "type": "Fichaje",
@@ -33264,7 +33069,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33276,7 +33081,7 @@
             "href": "https://mister.mundodeportivo.com/players/4886/asier-villalibre"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "21 ago 2026",
             "type": "Fichaje",
@@ -33305,7 +33110,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33334,7 +33139,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33346,7 +33151,7 @@
             "href": "https://mister.mundodeportivo.com/players/71037/facundo-gonzalez"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "20 ago 2026",
             "type": "Fichaje",
@@ -33375,7 +33180,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33387,7 +33192,7 @@
             "href": "https://mister.mundodeportivo.com/players/48210/jonathan-dubasin"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "13 ago 2026",
             "type": "Fichaje",
@@ -33416,7 +33221,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33445,7 +33250,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33474,7 +33279,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33503,7 +33308,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33532,7 +33337,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33561,7 +33366,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33573,7 +33378,7 @@
             "href": "https://mister.mundodeportivo.com/players/15693/javi-galan"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "5 ago 2026",
             "type": "Fichaje",
@@ -33602,7 +33407,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33614,7 +33419,7 @@
             "href": "https://mister.mundodeportivo.com/players/18109/luis-rioja"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "21 ago 2026",
             "type": "Fichaje",
@@ -33626,7 +33431,7 @@
             "href": "https://mister.mundodeportivo.com/players/18109/luis-rioja"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "31 jul 2026",
             "type": "Fichaje",
@@ -33655,7 +33460,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33700,7 +33505,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33729,7 +33534,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33758,7 +33563,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33787,7 +33592,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33832,7 +33637,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33844,7 +33649,7 @@
             "href": "https://mister.mundodeportivo.com/players/56924/etta-eyong"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "20 ago 2026",
             "type": "Fichaje",
@@ -33873,7 +33678,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33902,7 +33707,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33931,7 +33736,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33960,7 +33765,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -33989,7 +33794,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -34034,7 +33839,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -34046,7 +33851,7 @@
             "href": "https://mister.mundodeportivo.com/players/28621/abdel-abqar"
           },
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "1 ago 2026",
             "type": "Fichaje",
@@ -34075,7 +33880,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -34104,7 +33909,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -34133,7 +33938,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -34178,7 +33983,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -34207,7 +34012,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -34251,7 +34056,7 @@
         "owner": null,
         "movements": [
           {
-            "scrapedAt": "2026-09-01T11:09:32.729Z",
+            "scrapedAt": "2026-09-01T11:27:13.080Z",
             "source": "player-profile",
             "dateText": "Puntos",
             "type": null,
@@ -34295,7 +34100,7 @@
     }
   ],
   "deep": {
-    "scrapedAt": "2026-09-01T11:09:32.729Z",
+    "scrapedAt": "2026-09-01T11:27:13.080Z",
     "gameweeks": [
       {
         "round": 1,
@@ -34388,8 +34193,8 @@
     "playerProfiles": 132
   },
   "calendar": {
-    "updatedAt": "2026-08-31T15:03:15.087Z",
-    "scrapedAt": "2026-08-31T15:03:15.087Z",
+    "updatedAt": "2026-09-01T11:28:42.079Z",
+    "scrapedAt": "2026-09-01T11:28:42.080Z",
     "source": "https://www.laliga.com/laliga-easports/calendario",
     "fallbackSource": "https://as.com/resultados/futbol/primera/calendario/",
     "status": "as-calendar-dates",
@@ -35311,8 +35116,8 @@
     ]
   },
   "pig": {
-    "updatedAt": "2026-08-29T13:26:15+02:00",
-    "note": "Histórico inicial editable. Las automatizaciones semanales podrán actualizar este archivo con las víctimas reales y las dos tarjetas de cada jornada.",
+    "updatedAt": "2026-09-01T11:25:13.310Z",
+    "note": "Histórico inicial editable. Las automatizaciones diarias podrán actualizar este archivo con las víctimas reales y conservar las dos tarjetas elegidas por el cerdo en cada jornada.",
     "rounds": [
       {
         "round": 1,
@@ -35331,7 +35136,7 @@
         "status": "closed",
         "victims": [
           "Alex Ballena",
-          "Peter LIM"
+          "Olivito"
         ],
         "cards": [
           "img/img4.jpg",
@@ -35340,8 +35145,11 @@
       },
       {
         "round": 3,
-        "status": "in_progress",
-        "victims": [],
+        "status": "closed",
+        "victims": [
+          "Alex Ballena",
+          "Rodando Nazário"
+        ],
         "cards": [
           "img/img3.jpg",
           "img/img7.jpeg"
