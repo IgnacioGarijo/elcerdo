@@ -94,6 +94,8 @@ En condiciones normales, no hay que hacer nada. Cada día, si una jornada nueva 
 
 Si una jornada queda incompleta por partidos aplazados, se debe mantener como `in_progress` y no sumarla a la general ni desbloquear galardones hasta que Mister la dé por cerrada. La Action profunda puede correr igualmente a diario; la web puede mostrar datos en vivo o provisionales, pero la clasificación histórica y los galardones sólo deben consolidarse con jornadas cerradas.
 
+El galardón `Peor alineador` no debe calcularse con el banquillo histórico que devuelve Mister para jornadas pasadas, porque ese banquillo puede reflejar la plantilla actual y no la plantilla real al inicio de la jornada. Desde ahora el scraping diario guarda `data/mister/roster-history.jsonl` con snapshots de plantilla por `managerId`. Para calcularlo bien se usa el primer snapshot posterior al inicio de la jornada, se excluyen los titulares oficiales y se descartan fichajes con `acquiredAt` posterior al inicio. Dentro de cada posición se empareja jerárquicamente: peor titular contra mejor suplente, siguiente peor titular contra siguiente mejor suplente, y cada titular sólo puede contar una vez.
+
 Conviene revisar de vez en cuando:
 
 - Que el workflow diario no esté fallando en GitHub.
@@ -117,7 +119,7 @@ Cada vez que corre el builder diario, compara los managers actuales de Mister co
 
 ## Scraping profundo
 
-El scraper semanal genera `data/mister/latest/deep.json`. La metodología buena es híbrida: abre una sola página autenticada para leer el `X-Auth` que usa Mister y después hace peticiones limpias a los endpoints JSON internos, sin abrir ficha por ficha ni depender de clicks visuales.
+El scraper diario genera `data/mister/latest/deep.json`. La metodología buena es híbrida: abre una sola página autenticada para leer el `X-Auth` que usa Mister y después hace peticiones limpias a los endpoints JSON internos, sin abrir ficha por ficha ni depender de clicks visuales.
 
 Endpoints reales usados:
 
@@ -137,10 +139,14 @@ Ese archivo guarda:
 - Catálogo de todos los jugadores visibles en Mister.
 - Puntos por jornada, goles, asistencias, tarjetas, minutos y eventos.
 - Desglose de Mixto, AS, Marca, Mundo Deportivo, Sofascore y Marca Stats.
+- Clausulazos detectables en el feed cuando aparece `por pago de cláusula`.
+- Snapshots diarios de plantilla por manager para métricas futuras que no se puedan reconstruir desde Mister, como el banquillo real.
 
 La web usa esos datos para permitir que las clasificaciones de `General` y `Jornada` cambien entre `Mixto`, `AS`, `Marca`, `Mundo Deportivo`, `Sofascore` y `Marca Stats`. Si falta un dato de proveedor en un jugador concreto, no se inventa: ese jugador queda fuera de esa suma alternativa hasta que Mister devuelva el detalle.
 
-Las asistencias no aparecen como campo simple en la ficha, pero sí se recuperan del detalle estadístico `goalAssist`. Por criterio de liga, `Peor alineador` y `Mejor/peor director deportivo` no se otorgan para jornadas anteriores al corte configurado en `MISTER_LINEUP_AWARD_START_ROUND`, aunque Mister permita recuperar parte del banquillo histórico.
+Las asistencias no aparecen como campo simple en la ficha, pero sí se recuperan del detalle estadístico `goalAssist`. Por criterio de liga, `Mejor/peor director deportivo` no se otorga para jornadas anteriores al corte configurado en `MISTER_LINEUP_AWARD_START_ROUND`. `Peor alineador` sólo se otorga si existe snapshot propio de plantilla para esa jornada; no se confía en el banquillo histórico de Mister.
+
+El gráfico `El Rata` cuenta pujas no aceptadas porque otro equipo pujó más usando las `Otras pujas` que Mister muestra en el feed después de una operación cerrada. No se usa el botón de mercado `Ver nº de pujas`, porque cuesta créditos y sólo enseña volumen de pujas activas, no histórico por equipo. Como el feed es limitado, el dato será más completo a medida que el scraping diario vaya acumulando historial.
 
 ## Cómo replicarlo en otro proyecto
 

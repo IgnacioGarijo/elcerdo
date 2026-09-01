@@ -56,6 +56,10 @@ function ensureAbsoluteUrl(href) {
   return new URL(href, BASE_URL).toString();
 }
 
+function cleanTransferParty(value) {
+  return String(value || "").replace(/\s+por pago de cl[áa]usula\s*$/i, "").trim();
+}
+
 async function writeJson(filePath, data) {
   await fs.mkdir(path.dirname(filePath), { recursive: true });
   await fs.writeFile(filePath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
@@ -230,32 +234,121 @@ async function scrapeFeed(page, metadata) {
   await page.waitForLoadState("networkidle", { timeout: 15000 }).catch(() => {});
   await scrollToLoad(page);
 
-  const feed = await page.evaluate(() => ({
-    headlineText: document.body.innerText.slice(0, 30000),
-    links: [...document.querySelectorAll('a[href*="players/"], a[href*="users/"]')].map((link) => ({
-      text: link.innerText.trim().replace(/\s+/g, " "),
-      href: link.href
-    })),
-    cards: [...document.querySelectorAll("#feed .card, .feed-card, article, .activity, .post")].map((card) => ({
-      text: card.innerText.trim().replace(/\s+/g, " "),
-      links: [...card.querySelectorAll("a[href]")].map((link) => ({ text: link.innerText.trim(), href: link.href }))
-    })).filter((card) => card.text)
-  }));
+  const feed = await page.evaluate(() => {
+    const parseNumber = (value) => {
+      if (value == null) return null;
+      const normalized = String(value).replace(/[^\d,.-]/g, "").replace(/\./g, "").replace(",", ".");
+      const parsed = Number(normalized);
+      return Number.isFinite(parsed) ? parsed : null;
+    };
 
-  const transfers = parseFeedTransfers(feed.headlineText, metadata.scrapedAt);
+    const cleanParty = (value) => String(value || "").replace(/\s+por pago de cl[áa]usula\s*$/i, "").trim();
+    const transferCards = [...document.querySelectorAll(".card-transfer")].flatMap((card) =>
+      [...card.querySelectorAll("ul.player-list > li")].map((item) => {
+        const title = item.querySelector(".title")?.innerText?.trim().replace(/\s+/g, " ") || "";
+        const movement = title.match(/^(.+?)\s+cambia de\s+(.+?)\s+a\s+(.+?)(?:\s+por pago de cl[áa]usula)?$/i);
+        if (!movement) return null;
+        const playerLink = item.querySelector('a.player[href*="players/"]');
+        const playerId = playerLink?.href?.match(/\/players\/(\d+)\//)?.[1] || null;
+        const otherBids = [...item.querySelectorAll(".other-bids li:not(.other-bids-title)")].map((bid) => {
+          const text = bid.innerText.trim().replace(/\s+/g, " ");
+          const bidMatch = text.match(/^(\d+)\.\s+(.+?)\s+›\s+([\d.]+)/);
+          if (!bidMatch) return null;
+          return {
+            rank: Number(bidMatch[1]),
+            team: bidMatch[2].trim(),
+            price: parseNumber(bidMatch[3])
+          };
+        }).filter(Boolean);
+
+        return {
+          playerId,
+          playerName: movement[1].trim(),
+          from: cleanParty(movement[2]),
+          to: cleanParty(movement[3]),
+          price: parseNumber(item.querySelector(".price")?.innerText),
+          type: /por pago de cl[áa]usula/i.test(title) ? "clause" : "transfer",
+          isClause: /por pago de cl[áa]usula/i.test(title),
+          otherBids,
+          raw: title
+        };
+      }).filter(Boolean)
+    );
+
+    return {
+      headlineText: document.body.innerText.slice(0, 30000),
+      links: [...document.querySelectorAll('a[href*="players/"], a[href*="users/"]')].map((link) => ({
+        text: link.innerText.trim().replace(/\s+/g, " "),
+        href: link.href
+      })),
+      cards: [...document.querySelectorAll("#feed .card, .feed-card, article, .activity, .post")].map((card) => ({
+        text: card.innerText.trim().replace(/\s+/g, " "),
+        links: [...card.querySelectorAll("a[href]")].map((link) => ({ text: link.innerText.trim(), href: link.href }))
+      })).filter((card) => card.text),
+      transferCards
+    };
+  });
+
+  const transfers = mergeStructuredFeedTransfers(parseFeedTransfers(feed.headlineText, metadata.scrapedAt), feed.transferCards || []);
   return { ...metadata, page: "feed", url: page.url(), ...feed, transfers };
+}
+
+function transferMergeKey(transfer) {
+  return [
+    transfer.playerName,
+    cleanTransferParty(transfer.from),
+    cleanTransferParty(transfer.to),
+    transfer.price ?? ""
+  ].map((part) => String(part || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")).join("|");
+}
+
+function mergeStructuredFeedTransfers(parsedTransfers = [], structuredTransfers = []) {
+  const structuredByKey = new Map();
+  for (const transfer of structuredTransfers) {
+    structuredByKey.set(transferMergeKey(transfer), transfer);
+  }
+
+  const merged = parsedTransfers.map((transfer) => {
+    const structured = structuredByKey.get(transferMergeKey(transfer));
+    if (!structured) return transfer;
+    structuredByKey.delete(transferMergeKey(transfer));
+    return {
+      ...transfer,
+      playerId: transfer.playerId || structured.playerId || null,
+      type: transfer.type || structured.type,
+      isClause: Boolean(transfer.isClause || structured.isClause),
+      otherBids: structured.otherBids || []
+    };
+  });
+
+  for (const transfer of structuredByKey.values()) {
+    merged.push({
+      scrapedAt: null,
+      dateText: null,
+      occurredAt: null,
+      ...transfer,
+      from: cleanTransferParty(transfer.from),
+      to: cleanTransferParty(transfer.to),
+      otherBids: transfer.otherBids || []
+    });
+  }
+
+  return merged;
 }
 
 function parseFeedTransfers(text = "", scrapedAt = new Date().toISOString()) {
   const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
   const transfers = [];
   const pricePattern = /^[\d.]{4,}$/;
+  let lastDateText = null;
 
   for (let i = 0; i < lines.length; i++) {
-    const movement = lines[i].match(/^(.+?)\s+cambia de\s+(.+?)\s+a\s+(.+)$/i);
+    const movement = lines[i].match(/^(.+?)\s+cambia de\s+(.+?)\s+a\s+(.+?)(?:\s+por pago de cl[áa]usula)?$/i);
     if (!movement) continue;
+    const isClause = /por pago de cl[áa]usula/i.test(lines[i]);
 
-    const dateText = /^(ahora|\d+\s*(?:s|min|h|d|sem|mes|meses|año|años))$/i.test(lines[i - 1] || "") ? lines[i - 1] : null;
+    const dateText = /^(ahora|\d+\s*(?:s|min|h|d|sem|mes|meses|año|años))$/i.test(lines[i - 1] || "") ? lines[i - 1] : lastDateText;
+    if (dateText) lastDateText = dateText;
     let price = null;
     for (let j = i + 1; j < Math.min(lines.length, i + 8); j++) {
       if (pricePattern.test(lines[j])) {
@@ -268,10 +361,13 @@ function parseFeedTransfers(text = "", scrapedAt = new Date().toISOString()) {
     transfers.push({
       scrapedAt,
       dateText,
+      occurredAt: approximateOccurredAt(dateText, scrapedAt),
       playerName: movement[1].trim(),
-      from: movement[2].trim(),
-      to: movement[3].trim(),
+      from: cleanTransferParty(movement[2]),
+      to: cleanTransferParty(movement[3]),
       price,
+      type: isClause ? "clause" : "transfer",
+      isClause,
       raw: lines.slice(Math.max(0, i - 1), Math.min(lines.length, i + 7)).join(" | ")
     });
   }
@@ -279,13 +375,39 @@ function parseFeedTransfers(text = "", scrapedAt = new Date().toISOString()) {
   return transfers;
 }
 
+async function persistRosterSnapshot(deep, metadata = {}) {
+  const latestRound = (deep?.rounds || []).at(-1);
+  const userRounds = latestRound?.userRounds || [];
+  if (!userRounds.length) return;
+  await appendJsonl(path.join(DATA_DIR, "roster-history.jsonl"), {
+    ...metadata,
+    round: latestRound.round || null,
+    gameweekId: latestRound.gameweekId || null,
+    teams: userRounds.map((userRound) => ({
+      managerId: userRound.manager?.managerId || null,
+      name: userRound.manager?.name || null,
+      players: (userRound.currentSquad || userRound.squad || []).map((player) => ({
+        playerId: player.playerId || null,
+        name: player.name || null,
+        position: player.position || null,
+        marketValue: player.marketValue ?? null,
+        acquiredAt: player.acquiredAt || null,
+        acquisitionPrice: player.acquisitionPrice ?? null,
+        clause: player.clause ?? null
+      }))
+    }))
+  });
+}
+
 function transferKey(transfer) {
+  const type = transfer.isClause ? "clause" : transfer.type || "transfer";
   return [
     transfer.playerName,
     transfer.from,
     transfer.to,
     transfer.price ?? "",
-    transfer.dateText ?? ""
+    type,
+    JSON.stringify(transfer.otherBids || [])
   ].map((part) => String(part || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")).join("|");
 }
 
@@ -877,6 +999,28 @@ function numberOrNull(value) {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
+function approximateOccurredAt(dateText, scrapedAt = new Date().toISOString()) {
+  const base = new Date(scrapedAt);
+  if (Number.isNaN(base.getTime()) || !dateText) return null;
+  if (/^ahora$/i.test(dateText)) return base.toISOString();
+  const match = String(dateText).match(/^(\d+)\s*(s|min|h|d|sem|mes|meses|año|años)$/i);
+  if (!match) return null;
+  const value = Number(match[1]);
+  const unit = match[2].toLowerCase();
+  const multipliers = {
+    s: 1000,
+    min: 60 * 1000,
+    h: 60 * 60 * 1000,
+    d: 24 * 60 * 60 * 1000,
+    sem: 7 * 24 * 60 * 60 * 1000,
+    mes: 30 * 24 * 60 * 60 * 1000,
+    meses: 30 * 24 * 60 * 60 * 1000,
+    "año": 365 * 24 * 60 * 60 * 1000,
+    "años": 365 * 24 * 60 * 60 * 1000
+  };
+  return new Date(base.getTime() - value * (multipliers[unit] || 0)).toISOString();
+}
+
 function parseMaybeJson(value) {
   if (!value || typeof value !== "string") return value || null;
   try {
@@ -1288,6 +1432,10 @@ async function main() {
 
     if (results.feed) {
       await persistTransfers(results.feed.transfers || [], metadata);
+    }
+
+    if (results.deep) {
+      await persistRosterSnapshot(results.deep, metadata);
     }
 
     await writeJson(path.join(snapshotDir, "run.json"), {

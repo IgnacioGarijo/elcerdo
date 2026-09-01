@@ -40,8 +40,8 @@ const images = [
 ];
 
 const BUILD_VERSION = {
-  label: "web round-close-v1",
-  updatedAt: "2026-09-01T13:35:00+02:00"
+  label: "web rata-rate-v1",
+  updatedAt: "2026-09-01T16:12:00+02:00"
 };
 
 const cardTeams = new Map([
@@ -109,6 +109,8 @@ const awardDefs = [
   { id: "coral", icon: "🧬", kind: "good", name: "Equipo más coral", desc: "Menor dependencia de un solo jugador entre equipos con puntos positivos." },
   { id: "captain", icon: "👑", kind: "good", name: "Capitán adecuado", desc: "Eligió al mejor capitán posible." },
   { id: "bench", icon: "🪑", kind: "bad", name: "Peor alineador", desc: "Más puntos útiles dejados en el banquillo frente a titulares de la misma posición." },
+  { id: "clauseMade", icon: "🪝", kind: "good", name: "Clausulazos hechos", desc: "Más jugadores robados pagando la cláusula." },
+  { id: "clauseReceived", icon: "🧾", kind: "bad", name: "Clausulazos recibidos", desc: "Más jugadores perdidos por cláusula." },
   { id: "directorGood", icon: "🧠", kind: "good", name: "Mejor director deportivo", desc: "Más puntos ganados por cambios de plantilla respecto a la jornada anterior." },
   { id: "directorBad", icon: "🧨", kind: "bad", name: "Peor director deportivo", desc: "Más puntos perdidos por cambios de plantilla respecto a la jornada anterior." },
   { id: "trader", icon: "📈", kind: "good", name: "Mejor trader", desc: "Mayor aumento de valor de equipo entre jornadas." },
@@ -862,6 +864,7 @@ function statsTemplate(tab, stats) {
         ${chartCard("stats-signing-points", "Puntos por fichajes", "Puntos aportados por jugadores actualmente fichados.")}
         ${chartCard("stats-first-signing", "Primera jornada tras fichar", "Impacto inicial de los fichajes detectados.")}
         ${chartCard("stats-activity", "Actividad de mercado", "Compras, ventas y movimientos visibles.")}
+        ${chartCard("stats-rejected-bids", "El Rata", "Porcentaje de pujas visibles no aceptadas.")}
         ${chartCard("stats-volume", "Volumen de mercado", "Dinero movido en operaciones detectadas.")}
       </div>
       ${statsTable("Operaciones cerradas", stats.completed_trades, ["user_name", "player_name", "buy_price", "sell_price", "profit"])}
@@ -929,6 +932,7 @@ function renderStatsCharts(tab, stats) {
     plotBar("stats-signing-points", stats.signing_points || [], "points_after_signing", { label: "Puntos", customY: row => `${row.player_name}<br>${row.user_name}` });
     plotBar("stats-first-signing", stats.first_round_signing_points || [], "first_round_points", { label: "Puntos", customY: row => `${row.player_name}<br>${row.user_name}` });
     plotGroupedBar("stats-activity", stats.market_activity_summary || [], ["purchases", "sales"], ["Compras", "Ventas"]);
+    plotBar("stats-rejected-bids", stats.market_activity_summary || [], "rejected_bid_rate", { label: "% pujas perdidas", percent: true, hoverKeys: ["rejected_bids", "visible_bids", "rejected_bid_volume"] });
     plotBar("stats-volume", stats.market_activity_summary || [], "market_volume", { label: "Volumen", money: true });
   }
   if (tab === "plantilla") {
@@ -1074,7 +1078,10 @@ function colorForRow(row, fallbackIndex = 0) {
 function hoverTemplate(options = {}) {
   const extras = {
     profit: "<br>Beneficio: %{customdata[0]:,.0f}€",
-    completed_trades: "<br>Operaciones: %{customdata[1]}"
+    completed_trades: "<br>Operaciones: %{customdata[1]}",
+    rejected_bids: "<br>Pujas perdidas: %{customdata[0]}",
+    visible_bids: "<br>Pujas visibles totales: %{customdata[1]}",
+    rejected_bid_volume: "<br>Volumen perdido: %{customdata[2]:,.0f}€"
   };
   const extraText = (options.hoverKeys || []).map(key => extras[key] || `<br>${key}: %{customdata}`).join("");
   return `%{y}<br>%{text}${extraText}<extra></extra>`;
@@ -1144,7 +1151,7 @@ function tableHeader(key) {
 }
 
 function formatTableValue(value, key) {
-  if (["buy_price", "sell_price", "profit", "team_value", "market_value"].includes(key)) return formatMoney(Number(value) || 0);
+  if (["buy_price", "sell_price", "profit", "team_value", "market_value", "rejected_bid_volume"].includes(key)) return formatMoney(Number(value) || 0);
   if (typeof value === "number") return Number.isInteger(value) ? value : value.toFixed(2);
   return value ?? "-";
 }

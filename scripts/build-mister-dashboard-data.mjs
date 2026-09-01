@@ -72,6 +72,8 @@ const AWARD_DEFINITIONS = [
   { id: "coral", icon: "🧬", kind: "good", name: "Equipo más coral", requirement: "player_round_points" },
   { id: "captain", icon: "👑", kind: "good", name: "Capitán adecuado", requirement: "captain_selection" },
   { id: "bench", icon: "🪑", kind: "bad", name: "Peor alineador", requirement: "bench_points" },
+  { id: "clauseMade", icon: "🪝", kind: "good", name: "Clausulazos hechos", requirement: "feed_clause_transfers" },
+  { id: "clauseReceived", icon: "🧾", kind: "bad", name: "Clausulazos recibidos", requirement: "feed_clause_transfers" },
   { id: "directorGood", icon: "🧠", kind: "good", name: "Mejor director deportivo", requirement: "roster_delta" },
   { id: "directorBad", icon: "🧨", kind: "bad", name: "Peor director deportivo", requirement: "roster_delta" },
   { id: "trader", icon: "📈", kind: "good", name: "Mejor trader", requirement: "daily_value_snapshots" },
@@ -225,6 +227,10 @@ function canonicalizeTeamName(name, identity) {
     if (key.startsWith(`${aliasKey} `) || key.includes(` ${aliasKey} `)) return team.currentName;
   }
   return name;
+}
+
+function cleanTransferParty(value) {
+  return String(value || "").replace(/\s+por pago de cl[áa]usula\s*$/i, "").trim();
 }
 
 function canonicalizeTeamRow(row, identity) {
@@ -701,7 +707,7 @@ function cumulativeStandingsBySystem(teams, closedRounds, roundNumber, system) {
   return Array.from(totals.values()).sort((a, b) => b.points - a.points || a.name.localeCompare(b.name));
 }
 
-function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Map()) {
+function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Map(), rosterHistory = [], calendar = {}, identity = { byId: new Map(), byAlias: new Map() }, transfers = []) {
   const counts = new Map(teams.map((team) => [team.name, {}]));
   const byRound = [];
   const previousUserRounds = new Map();
@@ -714,6 +720,7 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
 
   for (const round of closedRounds) {
     const rows = [...round.rows].sort((a, b) => b.points - a.points);
+    const rosterSnapshot = rosterSnapshotForRound(round, calendar, rosterHistory, identity);
     awardExtremes(rows, "points", "max").forEach((row) => add(row.name, "winner", round.round, `${row.points} pts`));
     awardExtremes(rows, "points", "min").forEach((row) => add(row.name, "loser", round.round, `${row.points} pts`));
     const withValue = rows
@@ -730,7 +737,7 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
     const userRounds = round.userRounds || [];
     const eventRows = userRounds.map((userRound) => {
       const lineup = userRound.lineup || [];
-      const bench = userRound.bench || [];
+      const bench = rosterSnapshot ? snapshotBenchForUserRound(userRound, rosterSnapshot, round, calendar, identity) : [];
       const scored = lineup.map((player) => ({
         ...player,
         position: playerPosition(player, playerLookup),
@@ -740,21 +747,11 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
         yellows: statCount(player, playerLookup, "yellowCard") || eventCount(player, playerLookup, /yellow/i),
         reds: statCount(player, playerLookup, "redCard") + statCount(player, playerLookup, "doubleYellowCard") || eventCount(player, playerLookup, /red/i)
       }));
-      const benchScored = bench.map((player) => ({
-        ...player,
-        position: playerPosition(player, playerLookup),
-        finalPoints: playerFinalPoints(player, playerLookup) ?? player.points ?? null
-      }));
       const total = scored.reduce((sum, player) => sum + Math.max(0, Number(player.finalPoints) || 0), 0);
       const top = scored.reduce((best, player) => Number(player.finalPoints) > Number(best?.finalPoints ?? -Infinity) ? player : best, null);
       const captainResult = captainChoiceResult(scored, playerLookup);
       const dnp = scored.filter((player) => !Number.isFinite(player.finalPoints)).length;
-      const benchMistakes = benchScored.filter((benchPlayer) => {
-        if (!Number.isFinite(benchPlayer.finalPoints)) return false;
-        const samePosition = scored.filter((starter) => starter.position && starter.position === benchPlayer.position && Number.isFinite(starter.finalPoints));
-        if (!samePosition.length) return false;
-        return benchPlayer.finalPoints > Math.min(...samePosition.map((starter) => starter.finalPoints));
-      });
+      const benchSummary = rosterSnapshot ? benchUpgradeSummary(lineup, bench, playerLookup, round.gameweekId) : { count: null, points: null };
       const previous = previousUserRounds.get(userRound.manager.name);
       const directorDelta = previous ? lineupChangeDelta(previous.lineup || [], lineup, round.gameweekId, playerLookup) : null;
       return {
@@ -764,7 +761,8 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
         yellows: scored.reduce((sum, player) => sum + player.yellows, 0),
         reds: scored.reduce((sum, player) => sum + player.reds, 0),
         dnp,
-        benchMistakes: benchMistakes.length,
+        benchMistakes: benchSummary.count,
+        benchPointsLeft: benchSummary.points,
         dependency: total > 0 && top ? top.finalPoints / total : null,
         coral: total > 0 && top ? top.finalPoints / total : null,
         captain: captainResult.chosen?.player || null,
@@ -784,6 +782,22 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
       .forEach((row) => add(row.team, "dnp", round.round, `${row.dnp} sin jugar`));
     awardExtremes(eventRows.filter((row) => round.round >= LINEUP_AWARD_START_ROUND && row.benchMistakes > 0), "benchMistakes", "max")
       .forEach((row) => add(row.team, "bench", round.round, `${row.benchMistakes} cambios claros`));
+
+    const window = roundWindow(round, calendar, closedRounds);
+    const roundClauses = window ? transfers
+      .filter((transfer) => transfer.isClause)
+      .map((transfer) => ({ ...transfer, occurredDate: approximateTransferDate(transfer) }))
+      .filter((transfer) => transfer.occurredDate && transfer.occurredDate >= window.start && transfer.occurredDate < window.end)
+      : [];
+    const clauseRows = teams.map((team) => ({
+      team: team.name,
+      made: roundClauses.filter((transfer) => teamKey(transfer.to) === teamKey(team.name)).length,
+      received: roundClauses.filter((transfer) => teamKey(transfer.from) === teamKey(team.name)).length
+    }));
+    awardExtremes(clauseRows.filter((row) => row.made > 0), "made", "max")
+      .forEach((row) => add(row.team, "clauseMade", round.round, `${row.made} cláusula(s)`));
+    awardExtremes(clauseRows.filter((row) => row.received > 0), "received", "max")
+      .forEach((row) => add(row.team, "clauseReceived", round.round, `${row.received} cláusula(s)`));
 
     const dependencyRows = eventRows.filter((row) => Number.isFinite(row.dependency));
     if (dependencyRows.length) {
@@ -836,6 +850,118 @@ function awardExtremes(rows, key, direction) {
   const target = direction === "min" ? Math.min(...values) : Math.max(...values);
   const tolerance = Math.max(Math.abs(target) * 1e-9, 1e-12);
   return rows.filter((row) => Number.isFinite(Number(row[key])) && Math.abs(Number(row[key]) - target) <= tolerance);
+}
+
+function dateValue(value) {
+  if (!value) return null;
+  const parsed = new Date(value);
+  return Number.isNaN(parsed.getTime()) ? null : parsed;
+}
+
+function approximateTransferDate(row) {
+  const direct = dateValue(row.occurredAt);
+  if (direct) return direct;
+  const scraped = dateValue(row.scrapedAt);
+  if (!scraped || !row.dateText) return null;
+  if (/^ahora$/i.test(row.dateText)) return scraped;
+  const match = String(row.dateText).match(/^(\d+)\s*(s|min|h|d|sem|mes|meses|año|años)$/i);
+  if (!match) return null;
+  const value = Number(match[1]);
+  const unit = match[2].toLowerCase();
+  const multipliers = {
+    s: 1000,
+    min: 60 * 1000,
+    h: 60 * 60 * 1000,
+    d: 24 * 60 * 60 * 1000,
+    sem: 7 * 24 * 60 * 60 * 1000,
+    mes: 30 * 24 * 60 * 60 * 1000,
+    meses: 30 * 24 * 60 * 60 * 1000,
+    "año": 365 * 24 * 60 * 60 * 1000,
+    "años": 365 * 24 * 60 * 60 * 1000
+  };
+  return new Date(scraped.getTime() - value * (multipliers[unit] || 0));
+}
+
+function roundWindow(round, calendar, closedRounds) {
+  const currentCalendar = (calendar?.rounds || []).find((item) => Number(item.round) === Number(round.round));
+  const start = roundStartDate(currentCalendar);
+  if (!start) return null;
+  const laterStarts = (calendar?.rounds || [])
+    .map((item) => ({ round: Number(item.round), start: roundStartDate(item) }))
+    .filter((item) => item.start && item.start > start)
+    .sort((a, b) => a.start - b.start);
+  const nextClosedRound = closedRounds
+    .filter((item) => Number(item.round) > Number(round.round))
+    .sort((a, b) => Number(a.round) - Number(b.round))[0];
+  const nextCalendarStart = laterStarts.find((item) => !nextClosedRound || item.start <= roundStartDate((calendar?.rounds || []).find((cal) => Number(cal.round) === Number(nextClosedRound.round))) || item.round === Number(nextClosedRound.round))?.start;
+  return { start, end: nextCalendarStart || new Date(start.getTime() + 7 * 24 * 60 * 60 * 1000) };
+}
+
+function rosterSnapshotForRound(round, calendar, rosterHistory = [], identity) {
+  const calendarRound = (calendar?.rounds || []).find((item) => Number(item.round) === Number(round.round));
+  const start = roundStartDate(calendarRound);
+  if (!start) return null;
+  const upperBound = new Date(start.getTime() + 36 * 60 * 60 * 1000);
+  return rosterHistory
+    .map((snapshot) => ({ ...snapshot, scrapedDate: dateValue(snapshot.scrapedAt) }))
+    .filter((snapshot) => snapshot.scrapedDate && snapshot.scrapedDate >= start && snapshot.scrapedDate <= upperBound)
+    .sort((a, b) => a.scrapedDate - b.scrapedDate)[0] || null;
+}
+
+function snapshotBenchForUserRound(userRound, snapshot, round, calendar, identity) {
+  if (!snapshot?.teams?.length) return [];
+  const managerId = String(userRound.manager?.managerId || "");
+  const teamSnapshot = snapshot.teams.find((team) =>
+    managerId ? String(team.managerId || "") === managerId : teamKey(canonicalizeTeamName(team.name, identity)) === teamKey(userRound.manager.name)
+  );
+  if (!teamSnapshot?.players?.length) return [];
+  const starterIds = new Set((userRound.lineup || []).map((player) => String(player.playerId)).filter(Boolean));
+  const calendarRound = (calendar?.rounds || []).find((item) => Number(item.round) === Number(round.round));
+  const start = roundStartDate(calendarRound);
+  return teamSnapshot.players
+    .filter((player) => player.playerId && !starterIds.has(String(player.playerId)))
+    .filter((player) => {
+      const acquired = dateValue(player.acquiredAt);
+      return !start || !acquired || acquired <= start;
+    });
+}
+
+function benchUpgradeSummary(lineup, bench, playerLookup, gameweekId = null) {
+  const mistakes = [];
+  for (const position of POSITION_ORDER) {
+    const starters = lineup
+      .map((player) => ({
+        ...player,
+        position: playerPosition(player, playerLookup),
+        finalPoints: playerFinalPoints(player, playerLookup, gameweekId)
+      }))
+      .filter((player) => player.position === position && Number.isFinite(player.finalPoints))
+      .sort((a, b) => a.finalPoints - b.finalPoints);
+    const candidates = bench
+      .map((player) => ({
+        ...player,
+        position: playerPosition(player, playerLookup),
+        finalPoints: playerFinalPoints(player, playerLookup, gameweekId)
+      }))
+      .filter((player) => player.position === position && Number.isFinite(player.finalPoints))
+      .sort((a, b) => b.finalPoints - a.finalPoints);
+    const usedStarters = new Set();
+    for (const benchPlayer of candidates) {
+      const starterIndex = starters.findIndex((starter, index) => !usedStarters.has(index) && benchPlayer.finalPoints > starter.finalPoints);
+      if (starterIndex === -1) continue;
+      usedStarters.add(starterIndex);
+      mistakes.push({
+        benchPlayer,
+        starter: starters[starterIndex],
+        delta: benchPlayer.finalPoints - starters[starterIndex].finalPoints
+      });
+    }
+  }
+  return {
+    count: mistakes.length,
+    points: sum(mistakes.map((item) => item.delta)),
+    mistakes
+  };
 }
 
 function lineupChangeDelta(previousLineup, currentLineup, gameweekId, playerLookup) {
@@ -1012,7 +1138,7 @@ function buildDetailedCharts(teams, closedRounds, playerLookup) {
   };
 }
 
-function buildBiwengerStats(teams, closedRounds, playerLookup, teamValues, transfersData, transferHistory, marketHistory, identity) {
+function buildBiwengerStats(teams, closedRounds, playerLookup, teamValues, transfersData, transferHistory, marketHistory, rosterHistory, identity) {
   const teamNames = new Set(teams.map((team) => team.name));
   const teamsRows = teams.map((team) => ({
     manager_id: team.managerId || null,
@@ -1231,21 +1357,43 @@ function buildBiwengerStats(teams, closedRounds, playerLookup, teamValues, trans
     .map((row) => ({
       ...row,
       from: canonicalizeTeamName(row.from, identity),
-      to: canonicalizeTeamName(row.to, identity)
+      to: canonicalizeTeamName(row.to, identity),
+      otherBids: (row.otherBids || []).map((bid) => ({
+          ...bid,
+          team: canonicalizeTeamName(bid.team, identity)
+        }))
     }))
     .filter((row) => teamNames.has(row.from) || teamNames.has(row.to));
+  const visibleTransfers = collapseCanonicalTransfers(transfers);
   const marketActivitySummary = teams.map((team) => {
-    const purchases = transfers.filter((row) => teamKey(row.to) === teamKey(team.name));
-    const sales = transfers.filter((row) => teamKey(row.from) === teamKey(team.name));
+    const purchases = visibleTransfers.filter((row) => teamKey(row.to) === teamKey(team.name));
+    const sales = visibleTransfers.filter((row) => teamKey(row.from) === teamKey(team.name));
+    const lostBids = visibleTransfers.flatMap((row) => (row.otherBids || []).map((bid) => ({
+      ...bid,
+      playerName: row.playerName,
+      winner: row.to,
+      winningPrice: row.price
+    }))).filter((bid) => teamKey(bid.team) === teamKey(team.name));
+    const acceptedBids = purchases.length;
+    const totalVisibleBids = acceptedBids + lostBids.length;
+    const clausesMade = purchases.filter((row) => row.isClause).length;
+    const clausesReceived = sales.filter((row) => row.isClause).length;
     return {
       user_name: team.name,
       purchases: purchases.length,
       sales: sales.length,
+      clauses_made: clausesMade,
+      clauses_received: clausesReceived,
+      rejected_bids: lostBids.length,
+      accepted_bids: acceptedBids,
+      visible_bids: totalVisibleBids,
+      rejected_bid_rate: totalVisibleBids ? lostBids.length / totalVisibleBids : null,
+      rejected_bid_volume: sum(lostBids.map((row) => row.price || 0)),
       market_volume: sum([...purchases, ...sales].map((row) => row.price || 0)),
       visible_movements: purchases.length + sales.length
     };
-  }).sort((a, b) => b.visible_movements - a.visible_movements);
-  const completedTrades = buildCompletedTrades(transfers);
+  }).sort((a, b) => b.visible_movements + b.rejected_bids - (a.visible_movements + a.rejected_bids));
+  const completedTrades = buildCompletedTrades(visibleTransfers);
   const tradeSummary = teams.map((team) => {
     const rows = completedTrades.filter((row) => teamKey(row.user_name) === teamKey(team.name));
     const totalBuy = sum(rows.map((row) => row.buy_price || 0));
@@ -1281,22 +1429,52 @@ function buildBiwengerStats(teams, closedRounds, playerLookup, teamValues, trans
     loyalty,
     concentration,
     market_activity_summary: marketActivitySummary,
-    transfers,
+    transfers: visibleTransfers,
     completed_trades: completedTrades,
     trade_summary: tradeSummary,
     signing_points: signingPoints,
     first_round_signing_points: signingPoints.filter((row) => Number.isFinite(row.first_round_points)).sort((a, b) => b.first_round_points - a.first_round_points),
     coverage: {
       closed_rounds: closedRounds.length,
-      transfers_visible: transfers.length,
+      transfers_visible: visibleTransfers.length,
+      clauses_visible: visibleTransfers.filter((row) => row.isClause).length,
+      rejected_bids_visible: sum(visibleTransfers.map((row) => (row.otherBids || []).length)),
       market_snapshots: marketHistory.length,
+      roster_snapshots: rosterHistory.length,
       notes: [
         "Las métricas deportivas salen de alineaciones cerradas y del detalle jugador-jornada.",
         "Las compras/ventas históricas dependen del feed visible y de los snapshots diarios acumulados desde ahora.",
-        "Peor alineador se calcula desde el corte configurado; director deportivo se calcula desde la primera jornada con XI anterior comparable."
+        "Peor alineador sólo se calcula para jornadas con snapshot propio de plantilla posterior al inicio; el banquillo histórico de Mister no se considera fiable.",
+        "El feed permite detectar clausulazos cuando aparece 'por pago de cláusula'.",
+        "El Rata cuenta las pujas perdidas visibles en el feed bajo 'Otras pujas' después de una operación cerrada."
       ]
     }
   };
+}
+
+function collapseCanonicalTransfers(transfers = []) {
+  const byTransaction = new Map();
+  for (const transfer of transfers) {
+    const key = [transfer.playerName, transfer.from, transfer.to, transfer.price ?? ""].map(teamKey).join("|");
+    const previous = byTransaction.get(key);
+    if (!previous) {
+      byTransaction.set(key, transfer);
+      continue;
+    }
+    byTransaction.set(key, {
+      ...previous,
+      ...transfer,
+      scrapedAt: previous.scrapedAt || transfer.scrapedAt,
+      dateText: previous.dateText || transfer.dateText,
+      occurredAt: previous.occurredAt || transfer.occurredAt,
+      source: previous.source === "feed" ? previous.source : transfer.source || previous.source,
+      type: previous.isClause || transfer.isClause ? "clause" : previous.type || transfer.type,
+      isClause: Boolean(previous.isClause || transfer.isClause),
+      otherBids: previous.otherBids?.length ? previous.otherBids : transfer.otherBids || [],
+      raw: previous.raw || transfer.raw || null
+    });
+  }
+  return [...byTransaction.values()];
 }
 
 function deepPlayerMovements(playerLookup) {
@@ -1313,20 +1491,33 @@ function normalizeTransferRows(latest, history, playerMovements = []) {
   rows.push(...playerMovements);
   const seen = new Set();
   return rows
-    .map((row) => ({
-      scrapedAt: row.scrapedAt || null,
-      dateText: row.dateText || null,
-      source: row.source || "feed",
-      playerId: row.playerId || null,
-      playerName: row.playerName || row.name || null,
-      from: row.from || null,
-      to: row.to || null,
-      price: numberOrNull(row.price),
-      raw: row.raw || null
-    }))
+    .map((row) => {
+      const isClause = Boolean(row.isClause || row.type === "clause" || /pago de cl[áa]usula/i.test(row.raw || ""));
+      return {
+        scrapedAt: row.scrapedAt || null,
+        dateText: row.dateText || null,
+        occurredAt: row.occurredAt || null,
+        source: row.source || "feed",
+        playerId: row.playerId || null,
+        playerName: row.playerName || row.name || null,
+        from: cleanTransferParty(row.from),
+        to: cleanTransferParty(row.to),
+        price: numberOrNull(row.price),
+        type: isClause ? "clause" : row.type || "transfer",
+        isClause,
+        otherBids: Array.isArray(row.otherBids)
+          ? row.otherBids.map((bid) => ({
+            rank: numberOrNull(bid.rank),
+            team: cleanTransferParty(bid.team),
+            price: numberOrNull(bid.price)
+          })).filter((bid) => bid.team)
+          : [],
+        raw: row.raw || null
+      };
+    })
     .filter((row) => row.playerName && row.from && row.to)
     .filter((row) => {
-      const key = [row.playerName, row.from, row.to, row.price ?? "", row.dateText ?? ""].map(teamKey).join("|");
+      const key = [row.playerName, row.from, row.to, row.price ?? "", row.type || (row.isClause ? "clause" : "transfer")].map(teamKey).join("|");
       if (seen.has(key)) return false;
       seen.add(key);
       return true;
@@ -1468,6 +1659,7 @@ async function main() {
   const calendar = await readJson("data/laliga/calendar.json", { rounds: [] });
   const marketHistory = await readJsonl("data/mister/market-history.jsonl");
   const transferHistory = await readJsonl("data/mister/transfer-history.jsonl");
+  const rosterHistory = await readJsonl("data/mister/roster-history.jsonl");
   const existingRegistry = await readTeamRegistry();
   const teamRegistry = mergeTeamRegistry(existingRegistry, deep.managers || []);
   const teamIdentity = buildTeamIdentity(teamRegistry);
@@ -1492,6 +1684,17 @@ async function main() {
       ? deep.managers.map((row) => canonicalizeTeamRow(row, teamIdentity))
       : effectiveClosedRounds[0].rows.map((row) => ({ name: row.name, initials: row.initials }));
   const teamValues = new Map(currentStandings.map((row) => [row.name, row.value || 0]));
+  const allTransfers = normalizeTransferRows(transfers, transferHistory, deepPlayerMovements(playerLookup))
+    .map((row) => ({
+      ...row,
+      from: canonicalizeTeamName(row.from, teamIdentity),
+      to: canonicalizeTeamName(row.to, teamIdentity),
+      otherBids: (row.otherBids || []).map((bid) => ({
+        ...bid,
+        team: canonicalizeTeamName(bid.team, teamIdentity)
+      }))
+    }));
+  const canonicalTransfers = collapseCanonicalTransfers(allTransfers);
   const parsedLiveRound = buildParsedLiveRound(parsedStandings, calendar, latestClosedRound, latestClosedRows, teamIdentity);
   const reconciledPig = reconcilePigHistory(pigHistory, effectiveClosedRounds);
   const scoringSystems = [
@@ -1503,7 +1706,7 @@ async function main() {
     { id: "marcaStats", name: "Marca Stats" }
   ];
   const detailedCharts = buildDetailedCharts(teams, effectiveClosedRounds, playerLookup);
-  const stats = buildBiwengerStats(teams, effectiveClosedRounds, playerLookup, teamValues, transfers, transferHistory, marketHistory, teamIdentity);
+  const stats = buildBiwengerStats(teams, effectiveClosedRounds, playerLookup, teamValues, { transfers: canonicalTransfers }, [], marketHistory, rosterHistory, teamIdentity);
 
   const dashboard = {
     meta: {
@@ -1540,7 +1743,7 @@ async function main() {
     ])),
     awards: {
       definitions: AWARD_DEFINITIONS,
-      ...buildAwardCounts(teams, effectiveClosedRounds, teamValues, playerLookup)
+      ...buildAwardCounts(teams, effectiveClosedRounds, teamValues, playerLookup, rosterHistory, calendar, teamIdentity, canonicalTransfers)
     },
     charts: {
       availableViews: BIWENGER_VIEWS,

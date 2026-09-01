@@ -54,4 +54,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Actualizar datos diarios Mister"
-          file_pattern: data/mister/latest/** data/mister/market-history.jsonl data/mister/transfer-history.jsonl data/cerdo/** data/laliga/**
+          file_pattern: data/mister/latest/** data/mister/market-history.jsonl data/mister/transfer-history.jsonl data/mister/roster-history.jsonl data/cerdo/** data/laliga/**
