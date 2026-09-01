@@ -71,7 +71,7 @@ Algunos sólo se pueden calcular con datos de puntos por equipo. Otros necesitan
 Hay dos workflows en GitHub Actions:
 
 - `.github/workflows/scrape-mister-market.yml`: se ejecuta a diario a las `07:10 UTC`, que normalmente son las `09:10` en España en horario de verano. Lee mercado, actualiza calendario y reconstruye datos.
-- `.github/workflows/scrape-mister-weekly.yml`: se ejecuta los martes a las `08:30 UTC`, normalmente `10:30` en España en horario de verano. Lee feed, clasificación, equipo, búsqueda, jornadas, managers, alineaciones, banquillo, eventos y puntuaciones por proveedor desde los endpoints internos de Mister.
+- `.github/workflows/scrape-mister-weekly.yml`: pese al nombre del archivo, se ejecuta a diario a las `08:30 UTC`, normalmente `10:30` en España en horario de verano. Lee feed, clasificación, equipo, búsqueda, jornadas, managers, alineaciones, banquillo, eventos y puntuaciones por proveedor desde los endpoints internos de Mister.
 
 Ambos pueden lanzarse también a mano desde la pestaña `Actions` de GitHub con `Run workflow`.
 
@@ -85,9 +85,9 @@ GitHub Actions hace el trabajo en servidores de GitHub. No hace falta que el ord
 
 ## Qué hacer cada jornada
 
-En condiciones normales, no hay que hacer nada. El martes, si la jornada ya está cerrada en Mister, GitHub Actions debería leer los nuevos datos, hacer commit automático en `data/` y GitHub Pages redeplegará la web.
+En condiciones normales, no hay que hacer nada. Cada día, si una jornada nueva ya está cerrada en Mister, GitHub Actions debería leer los nuevos datos, hacer commit automático en `data/` y GitHub Pages redeplegará la web.
 
-Si una jornada queda incompleta por partidos aplazados, se debe mantener como `in_progress` y no sumarla a la general ni desbloquear galardones hasta que Mister la dé por cerrada. La web puede mostrar datos en vivo o provisionales, pero la clasificación histórica y los galardones sólo deben consolidarse con jornadas cerradas.
+Si una jornada queda incompleta por partidos aplazados, se debe mantener como `in_progress` y no sumarla a la general ni desbloquear galardones hasta que Mister la dé por cerrada. La Action profunda puede correr igualmente a diario; la web puede mostrar datos en vivo o provisionales, pero la clasificación histórica y los galardones sólo deben consolidarse con jornadas cerradas.
 
 Conviene revisar de vez en cuando:
 
@@ -147,7 +147,7 @@ Si se quiere hacer algo parecido para Biwenger u otra liga fantasy, el orden rec
 4. Mantener una pestaña narrativa propia de la liga, no sólo gráficos.
 5. Crear una clasificación general animada por jornadas.
 6. Crear una vista por jornada con resultados y premios.
-7. Automatizar capturas diarias para mercado/calendario y semanales para jornada cerrada.
+7. Automatizar capturas diarias para mercado/calendario y comprobaciones profundas diarias de jornada cerrada.
 8. Guardar histórico real de decisiones irrepetibles, como las tarjetas elegidas por el cerdo.
 9. Usar GitHub Actions para que no dependa del ordenador local.
 10. Dejar siempre visible la versión de web y la fecha de datos para diagnosticar cachés o despliegues.
