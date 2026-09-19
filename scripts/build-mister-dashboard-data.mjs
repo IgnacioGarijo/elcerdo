@@ -59,6 +59,16 @@ const FALLBACK_CLOSED_ROUNDS = [
   }
 ];
 
+const PIG_CARD_IMAGES = [
+  "img/img1.jpg",
+  "img/img2.jpg",
+  "img/img3.jpg",
+  "img/img4.jpg",
+  "img/img5.jpg",
+  "img/img6.jpg",
+  "img/img7.jpeg"
+];
+
 const AWARD_DEFINITIONS = [
   { id: "winner", icon: "🏆", kind: "good", name: "Ganador de la jornada", requirement: "round_points" },
   { id: "loser", icon: "🕳", kind: "bad", name: "Perdedor de la jornada", requirement: "round_points" },
@@ -325,10 +335,43 @@ function buildParsedLiveRound(parsedStandings, calendar, latestClosedRound, late
   };
 }
 
-function reconcilePigHistory(pigHistory, closedRounds) {
+function simpleHash(str) {
+  let hash = 0;
+  for (let index = 0; index < str.length; index += 1) {
+    hash = (hash << 5) - hash + str.charCodeAt(index);
+    hash |= 0;
+  }
+  return Math.abs(hash);
+}
+
+function pigCardsForRound(roundNumber, calendar) {
+  const calendarRound = (calendar?.rounds || []).find((item) => Number(item.round) === Number(roundNumber));
+  const startDate = roundStartDate(calendarRound);
+  if (!startDate) return [];
+  const revealDate = new Date(startDate.getTime() - 24 * 60 * 60 * 1000);
+  const dateStr = `jornada-${roundNumber}-${revealDate.toISOString().slice(0, 16)}`;
+  const first = Math.floor((simpleHash(dateStr) % 10000) / 10000 * PIG_CARD_IMAGES.length);
+  let second = Math.floor((simpleHash(`${dateStr}_b`) % 10000) / 10000 * PIG_CARD_IMAGES.length);
+  if (second === first) second = (second + 1) % PIG_CARD_IMAGES.length;
+  return [PIG_CARD_IMAGES[first], PIG_CARD_IMAGES[second]];
+}
+
+function reconcilePigHistory(pigHistory, closedRounds, calendar = {}) {
   const closedByRound = new Map((closedRounds || []).map((round) => [Number(round.round), round]));
+  const existingByRound = new Map((pigHistory?.rounds || []).map((pigRound) => [Number(pigRound.round), pigRound]));
+  const roundNumbers = [...new Set([
+    ...(pigHistory?.rounds || []).map((pigRound) => Number(pigRound.round)),
+    ...(closedRounds || []).map((round) => Number(round.round))
+  ])].filter(Number.isFinite).sort((a, b) => a - b);
   let changed = false;
-  const rounds = (pigHistory?.rounds || []).map((pigRound) => {
+
+  const rounds = roundNumbers.map((roundNumber) => {
+    const pigRound = existingByRound.get(roundNumber) || {
+      round: roundNumber,
+      status: "pending",
+      victims: [],
+      cards: pigCardsForRound(roundNumber, calendar)
+    };
     const closedRound = closedByRound.get(Number(pigRound.round));
     if (!closedRound?.rows?.length) return pigRound;
     const ordered = [...closedRound.rows].sort((a, b) => Number(a.rank || 999) - Number(b.rank || 999));
@@ -336,7 +379,8 @@ function reconcilePigHistory(pigHistory, closedRounds) {
     const nextRound = {
       ...pigRound,
       status: "closed",
-      victims
+      victims,
+      cards: (pigRound.cards || []).filter(Boolean).length === 2 ? pigRound.cards : pigCardsForRound(pigRound.round, calendar)
     };
     if (JSON.stringify(nextRound) !== JSON.stringify(pigRound)) changed = true;
     return nextRound;
@@ -527,6 +571,14 @@ function scoreForPlayer(player, playerLookup, system = "final") {
   return round?.providers?.[system] ?? null;
 }
 
+function scoreForPlayerWithCaptain(player, playerLookup, system = "final") {
+  const points = scoreForPlayer(player, playerLookup, system);
+  if (!Number.isFinite(points)) return null;
+  if (system === "final") return points;
+  const multiplier = Number(player?.captainMultiplier) || (player?.isCaptain ? captainMultiplier(player, playerLookup) : 1);
+  return player?.isCaptain && multiplier > 0 ? points * multiplier : points;
+}
+
 function roundRowsBySystem(round, playerLookup) {
   const systems = ["final", "as", "marca", "mundoDeportivo", "sofascore", "marcaStats"];
   const rowsBySystem = {};
@@ -534,7 +586,7 @@ function roundRowsBySystem(round, playerLookup) {
     rowsBySystem[system] = (round.userRounds || []).map((userRound) => {
       const lineup = userRound.lineup || [];
       const scoredPlayers = lineup
-        .map((player) => scoreForPlayer(player, playerLookup, system))
+        .map((player) => scoreForPlayerWithCaptain(player, playerLookup, system))
         .filter((points) => Number.isFinite(points));
       const points = system === "final"
         ? round.standings?.find((row) => row.managerId === userRound.manager.managerId)?.points ?? sum(scoredPlayers)
@@ -597,7 +649,7 @@ function slimRoundForDashboard(round) {
 
 function isClosedRound(round, feedClosedRounds) {
   if (feedClosedRounds.some((item) => item.round === round.round)) return true;
-  if (round.status === "closed" && !round.rows?.some((row) => row.played)) return true;
+  if (round.status === "closed") return true;
   return false;
 }
 
@@ -794,10 +846,14 @@ function buildAwardCounts(teams, closedRounds, teamValues, playerLookup = new Ma
       made: roundClauses.filter((transfer) => teamKey(transfer.to) === teamKey(team.name)).length,
       received: roundClauses.filter((transfer) => teamKey(transfer.from) === teamKey(team.name)).length
     }));
-    awardExtremes(clauseRows.filter((row) => row.made > 0), "made", "max")
-      .forEach((row) => add(row.team, "clauseMade", round.round, `${row.made} cláusula(s)`));
-    awardExtremes(clauseRows.filter((row) => row.received > 0), "received", "max")
-      .forEach((row) => add(row.team, "clauseReceived", round.round, `${row.received} cláusula(s)`));
+    clauseRows.filter((row) => row.made > 0)
+      .forEach((row) => {
+        for (let index = 0; index < row.made; index += 1) add(row.team, "clauseMade", round.round, "Clausulazo hecho");
+      });
+    clauseRows.filter((row) => row.received > 0)
+      .forEach((row) => {
+        for (let index = 0; index < row.received; index += 1) add(row.team, "clauseReceived", round.round, "Clausulazo recibido");
+      });
 
     const dependencyRows = eventRows.filter((row) => Number.isFinite(row.dependency));
     if (dependencyRows.length) {
@@ -1696,7 +1752,7 @@ async function main() {
     }));
   const canonicalTransfers = collapseCanonicalTransfers(allTransfers);
   const parsedLiveRound = buildParsedLiveRound(parsedStandings, calendar, latestClosedRound, latestClosedRows, teamIdentity);
-  const reconciledPig = reconcilePigHistory(pigHistory, effectiveClosedRounds);
+  const reconciledPig = reconcilePigHistory(pigHistory, effectiveClosedRounds, calendar);
   const scoringSystems = [
     { id: "final", name: "Mixto" },
     { id: "as", name: "AS" },

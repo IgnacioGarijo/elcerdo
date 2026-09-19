@@ -40,8 +40,8 @@ const images = [
 ];
 
 const BUILD_VERSION = {
-  label: "web rata-rate-v1",
-  updatedAt: "2026-09-01T16:12:00+02:00"
+  label: "web automation-fix-v1",
+  updatedAt: "2026-09-20T01:45:00+02:00"
 };
 
 const cardTeams = new Map([
