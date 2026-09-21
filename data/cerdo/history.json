@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T23:40:07.912Z",
+  "updatedAt": "2026-09-21T15:18:43.830Z",
   "note": "Histórico inicial editable. Las automatizaciones diarias podrán actualizar este archivo con las víctimas reales y conservar las dos tarjetas elegidas por el cerdo en cada jornada.",
   "rounds": [
     {
@@ -7,7 +7,7 @@
       "status": "closed",
       "victims": [
         "Alex Ballena",
-        "Olivito"
+        "Llourinho"
       ],
       "cards": [
         "img/img2.jpg",
@@ -19,7 +19,7 @@
       "status": "closed",
       "victims": [
         "Alex Ballena",
-        "Olivito"
+        "Llourinho"
       ],
       "cards": [
         "img/img4.jpg",
@@ -43,7 +43,7 @@
       "status": "closed",
       "victims": [
         "Alex Ballena",
-        "Olivito"
+        "Llourinho"
       ],
       "cards": [
         "img/img7.jpeg",
@@ -54,7 +54,7 @@
       "round": 5,
       "status": "closed",
       "victims": [
-        "Olivito",
+        "Llourinho",
         "Alex Ballena"
       ],
       "cards": [
@@ -66,12 +66,24 @@
       "round": 6,
       "status": "closed",
       "victims": [
-        "Olivito",
+        "Llourinho",
         "Alex Ballena"
       ],
       "cards": [
         "img/img7.jpeg",
         "img/img4.jpg"
+      ]
+    },
+    {
+      "round": 7,
+      "status": "closed",
+      "victims": [
+        "Llourinho",
+        "Alex Ballena"
+      ],
+      "cards": [
+        "img/img6.jpg",
+        "img/img1.jpg"
       ]
     }
   ]
