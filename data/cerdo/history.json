@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T15:18:43.830Z",
+  "updatedAt": "2026-10-13T16:18:36.957Z",
   "note": "Histórico inicial editable. Las automatizaciones diarias podrán actualizar este archivo con las víctimas reales y conservar las dos tarjetas elegidas por el cerdo en cada jornada.",
   "rounds": [
     {
@@ -84,6 +84,18 @@
       "cards": [
         "img/img6.jpg",
         "img/img1.jpg"
+      ]
+    },
+    {
+      "round": 8,
+      "status": "closed",
+      "victims": [
+        "Rodando Nazário",
+        "Peter LIM"
+      ],
+      "cards": [
+        "img/img1.jpg",
+        "img/img4.jpg"
       ]
     }
   ]
