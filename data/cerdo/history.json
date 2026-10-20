@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T16:18:36.957Z",
+  "updatedAt": "2026-10-20T13:50:26.219Z",
   "note": "Histórico inicial editable. Las automatizaciones diarias podrán actualizar este archivo con las víctimas reales y conservar las dos tarjetas elegidas por el cerdo en cada jornada.",
   "rounds": [
     {
@@ -95,6 +95,18 @@
       ],
       "cards": [
         "img/img1.jpg",
+        "img/img4.jpg"
+      ]
+    },
+    {
+      "round": 9,
+      "status": "closed",
+      "victims": [
+        "Peter LIM",
+        "Llourinho"
+      ],
+      "cards": [
+        "img/img3.jpg",
         "img/img4.jpg"
       ]
     }
