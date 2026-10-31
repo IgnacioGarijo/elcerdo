@@ -1,10 +1,10 @@
 {
-  "scrapedAt": "2026-10-30T15:11:05.419Z",
+  "scrapedAt": "2026-10-31T14:39:53.874Z",
   "source": "https://mister.mundodeportivo.com",
   "communityId": "1263883",
   "page": "standings",
   "url": "https://mister.mundodeportivo.com/standings",
-  "text": "L\nLlourinho\n[email-redacted]\nLigas oficiales\n🎲\nQuiniela\nTus ligas\nManicomio 26/27\nOtros\nAyuda\nX (Twitter)\nInstagram\nTikTok\nAñadir liga\n280.411\n66\nInicio\nMercado\n0\nEquipo\nTabla\nBuscar\nGeneral\nJornada\n1\nHM\nHeung Min Dad\n11 jugadores · € 95.759.000\n660 PTS\n+302\n2\nRN\nRodando Nazário\n14 jugadores · € 90.100.000\n538 PTS\n+180\n3\nDM\nDon Manuel Ruíz de Lopera\n13 jugadores · € 135.592.000\n530 PTS\n+172\n4\nLT\nLolo Tierra\n21 jugadores · € 124.485.000\n500 PTS\n+142\n5\nPL\nPeter LIM\n15 jugadores · € 85.907.000\n461 PTS\n+103\n6\nL\nLlourinho\n12 jugadores · € 82.355.000\n358 PTS\n7\nAB\nAlex Ballena\n12 jugadores · € 76.971.000\n308 PTS\n-50\nEvolución de la clasificación\nInvitar amigos",
+  "text": "L\nLlourinho\n[email-redacted]\nLigas oficiales\n🎲\nQuiniela\nTus ligas\nManicomio 26/27\nOtros\nAyuda\nX (Twitter)\nInstagram\nTikTok\nAñadir liga\n280.411\n66\nInicio\nMercado\n0\nEquipo\nTabla\nBuscar\nGeneral\nJornada\nJ1\nJ2\nJ3\nJ4\nJ5\nJ6\nJ7\nJ8\nJ9\nJ10\nJ11\n1\nPL\nPeter LIM\n3 / 11 Jugadores · € 79.514.000\n43 PTS\n2\nL\nLlourinho\n5 / 11 Jugadores · € 74.995.000\n37 PTS\n3\nLT\nLolo Tierra\n2 / 11 Jugadores · € 105.639.000\n17 PTS\n4\nHM\nHeung Min Dad\n2 / 11 Jugadores · € 95.759.000\n12 PTS\n5\nDM\nDon Manuel Ruíz de Lopera\n3 / 11 Jugadores · € 118.429.000\n10 PTS\n6\nAB\nAlex Ballena\n2 / 11 Jugadores · € 75.288.000\n9 PTS\n7\nRN\nRodando Nazário\n0 / 11 Jugadores · € 87.865.000\n0 PTS\nEvolución de la clasificación\nInvitar amigos",
   "gameweekLinks": [
     {
       "text": "J1",
@@ -65,64 +65,70 @@
       "href": "https://mister.mundodeportivo.com/standings?gw=4051",
       "gameweekId": "4051",
       "round": 10
+    },
+    {
+      "text": "J11",
+      "href": "https://mister.mundodeportivo.com/standings?gw=4052",
+      "gameweekId": "4052",
+      "round": 11
     }
   ],
   "users": [
     {
-      "text": "1 HM Heung Min Dad 11 jugadores · € 95.759.000 660 PTS +302",
+      "text": "1 HM Heung Min Dad 11 jugadores · € 96.458.000 672 Pts +277",
       "href": "https://mister.mundodeportivo.com/users/8771310/heung-min-dad"
     },
     {
-      "text": "2 RN Rodando Nazário 14 jugadores · € 90.100.000 538 PTS +180",
-      "href": "https://mister.mundodeportivo.com/users/8769466/rodando-nazario"
-    },
-    {
-      "text": "3 DM Don Manuel Ruíz de Lopera 13 jugadores · € 135.592.000 530 PTS +172",
+      "text": "2 DM Don Manuel Ruíz de Lopera 14 jugadores · € 152.840.000 540 Pts +145",
       "href": "https://mister.mundodeportivo.com/users/8785696/don-manuel-ruiz-de-lopera"
     },
     {
-      "text": "4 LT Lolo Tierra 21 jugadores · € 124.485.000 500 PTS +142",
+      "text": "3 RN Rodando Nazário 14 jugadores · € 90.393.000 538 Pts +143",
+      "href": "https://mister.mundodeportivo.com/users/8769466/rodando-nazario"
+    },
+    {
+      "text": "4 LT Lolo Tierra 19 jugadores · € 122.157.000 517 Pts +122",
       "href": "https://mister.mundodeportivo.com/users/13365280/lolo-tierra"
     },
     {
-      "text": "5 PL Peter LIM 15 jugadores · € 85.907.000 461 PTS +103",
+      "text": "5 PL Peter LIM 15 jugadores · € 86.424.000 504 Pts +109",
       "href": "https://mister.mundodeportivo.com/users/12113243/peter-lim"
     },
     {
-      "text": "6 L Llourinho 12 jugadores · € 82.355.000 358 PTS",
+      "text": "6 L Llourinho 12 jugadores · € 82.806.000 395 Pts",
       "href": "https://mister.mundodeportivo.com/users/10359824/llourinho"
     },
     {
-      "text": "7 AB Alex Ballena 12 jugadores · € 76.971.000 308 PTS -50",
+      "text": "7 AB Alex Ballena 12 jugadores · € 77.258.000 317 Pts -78",
       "href": "https://mister.mundodeportivo.com/users/15420188/alex-ballena"
     },
     {
-      "text": "1 PL Peter LIM 10 / 11 Jugadores · € 59.388.000 72 Pts",
+      "text": "1 PL Peter LIM 3 / 11 Jugadores · € 79.514.000 43 PTS",
       "href": "https://mister.mundodeportivo.com/users/12113243/peter-lim"
     },
     {
-      "text": "2 HM Heung Min Dad 11 / 11 Jugadores · € 89.466.000 70 Pts",
+      "text": "2 L Llourinho 5 / 11 Jugadores · € 74.995.000 37 PTS",
+      "href": "https://mister.mundodeportivo.com/users/10359824/llourinho"
+    },
+    {
+      "text": "3 LT Lolo Tierra 2 / 11 Jugadores · € 105.639.000 17 PTS",
+      "href": "https://mister.mundodeportivo.com/users/13365280/lolo-tierra"
+    },
+    {
+      "text": "4 HM Heung Min Dad 2 / 11 Jugadores · € 95.759.000 12 PTS",
       "href": "https://mister.mundodeportivo.com/users/8771310/heung-min-dad"
     },
     {
-      "text": "3 RN Rodando Nazário 9 / 11 Jugadores · € 88.147.000 57 Pts",
-      "href": "https://mister.mundodeportivo.com/users/8769466/rodando-nazario"
-    },
-    {
-      "text": "4 LT Lolo Tierra 10 / 11 Jugadores · € 96.424.000 54 Pts",
-      "href": "https://mister.mundodeportivo.com/users/13365280/lolo-tierra"
-    },
-    {
-      "text": "5 DM Don Manuel Ruíz de Lopera 9 / 11 Jugadores · € 128.776.000 47 Pts",
+      "text": "5 DM Don Manuel Ruíz de Lopera 3 / 11 Jugadores · € 118.429.000 10 PTS",
       "href": "https://mister.mundodeportivo.com/users/8785696/don-manuel-ruiz-de-lopera"
     },
     {
-      "text": "6 AB Alex Ballena 10 / 11 Jugadores · € 74.715.000 42 Pts",
+      "text": "6 AB Alex Ballena 2 / 11 Jugadores · € 75.288.000 9 PTS",
       "href": "https://mister.mundodeportivo.com/users/15420188/alex-ballena"
     },
     {
-      "text": "7 L Llourinho 11 / 11 Jugadores · € 79.854.000 41 Pts",
-      "href": "https://mister.mundodeportivo.com/users/10359824/llourinho"
+      "text": "7 RN Rodando Nazário 0 / 11 Jugadores · € 87.865.000 0 PTS",
+      "href": "https://mister.mundodeportivo.com/users/8769466/rodando-nazario"
     }
   ]
 }
