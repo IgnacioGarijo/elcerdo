@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T16:30:45.854Z",
+  "updatedAt": "2026-11-09T19:07:12.439Z",
   "note": "Histórico inicial editable. Las automatizaciones diarias podrán actualizar este archivo con las víctimas reales y conservar las dos tarjetas elegidas por el cerdo en cada jornada.",
   "rounds": [
     {
@@ -131,6 +131,18 @@
       ],
       "cards": [
         "img/img7.jpeg",
+        "img/img1.jpg"
+      ]
+    },
+    {
+      "round": 12,
+      "status": "closed",
+      "victims": [
+        "Alex Ballena",
+        "Don Manuel Ruíz de Lopera"
+      ],
+      "cards": [
+        "img/img4.jpg",
         "img/img1.jpg"
       ]
     }
