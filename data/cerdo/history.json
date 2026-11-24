@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T19:07:12.439Z",
+  "updatedAt": "2026-11-24T19:45:39.227Z",
   "note": "Histórico inicial editable. Las automatizaciones diarias podrán actualizar este archivo con las víctimas reales y conservar las dos tarjetas elegidas por el cerdo en cada jornada.",
   "rounds": [
     {
@@ -144,6 +144,18 @@
       "cards": [
         "img/img4.jpg",
         "img/img1.jpg"
+      ]
+    },
+    {
+      "round": 13,
+      "status": "closed",
+      "victims": [
+        "Alex Ballena",
+        "Heung Min Dad"
+      ],
+      "cards": [
+        "img/img7.jpeg",
+        "img/img2.jpg"
       ]
     }
   ]
